@@ -1,0 +1,44 @@
+       01  WS-VCLMELS3-LAYOUT.                                                  
+           05  UL-LAPSE-KEY-DATA-AREA.                                          
+               10  UL-LAPSE-KEY-COMPANY-CODE           PIC X(03).               
+               10  UL-LAPSE-KEY-MASTER-ID              PIC X(15).               
+               10  UL-LAPSE-KEY-FILE-CODE              PIC X(05).               
+               10  UL-LAPSE-KEY-DOCUMENT-TYPE          PIC X(50).               
+               10  UL-LAPSE-KEY-DOCUMENT-ID            PIC X(50).               
+               10  UL-LAPSE-KEY-TRX-CODE               PIC X(04).               
+               10  FILLER-1                            PIC X(100).              
+               10  UL-LAPSE-KEY-MAP-RECORD-ID          PIC X(50).               
+           05  UL-LAPSE-PAST-DUE-CHARGES.                                       
+               10  UL-LAPSE-COI-PAST-DUE               PIC +9(9).99.            
+               10  UL-LAPSE-LOAN-CAP-PAST-DUE          PIC +9(9).99.            
+               10  UL-LAPSE-ANNIV-LOAD-PAST-DUE        PIC +9(9).99.            
+               10  UL-LAPSE-TOTAL-AMOUNT-DEFIC         PIC +9(9).99.            
+           05  UL-LAPSE-LAST-COI-CALCULATED            PIC +9(9).99.            
+           05  UL-LAPSE-FUTURE-CHARGES-DUE             PIC +9(9).99.            
+           05  UL-LAPSE-GROSS-AMOUNT-BILLED            PIC +9(9).99.            
+           05  UL-LAPSE-LAPSE-PEND-INIT-DT             PIC 9(08).               
+           05  UL-LAPSE-XP-REASON                      PIC X(04).               
+           05  UL-LAPSE-XP-EFFECTIVE-DATE              PIC 9(08).               
+           05  UL-LAPSE-XP-VALUATION-DATE              PIC 9(08).               
+           05  UL-LAPSE-REINSTATEMENT-DATE             PIC 9(08).               
+           05  UL-LAPSE-PRIOR-POLICY-STATUS            PIC X.                   
+           05  UL-LAPSE-DURATION                       PIC +9(03).              
+           05  UL-LAPSE-LOAN-COLL-FUND-AMT             PIC +9(9).99.            
+           05  UL-LAPSE-LOAN-ACCUM-FUND-AMT            PIC +9(9).99.            
+           05  UL-LAPSE-MINIMUM-PYMT-MET-SW            PIC X.                   
+           05  UL-LAPSE-SUSPENSE-AMT-SUMMED            PIC +9(9).99.            
+           05  UL-LAPSE-SUSPENSE-EFF-DATE              PIC 9(08).               
+           05  UL-ANN-STMT-LAPSE-PEND-CREDIT           PIC +9(9).99.            
+           05  UL-LAPSE-MODIFIED-LAPSE-IND             PIC X.                   
+           05  UL-LAPSE-MINIMUM-NET-AMOUNT             PIC +9(9).99.            
+           05  UL-LAPSE-CALCULATED-VALUES.                                      
+               10  UL-LAPSE-ADDL-PYMT-DUE-AMT          PIC +9(9).99.            
+               10  UL-LAPSE-TERM-REINSTATE-DT          PIC 9(8).                
+               10  FILLER-2                            PIC X(3).                
+           05  UL-LAPSE-SCAN-LINE                      PIC X(51).               
+           05  UL-LAPSE-REINS-QUOTE-AMT                PIC +9(9).99.            
+           05  UL-LAPSE-CASH-VALUE                     PIC +9(9).99.            
+           05  UL-LAPSE-TOTAL-POLICY-DEBT              PIC +9(9).99.            
+           05  UL-LAPSE-PRU-SUSPENSE-AMOUNT            PIC +9(9).99.            
+           05  UL-TAD-NO-FORM                          PIC X.                   
+           05  FILLER-3                                PIC X(148).              

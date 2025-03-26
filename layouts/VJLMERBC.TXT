@@ -1,0 +1,102 @@
+       01  WS-VCLMERBC-LAYOUT.                                                  
+           05 UL-RBC-KEY-DATA-AREA.                                             
+               10  UL-RBC-KEY-COMPANY-CODE             PIC X(03).               
+               10  UL-RBC-KEY-MASTER-ID                PIC X(15).               
+               10  UL-RBC-KEY-FILE-CODE                PIC X(05).               
+               10  UL-RBC-KEY-DOCUMENT-TYPE            PIC X(50).               
+               10  UL-RBC-KEY-DOCUMENT-ID              PIC X(50).               
+               10  UL-RBC-KEY-TRX-CODE                 PIC X(04).               
+               10  UL-RBC-FILLER                       PIC X(100).              
+               10  UL-RBC-KEY-MAP-RECORD-ID            PIC X(50).               
+           05  UL-RBC-BROKER-DEALER-INFO.                                       
+               10  UL-RBC-TRADE-PARTNER-ID-NUM    PIC X(20).                    
+               10  UL-RBC-CLEARINGHOUSE-NAME      PIC X(30).                    
+               10  UL-RBC-TRADE-PARTNER-CTL-NUM   PIC X(30).                    
+               10  UL-RBC-CLEARINGHOUSE-CTL-NUM   PIC X(30).                    
+               10  UL-RBC-DISTRIB-CUST-ACCT-NUM   PIC X(30).                    
+               10  UL-RBC-DISTRIB-TRX-ID-NUM      PIC X(30).                    
+               10  UL-RBC-APPLICATION-CTL-NUM     PIC X(20).                    
+               10  UL-RBC-FILLER-FUTURE-USE       PIC X(68).                    
+           05  FILLER-1                                 PIC X(87).              
+           05  FILLER-2                                 PIC XX.                 
+           05  FILLER-3                                 PIC X(15).              
+           05  FILLER-4                                 PIC X(5).               
+           05  FILLER-5                                 PIC 99.                 
+           05  UL-RBC-ACTION-CODE                       PIC X.                  
+           05  UL-RBC-TRX-SEGMENT-PRIOR.                                        
+               10  UL-RBC-PRI-SCHED-REBAL-INFO.                                 
+                   15  UL-RBC-PRI-REBALANCING-STATUS    PIC X.                  
+                   15  UL-RBC-PRI-REBALANCING-FREQ      PIC XX.                 
+                   15  UL-RBC-PRI-MEMO-CODE             PIC XX.                 
+                   15  UL-RBC-PRI-SOURCE-CODE           PIC XX.                 
+                   15  UL-RBC-PRI-REBALANCE-START-DTE   PIC 9(8).               
+                   15  UL-RBC-PRI-FINAL-REBALANCE-DTE   PIC 9(8).               
+                   15  UL-RBC-PRI-NEXT-REBALANCE-DTE    PIC 9(8).               
+                   15  UL-RBC-PRI-PREV-REBALANCE-DTE    PIC 9(8).               
+                   15  UL-RBC-PRI-PREV-CHANGE-ID        PIC X(8).               
+                   15  UL-RBC-PRI-PREV-CHANGE-DATE      PIC 9(8).               
+                   15  UL-RBC-PRI-FUND-INFO-GROUP.                              
+                      20  UL-RBC-PRI-FUND-INFO-CTR     PIC 9(3).                
+                      20  UL-RBC-PRI-FUND-AREA         PIC X(5626).             
+                      20  UL-RBC-PRI-FUND-ARRAY REDEFINES                       
+                                             UL-RBC-PRI-FUND-AREA.              
+                       22  UL-RBC-PRI-FUND-INFO   OCCURS 97 TIMES.              
+                        25  UL-RBC-PRI-FUND-NUMBER       PIC +9(3).             
+                        25  UL-RBC-PRI-FUND-NUMBER-TRNSL PIC X(50).             
+                        25  UL-RBC-PRI-ALLOCATION-PERCENT PIC +9(4).9.          
+                   15  UL-RBC-PRI-FILLER                    PIC X(50).          
+               10  UL-RBC-PRI-UNSCHED-REBAL-INFO.                               
+                   15  UL-RBC-PRI-UNS-MEMO-CODE             PIC XX.             
+                   15  UL-RBC-PRI-UNS-SOURCE-CODE           PIC XX.             
+                   15  UL-RBC-PRI-UNS-REBALANCE-DATE        PIC 9(8).           
+                   15  UL-RBC-PRI-UNS-FUND-INFO-GROUP.                          
+                      20  UL-RBC-PRI-UNS-FUND-INFO-CTR     PIC 9(3).            
+                      20  UL-RBC-UNS-PRI-AREA          PIC X(5626).             
+                      20  UL-RBC-UNS-PRI-ARRAY REDEFINES                        
+                                             UL-RBC-UNS-PRI-AREA.               
+                       22  UL-RBC-UNS-PRI-INFO   OCCURS 97 TIMES.               
+                         25  UL-RBC-UNS-PRI-FUND-NUM      PIC +9(3).            
+                         25  UL-RBC-UNS-PRI-FUND-NUM-TRNSL PIC X(50).           
+                         25  UL-RBC-UNS-PRI-ALLOC-PERCENT PIC +9(4).9.          
+               10  UL-RBC-PRI-USER-AREA                     PIC X(30).          
+               10  UL-RBC-PRI-FILLER2                       PIC X(50).          
+           05  UL-RBC-CUR-TRX-SEGMENT-CURRENT.                                  
+               10  UL-RBC-CUR-SCHED-REBAL-INFO.                                 
+                   15  UL-RBC-CUR-REBALANCING-STATUS        PIC X.              
+                   15  UL-RBC-CUR-REBALANCING-FREQ          PIC XX.             
+                   15  UL-RBC-CUR-MEMO-CODE                 PIC XX.             
+                   15  UL-RBC-CUR-SOURCE-CODE               PIC XX.             
+                   15  UL-RBC-CUR-REBALANCE-START-DTE       PIC 9(8).           
+                   15  UL-RBC-CUR-FINAL-REBALANCE-DTE       PIC 9(8).           
+                   15  UL-RBC-CUR-NEXT-REBALANCE-DTE        PIC 9(8).           
+                   15  UL-RBC-CUR-PREV-REBALANCE-DTE        PIC 9(8).           
+                   15  UL-RBC-CUR-PREV-CHANGE-ID            PIC X(8).           
+                   15  UL-RBC-CUR-PREV-CHANGE-DATE          PIC 9(8).           
+                   15  UL-RBC-CUR-FUND-INFO-GROUP.                              
+                       20  UL-RBC-CUR-FUND-INFO-CTR         PIC 9(3).           
+                       20  UL-RBC-CUR-FUND-AREA         PIC X(5626).            
+                       20  UL-RBC-CUR-FUND-ARRAY REDEFINES                      
+                                             UL-RBC-CUR-FUND-AREA.              
+                         22  UL-RBC-CUR-FUND-INFO   OCCURS 97 TIMES.            
+                         25  UL-RBC-CUR-FUND-NUMBER       PIC +9(3).            
+                         25  UL-RBC-CUR-FUND-NUMBER-TRNSL  PIC X(50).           
+                         25  UL-RBC-CUR-ALLOCATION-PERCENT PIC +9(4).9.         
+                   15  UL-RBC-CUR-FILLER                    PIC X(50).          
+               10  UL-RBC-CUR-UNSCH-REBAL-INFO.                                 
+                  15  UL-RBC-CUR-UNS-MEMO-CODE             PIC XX.              
+                  15  UL-RBC-CUR-UNS-SOURCE-CODE           PIC XX.              
+                  15  UL-RBC-CUR-UNS-REBALANCE-DATE        PIC 9(8).            
+                  15  UL-RBC-CUR-UNS-FUND-INFO-GROUP.                           
+                    20  UL-RBC-CUR-UNS-FUND-INFO-CTR     PIC 9(3).              
+                    20  UL-RBC-CUR-UNS-AREA              PIC X(5626).           
+                    20  UL-RBC-CUR-UNS-ARRAY REDEFINES                          
+                                           UL-RBC-CUR-UNS-AREA.                 
+                     22  UL-RBC-CUR-UNS-FUND-INFO  OCCURS 97 TIMES.             
+                      25  UL-RBC-CUR-UNS-FUND-NUM      PIC +9(3).               
+                      25  UL-RBC-CUR-UNS-FUND-NUM-TRNSL PIC X(50).              
+                      25  UL-RBC-CUR-UNS-ALLOCATION-PCT                         
+                                                       PIC +9(4).9.             
+               10  UL-RBC-CUR-USER-AREA                     PIC X(30).          
+               10  UL-RBC-CUR-FILLER                        PIC X(50).          
+           05  UL-RBC-CALC-FIELDS.                                              
+                 10  UL-RBC-ALLOC-PERCENT-SUM            PIC +9(4).9.           

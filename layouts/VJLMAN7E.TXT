@@ -1,0 +1,30 @@
+       01 WS-VCLMAN7E-LAYOUT.                                                   
+         02  UL-AN7E-KEY-DATA-AREA.                                             
+           05  UL-AN7E-KEY-COMPANY-CODE        PIC X(03).                       
+           05  UL-AN7E-KEY-MASTER-ID           PIC X(15).                       
+           05  UL-AN7E-KEY-FILE-CODE           PIC X(05).                       
+           05  UL-AN7E-KEY-DOCUMENT-TYPE       PIC X(50).                       
+           05  UL-AN7E-KEY-DOCUMENT-ID         PIC X(50).                       
+           05  UL-AN7E-KEY-TRX-CODE            PIC X(04).                       
+           05  UL-AN7E-FILLER                  PIC X(100).                      
+           05  UL-AN7E-KEY-MAP-RECORD-ID       PIC X(50).                       
+         02  UL-AN7E-DATA-AREA.                                                 
+           05  UL-AN7E-RECORD-TYPE-IND         PIC X(4).                        
+           05  UL-AN7E-RECORD-CODE             PIC 9(5).                        
+           05  UL-AN7E-EXTRACT-DATA.                                            
+               10  UL-AN7E-TRX-EFF-DATE        PIC 9(8).                        
+               10  UL-AN7E-TRX-CODE            PIC X(4).                        
+               10  UL-AN7E-TRX-CODE-TRNSL      PIC X(50).                       
+               10  UL-AN7E-TRX-GROSS-AMT       PIC +9(9).9(2).                  
+               10  UL-AN7E-COI-AMOUNT          PIC +9(9).9(2).                  
+               10  UL-AN7E-PREMIUM-TAX         PIC +9(9).9(2).                  
+               10  UL-AN7E-SALES-CHARGES       PIC +9(9).9(2).                  
+               10  UL-AN7E-OTHER-AMOUNT        PIC +9(9).9(2).                  
+               10  UL-AN7E-ADMIN-TRX-CHARGES   PIC +9(9).9(2).                  
+               10  UL-AN7E-TCF-VALUE-BEFORE    PIC +9(9).9(2).                  
+               10  UL-AN7E-TCF-VALUE-AFTER     PIC +9(9).9(2).                  
+               10  UL-AN7E-TRX-EFFECT          PIC +9(9).9(2).                  
+               10  UL-AN7E-INVESTMENT-CHANGE   PIC +9(9).9(2).                  
+               10  UL-AN7E-XP-NL-STATUS        PIC X.                           
+               10  UL-AN7E-MEMO-CODE           PIC XX.                          
+               10  UL-AN7E-LOAN-PRINCIPAL-AMT  PIC +9(9).99.                    

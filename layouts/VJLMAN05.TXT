@@ -1,0 +1,71 @@
+       01 WS-VCLMAN05-LAYOUT.                                                   
+         02  UL-AN05-KEY-DATA-AREA.                                             
+           05  UL-AN05-KEY-COMPANY-CODE  PIC X(03).                             
+           05  UL-AN05-KEY-MASTER-ID     PIC X(15).                             
+           05  UL-AN05-KEY-FILE-CODE     PIC X(05).                             
+           05  UL-AN05-KEY-DOCUMENT-TYPE PIC X(50).                             
+           05  UL-AN05-KEY-DOCUMENT-ID   PIC X(50).                             
+           05  UL-AN05-KEY-TRX-CODE      PIC X(04).                             
+           05  UL-AN05-FILLER            PIC X(100).                            
+           05  UL-AN05-KEY-MAP-RECORD-ID PIC X(50).                             
+         02  UL-AN05-DATA-AREA.                                                 
+           05  UL-AN05-RECORD-TYPE-IND          PIC X(4).                       
+           05  UL-AN05-RECORD-CODE              PIC 9(5).                       
+           05  UL-AN05-EXTRACT-DATA.                                            
+               10  UL-AN05-DIRECTORY-ID         PIC X(15).                      
+               10  UL-AN05-NO-OF-PIECES         PIC +9(3).                      
+               10  UL-AN05-EACH-PIECE OCCURS 50 TIMES.                          
+                   15  UL-AN05-OCCURRENCE-NUMBER PIC X(2).                      
+                   15  UL-AN05-INSURANCE-CHARGES PIC +9(9).99.                  
+                   15  UL-AN05-RIDER-BENEFIT-TYPE PIC X(5).                     
+                   15  UL-AN05-CVG-EFF-DATE     PIC 9(8).                       
+                   15  UL-AN05-CVG-TERMINATE-DATE PIC 9(8).                     
+                   15  UL-AN05-PREM-TERMINATE-DATE PIC 9(8).                    
+                   15  UL-AN05-RIDER-STATUS     PIC X.                          
+                   15  UL-AN05-CVG-UNITS        PIC +9(6).9(5).                 
+                   15  UL-AN05-PLAN-CODE        PIC X(6).                       
+               10  UL-AN05-CHILD-DATA-AREA.                                     
+                   15  UL-AN05-CHILDS-INFO OCCURS 14 TIMES.                     
+                       20  UL-AN05-CHILDS-NAME.                                 
+                           25  UL-AN05-CHILD-LAST-NAME PIC X(15).               
+                           25  UL-AN05-CHILD-1ST-MIDDLE PIC X(20).              
+                       20  UL-AN05-CHILDS-BIRTHDATE  PIC 9(8).                  
+                       20  UL-AN05-CHILDS-SEX        PIC X.                     
+                       20  UL-AN05-CHILDS-SSN-NUMBER.                           
+                           25  UL-AN05-CHILDS-SSN    PIC X(15).                 
+                           25  UL-AN05-CHILDS-SSN-SUFFIX PIC X.                 
+                       20  UL-AN05-CHILDS-EXP-DATE   PIC 9(8).                  
+                       20  UL-AN05-CHILDS-STATUS-IND PIC X.                     
+           05  UL-AN05-RB-INFO-MISC-INFO.                                       
+               10  UL-AN05-ADB-FACE-AMT       PIC +9(9).99.                     
+               10  UL-AN05-ADINS-FACE-AMT     PIC +9(9).99.                     
+               10  UL-AN05-CHILD-FACE-AMT     PIC +9(9).99.                     
+               10  UL-AN05-GPO-FACE-AMT       PIC +9(9).99.                     
+               10  UL-AN05-COLA-FACE-AMT      PIC +9(9).99.                     
+               10  UL-AN05-TERM-RIDER-FACE-AMT PIC +9(9).99.                    
+               10  UL-AN05-BEG-TRM-RDR-FACE-AMT PIC +9(9).99.                   
+               10  UL-AN05-PRIMARY-INFO.                                        
+                   15  UL-AN05-RELATIONSHIP-CODE-1  PIC X.                      
+                   15  UL-AN05-INDIVIDUAL-NAME-1.                               
+                       20  UL-AN05-LAST-NAME-1    PIC X(35).                    
+                       20  UL-AN05-FIRST-NAME-1   PIC X(25).                    
+                   15  UL-AN05-TTL-ADIN-RID-FACE-AMT1                           
+                                               PIC +9(9).99.                    
+               10  UL-AN05-SECONDARY-INFO.                                      
+                   15  UL-AN05-RELATIONSHIP-CODE-2  PIC X.                      
+                   15  UL-AN05-INDIVIDUAL-NAME-2.                               
+                       20  UL-AN05-LAST-NAME-2    PIC X(35).                    
+                       20  UL-AN05-FIRST-NAME-2   PIC X(25).                    
+                   15  UL-AN05-TTL-ADIN-RID-FACE-AMT2                           
+                                               PIC +9(9).99.                    
+               10  UL-AN05-TTL-10YR-TERM-FACE-AMT                               
+                                         PIC +9(9).99.                          
+               10  UL-AN05-TTL-20YR-TERM-FACE-AMT                               
+                                         PIC +9(9).99.                          
+               10  UL-AN05-PW-DOLLAR-AMT                                        
+                                         PIC +9(9).99.                          
+           05  PW-INFO-FOR-CVGS OCCURS 50 TIMES.                                
+               10  PW-TYPE           PIC XX.                                    
+           05  UL-AN05-SIA-IND-FIELDS OCCURS 50 TIMES.                          
+               10  UL-AN05-SIA-INDICATOR     PIC X.                             
+           05  UL-AN05-PW-BENE-ATTAINED-AGE       PIC +9(3).                    

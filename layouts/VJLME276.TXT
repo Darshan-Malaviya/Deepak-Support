@@ -1,0 +1,14 @@
+       01 WS-VCLME276-LAYOUT.                                                   
+           05  UL-V276-KEY-DATA-AREA.                                           
+               10  UL-V276-KEY-COMPANY-CODE   PIC X(03).                        
+               10  UL-V276-KEY-MASTER-ID      PIC X(15).                        
+               10  UL-V276-KEY-FILE-CODE      PIC X(05).                        
+               10  UL-V276-KEY-DOCUMENT-TYPE  PIC X(50).                        
+               10  UL-V276-KEY-DOCUMENT-ID    PIC X(50).                        
+               10  UL-V276-KEY-TRX-CODE       PIC X(04).                        
+               10  FILLER-1                   PIC X(100).                       
+               10  UL-V276-KEY-MAP-RECORD-ID  PIC X(50).                        
+           05  UL-V276-TRANSACTION-INFO.                                        
+               10  UL-V276-INT-RT-EFF-DT      PIC 9(8).                         
+               10  UL-V276-OLD-PART-LN-INT-RT PIC +9(2).9(3).                   
+               10  UL-V276-NEW-PART-LN-INT-RT PIC +9(2).9(3).                   

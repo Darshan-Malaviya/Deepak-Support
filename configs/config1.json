@@ -1,0 +1,41 @@
+{
+    "feed_configs": [
+        {
+            "feed_file": "VANFEEDA.txt",
+            "output_file": "vantage.json",
+            "camelCase": "False",
+            "layout_config": {
+                "record_layout_mapping": {
+                    "OP-DIST": "VCLMMAIL",
+                    "ARC-TRX": "VCLMXCIV",
+                    "UL-CNTR": "VCLMXCSV",
+                    "ADSI-AGT": "VCLMXAIC",
+                    "UL-SERV": "VCLMXSVC",
+                    "ARC-OWN": "VCLMXCOW",
+                    "ARC-INS": "VCLMXCIN",
+                    "ARC-PAY": "VCLMXCPY",
+                    "UL-BILL": "VCLMEBS3",
+                    "UL-ZRIM": "VCLMERIM",
+                    "PROD-VAR": "VCLMPRDV",
+                    "ARC-CLI": "VCLMXCCL"
+                }
+            }
+        },
+        {
+            "feed_file": "aos010.txt",
+            "output_file": "aos010_output.json",
+            "camelCase": "True",
+            "layout_config": {
+                "layout_file": "ao010layout"
+            }
+        },
+        {
+            "feed_file": "LP006file.txt",
+            "output_file": "LP006_output.json",
+            "camelCase": "False",
+            "layout_config": {
+                "layout_file": "LP006Layout"
+            }
+        }
+    ]
+}

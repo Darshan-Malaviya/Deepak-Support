@@ -1,0 +1,34 @@
+       01  WS-VCLMELNC-LAYOUT.                                                  
+           05  UL-LOAN-KEY-DATA-AREA.                                           
+               10  UL-LOAN-KEY-COMPANY-CODE        PIC X(03).                   
+               10  UL-LOAN-KEY-MASTER-ID           PIC X(15).                   
+               10  UL-LOAN-KEY-FILE-CODE           PIC X(05).                   
+               10  UL-LOAN-KEY-DOCUMENT-TYPE       PIC X(50).                   
+               10  UL-LOAN-KEY-DOCUMENT-ID         PIC X(50).                   
+               10  UL-LOAN-KEY-TRX-CODE            PIC X(04).                   
+               10  FILLER-1                        PIC X(100).                  
+               10  UL-LOAN-KEY-MAP-RECORD-ID       PIC X(50).                   
+           05  UL-LOAN-LOAN-INITIATE-DATE          PIC 9(08).                   
+           05  UL-LOAN-LOAN-INIT-REASON            PIC X(02).                   
+           05  UL-LOAN-LOAN-INDICATORS.                                         
+               10  UL-LOAN-GROSS-NET-IND           PIC X.                       
+               10  UL-LOAN-ADV-ARR-IND             PIC X(03).                   
+               10  UL-LOAN-NEXT-YEAR-IND           PIC X.                       
+               10  UL-LOAN-FUND-ALLOC-OVERRIDE     PIC X.                       
+               10  UL-LOAN-LOAN-LIMIT-OVERRIDE     PIC X.                       
+           05  UL-LOAN-DATE-LOAN-REPAID            PIC 9(08).                   
+           05  UL-LOAN-LOAN-AMOUNTS.                                            
+               10  UL-LOAN-ORIGINAL-LOAN-AMT       PIC +9(9).99.                
+               10  UL-LOAN-REMAINING-LOAN-AMT      PIC +9(9).99.                
+               10  UL-LOAN-INTEREST-DEDUCTIBLE     PIC +9(9).99.                
+               10  UL-LOAN-LOAN-INTEREST-AMT       PIC +9(9).99.                
+               10  UL-LOAN-LOAN-DURATION           PIC +9(3).                   
+           05  UL-LOAN-LOAN-FILE-CODE              PIC +9(5).                   
+           05  UL-LOAN-LAST-PRIN-REPAY-AMT         PIC +9(9).99.                
+           05  UL-LOAN-LAST-PRIN-REPAY-DT          PIC 9(08).                   
+           05  UL-LOAN-LOAN-COLL-FUND-NUMB         PIC 9(03).                   
+           05  UL-LOAN-LOAN-COLL-FUND-ACCT         PIC X(08).                   
+           05  UL-LOAN-PREFERRED-LOAN-IND          PIC X.                       
+           05  UL-LOAN-CALCULATED-VALUES.                                       
+               10  UL-LOAN-TOTAL-POLICY-DEBT       PIC +9(9).99.                
+           05  FILLER-2                            PIC X(189).                  

@@ -1,0 +1,40 @@
+       01 WS-VCLMAN7M-LAYOUT.                                                   
+         02  UL-AN7M-KEY-DATA-AREA.                                             
+           05  UL-AN7M-KEY-COMPANY-CODE        PIC X(03).                       
+           05  UL-AN7M-KEY-MASTER-ID           PIC X(15).                       
+           05  UL-AN7M-KEY-FILE-CODE           PIC X(05).                       
+           05  UL-AN7M-KEY-DOCUMENT-TYPE       PIC X(50).                       
+           05  UL-AN7M-KEY-DOCUMENT-ID         PIC X(50).                       
+           05  UL-AN7M-KEY-TRX-CODE            PIC X(04).                       
+           05  UL-AN7M-FILLER                  PIC X(100).                      
+           05  UL-AN7M-KEY-MAP-RECORD-ID       PIC X(50).                       
+         02  UL-AN7M-DATA-AREA.                                                 
+           05  UL-AN7M-RECORD-TYPE-IND         PIC X(4).                        
+           05  UL-AN7M-RECORD-CODE             PIC 9(5).                        
+           05  UL-AN7M-EXTRACT-DATA.                                            
+               10  UL-AN7M-BEG-PERIOD            PIC 9(8).                      
+               10  UL-AN7M-END-PERIOD            PIC 9(8).                      
+               10  UL-AN7M-NON-GUAR-PART-RATE    PIC +9(3).99.                  
+               10  UL-AN7M-NON-GUAR-GROWTH-FLOOR PIC +9(3).99.                  
+               10  UL-AN7M-NON-GUAR-GROWTH-CAP   PIC +9(3).99.                  
+               10  UL-AN7M-INIT-BAL              PIC +9(9).99.                  
+               10  UL-AN7M-WITHDRAWALS           PIC +9(9).99.                  
+               10  UL-AN7M-INT-RATE              PIC +9(3).99.                  
+               10  UL-AN7M-INT-CREDITED          PIC +9(9).99.                  
+               10  UL-AN7M-TRANSFER-TO-BIA-AMT   PIC +9(9).99.                  
+               10  UL-AN7M-BEG-IDX-VAL           PIC +9(6).9(2).                
+               10  UL-AN7M-END-IDX-VAL           PIC +9(6).9(2).                
+               10  UL-AN7M-IDX-CHANGE            PIC +9(4).9(4).                
+               10  UL-AN7M-IDX-CHG-AFT-PART-RT   PIC +9(4).9(4).                
+               10  UL-AN7M-IDX-GRWTH-RT          PIC +9(3).9(4).                
+               10  UL-AN7M-IDX-MAT-VALUE         PIC +9(9).9(2).                
+               10  UL-AN7M-ADSV                  PIC +9(9).9(2).                
+               10  UL-AN7M-IDX-INT-CREDIT        PIC +9(9).9(2).                
+               10  UL-AN7M-IDX-BLEND-RATE        PIC +9(3).                     
+               10  UL-AN7M-DECL-SPREAD-MUL       PIC +9(1).9(2).                
+               10  UL-AN7M-DECL-SPREAD           PIC +9(2).9(2).                
+               10  UL-AN7M-FUND-NUMBER           PIC +9(3).                     
+               10  UL-AN7M-INDEX-FUND-NAME       PIC  X(50).                    
+               10  UL-AN7M-NEW-MATURED-FUND      PIC  X(1).                     
+               10  UL-AN7M-DECL-BUFF-RT          PIC +9(3).9(2).                
+               10  UL-AN7M-DECL-STEP-RT          PIC +9(3).9(2).                

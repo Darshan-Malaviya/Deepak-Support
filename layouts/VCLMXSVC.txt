@@ -1,0 +1,36 @@
+       01 WS-VCLMXSVC-LAYOUT.                                                   
+           05  UL-SERV-KEY-DATA-AREA.                                           
+               10  UL-SERV-KEY-COMPANY-CODE    PIC X(03).                       
+               10  UL-SERV-KEY-MASTER-ID       PIC X(15).                       
+               10  UL-SERV-KEY-FILE-CODE       PIC X(05).                       
+               10  UL-SERV-KEY-DOCUMENT-TYPE   PIC X(50).                       
+               10  UL-SERV-KEY-DOCUMENT-ID     PIC X(50).                       
+               10  UL-SERV-KEY-TRX-CODE        PIC X(04).                       
+               10  FILLER-1                    PIC X(100).                      
+               10  UL-SERV-KEY-MAP-RECORD-ID   PIC X(50).                       
+           05  UL-SERV-OFFICE-NAME             PIC X(50).                       
+           05  UL-SERV-ADDRESS-LINE1           PIC X(50).                       
+           05  UL-SERV-ADDRESS-LINE2           PIC X(50).                       
+           05  UL-SERV-PHONE-NUMBER            PIC X(50).                       
+           05  UL-SERV-OPEN-DAY                PIC X(50).                       
+           05  UL-SERV-CLOSE-DAY               PIC X(50).                       
+           05  UL-SERV-OPEN-HOUR               PIC X(50).                       
+           05  UL-SERV-CLOSE-HOUR              PIC X(50).                       
+           05  UL-SERV-TIME-ZONE               PIC X(50).                       
+           05  UL-SERV-SIGNATURE-IND           PIC X(02).                       
+           05  UL-SERV-TAD-ADDRESS-AREA.                                        
+               10  UL-SERV-TAD-ADDRESS-1       PIC X(50).                       
+               10  UL-SERV-TAD-ADDRESS-2       PIC X(50).                       
+               10  UL-SERV-TAD-ADDRESS-3       PIC X(50).                       
+               10  UL-SERV-TAD-ADDRESS-4       PIC X(50).                       
+               10  UL-SERV-TAD-BAR-CODE        PIC X(50).                       
+           05  UL-SERV-SIGNATURE-AREA.                                          
+               10  UL-SERV-SIG-IMAGE-NUM       PIC X(50).                       
+               10  UL-SERV-SIG-NAME            PIC X(50).                       
+               10  UL-SERV-SIG-TITLE-ONE       PIC X(50).                       
+               10  UL-SERV-SIG-TITLE-TWO       PIC X(50).                       
+           05  UL-SERV-INQUIRY-AREA.                                            
+               10  UL-SERV-INQUIRY-OFFICE      PIC X(50).                       
+               10  UL-SERV-INQUIRY-ADDRESS1    PIC X(50).                       
+               10  UL-SERV-INQUIRY-ADDRESS2    PIC X(50).                       
+           05  FILLER-2                        PIC X(350).                      

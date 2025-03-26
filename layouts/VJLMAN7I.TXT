@@ -1,0 +1,30 @@
+       01 WS-VCLMAN7I-LAYOUT.                                                   
+         02  UL-AN7I-KEY-DATA-AREA.                                             
+           05  UL-AN7I-KEY-COMPANY-CODE        PIC X(03).                       
+           05  UL-AN7I-KEY-MASTER-ID           PIC X(15).                       
+           05  UL-AN7I-KEY-FILE-CODE           PIC X(05).                       
+           05  UL-AN7I-KEY-DOCUMENT-TYPE       PIC X(50).                       
+           05  UL-AN7I-KEY-DOCUMENT-ID         PIC X(50).                       
+           05  UL-AN7I-KEY-TRX-CODE            PIC X(04).                       
+           05  UL-AN7I-FILLER                  PIC X(100).                      
+           05  UL-AN7I-KEY-MAP-RECORD-ID       PIC X(50).                       
+         02  UL-AN7I-DATA-AREA.                                                 
+           05  UL-AN7I-RECORD-TYPE-IND         PIC X(4).                        
+           05  UL-AN7I-RECORD-CODE             PIC 9(5).                        
+           05  UL-AN7I-EXTRACT-DATA.                                            
+               10  UL-AN7I-TRX-CODE             PIC X(04).                      
+               10  UL-AN7I-PLY-MONTH-START-DATE.                                
+                   15 UL-AN7I-PLY-MTH-STRT-YYYY PIC 9(4).                       
+                   15 UL-AN7I-PLY-MTH-STRT-MM   PIC 9(2).                       
+                   15 UL-AN7I-PLY-MTH-STRT-DD   PIC 9(2).                       
+               10  UL-AN7I-PLY-MONTH-END-DATE.                                  
+                   15 UL-AN7I-PLY-MTH-END-YYYY  PIC 9(4).                       
+                   15 UL-AN7I-PLY-MTH-END-MM    PIC 9(2).                       
+                   15 UL-AN7I-PLY-MTH-END-DD    PIC 9(2).                       
+               10  UL-AN7I-PREMIUMS-RECEIVED    PIC +9(9).9(2).                 
+               10  UL-AN7I-ADMIN-TRX-CHARGES    PIC +9(9).9(2).                 
+               10  UL-AN7I-COI-AMOUNT           PIC +9(9).9(2).                 
+               10  UL-AN7I-OTHER-AMOUNT         PIC +9(9).9(2).                 
+               10  UL-AN7I-WITHDRAWAL-AMOUNT     PIC +9(9).9(2).                
+               10  UL-AN7I-CREDIT-INTERESTS     PIC +9(9).9(2).                 
+               10  UL-AN7I-CONTRACT-FUND        PIC +9(9).9(2).                 

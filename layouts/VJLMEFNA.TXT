@@ -1,0 +1,30 @@
+       01  WS-VCLMEFNA-LAYOUT.                                                  
+           05  FUND-UL-NA-KEY-DATA-AREA.                                        
+               10  FUND-UL-NA-KEY-COMPANY-CODE           PIC X(03).             
+               10  FUND-UL-NA-KEY-MASTER-ID              PIC X(15).             
+               10  FUND-UL-NA-KEY-FILE-CODE              PIC X(05).             
+               10  FUND-UL-NA-KEY-DOCUMENT-TYPE          PIC X(50).             
+               10  FUND-UL-NA-KEY-DOCUMENT-ID            PIC X(50).             
+               10  FUND-UL-NA-KEY-TRX-CODE               PIC X(04).             
+               10  FILLER-1                              PIC X(100).            
+               10  FUND-UL-NA-KEY-MAP-RECORD-ID          PIC X(50).             
+           05  FUND-UL-NA-FUND-INFO.                                            
+               10  FUND-UL-NA-FUND-TYPE              PIC X.                     
+               10  FUND-UL-NA-FUND-PARTICIPATION     PIC X.                     
+               10  FUND-UL-NA-FUND-NUMBER            PIC +9(3).                 
+               10  FUND-UL-NA-FUND-NUMBER-TRNSL      PIC X(50).                 
+               10  FUND-UL-NA-FUND-ALLOCATION-PCT    PIC +9(4).99.              
+               10  FUND-UL-NA-FUND-CURR-CASH-VAL     PIC +9(9).99.              
+               10  FUND-UL-NA-FUND-NET-PREMIUM       PIC +9(9).99.              
+               10  FUND-UL-NA-FUND-PREMIUM-TAX       PIC +9(9).99.              
+               10  FUND-UL-NA-FUND-AREA-TAX          PIC +9(9).99.              
+               10  FUND-UL-NA-FUND-TRANSACTION-FE    PIC +9(9).99.              
+               10  FUND-UL-NA-FUND-SALES-SETUP-FE    PIC +9(9).99.              
+               10  FUND-UL-NA-FUND-SALES-LOADS       PIC +9(9).99.              
+               10  FUND-UL-NA-FUND-ADMIN-SETUP-FE    PIC +9(9).99.              
+               10  FUND-UL-NA-FUND-ADMIN-LOADS       PIC +9(9).99.              
+               10  FUND-UL-NA-FUND-GAIN-AMOUNT       PIC +9(9).99.              
+               10  FUND-UL-NA-FUND-LOSS-AMOUNT       PIC +9(9).99.              
+               10  FUND-UL-NA-FUND-TOTAL-UNITS       PIC +9(7).9(4).            
+               10  FUND-UL-NA-FUND-CHANGE-IN-UNTS    PIC +9(7).9(4).            
+               10  FUND-UL-NA-FUND-UNIT-VALUE       PIC +999.9(6).              

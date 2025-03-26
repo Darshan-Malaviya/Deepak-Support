@@ -1,0 +1,112 @@
+       01  WS-VCLMEGM3-LAYOUT.                                                  
+           05  UL-CNTR-KEY-DATA-AREA.                                           
+               10  UL-VERT-GM-KEY-COMPANY-CODE PIC X(03).                       
+               10  UL-VERT-GM-KEY-MASTER-ID   PIC X(15).                        
+               10  UL-VERT-GM-KEY-FILE-CODE   PIC X(05).                        
+               10  UL-VERT-GM-KEY-DOCUMENT-TYPE PIC X(50).                      
+               10  UL-VERT-GM-KEY-DOCUMENT-ID PIC X(50).                        
+               10  UL-VERT-GM-KEY-TRX-CODE    PIC X(04).                        
+               10  FILLER-1                   PIC X(100).                       
+               10  UL-VERT-GM-KEY-MAP-RECORD-ID PIC X(50).                      
+           05  UL-GM-BROKER-DEALER-INFO.                                        
+               10  UL-GM-TRADE-PARTNER-ID-NUM     PIC X(20).                    
+               10  UL-GM-CLEARINGHOUSE-NAME       PIC X(30).                    
+               10  UL-GM-TRADE-PARTNER-CTL-NUM    PIC X(30).                    
+               10  UL-GM-CLEARINGHOUSE-CTL-NUM    PIC X(30).                    
+               10  UL-GM-DISTRIB-CUST-ACCT-NUM    PIC X(30).                    
+               10  UL-GM-DISTRIB-TRX-ID-NUM       PIC X(30).                    
+               10  UL-GM-APPLICATION-CTL-NUM      PIC X(20).                    
+               10  UL-GM-FILLER-FUTURE-USE        PIC X(68).                    
+           05  UL-GM-TRX-INFO.                                                  
+               10  UL-GM-PLAN-CODE                     PIC X(6).                
+               10  UL-GM-PLAN-CODE-TRNSL               PIC X(50).               
+               10  UL-GM-LINE-OF-BUSINESS              PIC XXX.                 
+               10  UL-GM-LINE-OF-BUSINESS-TRNSL        PIC X(50).               
+               10  UL-GM-STATUTORY-COMPANY-CODE        PIC XXX.                 
+               10  UL-GM-STAT-COMPANY-CODE-TRNSL       PIC X(50).               
+               10  UL-GM-POLICY-DURATION               PIC +9(3).               
+               10  UL-GM-ADJUSTED-DURATION             PIC +9(3).               
+               10  UL-GM-TEFRA-IND                     PIC X.                   
+               10  UL-GM-TARGET-IND                    PIC X.                   
+               10  UL-GM-STATUS-REQUEST-CODE           PIC X.                   
+               10  UL-GM-REQUESTED-TYPE                PIC X.                   
+               10  UL-GM-REQ-TYPE-TRNSL-LONG           PIC X(50).               
+               10  UL-GM-REQ-TYPE-TRNSL-SHRT           PIC X(50).               
+               10  UL-GM-SPEC-PAGE-AGENCY-CRD-IND      PIC X.                   
+               10  UL-GM-LIMIT-OVERRIDE-CODE           PIC X.                   
+               10  UL-GM-SALES-LOAD-OVERRIDE-IND       PIC X.                   
+               10  UL-GM-ADMIN-LOAD-OVERRIDE-IND       PIC X.                   
+               10  UL-GM-USER-AREA                     PIC X(8).                
+               10  UL-GM-PRIOR-UNITS                   PIC +9(6).9(5).          
+               10  UL-GM-CURRENT-UNITS                 PIC +9(6).9(5).          
+               10  UL-GM-REVERSAL-TRX-DATE             PIC 9(8).                
+               10  UL-GM-REVERSAL-ORIGINATOR-CODE      PIC X(8).                
+               10  UL-GM-TOTAL-FUNDS-AFFECTED          PIC +9(3).               
+               10  UL-GM-FUND-VALUES-REMOVED           PIC +9(9).99.            
+               10  UL-GM-GUIDELINE-LEVEL-PREM-ADJ      PIC +9(9).99.            
+               10  UL-GM-PRI-GUIDELINE-LEVEL-PREM      PIC +9(9).99.            
+               10  UL-GM-GUIDELNE-SINGLE-PREM-ADJ      PIC +9(9).99.            
+               10  UL-GM-PRI-GUIDELNE-SINGLE-PREM      PIC +9(9).99.            
+               10  UL-GM-PRIOR-POLICY-TYPE             PIC X.                   
+               10  UL-GM-PRI-POL-TYPE-TRNSL-LONG       PIC X(50).               
+               10  UL-GM-PRI-POL-TYPE-TRNSL-SHRT       PIC X(50).               
+               10  UL-GM-PRIOR-TYPE-CHANGE-DATE        PIC 9(8).                
+               10  UL-GM-TOTAL-POLICY-VALUE            PIC +9(9).99.            
+               10  UL-GM-LOWEST-TERM-CVG-UNITS         PIC +9(6).9(5).          
+               10  UL-GM-LOADS-AND-FEES.                                        
+                   15  UL-GM-TRANSACTION-FEE           PIC +9(9).99.            
+                   15  UL-GM-SALES-LOAD                PIC +9(9).99.            
+                   15  UL-GM-ADMIN-LOAD                PIC +9(9).99.            
+                   15  UL-GM-FILLER                    PIC X(24).               
+               10  UL-GM-ADMIN-PCT-OF-CASH-VALUE       PIC +9(9).9(2).          
+               10  UL-GM-SALES-PCT-OF-CASH-VALUE       PIC +9(9).9(2).          
+               10  UL-GM-ADMIN-CHARGE-PER-UNIT         PIC +9(9).9(2).          
+               10  UL-GM-SALES-CHARGE-PER-UNIT         PIC +9(9).9(2).          
+               10  UL-GM-ADMIN-PCT-OF-TARGET           PIC +9(9).9(2).          
+               10  UL-GM-SALES-PCT-OF-TARGET           PIC +9(9).9(2).          
+               10  UL-GM-PART-SURR-FACTOR-REMNG        PIC +9(1).9(6).          
+               10  UL-GM-PRIOR-SURR-FACTOR-REMNG       PIC +9(1).9(6).          
+               10  FILLER-2                            PIC X(300).              
+               10  UL-GM-FUND-INFORMATION-CTR          PIC 9(3).                
+               10  UL-GM-FUND-AREA                     PIC X(22968).            
+               10  UL-GM-FUND-ARRAY REDEFINES UL-GM-FUND-AREA.                  
+                 12  UL-GM-FUND-INFORMATION              OCCURS 99.             
+                   15  UL-GM-FUND-NUMBER               PIC +999.                
+                   15  UL-GM-FUND-NUMBER-TRNSL         PIC X(50).               
+                   15  UL-GM-FUND-TYPE                 PIC X.                   
+                   15  UL-GM-FUND-CURR-CASH-VALUE      PIC +9(9).99.            
+                   15  UL-GM-FUND-UNITS-REMAINING      PIC +9(7).9(4).          
+                   15  UL-GM-FUND-CHANGE-IN-UNITS      PIC +9(7).9(4).          
+                   15  UL-GM-FUND-TRANSACTION-FEE      PIC +9(9).99.            
+                   15  UL-GM-FUND-SALES-LOAD           PIC +9(9).99.            
+                   15  UL-GM-FUND-ADMIN-LOAD           PIC +9(9).99.            
+                   15  FILLER-3                        PIC  X(24).              
+                   15  UL-GM-FUND-GAIN-AMOUNT          PIC +9(9).99.            
+                   15  UL-GM-FUND-LOSS-AMOUNT          PIC +9(9).99.            
+                   15  UL-GM-FUND-ADMN-PCT-OF-CSH-VAL                           
+                                                       PIC +9(9).99.            
+                   15  UL-GM-FUND-SALE-PCT-OF-CSH-VAL                           
+                                                       PIC +9(9).99.            
+                   15  UL-GM-FUND-ADMIN-CHG-PER-UNIT   PIC +9(9).99.            
+                   15  UL-GM-FUND-SALES-CHG-PER-UNIT   PIC +9(9).99.            
+                   15  UL-GM-FUND-ADMIN-PCT-OF-TARGET  PIC +9(9).99.            
+                   15  UL-GM-FUND-SALES-PCT-OF-TARGET  PIC +9(9).99.            
+               10  UL-GM-PREM-RETURN-INT-RATE          PIC +9(2).9(3).          
+               10  UL-GM-CHANGE-ACTION-TYPE            PIC X.                   
+               10  UL-GM-PREM-RETURN-ACCUM             PIC +9(9).99.            
+               10  UL-GM-PREM-RETURN-UPDT-DATE         PIC 9(8).                
+               10  UL-GM-PRI-DEATH-BENE-OPT-C-IND      PIC X.                   
+               10  UL-GM-MDBG-GUAR-CHANGE-IND          PIC X.                   
+               10  UL-GM-PRIOR-LIFE-TIME-MDBG-IND      PIC X.                   
+               10  UL-GM-PRI-SHRT-TRM-GUAR-END-DT      PIC 9(8).                
+               10  UL-GM-PRI-NO-LPSE-GUAR-END-DT       PIC 9(8).                
+           05  UL-GM-CALC-AREA.                                                 
+               10  UL-GM-BASIC-INS-AMT-CURR            PIC +9(9).99.            
+               10  UL-GM-BASIC-INS-AMT-PRIOR           PIC +9(9).99.            
+               10  UL-GM-SURR-CHARGE                   PIC +9(9).99.            
+               10  UL-GM-MEC-IND-I                     PIC X.                   
+               10  UL-GM-MEC-CONTRACT                  PIC X.                   
+               10  FILLER-4                            PIC +9(9).99.            
+               10  UL-GM-RIDER-AMT                     PIC +9(9).99.            
+               10  UL-GM-TARGET-AMT-PRIOR              PIC +9(9).99.            
+               10  UL-GM-TARGET-AMT-CURR               PIC +9(9).99.            

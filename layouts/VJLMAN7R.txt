@@ -1,0 +1,16 @@
+       01 WS-VCLMAN7R-LAYOUT.                                                   
+         02  UL-AN7R-KEY-DATA-AREA.                                             
+           05  UL-AN7R-KEY-COMPANY-CODE        PIC X(03).                       
+           05  UL-AN7R-KEY-MASTER-ID           PIC X(15).                       
+           05  UL-AN7R-KEY-FILE-CODE           PIC X(05).                       
+           05  UL-AN7R-KEY-DOCUMENT-TYPE       PIC X(50).                       
+           05  UL-AN7R-KEY-DOCUMENT-ID         PIC X(50).                       
+           05  UL-AN7R-KEY-TRX-CODE            PIC X(04).                       
+           05  UL-AN7R-FILLER                  PIC X(100).                      
+           05  UL-AN7R-KEY-MAP-RECORD-ID       PIC X(50).                       
+         02  UL-AN7R-DATA-AREA.                                                 
+           05  UL-AN7R-RECORD-TYPE-IND         PIC X(4).                        
+           05  UL-AN7R-RECORD-CODE             PIC 9(5).                        
+           05  UL-AN7R-EXTRACT-DATA.                                            
+               10  UL-AN7R-TRX-EFF-DATE        PIC 9(8).                        
+               10  UL-AN7R-TRX-CODE-TRNSL      PIC X(50).                       

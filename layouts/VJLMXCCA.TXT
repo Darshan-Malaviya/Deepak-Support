@@ -1,0 +1,49 @@
+       01  WS-VCLMXCCA-LAYOUT.                                                  
+           05  ARC-ASG-KEY-DATA-AREA.                                           
+               10  ARC-ASG-KEY-COMPANY-CODE       PIC X(03).                    
+               10  ARC-ASG-KEY-MASTER-ID          PIC X(15).                    
+               10  ARC-ASG-KEY-FILE-CODE          PIC X(05).                    
+               10  ARC-ASG-KEY-DOCUMENT-TYPE      PIC X(50).                    
+               10  ARC-ASG-KEY-DOCUMENT-ID        PIC X(50).                    
+               10  ARC-ASG-KEY-TRX-CODE           PIC X(04).                    
+               10  FILLER-1                       PIC X(100).                   
+               10  ARC-ASG-KEY-MAP-RECORD-ID      PIC X(50).                    
+           05  ARC-ASG-COMPANY-NAME                  PIC X(80).                 
+           05  ARC-ASG-INDIVIDUAL-NAME.                                         
+               10  ARC-ASG-LAST-NAME                 PIC X(35).                 
+               10  ARC-ASG-FIRST-NAME                PIC X(25).                 
+               10  ARC-ASG-NAME-PREFIX               PIC X(10).                 
+               10  ARC-ASG-NAME-SUFFIX               PIC X(10).                 
+           05  ARC-ASG-ADDRESS-INFO.                                            
+               10  ARC-ASG-ADDRESS-LINE-1            PIC X(35).                 
+               10  ARC-ASG-ADDRESS-LINE-2            PIC X(35).                 
+               10  ARC-ASG-ADDRESS-LINE-3            PIC X(35).                 
+               10  ARC-ASG-ADDRESS-LINE-4            PIC X(35).                 
+               10  ARC-ASG-ADDRESS-LINE-5            PIC X(35).                 
+               10  ARC-ASG-FILLER-CITY-ST            PIC X(35).                 
+               10  ARC-ASG-ZIP-POSTAL-CODE           PIC X(15).                 
+           05  ARC-ASG-TAX-ID-NUMBER.                                           
+               10  ARC-ASG-TAX-ID-NO                 PIC X(15).                 
+               10  ARC-ASG-TAX-ID-SUFFIX             PIC X.                     
+           05  ARC-ASG-COMPANY-INDIV-CODE            PIC X.                     
+           05  ARC-ASG-COUNTRY-CODE                  PIC XX.                    
+           05  ARC-ASG-BIRTH-DATE                    PIC 9(08).                 
+           05  ARC-ASG-SEX-CODE                      PIC X.                     
+           05  ARC-ASG-SEX-CODE-TRNSL                PIC X(50).                 
+           05  ARC-ASG-DEPOSIT-FUND-IND              PIC X.                     
+           05  ARC-ASG-HANDLING-CODE                 PIC X.                     
+           05  ARC-ASG-LANGUAGE-CODE                 PIC X.                     
+           05  ARC-ASG-SPECIAL-COND-CODE-1           PIC X.                     
+           05  ARC-ASG-SPECIAL-COND-CODE-2           PIC X.                     
+           05  ARC-ASG-STATUS-CODE                   PIC X.                     
+           05  ARC-ASG-SOLICITATION-DATE             PIC 9(08).                 
+           05  ARC-ASG-TIN-VERIFICATION              PIC X.                     
+           05  ARC-ASG-NON-RES-ALIEN-IND             PIC X.                     
+           05  ARC-ASG-MARITAL-STATUS                PIC X.                     
+           05  ARC-ASG-NUM-EXEMPTIONS                PIC 9(02).                 
+           05  ARC-ASG-CLIENT-CENTRIC-INFO.                                     
+               10  ARC-ASG-CLIENT-CENTRIC-DATA-CT    PIC 9(03).                 
+               10  ARC-ASG-CLIENT-CENTRIC-DATA OCCURS 50 TIMES.                 
+                   15  ARC-ASG-COMMUNICATION-TYPE    PIC X(02).                 
+                   15  ARC-ASG-COMMUNICATION-NUM     PIC X(50).                 
+           05  FILLER                                PIC X(200).                

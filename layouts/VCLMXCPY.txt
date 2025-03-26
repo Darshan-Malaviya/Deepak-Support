@@ -1,0 +1,49 @@
+       01  WS-VCLMXCPY-LAYOUT.                                                  
+           05  ARC-PAY-KEY-DATA-AREA.                                           
+               10  ARC-PAY-KEY-COMPANY-CODE          PIC X(03).                 
+               10  ARC-PAY-KEY-MASTER-ID             PIC X(15).                 
+               10  ARC-PAY-KEY-FILE-CODE             PIC X(05).                 
+               10  ARC-PAY-KEY-DOCUMENT-TYPE         PIC X(50).                 
+               10  ARC-PAY-KEY-DOCUMENT-ID           PIC X(50).                 
+               10  ARC-PAY-KEY-TRX-CODE              PIC X(04).                 
+               10  FILLER-1                          PIC X(100).                
+               10  ARC-PAY-KEY-MAP-RECORD-ID         PIC X(50).                 
+           05  ARC-PAY-COMPANY-NAME                  PIC X(80).                 
+           05  ARC-PAY-INDIVIDUAL-NAME.                                         
+               10  ARC-PAY-LAST-NAME                 PIC X(35).                 
+               10  ARC-PAY-FIRST-NAME                PIC X(25).                 
+               10  ARC-PAY-NAME-PREFIX               PIC X(10).                 
+               10  ARC-PAY-NAME-SUFFIX               PIC X(10).                 
+           05  ARC-PAY-ADDRESS-INFO.                                            
+               10  ARC-PAY-ADDRESS-LINE-1            PIC X(35).                 
+               10  ARC-PAY-ADDRESS-LINE-2            PIC X(35).                 
+               10  ARC-PAY-ADDRESS-LINE-3            PIC X(35).                 
+               10  ARC-PAY-ADDRESS-LINE-4            PIC X(35).                 
+               10  ARC-PAY-ADDRESS-LINE-5            PIC X(35).                 
+               10  ARC-PAY-FILLER-CITY-ST            PIC X(35).                 
+               10  ARC-PAY-ZIP-POSTAL-CODE           PIC X(15).                 
+           05  ARC-PAY-TAX-ID-NUMBER.                                           
+               10  ARC-PAY-TAX-ID-NO                 PIC X(15).                 
+               10  ARC-PAY-TAX-ID-SUFFIX             PIC X.                     
+           05  ARC-PAY-COMPANY-INDIV-CODE            PIC X.                     
+           05  ARC-PAY-COUNTRY-CODE                  PIC XX.                    
+           05  ARC-PAY-BIRTH-DATE                    PIC 9(08).                 
+           05  ARC-PAY-SEX-CODE                      PIC X.                     
+           05  ARC-PAY-SEX-CODE-TRNSL                PIC X(50).                 
+           05  ARC-PAY-DEPOSIT-FUND-IND              PIC X.                     
+           05  ARC-PAY-HANDLING-CODE                 PIC X.                     
+           05  ARC-PAY-LANGUAGE-CODE                 PIC X.                     
+           05  ARC-PAY-SPECIAL-COND-CODE-1           PIC X.                     
+           05  ARC-PAY-SPECIAL-COND-CODE-2           PIC X.                     
+           05  ARC-PAY-STATUS-CODE                   PIC X.                     
+           05  ARC-PAY-SOLICITATION-DATE             PIC 9(08).                 
+           05  ARC-PAY-TIN-VERIFICATION              PIC X.                     
+           05  ARC-PAY-NON-RES-ALIEN-IND             PIC X.                     
+           05  ARC-PAY-MARITAL-STATUS                PIC X.                     
+           05  ARC-PAY-NUM-EXEMPTIONS                PIC 9(02).                 
+           05  ARC-PAY-CLIENT-CENTRIC-INFO.                                     
+               10  ARC-PAY-CLIENT-CENTRIC-DATA-CT    PIC 9(03).                 
+               10  ARC-PAY-CLIENT-CENTRIC-DATA OCCURS 50 TIMES.                 
+                   15  ARC-PAY-COMMUNICATION-TYPE    PIC X(02).                 
+                   15  ARC-PAY-COMMUNICATION-NUM     PIC X(50).                 
+           05  FILLER-2                              PIC X(200).                

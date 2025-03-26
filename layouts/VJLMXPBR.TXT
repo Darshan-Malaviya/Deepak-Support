@@ -1,0 +1,131 @@
+       01 WS-VCLMXPBR-LAYOUT.                                                   
+           05  BC-PBR-KEY-DATA-AREA.                                            
+               10  BC-PBR-KEY-COMPANY-CODE             PIC X(03).               
+               10  BC-PBR-KEY-POLICY-NUMBER            PIC X(15).               
+               10  BC-PBR-KEY-BILL-INDEX-NUMBER        PIC X(05).               
+               10  BC-PBR-KEY-DOCUMENT-TYPE            PIC X(50).               
+               10  BC-PBR-KEY-DOCUMENT-ID              PIC X(50).               
+               10  BC-PBR-KEY-REPRT-CODE               PIC X(04).               
+               10  FILLER-1                            PIC X(100).              
+               10  BC-PBR-KEY-MAP-RECORD-ID            PIC X(50).               
+           05  BC-PBR-REPORT-CODE                      PIC X(3).                
+           05  BC-PBR-COMPANY-CODE                     PIC X(3).                
+           05  BC-PBR-BILL-CLIENT-NUMBER               PIC X(15).               
+           05  BC-PBR-BILL-INDEX-NUMBER                PIC X(5).                
+           05  BC-PBR-BILL-SORT-FIELD                  PIC X(15).               
+           05  BC-PBR-MASTER-DATA-AREA.                                         
+               10  BC-PBR-CLIENT-NAME-ADDR-INFO.                                
+                   15  BC-PBR-ORIG-NAME-ADDR.                                   
+                       20  BC-PBR-ORIG-NAME            PIC X(80).               
+                       20  BC-PBR-ORIG-ADDRESS-AREA-CTR PIC 9(3).               
+                       20  BC-PBR-ORIG-ADDRESS-AREA.                            
+                           25  BC-PBR-ORIG-ADDRESS OCCURS 5                     
+                                                       PIC X(35).               
+                       20  BC-PBR-ORIG-ZIP-CODE.                                
+                           25  BC-PBR-ORIG-ZIP-PREFIX  PIC X(5).                
+                           25  BC-PBR-ORIG-ZIP-SUFFIX  PIC X(4).                
+                           25  BC-PBR-ORIG-ZIP-SIX     PIC X(6).                
+                       20  BC-PBR-ORIG-CO-INDIV-CODE   PIC X.                   
+                       20  BC-PBR-ORIG-COUNTRY-CODE    PIC XX.                  
+                   15  BC-PBR-DUPL-NAME-ADDR.                                   
+                       20  BC-PBR-DUPL-NAME            PIC X(80).               
+                       20  BC-PBR-DUPL-ADDRESS-AREA-CTR PIC 9(3).               
+                       20  BC-PBR-DUPL-ADDRESS-AREA.                            
+                           25  BC-PBR-DUPL-ADDRESS OCCURS 5                     
+                                                       PIC X(35).               
+                       20  BC-PBR-DUPL-ZIP-CODE.                                
+                           25  BC-PBR-DUPL-ZIP-PREFIX  PIC X(5).                
+                           25  BC-PBR-DUPL-ZIP-SUFFIX  PIC X(4).                
+                           25  BC-PBR-DUPL-ZIP-SIX     PIC X(6).                
+                       20  BC-PBR-DUPL-CO-INDIV-CODE   PIC X.                   
+                       20  BC-PBR-DUPL-COUNTRY-CODE    PIC XX.                  
+               10  BC-PBR-LAST-ONLINE-DATE             PIC X(8).                
+               10  BC-PBR-LAST-ONLINE-ORIG             PIC X(8).                
+               10  BC-PBR-LAST-SYSTEM-DATE             PIC X(8).                
+               10  BC-PBR-BILL-DELETE-DAYS             PIC +9(5).               
+               10  BC-PBR-BILL-DUE-DAYS                PIC +9(3).               
+               10  BC-PBR-BACK-BILLING-IND             PIC X.                   
+               10  BC-PBR-BILL-GROUP-INTERVAL          PIC XX.                  
+               10  BC-PBR-GROUP-INITIAL-START-DT       PIC X(8).                
+               10  BC-PBR-PRINT-REQ-INFORMATION.                                
+                   15  BC-PBR-BILL-TYPE                PIC X.                   
+                   15  BC-PBR-ITEMS-PER-PAGE           PIC +999.                
+                   15  BC-PBR-NUMBER-PRINT-COPIES      PIC +999.                
+                   15  BC-PBR-LIST-BILL-SEQUENCE       PIC X.                   
+                   15  BC-PBR-BILL-VIEW-SEQUENCE       PIC X.                   
+                   15  BC-PBR-MAIL-FLAG                PIC X.                   
+               10  BC-PBR-MASTER-BILL-USR-AR-CTR       PIC 9(3).                
+               10  BC-PBR-MASTER-BILL-USER-AREA.                                
+                   15  BC-PBR-USER-AREA OCCURS 10      PIC X(30).               
+               10  BC-PBR-FILLER                       PIC X(100).              
+           05  BC-PBR-GROUP-DATA-AREA.                                          
+               10  BC-PBR-BILL-ADD-START-DATE          PIC X(8).                
+               10  BC-PBR-BILL-ADD-END-DATE            PIC X(8).                
+               10  BC-PBR-BILL-DUE-DATE                PIC X(8).                
+               10  BC-PBR-LAST-ONLINE-DATE             PIC X(8).                
+               10  BC-PBR-LAST-ONLINE-ORIG             PIC X(8).                
+               10  BC-PBR-BILL-STATUS                  PIC X.                   
+               10  BC-PBR-BILL-PRINT-IND               PIC X.                   
+               10  BC-PBR-BILL-TOTALS.                                          
+                   15  BC-PBR-TOTAL-BILL-AMOUNT        PIC +9(9).99.            
+               10  BC-PBR-REMITTANCE-EFF-DATE          PIC X(8).                
+               10  BC-PBR-REMITTANCE-TAX-EFF-DATE      PIC X(8).                
+               10  BC-PBR-PRINT-REQ-INFORMATION.                                
+                   15  BC-PBR-BILL-TYPE                PIC X.                   
+                   15  BC-PBR-ITEMS-PER-PAGE           PIC +999.                
+                   15  BC-PBR-NUMBER-PRINT-COPIES      PIC +999.                
+               10  BC-PBR-GROUP-TYPE-CODE              PIC XX.                  
+               10  BC-PBR-BATCH-NUMBER                 PIC X(5).                
+               10  BC-PBR-SUSPENSE-TICKET-NUMBER       PIC X(5).                
+               10  BC-PBR-TRX-CODE-USED                PIC X(4).                
+               10  BC-PBR-GROUP-BILL-USR-AREA-CTR      PIC 9(3).                
+               10  BC-PBR-GROUP-BILL-USER-AREA.                                 
+                   15  BC-PBR-USER-AREA OCCURS 10      PIC X(30).               
+               10  BC-PBR-FILLER                       PIC X(100).              
+           05  BC-PBR-POLICY-DATA-AREA.                                         
+               10  BC-PBR-FEDERAL-ID-NUMBER            PIC X(10).               
+               10  BC-PBR-EMPLOYEE-NUMBER              PIC X(11).               
+               10  BC-PBR-INSURED-NAME.                                         
+                   15  BC-PBR-INSURED-LAST-NAME        PIC X(35).               
+                   15  BC-PBR-INSURED-FIRST-NAME       PIC X(5).                
+               10  BC-PBR-POLICY-NUMBER                PIC X(15).               
+               10  BC-PBR-LINE-OF-BUSINESS-CODE        PIC XXX.                 
+               10  BC-PBR-POLICY-EFF-DATE.                                      
+                   15  BC-PBR-POLICY-EFF-YY            PIC 9(4).                
+                   15  BC-PBR-POLICY-EFF-MM            PIC 99.                  
+                   15  BC-PBR-POLICY-EFF-DD            PIC 99.                  
+               10  BC-PBR-POLICY-STATUS                PIC X.                   
+               10  BC-PBR-SYSTEM-CODE                  PIC XXXX.                
+               10  BC-PBR-PRODUCT-CODE                 PIC XX.                  
+               10  BC-PBR-BILL-TYPE                    PIC X.                   
+               10  BC-PBR-AMOUNTS.                                              
+                   15  BC-PBR-BILL-AMOUNT              PIC +9(9).99.            
+                   15  BC-PBR-LOAN-BILL-AMOUNT         PIC +9(9).99.            
+                   15  BC-PBR-LOAN-INT-BILL-AMOUNT     PIC +9(9).99.            
+                   15  BC-PBR-PAID-AMOUNT              PIC +9(9).99.            
+               10  BC-PBR-REMITTANCE-EFF-DATE          PIC X(8).                
+               10  BC-PBR-SECONDARY-ID                 PIC X(5).                
+               10  BC-PBR-MEMO-CODE                    PIC XX.                  
+               10  BC-PBR-SOURCE-CODE                  PIC XX.                  
+               10  BC-PBR-LAST-ONLINE-DATE             PIC X(8).                
+               10  BC-PBR-LAST-ONLINE-ORIG             PIC X(8).                
+               10  BC-PBR-PAGE-NUMBER                  PIC +9(5).               
+               10  BC-PBR-TRX-OVERRIDE-IND             PIC X.                   
+               10  BC-PBR-INDIVIDUAL-BILLING-INFO.                              
+                   15  BC-PBR-BILL-EXTRACT-DATE        PIC X(8).                
+                   15  BC-PBR-BILL-DUE-DATE            PIC X(8).                
+                   15  BC-PBR-BILL-FREQUENCY           PIC XX.                  
+                   15  BC-PBR-ADDRESS-FILLER-AREA.                              
+                       20  BC-PBR-ADDRESS-1-FILLER     PIC X(159).              
+                       20  BC-PBR-ADDRESS-2-FILLER     PIC X(159).              
+               10  BC-PBR-POLICY-BILL-USER-AR-CTR      PIC 9(3).                
+               10  BC-PBR-POLICY-BILL-USER-AREA.                                
+                   15  BC-PBR-USER-AREA OCCURS 10      PIC X(30).               
+               10  BC-PBR-LBI-INDICATOR                PIC X.                   
+               10  BC-PBR-PAID-BILL-IND                PIC X.                   
+               10  BC-PBR-PAID-BILL-NUM                REDEFINES                
+                      BC-PBR-PAID-BILL-IND             PIC 9.                   
+               10  BC-PBR-ERROR-TRX                    PIC X(3).                
+               10  BC-PBR-FILLER                       PIC X(100).              
+           05  BC-PBR-FILLER                           PIC X(13).               
+           05  BC-PBR-LINE-OF-BUSINESS-TRNSL           PIC X(50).               

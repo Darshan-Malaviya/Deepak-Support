@@ -1,0 +1,49 @@
+       01 WS-VCLMXCOW-LAYOUT.                                                   
+           05  ARC-OWN-KEY-DATA-AREA.                                           
+               10  ARC-OWN-KEY-COMPANY-CODE          PIC X(03).                 
+               10  ARC-OWN-KEY-MASTER-ID             PIC X(15).                 
+               10  ARC-OWN-KEY-FILE-CODE             PIC X(05).                 
+               10  ARC-OWN-KEY-DOCUMENT-TYPE         PIC X(50).                 
+               10  ARC-OWN-KEY-DOCUMENT-ID           PIC X(50).                 
+               10  ARC-OWN-KEY-TRX-CODE              PIC X(04).                 
+               10  FILLER-1                          PIC X(100).                
+               10  ARC-OWN-KEY-MAP-RECORD-ID         PIC X(50).                 
+           05  ARC-OWN-COMPANY-NAME                  PIC X(80).                 
+           05  ARC-OWN-INDIVIDUAL-NAME.                                         
+               10  ARC-OWN-LAST-NAME                 PIC X(35).                 
+               10  ARC-OWN-FIRST-NAME                PIC X(25).                 
+               10  ARC-OWN-NAME-PREFIX               PIC X(10).                 
+               10  ARC-OWN-NAME-SUFFIX               PIC X(10).                 
+           05  ARC-OWN-ADDRESS-INFO.                                            
+               10  ARC-OWN-ADDRESS-LINE-1            PIC X(35).                 
+               10  ARC-OWN-ADDRESS-LINE-2            PIC X(35).                 
+               10  ARC-OWN-ADDRESS-LINE-3            PIC X(35).                 
+               10  ARC-OWN-ADDRESS-LINE-4            PIC X(35).                 
+               10  ARC-OWN-ADDRESS-LINE-5            PIC X(35).                 
+               10  ARC-OWN-FILLER-CITY-ST            PIC X(35).                 
+               10  ARC-OWN-ZIP-POSTAL-CODE           PIC X(15).                 
+           05  ARC-OWN-TAX-ID-NUMBER.                                           
+               10  ARC-OWN-TAX-ID-NO                 PIC X(15).                 
+               10  ARC-OWN-TAX-ID-SUFFIX             PIC X.                     
+           05  ARC-OWN-COMPANY-INDIV-CODE            PIC X.                     
+           05  ARC-OWN-COUNTRY-CODE                  PIC XX.                    
+           05  ARC-OWN-BIRTH-DATE                    PIC 9(08).                 
+           05  ARC-OWN-SEX-CODE                      PIC X.                     
+           05  ARC-OWN-SEX-CODE-TRNSL                PIC X(50).                 
+           05  ARC-OWN-DEPOSIT-FUND-IND              PIC X.                     
+           05  ARC-OWN-HANDLING-CODE                 PIC X.                     
+           05  ARC-OWN-LANGUAGE-CODE                 PIC X.                     
+           05  ARC-OWN-SPECIAL-COND-CODE-1           PIC X.                     
+           05  ARC-OWN-SPECIAL-COND-CODE-2           PIC X.                     
+           05  ARC-OWN-STATUS-CODE                   PIC X.                     
+           05  ARC-OWN-SOLICITATION-DATE             PIC 9(08).                 
+           05  ARC-OWN-TIN-VERIFICATION              PIC X.                     
+           05  ARC-OWN-NON-RES-ALIEN-IND             PIC X.                     
+           05  ARC-OWN-MARITAL-STATUS                PIC X.                     
+           05  ARC-OWN-NUM-EXEMPTIONS                PIC 9(02).                 
+           05  ARC-OWN-CLIENT-CENTRIC-INFO.                                     
+               10  ARC-OWN-CLIENT-CENTRIC-DATA-CT    PIC 9(03).                 
+               10  ARC-OWN-CLIENT-CENTRIC-DATA OCCURS 50 TIMES.                 
+                   15  ARC-OWN-COMMUNICATION-TYPE    PIC X(02).                 
+                   15  ARC-OWN-COMMUNICATION-NUM     PIC X(50).                 
+           05  FILLER                                PIC X(200).                

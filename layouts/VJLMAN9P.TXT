@@ -1,0 +1,52 @@
+       01 WS-VCLMAN9P-LAYOUT.                                                   
+         02  UL-AN9P-KEY-DATA-AREA.                                             
+           05  UL-AN9P-KEY-COMPANY-CODE  PIC X(03).                             
+           05  UL-AN9P-KEY-MASTER-ID     PIC X(15).                             
+           05  UL-AN9P-KEY-FILE-CODE     PIC X(05).                             
+           05  UL-AN9P-KEY-DOCUMENT-TYPE PIC X(50).                             
+           05  UL-AN9P-KEY-DOCUMENT-ID   PIC X(50).                             
+           05  UL-AN9P-KEY-TRX-CODE      PIC X(04).                             
+           05  UL-AN9P-FILLER            PIC X(100).                            
+           05  UL-AN9P-KEY-MAP-RECORD-ID PIC X(50).                             
+         02  UL-AN9P-DATA-AREA.                                                 
+           05  UL-AN9P-RECORD-TYPE-IND   PIC X(4).                              
+           05  UL-AN9P-RECORD-CODE       PIC 9(5).                              
+           05  UL-AN9P-EXTRACT-DATA.                                            
+               10  UL-AN9P-USER-AREA-SEG-DATA.                                  
+                   15  UL-AN9P-USER-AREA-DATA   OCCURS 10 TIMES                 
+                                                PIC X(30).                      
+               10  UL-AN9P-NRPD-VALUES.                                         
+                   15  UL-AN9P-NEXT-RISK-PUR-DATE PIC 9(8).                     
+                   15  UL-AN9P-SHORT-TERM-IND     PIC X.                        
+                   15  UL-AN9P-LIMITED-IND        PIC X.                        
+                   15  UL-AN9P-LONG-TERM-IND      PIC X.                        
+                   15  UL-AN9P-SHORT-TERM-DB-AMT  PIC +9(9).99.                 
+                   15  UL-AN9P-LIMITED-DB-AMOUNT  PIC +9(9).99.                 
+                   15  UL-AN9P-LONG-TERM-DB-AMT   PIC +9(9).99.                 
+                   15  UL-AN9P-SHORT-TERM-DURATION PIC +9(3).                   
+                   15  UL-AN9P-LIMITED-DURATION   PIC +9(3).                    
+                   15  UL-AN9P-LONG-TERM-DURATION PIC +9(3).                    
+               10  UL-AN9P-SED-VALUES.                                          
+                   15  UL-AN9P-AT-INTEREST-FIELDS.                              
+                       20  UL-AN9P-TOTAL-GROSS-PREMIUM PIC +9(9).99.            
+                       20  UL-AN9P-TOTAL-WITHDRAWALS PIC +9(9).99.              
+                       20  UL-AN9P-TOTAL-NET-PREMIUM PIC +9(9).99.              
+                   15  UL-AN9P-NON-INTEREST-FIELDS.                             
+                       20  UL-AN9P-TOTAL-GROSS-PREMIUM PIC +9(9).99.            
+                       20  UL-AN9P-TOTAL-WITHDRAWALS PIC +9(9).99.              
+           05  UL-AN9P-MISC-INFO.                                               
+               10  UL-AN9P-SHORT-TERM-ACTIVE-SW PIC X.                          
+               10  UL-AN9P-LIMITED-TERM-ACT-SW  PIC X.                          
+               10  UL-AN9P-LIFETIME-ACTIVE-SW   PIC X.                          
+               10  UL-AN9P-DIVORCE-LAW-IND-SW   PIC X.                          
+               10  UL-AN9P-BENEFIT-INDICATOR-SW PIC X.                          
+               10  UL-AN9P-SHORT-TERM-AGE       PIC +9(3).                      
+               10  UL-AN9P-LIMITED-AGE          PIC +9(3).                      
+               10  UL-AN9P-SHORTFALL-AMOUNT     PIC +9(9).99.                   
+               10  UL-AN9P-PLCY-SPLIT-RDR-IND-SW  PIC X.                        
+               10  UL-AN9P-NLG-AMOUNT-100         PIC +9(9).99.                 
+               10  UL-AN9P-NLG-END-DATE         PIC 9(8).                       
+               10  UL-AN9P-NLG-END-TEXT         PIC X.                          
+               10  UL-AN9P-NLG-VALUE-TENSE      PIC X.                          
+               10  UL-AN9P-PREM-CREDIT-ELIG-AMT PIC +9(9).99.                   
+               10  UL-AN9P-NLG-END-DATE-NY-REG  PIC  9(8).                      

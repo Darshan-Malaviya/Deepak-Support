@@ -1,0 +1,28 @@
+       01 WS-VCLMAN8T-LAYOUT.                                                   
+         02  UL-AN8T-KEY-DATA-AREA.                                             
+           05  UL-AN8T-KEY-COMPANY-CODE        PIC X(03).                       
+           05  UL-AN8T-KEY-MASTER-ID           PIC X(15).                       
+           05  UL-AN8T-KEY-FILE-CODE           PIC X(05).                       
+           05  UL-AN8T-KEY-DOCUMENT-TYPE       PIC X(50).                       
+           05  UL-AN8T-KEY-DOCUMENT-ID         PIC X(50).                       
+           05  UL-AN8T-KEY-TRX-CODE            PIC X(04).                       
+           05  UL-AN8T-FILLER                  PIC X(100).                      
+           05  UL-AN8T-KEY-MAP-RECORD-ID       PIC X(50).                       
+         02  UL-AN8T-DATA-AREA.                                                 
+               10  UL-AN8T-INSTRCTION-STATUS-CD-M  PIC X(1).                    
+               10  UL-AN8T-MATURING-FUND-INFO OCCURS 10 TIMES.                  
+                  15  UL-AN8T-CUSTOM-INDEX-ACCOUNT-M PIC X(50).                 
+                  15  UL-AN8T-SWEEP-INFORMATION-M    OCCURS 50 TIMES.           
+                     20  UL-AN8T-SWEEP-FUND-NAME-M  PIC X(50).                  
+                     20  UL-AN8T-SWEEP-FUND-PCT-M   PIC 9(3).                   
+               10  UL-AN8T-INSTRCTION-STATUS-CD-R   PIC X(1).                   
+               10  UL-AN8T-RECURR-SWEEP-AMT         PIC +9(9).9(2).             
+               10  UL-AN8T-RECUR-TRANSFER-END-DT.                               
+                  15  UL-AN8T-RECURR-TRNS-YYYY      PIC 9(4).                   
+                  15  UL-AN8T-RECURR-TRNS-MM        PIC 9(2).                   
+                  15  UL-AN8T-RECURR-TRNS-DD        PIC 9(2).                   
+               10  UL-AN8T-RECUR-TRNSF-END-DT-R                                 
+                    REDEFINES UL-AN8T-RECUR-TRANSFER-END-DT PIC 9(8).           
+               10  UL-AN8T-SWEEP-INFORMATION-R    OCCURS 10 TIMES.              
+                  15  UL-AN8T-SWEEP-FUND-NAME-R   PIC X(50).                    
+                  15  UL-AN8T-SWEEP-FUND-PCT-R    PIC 9(3).                     

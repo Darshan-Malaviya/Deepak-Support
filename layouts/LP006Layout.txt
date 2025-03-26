@@ -1,0 +1,151 @@
+      * ------------------------------------------------------------ *          
+      *         <<<<<   OCWFEED, LPFEED AND LP006 LAYOUT >>>>>>                 
+      * COPYBOOK NAME: JSNLP006                                                 
+      * ------------------------------------------------------------ *          
+      * THIS LIFEPRO COPYBOOK IS OUTPUT SPECIFIC.                               
+      * ------------------------------------------------------------ *          
+      *            INITIALS OF   DATE                                           
+      * IDENTIFIER PROGRAMMER   CHANGED    DESCRIPTION OF CHANGES               
+      * ------------------------------------------------------------ *          
+      *            TCS         2024/11/05  INITIAL CREATION                     
+      * ------------------------------------------------------------ *          
+       01 WS-LP006-LAYOUT.                                                      
+      *****************************************************************         
+      * START OF OCWFEED LAYOUT                                       *         
+      *****************************************************************         
+       02  W-CTRL-WORD.                                                         
+           05  W-FILLER                                PIC X(04).               
+           05  W-CW-EXPANSION-POS                      PIC X(01).               
+           05  W-CW-IA.                                                         
+               10  W-CW-ADMIN-UNIT-IA                  PIC X(01).               
+               10  W-CW-CODE-IA.                                                
+                   15  W-CW-TYPE-IA                    PIC X(01).               
+                   15  W-CW-KIND-IA.                                            
+                       20  W-CW-KIND-IA-1ST-DIGIT      PIC 9(01).               
+                       20  W-CW-KIND-IA-2ND-3RD-DIGITS PIC 9(02).               
+               10  W-CW-DATA-IA.                                                
+                   15  W-CW-ASSEMBLY-AREA-IA           PIC X(02).               
+                   15  W-CW-DESTINATION-IA-1-2         PIC X(02).               
+                   15  W-CW-DESTINATION-IA-3-4         PIC X(02).               
+                   15  W-CW-SEQUENCE-AREA-IA.                                   
+                       20  W-CW-1ST-SEQUENCE-IA        PIC X(08).               
+                       20  W-CW-2ND-SEQUENCE-IA        PIC X(09).               
+                       20  W-POLICY-NUMBER             REDEFINES                
+                           W-CW-2ND-SEQUENCE-IA.                                
+                           25  W-DO-POL-TYPE           PIC X(01).               
+                           25  W-POL-TYPE              PIC X(01).               
+                           25  W-POL-FILLER            PIC 9(07).               
+           05  W-CW-SEQ-CTRL-IA                        PIC X(01).               
+         02  OCW-TRAILER.                                                       
+             05  SB-AU-AND-CODE.                                                
+                 10  SB-AU                             PIC X(02).               
+                 10  SB-CODE                           PIC X(02).               
+             05  AA-ACCESS-AREA.                                                
+                 10  AA-CENTRALIZED-OFF-FLAG           PIC X(01).               
+                 10  AA-OFFICE.                                                 
+                     15  INFORCE-OFFICE                PIC X(04).               
+                     15  DETACHED-OFFICE               PIC X(01).               
+             05  FOT-TRLR.                                                      
+                 10  W-FORMAT-ID                       PIC X(01).               
+                 10  REQ-RHO                           PIC X(01).               
+                 10  F                                 PIC X(01).               
+                 10  REQ-OFFICE.                                                
+                     15  REQ-OFF                       PIC X(04).               
+                     15  F                             PIC X(01).               
+                     15  DETACH-OFF                    PIC X(01).               
+                 10  RESP-BU-CODE                      PIC X(02).               
+                 10  F                                 PIC X(03).               
+                 10  PROC-RHO                          PIC X(01).               
+             05  AGENTS-NUMBER.                                                 
+                 10  AGENT-TYPE                        PIC X(01).               
+                 10  AGENTS-NUM                        PIC X(05).               
+             05  POL-ID-ITEM-NUM.                                               
+                 10  POL-ID-FILLER                     PIC 9(05).               
+             05  DEBIT-MAIL-PAY-SIG                    PIC X(01).               
+             05  SIGNED-SOURCE-DOC                     PIC X(01).               
+             05  INPUT-ID                              PIC 9(07).               
+             05  COMPANY-CODE                          PIC X(03).               
+             05  LANG-CODE                             PIC X(02).               
+             05  NEW-PATH-SWITCH                       PIC X(01).               
+             05  TRANS-CODE                            PIC 9(03).               
+             05  PRODUCT-CODE                          PIC 9(05).               
+             05  PRU-SELECT-SERV-REP-CONTR-NO          PIC X(06).               
+             05  W-POLICY-NUMBER.                                               
+                 06  W-POLICY-NO-1                     PIC X(01).               
+                 06  W-POLICY-NO-2                     PIC X(01).               
+                 06  W-POLICY-FILLER                   PIC 9(07).               
+             05  OP-1-AND-2-SIGNAL                     PIC X(01).               
+             05  MKTG-CHANNEL-POLICY                   PIC 9(01).               
+             05  PRUSEL-COPY-SIGNAL                    PIC 9(01).               
+             05  AS400-IND                             PIC X(01).               
+             05  TRANS-BATCH-TYPE                      PIC X(01).               
+             05  BUNDLING-IND                          PIC X(03).               
+             05  OFFICE-INFORCE-HOLD-FILLER            PIC X(04).               
+             05  F-CO-SETTLEMENT-STATUS                PIC X.                   
+             05  F-CO-ADR-CLAIM-DISP                   PIC X                    
+                                                       OCCURS 3 TIMES.          
+             05  F-CO-SETTLE-OVERFLOW-SIGNAL           PIC X.                   
+             05  F-CO-OPL-LOAN-STATUS                  PIC X.                   
+             05  F-CO-ADR-STATUS                       PIC X.                   
+             05  OCW-NOTICE-HANDLING                   PIC 9(03).               
+             05  OCW-FILLER                            PIC X(11).               
+      *                                                                         
+      *****************************************************************         
+      * END  OF OCWFEED LAYOUT                                        *         
+      *****************************************************************         
+      *****************************************************************         
+      * START OF LPFEED LAYOUT                                        *         
+      *****************************************************************         
+       02  LP-FEED.                                                             
+           05  LP-RECIPIENT-ID                     PIC 9(2).                    
+           05  LP-RECIPIENT-NAME                   PIC X(24).                   
+           05  LP-ADDRESS-LINE-1                   PIC X(35).                   
+           05  LP-ADDRESS-LINE-2                   PIC X(35).                   
+           05  LP-ADDRESS-LINE-3                   PIC X(35).                   
+           05  LP-ADDRESS-LINE-4                   PIC X(35).                   
+           05  LP-UNDELV-IND                       PIC X(01).                   
+           05  LP-FILLER                           PIC X(33).                   
+      *                                                                         
+      ****************************************************************          
+      *  END OF LPFEED LAAYOUT                                       *          
+      ****************************************************************          
+      ****************************************************************          
+      *  START OF LP006 LAYOUT                                       *          
+      ****************************************************************          
+       02  OUTPUT-BLOCK.                                                        
+           05  C-POLICY-YR                         PIC 9(05).                   
+           05  C-INFORCE-DEBIT-NO                  PIC 9(03).                   
+           05  C-AGENTS-INITIALS                   PIC X(03).                   
+           05  C-COMM-SIGNAL                       PIC 9(01).                   
+           05  C-AGENTS-NO.                                                     
+               10  C-AGENT-TYPE                    PIC X(01).                   
+               10  C-AGT-NO-FILLER                 PIC X(05).                   
+           05  C-NAME-OF-INSURED                   PIC X(24).                   
+           05  C-C-S-P-PAID-TO-DATE.                                            
+               10  C-C-S-P-PAID-TO-DATE-YR         PIC 9(05).                   
+               10  C-C-S-P-PAID-TO-DATE-MO         PIC 9(03).                   
+               10  C-C-S-P-PAID-TO-DATE-DAY        PIC 9(03).                   
+           05  C-PREM-PAYMENT-MODE                 PIC 9(01).                   
+           05  C-REDUCTION-DIVD-BILLED             PIC 9(07)V99.                
+           05  C-DIVD-OPTION                       PIC 9(03).                   
+           05  C-AUTO-PREM-LOAN-SIGNAL             PIC 9(01).                   
+           05  C-DIVD-TOTAL-ACCUM                  PIC 9(07)V99.                
+           05  C-CURRENT-PROCESSING-DATE.                                       
+               10  C-CURRENT-PROCESSING-YR         PIC 9(05).                   
+               10  C-CURRENT-PROCESSING-MO         PIC 9(03).                   
+               10  C-CURRENT-PROCESSING-DAY        PIC 9(03).                   
+           05  C-PREM-GROSS-BILLED                 PIC 9(07)V99.                
+           05  C-PREM-NET-BILLED                   PIC 9(07)V99.                
+           05  C-AMOUNT-OF-LOAN-AVAILABLE          PIC 9(07)V99.                
+           05  C-RESIDENT-STATE-OR-PROVINCE        PIC 9(03).                   
+           05  C-PENS-TRUST-RHO                    PIC 9(01).                   
+           05  C-PREM-CREDIT-SECTION-SIGNAL        PIC 9(01).                   
+           05  C-TC-PREMIUM-CREDIT                 PIC 9(07)V99.                
+           05  C-APL-SUFFICIENT-IND                PIC X(01).                   
+           05  C-NFO-OPTION                        PIC X(01).                   
+           05  C-ISSUE-STATE                       PIC X(02).                   
+      *                                                                         
+      ****************************************************************          
+      *  END OF LP006 LAYOUT                                         *          
+      ****************************************************************          
+      * -------------- END OF COPYBOOK JSNLP006 --------------------- *         

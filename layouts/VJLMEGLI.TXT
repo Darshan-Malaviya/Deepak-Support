@@ -1,0 +1,183 @@
+       01  WS-VCLMEGLI-LAYOUT.                                                  
+           05  UL-CNTR-KEY-DATA-AREA.                                           
+               10  UL-GLI-KEY-COMPANY-CODE    PIC X(03).                        
+               10  UL-GLI-KEY-MASTER-ID       PIC X(15).                        
+               10  UL-GLI-KEY-FILE-CODE       PIC X(05).                        
+               10  UL-GLI-KEY-DOCUMENT-TYPE   PIC X(50).                        
+               10  UL-GLI-KEY-DOCUMENT-ID     PIC X(50).                        
+               10  UL-GLI-KEY-TRX-CODE        PIC X(04).                        
+               10  FILLER-1                   PIC X(100).                       
+               10  UL-GLI-KEY-MAP-RECORD-ID   PIC X(50).                        
+           05  UL-GLI-BROKER-DEALER-INFO.                                       
+               10  UL-GLI-TRADE-PARTNER-ID-NUM    PIC X(20).                    
+               10  UL-GLI-CLEARINGHOUSE-NAME      PIC X(30).                    
+               10  UL-GLI-TRADE-PARTNER-CTL-NUM   PIC X(30).                    
+               10  UL-GLI-CLEARINGHOUSE-CTL-NUM   PIC X(30).                    
+               10  UL-GLI-DISTRIB-CUST-ACCT-NUM   PIC X(30).                    
+               10  UL-GLI-DISTRIB-TRX-ID-NUM      PIC X(30).                    
+               10  UL-GLI-APPLICATION-CTL-NUM     PIC X(20).                    
+               10  UL-GLI-FILLER-FUTURE-USE       PIC X(68).                    
+           05  UL-GLI-TRX-INFO.                                                 
+               10  UL-GLI-OCCURRENCE-NO                  PIC 99.                
+               10  UL-GLI-DB-RETRIEVAL-KEY               PIC X(87).             
+               10  UL-GLI-PLAN-CODE                      PIC X(6).              
+               10  UL-GLI-PLAN-CODE-TRNSL                PIC X(50).             
+               10  UL-GLI-LINE-OF-BUSINESS               PIC XXX.               
+               10  UL-GLI-LINE-OF-BUSINESS-TRNSL         PIC X(50).             
+               10  UL-GLI-STATUTORY-COMPANY-CODE         PIC XXX.               
+               10  UL-GLI-POLICY-DURATION                PIC +9(3).             
+               10  UL-GLI-ADJUSTED-DURATION              PIC +9(3).             
+               10  UL-GLI-TEFRA-IND                      PIC X.                 
+               10  UL-GLI-TARGET-IND                     PIC X.                 
+               10  UL-GLI-CVG-EFF-DATE                   PIC 9(8).              
+               10  UL-GLI-CVG-ISSUE-DATE                 PIC 9(8).              
+               10  UL-GLI-INCREASE-UNITS                 PIC +9(6).9(5).        
+               10  UL-GLI-PREM-CLASS-CODE                PIC X.                 
+               10  UL-GLI-PREM-CLASS-CODE-TRNSL          PIC X(50).             
+               10  UL-GLI-RATE-EFF-DATE                  PIC 9(8).              
+               10  UL-GLI-UND-EFF-DATE                   PIC 9(8).              
+               10  UL-GLI-REINSURANCE-IND                PIC X.                 
+               10  UL-GLI-NON-STANDARD-IND               PIC X.                 
+               10  UL-GLI-REPLACEMENT-IND                PIC X.                 
+               10  UL-GLI-PW-ADB-INDICATOR               PIC X.                 
+               10  UL-GLI-MATURITY-DATE                  PIC 9(8).              
+               10  UL-GLI-CVG-ISSUE-REASON               PIC XX.                
+               10  UL-GLI-SPEC-PG-AGCY-CD-IN             PIC X.                 
+               10  UL-GLI-RELATIONSHIP-PNTR.                                    
+                   15  UL-GLI-PROD-GROUP-CODE            PIC XX.                
+               10  UL-GLI-LOAD-DUR-ADJUSTMNT             PIC +9(3).             
+               10  UL-GLI-COMM-DUR-ADJUSTMNT             PIC +9(3).             
+               10  UL-GLI-SALES-LOAD-OR-IND              PIC X.                 
+               10  UL-GLI-ADMIN-LOAD-OR-IND              PIC X.                 
+               10  UL-GLI-STATUS-REQUEST-CDE             PIC X.                 
+               10  UL-GLI-LIMIT-OVERRIDE-CDE             PIC X.                 
+               10  UL-GLI-UNDRWRTNG-BASIS-IN             PIC X.                 
+               10  UL-GLI-GUIDELINE-LVL-PREM             PIC +9(9).99.          
+               10  UL-GLI-GUIDELNE-SING-PREM             PIC +9(9).99.          
+               10  UL-GLI-GDLNE-LVL-PREM-OVR             PIC +9(9).99.          
+               10  UL-GLI-GDLNE-SNG-PREM-OVR             PIC +9(9).99.          
+               10  UL-GLI-MIN-PYMT-TGT-OR-IN             PIC X.                 
+               10  UL-GLI-MINIMUM-PAYMENT-TARGET         PIC +9(9).99.          
+               10  UL-GLI-PYMT-LOAD-TGT-OVRDE-IND        PIC X.                 
+               10  UL-GLI-PAYMENT-LOAD-TARGET            PIC +9(9).99.          
+               10  UL-GLI-PYMT-COMM-TGT-OVRDE-IND        PIC X.                 
+               10  UL-GLI-PYMNT-COMMISSION-TARGET        PIC +9(9).99.          
+               10  UL-GLI-SURR-LOAD-TGT-OVRDE-IND        PIC X.                 
+               10  UL-GLI-SURRENDER-LOAD-TARGET          PIC +9(9).99.          
+               10  UL-GLI-TERM-SEGMENT-USER-AREA.                               
+                   15  UL-GLI-TERM-USER-LINE-CNTR        PIC 9(3).              
+                   15  UL-GLI-TERM-USER-AREA       OCCURS 10 TIMES.             
+                       20  UL-GLI-TERM-USER-LINE         PIC X(30).             
+               10  UL-GLI-PRIOR-UNITS                    PIC +9(6).9(5).        
+               10  UL-GLI-CURRENT-UNITS                  PIC +9(6).9(5).        
+               10  UL-GLI-REVERSAL-TRX-DATE              PIC 9(8).              
+               10  UL-GLI-REVERSAL-ORIG-CODE             PIC X(8).              
+               10  UL-GLI-TOTAL-FUNDS-AFFECTED           PIC +9(3).             
+               10  UL-GLI-TOTAL-POLICY-VALUE             PIC +9(9).99.          
+               10  UL-GLI-LOADS-AND-FEES.                                       
+                   15  UL-GLI-TRANSACTION-FEE            PIC +9(9).99.          
+                   15  UL-GLI-SALES-LOAD-AMOUNT          PIC +9(9).99.          
+                   15  UL-GLI-ADMIN-LOAD-AMOUNT          PIC +9(9).99.          
+                   15  UL-GLI-SALES-CHG-PER-UNIT-LOAD    PIC +9(9).99.          
+                   15  UL-GLI-SALES-FLAT-DOLLAR-LOAD     PIC +9(9).99.          
+                   15  UL-GLI-ADMIN-CHG-PER-UNIT-LOAD    PIC +9(9).99.          
+                   15  UL-GLI-ADMIN-FLAT-DOLLAR-LOAD     PIC +9(9).99.          
+               10  UL-GLI-INITIAL-COMPLETION-MASK        PIC X(6).              
+               10  UL-GLI-CVG-COMPLETION-MASK.                                  
+                   15  UL-GLI-TERM-PENDING-IND           PIC 99.                
+                   15  FILLER-2                          PIC X(12).             
+               10  UL-GLI-SPECIAL-CASE-INDICATOR         PIC X.                 
+               10  UL-GLI-RESTRICTION-CODE               PIC X(1).              
+               10  FILLER-3                              PIC X(2).              
+               10  UL-GLI-PRODUCER-INFORMATION.                                 
+                   15  UL-GLI-PRODUCER-GROUP-CODE        PIC XX.                
+                   15  UL-GLI-AGENT-INFO-CNTR            PIC 9(3).              
+                   15  UL-GLI-AGENT-INFORMATION   OCCURS 10 TIMES.              
+                       20  UL-GLI-ROLE-TYPE-CODE         PIC X.                 
+                       20  UL-GLI-FIRST-YEAR-PERCENT     PIC +9(4).9.           
+                       20  UL-GLI-RENEWAL-PERCENT        PIC +9(4).9.           
+                       20  UL-GLI-COMMISSION-AGENCY-CODE PIC X(6).              
+                       20  UL-GLI-PERSON-CODE            PIC X(10).             
+                       20  UL-GLI-USER-INFO-AREA         PIC X(25).             
+                       20  UL-GLI-AGENT-PROFILE          PIC X(3).              
+                       20  UL-GLI-AGENT-CONTRACT         PIC X(5).              
+                   15  UL-GLI-COMMISSION-USER-AREA.                             
+                       20  UL-GLI-COMM-USER-LINE-CNTR    PIC 9(3).              
+                       20  UL-GLI-COMM-USER-AREA    OCCURS 10 TIMES.            
+                           25  UL-GLI-COMM-USER-LINE     PIC X(30).             
+               10  UL-GLI-REINSURANCE-INFORMATION.                              
+                   15  UL-GLI-REINSURANCE-TYPE           PIC X.                 
+                   15  UL-GLI-REINSURER-CODE             PIC XXX.               
+                   15  UL-GLI-CESSION-NUMBER             PIC X(11).             
+                   15  UL-GLI-RETENTION-THRESHOLD-AMT    PIC +9(9).             
+                   15  UL-GLI-RETENTION-THRESHOLD-PCT    PIC +9(4).9.           
+               10  UL-GLI-SPECIAL-CLASS-INFO.                                   
+                   15  UL-GLI-RATING-FACTOR              PIC +99.999.           
+                   15  UL-GLI-RATING-REASON              PIC XX.                
+                   15  UL-GLI-RATING-END-DATE            PIC 9(8).              
+                   15  UL-GLI-RATING-FACTOR-COMM-CODE    PIC X.                 
+                   15  UL-GLI-SPECIAL-CLASS-CODE         PIC XX.                
+                   15  UL-GLI-SPECIAL-CLASS-REASON       PIC XX.                
+                   15  UL-GLI-CEASE-DATE                 PIC 9(8).              
+                   15  UL-GLI-SPECIAL-CLASS-COMM-CODE    PIC X.                 
+               10  UL-GLI-FLAT-EXTRA-CNTR                PIC 9(3).              
+               10  UL-GLI-FLAT-EXTRA-AREA         OCCURS 6 TIMES.               
+                   15  UL-GLI-FLAT-EXTRA-AMOUNT          PIC +9(3).99.          
+                   15  UL-GLI-FLAT-EXTRA-REASON          PIC XX.                
+                   15  UL-GLI-FLAT-EXTRA-REASON-TRNSL    PIC X(50).             
+                   15  UL-GLI-FLAT-EXTRA-END-DATE        PIC 9(8).              
+                   15  UL-GLI-FLAT-EXTRA-COMM-CODE       PIC X.                 
+               10  UL-GLI-REPLACEMENT-INFORMATION.                              
+                   15  UL-GLI-REPLACEMENT-TYPE           PIC X.                 
+                   15  UL-GLI-REPLACEMENT-EFF-DATE       PIC 9(8).              
+                   15  UL-GLI-OLD-POLICY-NUMBER          PIC X(15).             
+                   15  UL-GLI-ORIGINAL-ISSUE-DATE        PIC 9(8).              
+                   15  UL-GLI-OLD-FACE-AMOUNT            PIC +9(9).             
+                   15  UL-GLI-OLD-CASH-VALUE             PIC +9(9).             
+                   15  UL-GLI-OLD-ANNUAL-PREMIUM         PIC +9(9).99.          
+                   15  UL-GLI-COST-BASIS                 PIC +9(9).99.          
+                   15  UL-GLI-PROFIT-LOSS                PIC +9(9).99.          
+                   15  UL-GLI-USER-AREA                  PIC X(8).              
+               10  UL-GLI-ADVANCE-INDICATOR              PIC X.                 
+               10  UL-GLI-APPLICATION-DATE               PIC 9(8).              
+               10  UL-GLI-TRX-FEE-OVERRIDE-INFO.                                
+                   15  UL-GLI-TRX-FEE-OVERRIDE-IND       PIC X.                 
+                   15  UL-GLI-TRX-FEE-OVERRIDE           PIC +9(9).99.          
+               10  UL-GLI-PRU-REINS-INFO.                                       
+                   15  UL-GLI-AUTO-REINS-OPT-OUT-IND     PIC X(02).             
+                   15  UL-GLI-AUTO-REINS-OPT-1-2  REDEFINES                     
+                           UL-GLI-AUTO-REINS-OPT-OUT-IND.                       
+                       20  UL-GLI-AUTO-REINS-OPT-1       PIC X.                 
+                       20  UL-GLI-AUTO-REINS-OPT-2       PIC X.                 
+                   15  UL-GLI-REINS-AREA-CNTR            PIC 9(3).              
+                   15  UL-GLI-REINSURANCE-AREA-INFO OCCURS 6 TIMES.             
+                       20  UL-GLI-EXCESS-REIN-PRG-CD     PIC X(03).             
+                       20  UL-GLI-PRU-REINSURER-CODE     PIC 9(02).             
+                       20  UL-GLI-EXCESS-AMOUNT-REINS    PIC +9(9).99.          
+               10  FILLER-4                              PIC X(300).            
+               10  UL-GLI-FUND-INFORMATION-CNTR          PIC 9(3).              
+               10  UL-GLI-FUND-AREA                      PIC X(18414).          
+               10  UL-GLI-FUND-ARRAY REDEFINES UL-GLI-FUND-AREA.                
+                 12  UL-GLI-FUND-INFORMATION        OCCURS 99 TIMES.            
+                   15  UL-GLI-FUND-NUMBER                PIC +999.              
+                   15  UL-GLI-FUND-NUMBER-TRNSL          PIC X(50).             
+                   15  UL-GLI-FUND-TYPE                  PIC X.                 
+                   15  UL-GLI-FUND-CURR-CASH-VALUE       PIC +9(9).99.          
+                   15  UL-GLI-FUND-UNITS-REMAINING       PIC +9(7).9(4).        
+                   15  UL-GLI-FUND-CHANGE-IN-UNITS       PIC +9(7).9(4).        
+                   15  UL-GLI-FUND-TRANSACTION-FEE       PIC +9(9).99.          
+                   15  UL-GLI-FUND-SALES-LOAD            PIC +9(9).99.          
+                   15  UL-GLI-FUND-ADMIN-LOAD            PIC +9(9).99.          
+                   15  UL-GLI-FUND-SALES-CHG-PER-UNIT    PIC +9(9).99.          
+                   15  UL-GLI-FUND-SALES-FLAT-DOLLAR     PIC +9(9).99.          
+                   15  UL-GLI-FUND-ADMIN-CHG-PER-UNIT    PIC +9(9).99.          
+                   15  UL-GLI-FUND-ADMIN-FLAT-DOLLAR     PIC +9(9).99.          
+                   15  UL-GLI-FUND-GAIN-AMOUNT           PIC +9(9).99.          
+                   15  UL-GLI-FUND-LOSS-AMOUNT           PIC +9(9).99.          
+           05  UL-GLI-CALC-AREA.                                                
+               10  UL-GLI-BASIC-INS-AMT-CURR             PIC +9(9).99.          
+               10  UL-GLI-BASIC-INS-AMT-PRIOR            PIC +9(9).99.          
+               10  UL-GLI-RIDER-AMT                      PIC +9(9).99.          
+               10  UL-GLI-TARGET-AMT-CURR                PIC +9(9).99.          
+               10  UL-GLI-TARGET-AMT-PRIOR               PIC +9(9).99.          
+           05  UL-GLI-ISSUE-BASIS                        PIC 999.               

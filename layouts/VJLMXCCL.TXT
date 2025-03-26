@@ -1,0 +1,49 @@
+       01  WS-VCLMXCCL-LAYOUT.                                                  
+           05  ARC-CLI-KEY-DATA-AREA.                                           
+               10  ARC-CLI-KEY-COMPANY-CODE          PIC X(03).                 
+               10  ARC-CLI-KEY-MASTER-ID             PIC X(15).                 
+               10  ARC-CLI-KEY-FILE-CODE             PIC X(05).                 
+               10  ARC-CLI-KEY-DOCUMENT-TYPE         PIC X(50).                 
+               10  ARC-CLI-KEY-DOCUMENT-ID           PIC X(50).                 
+               10  ARC-CLI-KEY-TRX-CODE              PIC X(04).                 
+               10  ARC-CLI-FILLER                    PIC X(100).                
+               10  ARC-CLI-KEY-MAP-RECORD-ID         PIC X(50).                 
+           05  ARC-CLI-COMPANY-NAME                  PIC X(80).                 
+           05  ARC-CLI-INDIVIDUAL-NAME.                                         
+               10  ARC-CLI-LAST-NAME                 PIC X(35).                 
+               10  ARC-CLI-FIRST-NAME                PIC X(25).                 
+               10  ARC-CLI-NAME-PREFIX               PIC X(10).                 
+               10  ARC-CLI-NAME-SUFFIX               PIC X(10).                 
+           05  ARC-CLI-ADDRESS-INFO.                                            
+               10  ARC-CLI-ADDRESS-LINE-1            PIC X(35).                 
+               10  ARC-CLI-ADDRESS-LINE-2            PIC X(35).                 
+               10  ARC-CLI-ADDRESS-LINE-3            PIC X(35).                 
+               10  ARC-CLI-ADDRESS-LINE-4            PIC X(35).                 
+               10  ARC-CLI-ADDRESS-LINE-5            PIC X(35).                 
+               10  ARC-CLI-FILLER-CITY-ST            PIC X(35).                 
+               10  ARC-CLI-ZIP-POSTAL-CODE           PIC X(15).                 
+           05  ARC-CLI-TAX-ID-NUMBER.                                           
+               10  ARC-CLI-TAX-ID-NO                 PIC X(15).                 
+               10  ARC-CLI-TAX-ID-SUFFIX             PIC X.                     
+           05  ARC-CLI-COMPANY-INDIV-CODE            PIC X.                     
+           05  ARC-CLI-COUNTRY-CODE                  PIC XX.                    
+           05  ARC-CLI-BIRTH-DATE                    PIC 9(08).                 
+           05  ARC-CLI-SEX-CODE                      PIC X.                     
+           05  ARC-CLI-SEX-CODE-TRNSL                PIC X(50).                 
+           05  ARC-CLI-DEPOSIT-FUND-IND              PIC X.                     
+           05  ARC-CLI-HANDLING-CODE                 PIC X.                     
+           05  ARC-CLI-LANGUAGE-CODE                 PIC X.                     
+           05  ARC-CLI-SPECIAL-COND-CODE-1           PIC X.                     
+           05  ARC-CLI-SPECIAL-COND-CODE-2           PIC X.                     
+           05  ARC-CLI-STATUS-CODE                   PIC X.                     
+           05  ARC-CLI-SOLICITATION-DATE             PIC 9(08).                 
+           05  ARC-CLI-TIN-VERIFICATION              PIC X.                     
+           05  ARC-CLI-NON-RES-ALIEN-IND             PIC X.                     
+           05  ARC-CLI-MARITAL-STATUS                PIC X.                     
+           05  ARC-CLI-NUM-EXEMPTIONS                PIC 9(02).                 
+           05  ARC-CLI-CLIENT-CENTRIC-INFO.                                     
+               10  ARC-CLI-CLIENT-CENTRIC-DATA-CT    PIC 9(03).                 
+               10  ARC-CLI-CLIENT-CENTRIC-DATA OCCURS 50 TIMES.                 
+                   15  ARC-CLI-COMMUNICATION-TYPE    PIC X(02).                 
+                   15  ARC-CLI-COMMUNICATION-NUM     PIC X(50).                 
+           05  FILLER                                PIC X(200).                

@@ -1,0 +1,28 @@
+       01 WS-VCLMAN7F-LAYOUT.                                                   
+         02  UL-AN7F-KEY-DATA-AREA.                                             
+           05  UL-AN7F-KEY-COMPANY-CODE  PIC X(03).                             
+           05  UL-AN7F-KEY-MASTER-ID     PIC X(15).                             
+           05  UL-AN7F-KEY-FILE-CODE     PIC X(05).                             
+           05  UL-AN7F-KEY-DOCUMENT-TYPE PIC X(50).                             
+           05  UL-AN7F-KEY-DOCUMENT-ID   PIC X(50).                             
+           05  UL-AN7F-KEY-TRX-CODE      PIC X(04).                             
+           05  UL-AN7F-FILLER            PIC X(100).                            
+           05  UL-AN7F-KEY-MAP-RECORD-ID PIC X(50).                             
+         02  UL-AN7F-DATA-AREA.                                                 
+           05  UL-AN7F-RECORD-TYPE-IND          PIC X(4).                       
+           05  UL-AN7F-RECORD-CODE              PIC 9(5).                       
+           05  UL-AN7F-EXTRACT-DATA.                                            
+               10  UL-AN7F-FUND-AREA          PIC X(4752).                      
+               10  UL-AN7F-FUND-ARRAY REDEFINES                                 
+                                 UL-AN7F-FUND-AREA.                             
+                 12  UL-AN7F-FUND-TRX-DATA     OCCURS 99 TIMES.                 
+                   15  UL-AN7F-FUND-NUMBER PIC +9(3).                           
+                   15  UL-AN7F-FUND-TYPE PIC  X(1).                             
+                   15  UL-AN7F-FUND-VALUE-BEFORE PIC +9(9).9(2).                
+                   15  UL-AN7F-FUND-VALUE-AFTER PIC +9(9).9(2).                 
+                   15  UL-AN7F-FUND-NET-AMOUNT PIC +9(9).9(2).                  
+                   15  UL-AN7F-FUND-INV-CHANGE PIC +9(9).9(2).                  
+               10  UL-AN7F-LOAN-PRINCIPAL-AMT   PIC +9(9).99.                   
+               10  UL-AN7F-TRX-CODE             PIC X(4).                       
+               10  UL-AN7F-TRX-CODE-TRNLS       PIC X(50).                      
+               10  UL-AN7F-CREDITED-LOAN-INT    PIC +9(9).99.                   

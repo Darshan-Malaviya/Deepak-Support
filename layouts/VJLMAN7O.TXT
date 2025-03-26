@@ -1,0 +1,35 @@
+       01 WS-VCLMAN7O-LAYOUT.                                                   
+         02  UL-AN7O-KEY-DATA-AREA.                                             
+           05  UL-AN7O-KEY-COMPANY-CODE        PIC X(03).                       
+           05  UL-AN7O-KEY-MASTER-ID           PIC X(15).                       
+           05  UL-AN7O-KEY-FILE-CODE           PIC X(05).                       
+           05  UL-AN7O-KEY-DOCUMENT-TYPE       PIC X(50).                       
+           05  UL-AN7O-KEY-DOCUMENT-ID         PIC X(50).                       
+           05  UL-AN7O-KEY-TRX-CODE            PIC X(04).                       
+           05  UL-AN7O-FILLER                  PIC X(100).                      
+           05  UL-AN7O-KEY-MAP-RECORD-ID       PIC X(50).                       
+         02  UL-AN7O-DATA-AREA.                                                 
+           05  UL-AN7O-RECORD-TYPE-IND         PIC X(4).                        
+           05  UL-AN7O-RECORD-CODE             PIC 9(5).                        
+           05  UL-AN7O-EXTRACT-DATA.                                            
+               10  UL-AN7O-BEG-PERIOD            PIC 9(8).                      
+               10  UL-AN7O-END-PERIOD            PIC 9(8).                      
+               10  UL-AN7O-NON-GUAR-PART-RATE    PIC +9(3).99.                  
+               10  UL-AN7O-NON-GUAR-GROWTH-FLOOR PIC +9(3).99.                  
+               10  UL-AN7O-NON-GUAR-GROWTH-CAP   PIC +9(3).99.                  
+               10  UL-AN7O-INIT-BAL              PIC +9(9).99.                  
+               10  UL-AN7O-WITHDRAWALS           PIC +9(9).99.                  
+               10  UL-AN7O-INT-RATE              PIC +9(3).99.                  
+               10  UL-AN7O-INT-CREDITED          PIC +9(9).99.                  
+               10  UL-AN70-CURR-VALUE            PIC +9(9).99.                  
+               10  UL-AN7O-BEG-IDX-VAL           PIC +9(6).9(2).                
+               10  UL-AN7O-ADSV                  PIC +9(9).9(2).                
+               10  UL-AN7O-IDX-BLEND-RATE        PIC +9(3).                     
+               10  UL-AN7O-DECL-SPREAD-MUL       PIC +9(1).9(2).                
+               10  UL-AN7O-DECL-SPREAD           PIC +9(2).9(2).                
+               10  UL-AN7O-FUND-NUMBER           PIC +9(3).                     
+               10  UL-AN7O-INDEX-FUND-NAME       PIC  X(50).                    
+               10  UL-AN7O-NEW-OPEN-FUND         PIC  X(1).                     
+               10 UL-AN7O-DECL-BUFF-RT           PIC +9(3).9(2).                
+               10 UL-AN7O-DECL-STEP-RT           PIC +9(3).9(2).                
+               10 UL-AN7O-CURR-IV                PIC +9(9).9(2).                

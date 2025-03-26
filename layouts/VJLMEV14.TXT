@@ -1,0 +1,25 @@
+       01  WS-VCLMEV14-LAYOUT.                                                  
+           05  UL-CAP-KEY-DATA-AREA.                                            
+               10  UL-CAP-KEY-COMPANY-CODE               PIC X(03).             
+               10  UL-CAP-KEY-MASTER-ID                  PIC X(15).             
+               10  UL-CAP-KEY-FILE-CODE                  PIC X(05).             
+               10  UL-CAP-KEY-DOCUMENT-TYPE              PIC X(50).             
+               10  UL-CAP-KEY-DOCUMENT-ID                PIC X(50).             
+               10  UL-CAP-KEY-TRX-CODE                   PIC X(04).             
+               10  FILLER-1                              PIC X(100).            
+               10  UL-CAP-KEY-MAP-RECORD-ID              PIC X(50).             
+         05  V014-TRX-INFO.                                                     
+             10  UL-CAP-PLAN-CODE           PIC X(6).                           
+             10  UL-CAP-ISSUE-BASIS         PIC 9(3).                           
+             10  UL-CAP-ISSUE-STATE         PIC X(3).                           
+             10  UL-CAP-IDX-ACCT-NAME       PIC X(30).                          
+             10  UL-CAP-NEXT-IDX-SWEEP-DT   PIC 9(8).                           
+             10  UL-CAP-DECL-GRWTH-RT       PIC +9(3).9(2).                     
+             10  UL-CAP-GUAR-INT-RATE       PIC +9(3).9(2).                     
+             10  UL-CAP-DECL-INDEX-SPREAD-FCT     PIC +99.99.                   
+             10  UL-CAP-GUAR-INDEX-SPREAD-FCT     PIC +99.99.                   
+             10  UL-CAP-DECL-INDEX-SPREAD-IND     PIC X.                        
+             10  UL-CAP-DECL-GUAR-GRWTH-RT-IND    PIC X.                        
+             10  UL-CAP-PARTICIP-RATE             PIC +9(3).9(2).               
+             10  UL-CAP-GUAR-PARTIC-RATE          PIC +9(3).9(2).               
+             10  UL-CAP-PARTICIP-RATE-IND         PIC X.                        

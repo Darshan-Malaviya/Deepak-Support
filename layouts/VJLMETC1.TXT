@@ -1,0 +1,174 @@
+       01  WS-VCLMETC1-LAYOUT.                                                  
+           05  UL-TC-KEY-DATA-AREA.                                             
+               10  UL-TC-KEY-COMPANY-CODE     PIC X(03).                        
+               10  UL-TC-KEY-MASTER-ID        PIC X(15).                        
+               10  UL-TC-KEY-FILE-CODE        PIC X(05).                        
+               10  UL-TC-KEY-DOCUMENT-TYPE    PIC X(50).                        
+               10  UL-TC-KEY-DOCUMENT-ID      PIC X(50).                        
+               10  UL-TC-KEY-TRX-CODE         PIC X(04).                        
+               10  FILLER-1                   PIC X(100).                       
+               10  UL-TC-KEY-MAP-RECORD-ID    PIC X(50).                        
+           05  UL-TC-BROKER-DEALER-INFO.                                        
+               10  UL-TC-TRADE-PARTNER-ID-NUM          PIC X(20).               
+               10  UL-TC-CLEARINGHOUSE-NAME            PIC X(30).               
+               10  UL-TC-TRADE-PARTNER-CTL-NUM         PIC X(30).               
+               10  UL-TC-CLEARINGHOUSE-CTL-NUM         PIC X(30).               
+               10  UL-TC-DISTRIB-CUST-ACCT-NUM         PIC X(30).               
+               10  UL-TC-DISTRIB-TRX-ID-NUM            PIC X(30).               
+               10  UL-TC-APPLICATION-CTL-NUM           PIC X(20).               
+               10  UL-TC-FILLER-FUTURE-USE             PIC X(68).               
+           05  UL-TC-TRANSACTION-INFO.                                          
+               10  UL-TC-STATUTORY-COMPANY-CODE        PIC X(03).               
+               10  UL-TC-STAT-COMPANY-CODE-TRNSL       PIC X(50).               
+               10  UL-TC-PLAN-CODE                     PIC X(06).               
+               10  UL-TC-PLAN-CODE-TRNSL               PIC X(50).               
+               10  UL-TC-LINE-OF-BUSINESS              PIC X(03).               
+               10  UL-TC-LINE-OF-BUSINESS-TRNSL        PIC X(50).               
+               10  UL-TC-STATE-CODE                    PIC X(02).               
+               10  UL-TC-STATUS-REQUEST-CODE           PIC X(01).               
+               10  UL-TC-MEMO-CODE                     PIC X(02).               
+               10  UL-TC-SOURCE-CODE                   PIC X(02).               
+               10  UL-TC-LAST-FINANCIAL-DATE           PIC 9(08).               
+               10  UL-TC-LOAN-REVERSAL-INFO.                                    
+                   15  UL-TC-REVERSAL-EFF-DATE         PIC 9(08).               
+                   15  UL-TC-REVERSAL-TRX-DATE         PIC 9(08).               
+                   15  UL-TC-REVERSAL-ORIGINATOR       PIC X(08).               
+               10  UL-TC-PREV-CONTRACT-INFO.                                    
+                   15  UL-TC-PRIOR-STATUS              PIC X.                   
+                   15  UL-TC-CURRENT-STATUS            PIC X.                   
+                   15  UL-TC-PRV-NEXT-INT-CAP-DATE     PIC 9(8).                
+                   15  UL-TC-PRV-NXT-INT-COL-CRED-DT   PIC 9(8).                
+                   15  UL-TC-PRV-LST-INTEREST-PMT-DT   PIC 9(8).                
+                   15  UL-TC-PRV-LST-INTEREST-PMT-AMT  PIC +9(9).99.            
+               10  UL-TC-LOAN-INDICATORS.                                       
+                   15  UL-TC-GROSS-NET-IND             PIC X(01).               
+                   15  UL-TC-COLLATERAL-SW             PIC X(01).               
+                   15  UL-TC-NEXT-YEAR-IND             PIC X(01).               
+                   15  UL-TC-FUND-ALLOC-OVERRIDE       PIC X(01).               
+                   15  UL-TC-LOAN-LIMIT-OVERRIDE       PIC X(01).               
+                   15  UL-TC-SUSPENSE-INDICATOR        PIC X(01).               
+                   15  UL-TC-ADV-ARR-IND               PIC X(03).               
+                   15  UL-TC-LOAN-INIT-REASON          PIC X(02).               
+               10  UL-TC-WITHHOLDING-AMT-FED-IND       PIC X.                   
+               10  UL-TC-USE-STATE-TABLE-IND           PIC X.                   
+               10  UL-TC-WITHHOLDING-AMT-FED           PIC +9(9).99.            
+               10  UL-TC-WITHHOLDING-PCT-FED           PIC +999.99.             
+               10  UL-TC-WITHHOLDING-PCT-FED-R         REDEFINES                
+                   UL-TC-WITHHOLDING-PCT-FED           PIC 9.9(4).              
+               10  UL-TC-WITHHOLDING-AMT-ST-IND        PIC X.                   
+               10  UL-TC-WITHHOLDING-AMT-STATE         PIC +9(9).99.            
+               10  UL-TC-WITHHOLDING-PCT-STATE         PIC +999.99.             
+               10  UL-TC-WITHHOLDING-PCT-STATE-R       REDEFINES                
+                   UL-TC-WITHHOLDING-PCT-STATE         PIC 9.9(4).              
+               10  UL-TC-WITHHOLDING-AMT-LOC-IND       PIC X.                   
+               10  UL-TC-WITHHOLDING-AMT-LOCAL         PIC +9(9).99.            
+               10  UL-TC-WITHHOLDING-PCT-LOCAL         PIC +999.99.             
+               10  UL-TC-WITHHOLDING-PCT-LOCAL-R       REDEFINES                
+                   UL-TC-WITHHOLDING-PCT-LOCAL         PIC 9.9(4).              
+               10  UL-TC-PRINCIPAL-SURRENDERED         PIC +9(9).99.            
+               10  UL-TC-GAIN-SURRENDERED              PIC +9(9).99.            
+               10  UL-TC-WITHHOLDING-AMOUNT            PIC +9(9).99.            
+               10  UL-TC-TAX-PENALTY-IND               PIC X.                   
+               10  UL-TC-TAX-FORM-OVERRIDE             PIC X.                   
+               10  UL-TC-DISTRIBUTION-CODE             PIC X.                   
+               10  UL-TC-RESIDENT-STATE                PIC XXX.                 
+               10  UL-TC-DISTRIBUTION-CODE-2           PIC X.                   
+               10  UL-TC-CLEAN-LOAN-IND                PIC X.                   
+               10  UL-TC-RPU-CASH-VALUE                PIC +9(9).99.            
+               10  UL-TC-FILLER                        PIC X.                   
+               10  UL-TC-OVERRIDE-INFO.                                         
+                   15  UL-TC-OVERRIDE-AREA-CTR         PIC 9(3).                
+                   15  UL-TC-OVERRIDE-AREA             OCCURS 18.               
+                       20  UL-TC-FUND-NUMBER-OVR       PIC +9(3).               
+                       20  UL-TC-FUND-NUMBER-OVR-TRNSL PIC X(50).               
+                       20  UL-TC-OVERRIDE-AMOUNT       PIC +9(9).99.            
+               10  UL-TC-LOAN-AMOUNTS.                                          
+                   15  UL-TC-LOAN-AMOUNT               PIC +9(9).99.            
+                   15  UL-TC-LOAN-PERCENT              PIC +9(3).99.            
+                   15  UL-TC-NET-AMOUNT                PIC +9(9).99.            
+                   15  UL-TC-GROSS-AMOUNT              PIC +9(9).99.            
+                   15  UL-TC-INTEREST-DEDUCTIBLE       PIC +9(9).99.            
+                   15  UL-TC-DISBURSEMENT-AMOUNT       PIC +9(9).99.            
+                   15  UL-TC-LOAN-TRX-FEE              PIC +9(9).99.            
+                   15  UL-TC-LOAN-DURATION             PIC +9(3).               
+               10  UL-TC-PREF-LOAN-AREA.                                        
+                   15  UL-TC-REMAINING-PREF-BALANCE    PIC +9(9).99.            
+                   15  UL-TC-PREF-NET-LOAN-AMT         PIC +9(9).99.            
+                   15  UL-TC-REGU-NET-LOAN-AMT         PIC +9(9).99.            
+                   15  UL-TC-PREF-GROSS-LOAN-AMT       PIC +9(9).99.            
+                   15  UL-TC-REGU-GROSS-LOAN-AMT       PIC +9(9).99.            
+                   15  UL-TC-PREF-DISC-GROSS-LOAN-AMT  PIC +9(9).99.            
+                   15  UL-TC-REGU-DISC-GROSS-LOAN-AMT  PIC +9(9).99.            
+                   15  UL-TC-PREF-LOAN-SW              PIC X.                   
+                   15  UL-TC-FIRST-LOAN-TAKEN-SW       PIC X.                   
+                   15  UL-TC-PREF-LOAN-CALC-IND        PIC X.                   
+                   15  UL-TC-NO-PREF-LOANS-THIS-YEAR   PIC 99.                  
+                   15  UL-TC-TOTAL-POLICY-VALUE        PIC +9(9).99.            
+                   15  UL-TC-FILLER                    PIC X(10).               
+               10  UL-TC-NON-MEC-PRINCIPAL-SURR        PIC +9(9).99.            
+               10  UL-TC-NON-MEC-GAIN-SURRENDERED      PIC +9(9).99.            
+               10  UL-TC-LOAN-TICKET-NUMBER.                                    
+                   15  UL-TC-LOAN-TICKET-NUMBER-1      PIC X(01).               
+                   15  UL-TC-LOAN-TICKET-NUMBER-4      PIC X(04).               
+               10  UL-TC-WITHDRAWAL-TICKET-NO.                                  
+                   15  UL-TC-WITHDRAWAL-TICKET-NO-1    PIC X.                   
+                   15  UL-TC-WITHDRAWAL-TICKET-NO-4    PIC 9(4).                
+               10  UL-TC-DEPOSIT-TICKET-NO.                                     
+                   15  UL-TC-DEPOSIT-TICKET-NO-1       PIC X(01).               
+                   15  UL-TC-DEPOSIT-TICKET-NO-4       PIC X(04).               
+               10  UL-TC-INTEREST-AMOUNTS.                                      
+                   15  UL-TC-CASH-INT-DEDUCTED         PIC +9(9).99.            
+                   15  UL-TC-CASH-INT-SUSPENSE         PIC +9(9).99.            
+                   15  UL-TC-CASH-INT-APPLIED          PIC +9(9).99.            
+                   15  UL-TC-LOAN-INTEREST-CAPPED      PIC +9(9).99.            
+               10  UL-TC-TOTAL-AMT-ALL-LOANS           PIC +9(9).99.            
+               10  UL-TC-TOTAL-NUMBER-OF-FUNDS         PIC +9(3).               
+           05  UL-TC-MASTER-INFO.                                               
+               10  UL-TC-LOAN-COLL-FUND-NUMB           PIC 9(03).               
+               10  UL-TC-LOAN-COLL-FUND-ACCT           PIC X(08).               
+               10  UL-TC-BEGINNING-CASH-VALUE          PIC +9(9).99.            
+               10  UL-TC-BEGIN-CSV                     PIC +9(9).99.            
+               10  UL-TC-BEGIN-LCV                     PIC +9(9).99.            
+               10  UL-TC-FILLER                        PIC X(03).               
+               10  UL-TC-LOAN-USER-AREA-CTR            PIC 9(3).                
+               10  UL-TC-LOAN-USER-AREA-CK             PIC X(300).              
+               10  UL-TC-LOAN-SEG-USER-AREA            REDEFINES                
+                   UL-TC-LOAN-USER-AREA-CK             OCCURS 10 TIMES.         
+                   15  UL-TC-LOAN-USER-AREA            PIC X(30).               
+               10  UL-TC-ALTERNATE-PAYEE.                                       
+                   15  UL-TC-PAYEE-NUMBER              PIC X(4).                
+                   15  UL-TC-PAYEE-NAME                PIC X(46).               
+                   15  UL-TC-PAYEE-ADDRESS-LINE1       PIC X(30).               
+                   15  UL-TC-PAYEE-ADDRESS-LINE2       PIC X(30).               
+                   15  UL-TC-PAYEE-ADDRESS-LINE3       PIC X(30).               
+                   15  UL-TC-PAYEE-ADDRESS-LINE4       PIC X(30).               
+                   15  UL-TC-PAYEE-ADDRESS-LINE5       PIC X(30).               
+                   15  UL-TC-PAYEE-ZIP-POSTAL-CODE     PIC X(9).                
+                   15  UL-TC-PAYEE-COUNTRY-CODE        PIC X(2).                
+               10  UL-TC-LOAN-FUND-INFO-CTR            PIC 9(3).                
+               10  UL-TC-FUND-AREA                     PIC X(14058).            
+               10  UL-TC-FUND-ARRAY REDEFINES UL-TC-FUND-AREA.                  
+                 12  UL-TC-LOAN-FUND-INFO            OCCURS 99 TIMES.           
+                   15  UL-TC-FUND-NUMBER                 PIC +9(4).             
+                   15  UL-TC-FUND-NUMBER-TRNSL           PIC X(49).             
+                   15  UL-TC-FUND-AMOUNT               PIC +9(9).99.            
+                   15  UL-TC-FUND-UNITS                PIC +9(7).9999.          
+                   15  UL-TC-FUND-VALUE                PIC +9(9).99.            
+                   15  UL-TC-FUND-GAIN                 PIC +9(9).99.            
+                   15  UL-TC-FUND-LOSS                 PIC +9(9).99.            
+                   15  UL-TC-FUND-TYPE                 PIC X.                   
+                   15  UL-TC-FUND-TRX-FEE              PIC +9(9).99.            
+                   15  UL-TC-FUND-NET-AMOUNT           PIC +9(9).99.            
+                   15  UL-TC-FUND-TOTAL-UNITS          PIC +9(7).9(4).          
+           05  UL-TC-PRU-SPECIFIC-DATA.                                         
+               10  UL-TC-PREFRD-LOAN-INDICATOR         PIC X.                   
+               10  UL-TC-FUND-AMOUNT-SUM               PIC +9(9).99.            
+               10  UL-TC-TOTAL-TAXES-WITHHELD          PIC +9(9).99.            
+               10  UL-TC-PREF-INT-RATE-TRNSL           PIC X(50).               
+               10  UL-TC-STD-INT-RATE-TRNSL            PIC X(50).               
+               10  UL-TC-PREF-FUND-INT-RATE-TRNSL      PIC X(50).               
+               10  UL-TC-STD-FUND-INT-RATE-TRNSL       PIC X(50).               
+               10  UL-TC-COLL-INT-RATE-TRNSL           PIC X(50).               
+               10  UL-TC-PART-LN-INT-RT                PIC +9(2).9(3).          
+               10  UL-TC-PREFERRED-LOAN-CD       PIC X.                         
+               10  UL-TC-EFFECTIVE-DATE          PIC 9(8).                      

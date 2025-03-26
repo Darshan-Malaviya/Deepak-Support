@@ -1,0 +1,27 @@
+       01 WS-VCLMAN7N-LAYOUT.                                                   
+         02  UL-AN7N-KEY-DATA-AREA.                                             
+           05  UL-AN7N-KEY-COMPANY-CODE        PIC X(03).                       
+           05  UL-AN7N-KEY-MASTER-ID           PIC X(15).                       
+           05  UL-AN7N-KEY-FILE-CODE           PIC X(05).                       
+           05  UL-AN7N-KEY-DOCUMENT-TYPE       PIC X(50).                       
+           05  UL-AN7N-KEY-DOCUMENT-ID         PIC X(50).                       
+           05  UL-AN7N-KEY-TRX-CODE            PIC X(04).                       
+           05  UL-AN7N-FILLER                  PIC X(100).                      
+           05  UL-AN7N-KEY-MAP-RECORD-ID       PIC X(50).                       
+         02  UL-AN7N-DATA-AREA.                                                 
+           05  UL-AN7N-RECORD-TYPE-IND         PIC X(4).                        
+           05  UL-AN7N-RECORD-CODE             PIC 9(5).                        
+           05  UL-AN7N-EXTRACT-DATA.                                            
+               10  UL-AN7N-TOT-INIT-BAL          PIC +9(9).99.                  
+               10  UL-AN7N-TOT-WITHDRAWALS       PIC +9(9).99.                  
+               10  UL-AN7N-TOT-INT-CREDITED      PIC +9(9).99.                  
+               10  UL-AN7N-TOT-TRNSFR-TO-BIA-AMT PIC +9(9).99.                  
+               10  UL-AN7N-TOT-IDX-MAT-VALUE     PIC +9(9).99.                  
+               10  UL-AN7N-IDX-TOT-IDX-INT-CREDIT PIC +9(9).99.                 
+               10  UL-AN7N-IDX-MAT-FND-REC OCCURS 5 TIMES.                      
+                15  UL-AN7N-FND-TOT-INIT-BAL       PIC +9(9).99.                
+                15  UL-AN7N-FND-TOT-WITHDRAWALS    PIC +9(9).99.                
+                15  UL-AN7N-FND-TOT-INT-CREDITED   PIC +9(9).99.                
+                15  UL-AN7N-FND-TOT-IDX-MAT-VALUE  PIC +9(9).99.                
+                15  UL-AN7N-FND-TOT-IDX-INT-CREDIT PIC +9(9).99.                
+                15  UL-AN7N-FND-TOT-TRANSFR-TO-BIA PIC +9(9).99.                

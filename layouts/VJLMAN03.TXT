@@ -1,0 +1,49 @@
+       01 WS-VCLMAN03-LAYOUT.                                                   
+         02  UL-AN03-KEY-DATA-AREA.                                             
+           05  UL-AN03-KEY-COMPANY-CODE  PIC X(03).                             
+           05  UL-AN03-KEY-MASTER-ID     PIC X(15).                             
+           05  UL-AN03-KEY-FILE-CODE     PIC X(05).                             
+           05  UL-AN03-KEY-DOCUMENT-TYPE PIC X(50).                             
+           05  UL-AN03-KEY-DOCUMENT-ID   PIC X(50).                             
+           05  UL-AN03-KEY-TRX-CODE      PIC X(04).                             
+           05  UL-AN03-FILLER                 PIC X(100).                       
+           05  UL-AN03-KEY-MAP-RECORD-ID PIC X(50).                             
+         02  UL-AN03-DATA-AREA.                                                 
+           05  UL-AN03-RECORD-TYPE-IND          PIC X(4).                       
+           05  UL-AN03-RECORD-CODE              PIC 9(5).                       
+           05  UL-AN03-EXTRACT-DATA.                                            
+               10  UL-AN03-BEGINNING-LOAN-BAL     PIC +9(9).99.                 
+               10  UL-AN03-ENDING-LOAN-BAL        PIC +9(9).99.                 
+               10  UL-AN03-COLL-INTEREST-RATE     PIC +99.999.                  
+               10  UL-AN03-TOTAL-COLL-INTEREST    PIC +9(9).99.                 
+               10  UL-AN03-NO-OF-ENTRIES          PIC +9(3).                    
+               10  UL-AN03-LOAN-ACTIVITY-INFO.                                  
+                   15  EACH-ACTIVITY OCCURS 50 TIMES.                           
+                       20  UL-AN03-TRX-CODE       PIC X(4).                     
+                       20  UL-AN03-EFFECTIVE-DATE PIC 9(8).                     
+                       20  UL-AN03-LOAN-INTEREST-RATE PIC +99.999.              
+                       20  UL-AN03-GROSS-REMITTANCE-AMT PIC +9(9).99.           
+                       20  UL-AN03-TRANSACTION-FEE PIC +9(9).99.                
+                       20  UL-AN03-PRINCIPAL-PAID-AMT PIC +9(9).99.             
+                       20  UL-AN03-INTEREST-PAID-AMT PIC +9(9).99.              
+                       20  UL-AN03-GROSS-LOAN-AMOUNT PIC +9(9).99.              
+                       20  UL-AN03-NET-LOAN-AMOUNT PIC +9(9).99.                
+               10  UL-AN03-BEG-LOAN-PRINCIPLE PIC +9(9).99.                     
+               10  UL-AN03-END-LOAN-PRINCIPLE PIC +9(9).99.                     
+               10  UL-AN03-REGU-BEG-LOAN-PRIN PIC +9(9).99.                     
+               10  UL-AN03-PREF-BEG-LOAN-PRIN PIC +9(9).99.                     
+               10  UL-AN03-REGU-END-LOAN-PRIN PIC +9(9).99.                     
+               10  UL-AN03-PREF-END-LOAN-PRIN PIC +9(9).99.                     
+               10  UL-AN03-REGU-BEG-LOAN-BAL PIC +9(9).99.                      
+               10  UL-AN03-PREF-BEG-LOAN-BAL PIC +9(9).99.                      
+               10  UL-AN03-REGU-END-LOAN-BAL   PIC +9(9).99.                    
+               10  UL-AN03-PREF-END-LOAN-BAL   PIC +9(9).99.                    
+               10  UL-AN03-LOAN-IN-PERIOD-SW  PIC X.                            
+               10  UL-AN03-BEG-NET-SURR-CALC  PIC +9(9).99.                     
+               10  UL-AN03-END-NET-SURR-CALC  PIC +9(9).99.                     
+               10  UL-AN03-BEG-NET-DEATH-BEN  PIC +9(9).99.                     
+               10  UL-AN03-END-NET-DEATH-BEN  PIC +9(9).99.                     
+               10  UL-AN03-STAND-LOAN-RATE    PIC X(5).                         
+               10  UL-AN03-COLL-LOAN-RATE     PIC X(5).                         
+               10  UL-AN03-PREF-LOAN-RATE     PIC X(5).                         
+               10  UL-AN03-GUAR-PART-LOAN-RATE  PIC X(5).                       

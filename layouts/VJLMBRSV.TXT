@@ -1,0 +1,21 @@
+       01 WS-VCLMBRSV-LAYOUT.                                                   
+           05  BC-SERV-KEY-DATA-AREA.                                           
+               10  BC-SERV-KEY-COMPANY-CODE        PIC X(03).                   
+               10  BC-SERV-KEY-BILL-CLIENT-NUMBER  PIC X(15).                   
+               10  BC-SERV-KEY-BILL-INDEX-NUMBER   PIC X(05).                   
+               10  BC-SERV-KEY-DOCUMENT-TYPE       PIC X(50).                   
+               10  BC-SERV-KEY-DOCUMENT-ID         PIC X(50).                   
+               10  BC-SERV-KEY-REPORT-CODE         PIC X(04).                   
+               10  FILLER-1                        PIC X(100).                  
+               10  BC-SERV-KEY-MAP-RECORD-ID       PIC X(50).                   
+           05  BC-SERV-OFFICE-NAME             PIC X(50).                       
+           05  BC-SERV-ADDRESS-LINE1           PIC X(50).                       
+           05  BC-SERV-ADDRESS-LINE2           PIC X(50).                       
+           05  BC-SERV-PHONE-NUMBER            PIC X(50).                       
+           05  BC-SERV-OPEN-DAY                PIC X(50).                       
+           05  BC-SERV-CLOSE-DAY               PIC X(50).                       
+           05  BC-SERV-OPEN-HOUR               PIC X(50).                       
+           05  BC-SERV-CLOSE-HOUR              PIC X(50).                       
+           05  BC-SERV-TIME-ZONE               PIC X(50).                       
+           05  BC-SERV-SIGNATURE-IND           PIC X(02).                       
+           05  FILLER-2                        PIC X(350).                      

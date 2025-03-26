@@ -1,0 +1,63 @@
+       01 WS-VJLMECSC-LAYOUT.                                                   
+           05  UL-CNTR-KEY-DATA-AREA.                                           
+               10  UL-CS-KEY-COMPANY-CODE         PIC X(03).                    
+               10  UL-CS-KEY-MASTER-ID            PIC X(15).                    
+               10  UL-CS-KEY-FILE-CODE            PIC X(05).                    
+               10  UL-CS-KEY-DOCUMENT-TYPE        PIC X(50).                    
+               10  UL-CS-KEY-DOCUMENT-ID          PIC X(50).                    
+               10  UL-CS-KEY-TRX-CODE             PIC X(04).                    
+               10  FILLER-1                       PIC X(100).                   
+               10  UL-CS-KEY-MAP-RECORD-ID        PIC X(50).                    
+           05  UL-CS-BROKER-DEALER-INFO.                                        
+               10  UL-CS-TRADE-PARTNER-ID-NUM     PIC X(20).                    
+               10  UL-CS-CLEARINGHOUSE-NAME       PIC X(30).                    
+               10  UL-CS-TRADE-PARTNER-CTL-NUM    PIC X(30).                    
+               10  UL-CS-CLEARINGHOUSE-CTL-NUM    PIC X(30).                    
+               10  UL-CS-DISTRIB-CUST-ACCT-NUM    PIC X(30).                    
+               10  UL-CS-DISTRIB-TRX-ID-NUM       PIC X(30).                    
+               10  UL-CS-APPLICATION-CTL-NUM      PIC X(20).                    
+               10  UL-CS-FILLER-FUTURE-USE        PIC X(68).                    
+           05  UL-CS-TRX-INFO.                                                  
+               10 UL-CS-TAX-IDENTIFIER            PIC X.                        
+               10 UL-CS-DIRECTORY-ID              PIC X(15).                    
+               10 UL-CS-ASSIGNMENT-EFF-DATE       PIC 9(8).                     
+               10 UL-CS-ASSIGNMENT-REASON-CODE    PIC X(2).                     
+               10 UL-CS-ASSIGNMENT-MAIL-CODE      PIC X.                        
+               10 FILLER-2                        PIC X.                        
+               10 UL-CS-DISTRIBUTION-CODE         PIC X(1).                     
+               10 UL-CS-TAX-FORM-OVERRIDE         PIC X(1).                     
+               10 UL-CS-DISTRIBUTION-CODE-2       PIC X(1).                     
+               10 UL-CS-STMT-MAIL-IND             PIC X.                        
+               10 UL-CS-CONFIRM-MAIL-IND          PIC X.                        
+               10 UL-CS-LAPSE-MAIL-IND            PIC X.                        
+               10 UL-CS-PROXY-MAIL-IND            PIC X.                        
+               10 UL-CS-OTHER-MAIL-IND            PIC X.                        
+               10 UL-CS-BILL-MAIL-IND             PIC X.                        
+               10 UL-CS-LOAN-INT-MAIL-IND         PIC X.                        
+               10 FILLER-3                        PIC X(83).                    
+               10 UL-CS-ASSIGNMENT-USER-AREAS.                                  
+                   15 UL-CS-ASSIGNMENT-AREAS-CNTR PIC 9(03).                    
+                   15 UL-CS-ASSIGNMENT-USER-AREA                                
+                                        OCCURS 10 TIMES PIC X(30).              
+               10 UL-CS-NAME-FIELDS.                                            
+                   15 UL-CS-LAST-NAME             PIC X(35).                    
+                   15 UL-CS-FIRST-NAME            PIC X(25).                    
+                   15 UL-CS-NAME-PREFIX           PIC X(10).                    
+                   15 UL-CS-NAME-SUFFIX           PIC X(10).                    
+               10 UL-CS-CORP-NAME                 PIC X(80).                    
+               10 UL-CS-ADDRESS-LINE-CNTR         PIC 9(03).                    
+               10 UL-CS-ADDRESS-FIELDS OCCURS 5 TIMES.                          
+                   15 UL-CS-ADDRESS-LINE          PIC X(35).                    
+               10  UL-CS-ZIP-POSTAL-CODE.                                       
+                   15 UL-CS-ZIP-CODE              PIC X(5).                     
+                   15 UL-CS-ZIP-CODE-SUFFIX       PIC X(4).                     
+                   15 UL-CS-ZIP-CODE-SIX          PIC X(6).                     
+               10 UL-CS-COUNTRY-CODE              PIC XX.                       
+               10 UL-CS-TAX-ID-NO                 PIC X(15).                    
+               10 UL-CS-TAX-ID-SUFFIX             PIC X.                        
+               10 UL-CS-SEX-CODE                  PIC X.                        
+               10 UL-CS-SEX-CODE-TRNSL            PIC X(50).                    
+               10 UL-CS-BIRTH-DATE                PIC 9(08).                    
+           05  PRU-SPECIFIC-FIELDS.                                             
+               10 UL-CS-TOTAL-POLICY-DEBT         PIC +9(9).99.                 
+               10 UL-CS-CASH-VALUE                PIC +9(9).99.                 

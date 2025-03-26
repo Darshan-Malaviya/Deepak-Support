@@ -1,0 +1,82 @@
+       01  WS-VCLMEDT3-LAYOUT.                                                  
+           05  UL-DTR-KEY-DATA-AREA.                                            
+               10  UL-DTR-KEY-COMPANY-CODE        PIC X(03).                    
+               10  UL-DTR-KEY-MASTER-ID           PIC X(15).                    
+               10  UL-DTR-KEY-FILE-CODE           PIC X(05).                    
+               10  UL-DTR-KEY-DOCUMENT-TYPE       PIC X(50).                    
+               10  UL-DTR-KEY-DOCUMENT-ID         PIC X(50).                    
+               10  UL-DTR-KEY-TRX-CODE            PIC X(04).                    
+               10  FILLER-1                       PIC X(100).                   
+               10  UL-DTR-KEY-MAP-RECORD-ID       PIC X(50).                    
+           05  UL-DTR-BROKER-DEALER-INFO.                                       
+               10  UL-DTR-TRADE-PARTNER-ID-NUM    PIC X(20).                    
+               10  UL-DTR-CLEARINGHOUSE-NAME      PIC X(30).                    
+               10  UL-DTR-TRADE-PARTNER-CTL-NUM   PIC X(30).                    
+               10  UL-DTR-CLEARINGHOUSE-CTL-NUM   PIC X(30).                    
+               10  UL-DTR-DISTRIB-CUST-ACCT-NUM   PIC X(30).                    
+               10  UL-DTR-DISTRIB-TRX-ID-NUM      PIC X(30).                    
+               10  UL-DTR-APPLICATION-CTL-NUM     PIC X(20).                    
+               10  UL-DTR-FILLER-FUTURE-USE       PIC X(68).                    
+           05  UL-DTR-NAMED-INSURED-INFO.                                       
+               10  UL-DTR-NI-CVG-EFF-DATE                PIC 9(08).             
+               10  UL-DTR-NI-TYPE                        PIC X(05).             
+               10  UL-DTR-NI-BENEFICIARY-CODE            PIC X(02).             
+               10  UL-DTR-NI-PRODUCER-CODE               PIC X(02).             
+               10  UL-DTR-NI-DIRECTORY-ID                PIC X(15).             
+               10  UL-DTR-NI-ADD-FILE-CODE               PIC +9(5).             
+               10  UL-DTR-NI-CVG-UNITS                   PIC +9(6).9(5).        
+           05  UL-DTR-BENEFITS.                                                 
+               10  UL-DTR-PW-INFO.                                              
+                   15  UL-DTR-PW-OCCURS                  PIC +9(5).             
+                   15  UL-DTR-PW-DATA-CTR                PIC 9(03).             
+                   15  UL-DTR-PW-DATA               OCCURS 5.                   
+                       20  UL-DTR-PW-CVG-EFF-DATE        PIC 9(08).             
+                       20  UL-DTR-PW-ADD-TRX-FILE-CD     PIC +9(5).             
+                       20  UL-DTR-PW-PRODUCER-CODE       PIC X(02).             
+               10  UL-DTR-GPO-INFO.                                             
+                   15  UL-DTR-GPO-OCCURS                 PIC +9(5).             
+                   15  UL-DTR-GPO-DATA-CTR               PIC 9(03).             
+                   15  UL-DTR-GPO-DATA              OCCURS 5.                   
+                       20  UL-DTR-GPO-CVG-EFF-DATE       PIC 9(08).             
+                       20  UL-DTR-GPO-ADD-TRX-FILE-CD PIC +9(5).                
+                       20  UL-DTR-GPO-PRODUCER-CODE      PIC X(02).             
+                       20  UL-DTR-GPO-CVG-UNITS          PIC +9(6).9(5).        
+               10  UL-DTR-COLA-INFO.                                            
+                   15  UL-DTR-COLA-OCCURS                PIC +9(5).             
+                   15  UL-DTR-COLA-DATA-CTR              PIC 9(03).             
+                   15  UL-DTR-COLA-DATA             OCCURS 5.                   
+                       20  UL-DTR-COLA-CVG-EFF-DATE      PIC 9(08).             
+                       20  UL-DTR-COLA-ADD-TRX-FILE-CD PIC +9(5).               
+                       20  UL-DTR-COLA-PRODUCER-CODE     PIC X(02).             
+                       20  UL-DTR-COLA-CVG-UNITS         PIC +9(6).9(5).        
+               10  UL-DTR-ADB-INFO.                                             
+                   15  UL-DTR-ADB-OCCURS                 PIC +9(5).             
+                   15  UL-DTR-ADB-DATA-CTR               PIC 9(03).             
+                   15  UL-DTR-ADB-DATA              OCCURS 5.                   
+                       20  UL-DTR-ADB-CVG-EFF-DATE       PIC 9(08).             
+                       20  UL-DTR-ADB-ADD-TRX-FILE-CD PIC +9(5).                
+                       20  UL-DTR-ADB-PRODUCER-CODE      PIC X(02).             
+                       20  UL-DTR-ADB-BENEFICIARY-CD     PIC X(02).             
+                       20  UL-DTR-ADB-CVG-UNITS          PIC +9(6).9(5).        
+               10  UL-DTR-TERM-RIDER-INFO.                                      
+                   15  UL-DTR-TERM-RIDER-OCCURS          PIC +9(5).             
+                   15  UL-DTR-TERM-RIDER-DATA-CTR        PIC 9(03).             
+                   15  UL-DTR-TERM-RIDER-DATA       OCCURS 5.                   
+                       20  UL-DTR-TERM-RID-CVG-EFF-DT PIC 9(08).                
+                       20  UL-DTR-TM-RID-ADD-T-FILE-CD PIC +9(5).               
+                       20  UL-DTR-TERM-RID-PRODUCER-CD PIC X(02).               
+                       20  UL-DTR-TERM-RID-BENE-CD       PIC X(02).             
+                       20  UL-DTR-TERM-RID-CVG-UNITS     PIC +9(6).9(5).        
+               10  UL-DTR-ABR-INFO.                                             
+                   15  UL-DTR-ABR-OCCURS                 PIC +9(5).             
+                   15  UL-DTR-ABR-DATA-CTR               PIC 9(03).             
+                   15  UL-DTR-ABR-DATA              OCCURS 5.                   
+                       20  UL-DTR-ABR-CVG-EFF-DATE       PIC 9(08).             
+                       20  UL-DTR-ABR-ADD-TRX-FILE-CD PIC +9(5).                
+                       20  UL-DTR-ABR-PRODUCER-CODE      PIC X(02).             
+                       20  UL-DTR-ABR-CVG-UNITS          PIC +9(6).9(5).        
+           05  UL-DTR-ADDIT-DELETION-INFO.                                      
+               10  UL-DTR-DELETION-ORIG-EFF-DT           PIC 9(08).             
+               10  UL-DTR-DELETION-ORIG-TRX-CD           PIC X(04).             
+               10  UL-DTR-SPEC-AGENCY-IND                PIC X.                 
+           05  FILLER-2                                  PIC X(200).            

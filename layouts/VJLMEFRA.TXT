@@ -1,0 +1,36 @@
+       01  WS-VCLMEFRA-LAYOUT.                                                  
+           05  FUND-UL-RA-KEY-DATA-AREA.                                        
+               10  FUND-UL-RA-KEY-COMPANY-CODE           PIC X(03).             
+               10  FUND-UL-RA-KEY-MASTER-ID              PIC X(15).             
+               10  FUND-UL-RA-KEY-FILE-CODE              PIC X(05).             
+               10  FUND-UL-RA-KEY-DOCUMENT-TYPE          PIC X(50).             
+               10  FUND-UL-RA-KEY-DOCUMENT-ID            PIC X(50).             
+               10  FUND-UL-RA-KEY-TRX-CODE               PIC X(04).             
+               10  FILLER-1                              PIC X(100).            
+               10  FUND-UL-RA-KEY-MAP-RECORD-ID          PIC X(50).             
+           05  FUND-UL-RA-FUND-INFO.                                            
+               10  FUND-UL-RA-FUND-TYPE            PIC X(01).                   
+               10  FUND-UL-RA-FUND-PARTICIPATION   PIC X.                       
+               10  FUND-UL-RA-FUND-NUMBER          PIC +9(3).                   
+               10  FUND-UL-RA-FUND-NUMBER-TRNSL    PIC X(50).                   
+               10  FUND-UL-RA-FUND-ALLOCATION-PCT  PIC +9(4).9.                 
+               10  FUND-UL-RA-FUND-CURR-CASH-VAL   PIC +9(9).99.                
+               10  FUND-UL-RA-FUND-NET-PREMIUM     PIC +9(9).99.                
+               10  FUND-UL-RA-FUND-PREMIUM-TAX     PIC +9(9).99.                
+               10  FUND-UL-RA-FUND-AREA-TAX        PIC +9(9).99.                
+               10  FUND-UL-RA-FUND-TRANSACTION-FE  PIC +9(9).99.                
+               10  FUND-UL-RA-FUND-SALES-SETUP-FE  PIC +9(9).99.                
+               10  FUND-UL-RA-FUND-SALES-LOADS     PIC +9(9).99.                
+               10  FUND-UL-RA-FUND-ADMIN-SETUP-FE  PIC +9(9).99.                
+               10  FUND-UL-RA-FUND-ADMIN-LOADS     PIC +9(9).99.                
+               10  FUND-UL-RA-FUND-GAIN-AMOUNT     PIC +9(9).99.                
+               10  FUND-UL-RA-FUND-LOSS-AMOUNT     PIC +9(9).99.                
+               10  FUND-UL-RA-FUND-TOTAL-UNITS     PIC +9(7).9(4).              
+               10  FUND-UL-RA-FUND-CHANGE-IN-UNTS  PIC +9(7).9(4).              
+               10  FUND-UL-RA-FND-ADMN-CSH-VAL-PE  PIC +9(9).99.                
+               10  FUND-UL-RA-FND-SALE-CSH-VAL-PE  PIC +9(9).99.                
+               10  FUND-UL-RA-FND-ADMN-CHG-UNT-PE  PIC +9(9).99.                
+               10  FUND-UL-RA-FND-SALE-CHG-UNT-PE  PIC +9(9).99.                
+               10  FUND-UL-RA-FND-ADMN-PCT-TGT-PE  PIC +9(9).99.                
+               10  FUND-UL-RA-FND-SALE-PCT-TGT-PE  PIC +9(9).99.                
+               10  FUND-UL-RA-FUND-UNIT-VALUE      PIC +999.9(6).               

@@ -1,0 +1,67 @@
+       01 WS-VCLMXAIC-LAYOUT.                                                   
+           05  ADSI-AGT-KEY-DATA-AREA.                                          
+               10  ADSI-AGT-KEY-COMPANY-CODE      PIC X(03).                    
+               10  ADSI-AGT-KEY-MASTER-ID         PIC X(15).                    
+               10  ADSI-AGT-KEY-FILE-CODE         PIC X(05).                    
+               10  ADSI-AGT-KEY-DOCUMENT-TYPE     PIC X(50).                    
+               10  ADSI-AGT-KEY-DOCUMENT-ID       PIC X(50).                    
+               10  ADSI-AGT-KEY-TRX-CODE          PIC X(04).                    
+               10  FILLER-1                       PIC X(100).                   
+               10  ADSI-AGT-KEY-MAP-RECORD-ID     PIC X(50).                    
+           05  ADSI-AGT-CALLING-INFO.                                           
+               10  ADSI-AGT-AGENT-PRE             PIC X.                        
+               10  ADSI-AGT-ORD-AGENCY            PIC X.                        
+               10  ADSI-AGT-DET-OFF-CODE          PIC X.                        
+               10  ADSI-AGT-APPLICATION-STATE     PIC X(02).                    
+               10  ADSI-AGT-COMPANY-CODE          PIC X(02).                    
+               10  ADSI-AGT-PRODUCT-GROUP-CODE    PIC X(03).                    
+               10  ADSI-AGT-LICENSE-DATE          PIC 9(8).                     
+               10  ADSI-AGT-FUNCTION-CODE         PIC X.                        
+               10  ADSI-AGT-RET-CHANNEL-IND       PIC X.                        
+               10  ADSI-AGT-KEY-CHANNEL-IND       PIC X.                        
+               10  ADSI-AGT-KEY-RMO               PIC X.                        
+           05  ADSI-AGT-RETURNED-INFO.                                          
+               10  ADSI-AGT-FUNCTION-A-CODES      PIC X.                        
+               10  ADSI-AGT-FUNCTION-B-CODES      PIC X.                        
+               10  ADSI-AGT-FUNCTION-C-CODES      PIC X.                        
+               10  ADSI-AGT-FUNCTION-D-CODES      PIC X.                        
+               10  ADSI-AGT-FUNCTION-E-CODES      PIC X.                        
+               10  ADSI-AGT-FUNCTION-F-CODES      PIC X.                        
+               10  ADSI-AGT-FILE-STATUS-CODE      PIC 9(02).                    
+               10  ADSI-AGT-PROGRAM-STATUS        PIC 9(02).                    
+               10  ADSI-AGT-CHANNEL-IND           PIC X.                        
+               10  ADSI-AGT-AGENT-NAME-INFO.                                    
+                   15  ADSI-AGT-TITLE-NAME        PIC X(10).                    
+                   15  ADSI-AGT-FIRST-NAME        PIC X(20).                    
+                   15  ADSI-AGT-MIDDLE-INT        PIC X.                        
+                   15  ADSI-AGT-BROKERS-NAME      PIC X(50).                    
+                   15  ADSI-AGT-LAST-NAME         PIC X(30).                    
+                   15  ADSI-AGT-SUFFIX-NAME       PIC X(20).                    
+                   15  ADSI-AGT-DESIG-CTR         PIC 9(3).                     
+                   15  ADSI-AGT-DESIGNATIONS      PIC X(06)                     
+                                         OCCURS 7 TIMES.                        
+               10  ADSI-AGT-DEBIT-INIT            PIC X(03).                    
+               10  ADSI-AGT-RMO                   PIC X.                        
+               10  ADSI-AGT-OFFICE.                                             
+                   15  ADSI-AGT-FOUR-POS-OFFICE   PIC X(04).                    
+                   15  ADSI-AGT-DETACHED-OFFICE   PIC X.                        
+               10  ADSI-AGT-REGION                PIC X.                        
+               10  ADSI-AGT-STAFF                 PIC X.                        
+               10  ADSI-AGT-CONTRACT-PREFIX       PIC X.                        
+               10  ADSI-AGT-FINAL-CODE            PIC X.                        
+               10  ADSI-AGT-PRUBACHE-AE-NBR       PIC X(06).                    
+               10  ADSI-AGT-ADDRESS-INFO.                                       
+                   15  ADSI-AGT-ADDR-LINE-1       PIC X(40).                    
+                   15  ADSI-AGT-ADDR-LINE-2       PIC X(40).                    
+                   15  ADSI-AGT-ADDR-LINE-3       PIC X(40).                    
+                   15  ADSI-AGT-CITY-NAME         PIC X(20).                    
+                   15  ADSI-AGT-STATE-CODE        PIC X(02).                    
+                   15  ADSI-AGT-ZIP-CODE          PIC X(10).                    
+               10  ADSI-AGT-AREA-CODE             PIC X(03).                    
+               10  ADSI-AGT-LOCAL-NUMBER          PIC X(07).                    
+               10  ADSI-AGT-RECORD-INDICATOR      PIC X.                        
+               10  ADSI-AGT-PRODUCT-INDICATOR     PIC X.                        
+               10  ADSI-AGT-CHECK-PRODUCT         PIC X.                        
+               10  ADSI-AGT-CHECK-PRODUCT-DATE1   PIC X.                        
+               10  ADSI-AGT-PRODUCT-DATE          PIC 9(08).                    
+               10  FILLER-2                       PIC X(200).                   

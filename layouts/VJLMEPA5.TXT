@@ -1,0 +1,245 @@
+       01  WS-VCLMEPA5-LAYOUT.                                                  
+           05  UL-PA-KEY-DATA-AREA.                                             
+               10  UL-PA-KEY-COMPANY-CODE               PIC X(03).              
+               10  UL-PA-KEY-MASTER-ID                  PIC X(15).              
+               10  UL-PA-KEY-FILE-CODE                  PIC X(05).              
+               10  UL-PA-KEY-DOCUMENT-TYPE              PIC X(50).              
+               10  UL-PA-KEY-DOCUMENT-ID                PIC X(50).              
+               10  UL-PA-KEY-TRX-CODE                   PIC X(04).              
+               10  UL-PA-FILLER                         PIC X(100).             
+               10  UL-PA-KEY-MAP-RECORD-ID              PIC X(50).              
+           05  UL-PA-BROKER-DEALER-INFO.                                        
+               10  UL-PA-TRADE-PARTNER-ID-NUM           PIC X(20).              
+               10  UL-PA-CLEARINGHOUSE-NAME             PIC X(30).              
+               10  UL-PA-TRADE-PARTNER-CTL-NUM          PIC X(30).              
+               10  UL-PA-CLEARINGHOUSE-CTL-NUM          PIC X(30).              
+               10  UL-PA-DISTRIB-CUST-ACCT-NUM          PIC X(30).              
+               10  UL-PA-DISTRIB-TRX-ID-NUM             PIC X(30).              
+               10  UL-PA-APPLICATION-CTL-NUM            PIC X(20).              
+               10  UL-PA-FILLER-FUTURE-USE              PIC X(68).              
+           05  UL-PA-TRX-INFO.                                                  
+               10  UL-PA-MEMO-CODE                      PIC XX.                 
+               10  UL-PA-SOURCE-CODE                    PIC XX.                 
+               10  UL-PA-CLAIM-NUMBER                   PIC X(15).              
+               10  UL-PA-CAUSE-CODE                     PIC X(8).               
+               10  UL-PA-REVERSAL-TRX-DATE              PIC 9(8).               
+               10  UL-PA-REVERSAL-ORIGINATOR-CD         PIC X(8).               
+               10  UL-PA-ADB-INDICATOR                  PIC X.                  
+               10  UL-PA-LAPSE-STATUS-OVERRIDE          PIC X.                  
+               10  UL-PA-REINSURANCE-INDICATOR          PIC X.                  
+               10  UL-PA-STATUS-REQUEST-CODE            PIC X.                  
+               10  UL-PA-DEPOSIT-TICKET-NO.                                     
+                   15  UL-PA-DEP-TICKET-NO-1            PIC X.                  
+                   15  UL-PA-DEP-TICKET-NO-4            PIC 9(4).               
+               10  UL-PA-NOTIFICATION-DATE              PIC 9(8).               
+               10  UL-PA-PRIOR-NI-STATUS                PIC X.                  
+               10  UL-PA-SAVE-LAST-NON-FIN-DATE         PIC 9(8).               
+               10  UL-PA-AMOUNT-AREA.                                           
+                   15  UL-PA-TOTAL-DEATH-BENEFIT        PIC +9(9).99.           
+                   15  UL-PA-FACE-AMOUNT                PIC +9(9).99.           
+                   15  UL-PA-ADB-AMOUNT                 PIC +9(9).99.           
+                   15  UL-PA-DEATH-BENEFIT-OVR-AMT      PIC +9(9).99.           
+                   15  UL-PA-ADB-OVERRIDE-AMOUNT        PIC +9(9).99.           
+                   15  UL-PA-ACCUMULATED-CASH-VAL       PIC +9(9).99.           
+                   15  UL-PA-CORRIDOR-AMOUNT            PIC +9(9).99.           
+                   15  UL-PA-OUTSTANDING-LOAN-AMT       PIC +9(9).99.           
+                   15  UL-PA-LOAN-INTEREST-EARNED       PIC +9(9).99.           
+                   15  UL-PA-LOAN-INTEREST-UNEARNED     PIC +9(9).99.           
+                   15  UL-PA-AMOUNT-DEFICIENT           PIC +9(9).99.           
+                   15  UL-PA-XP-AMOUNT                  PIC +9(9).99.           
+                   15  UL-PA-LOAN-CAPITALIZATION        PIC +9(9).99.           
+                   15  UL-PA-TR-AMOUNT                  PIC +9(9).99.           
+               10  UL-PA-USER-AREA                      PIC X(8).               
+               10  UL-PA-PRINI-KEY                      PIC X(87).              
+               10  UL-PA-SAVE-250-TEST-DATE             PIC 9(8).               
+               10  UL-PA-SAVE-EXEMPT-TEST-DATE          PIC 9(8).               
+               10  UL-PA-SAVE-CAN-CAL-YR-DATE           PIC 9(8).               
+               10  UL-PA-MISTMT-IND                     PIC X.                  
+               10  UL-PA-CORRECT-PA-DOB                 PIC 9(8).               
+               10  UL-PA-CORRECT-PA-SEX                 PIC X.                  
+               10  UL-PA-PRIOR-CVG-UNITS               PIC +9(6).9(5).          
+               10  UL-PA-TAX-FORM-OVERRIDE              PIC X.                  
+               10  UL-PA-NON-RES-ALIEN-IND              PIC X.                  
+               10  UL-PA-TAX-ID-INDICATOR               PIC X.                  
+               10  UL-PA-INT-OVERRIDE-AMT               PIC +9(9).99.           
+               10  UL-PA-INT-OVERRIDE-IND               PIC X.                  
+               10  UL-PA-BACKUP-WITH-AMT-STATE          PIC +9(9).99.           
+               10  UL-PA-BACKUP-WITH-STATE-IND          PIC X.                  
+               10  UL-PA-INTEREST-AMOUNT                PIC +9(9).99.           
+               10  UL-PA-BACKUP-WITH-AMT-FED            PIC +9(9).99.           
+               10  UL-PA-BENE-RES-STATE                 PIC XXX.                
+               10  UL-PA-PREM-RETURN-ACCUM              PIC +9(9).99.           
+               10  UL-PA-PREM-RETURN-UPDT-DATE          PIC 9(8).               
+               10  UL-PA-LINE-OF-BUSINESS               PIC X(3).               
+               10  UL-PA-LINE-OF-BUSINESS-TRNSL         PIC X(50).              
+               10  FILLER-1                             PIC X(90).              
+               10  UL-PA-DTHPND-PRI-STAT-CD             PIC X.                  
+               10  UL-PA-TTR-SIA-DB-AMT                 PIC +9(9).99.           
+               10  UL-PA-BUY-BACK-AMOUNT                PIC +9(9).99.           
+               10  UL-PA-DATE-OF-DEATH                  PIC 9(8).               
+               10  UL-PA-ADB-EXISTS-IND                 PIC X.                  
+               10  UL-PA-ADD-SUSPN-EXISTS-IND           PIC X.                  
+               10  UL-PA-REFUND-PREMS-IN-DB-IND         PIC X.                  
+               10  UL-PA-BENE-EVEN-SPLIT-IND            PIC X.                  
+               10  UL-PA-NUMBER-OF-ASSIGNMENTS          PIC +9(3).              
+               10  UL-PA-NUM-OF-BENEFICIARIES           PIC +9(3).              
+               10  UL-PA-PAYEE-TYPE                     PIC X(12).              
+               10  UL-PA-PAYEE-NAME-1                   PIC X(37).              
+               10  UL-PA-PAYEE-NAME-2                   PIC X(37).              
+               10  UL-PA-PAYEE-NAME-3                   PIC X(8).               
+               10  UL-PA-PAYEE-TIN                      PIC +9(9).              
+               10  UL-PA-INDIVIDUAL-IND                 PIC X.                  
+               10  UL-PA-PAYEE-ADDRESS-1                PIC X(28).              
+               10  UL-PA-PAYEE-ADDRESS-2                PIC X(28).              
+               10  UL-PA-PAYEE-ADDRESS-3                PIC X(28).              
+               10  UL-PA-PAYEE-ADDRESS-4                PIC X(28).              
+               10  UL-PA-PAYEE-COUNTRY-CODE             PIC XX.                 
+               10  UL-PA-DCI-DATE                       PIC 9(8).               
+               10  UL-PA-ASSIGNMENT-AMOUNT              PIC +9(9).99.           
+               10  UL-PA-ASSIGNMENT-TYPE                PIC X.                  
+               10  UL-PA-ASSIGNEE-DCI-TAX-IND           PIC X.                  
+               10  UL-PA-SPECIAL-ADDRESSEE-NAME         PIC X(28).              
+               10  UL-PA-SPEC-ADDRESSEE-ADD-L-1         PIC X(28).              
+               10  UL-PA-SPEC-ADDRESSEE-ADD-L-2         PIC X(28).              
+               10  UL-PA-SPEC-ADDRESSEE-ADD-L-3         PIC X(28).              
+               10  UL-PA-SPEC-ADDRESSEE-ADD-L-4         PIC X(28).              
+               10  UL-PA-BENEFICIARY-PERCENT            PIC +9(2).9(3).         
+               10  UL-PA-BENE-DB-OVERRIDE-AMT           PIC +9(9).99.           
+               10  UL-PA-BENE-PREM-OVERRIDE-AMT         PIC +9(9).99.           
+               10  UL-PA-BENE-ASSIGNMENT-IND            PIC X.                  
+               10  UL-PA-TOT-PREMIUM-AMT                PIC +9(9).99.           
+               10  UL-PA-PAYEE-TOT-BNF-AMT              PIC +9(9).99.           
+               10  UL-PA-PAYEE-DTH-BNF-AMT              PIC +9(9).99.           
+               10  UL-PA-PAYEE-PREMIUM-AMT              PIC +9(9).99.           
+               10  UL-PA-PRIOR-BENEFIT-AMOUNT           PIC +9(9).99.           
+               10  UL-PA-REMAINING-PREMIUM              PIC +9(9).99.           
+               10  UL-PA-REMAINING-DTH-BENEFIT          PIC +9(9).99.           
+               10  UL-PA-REMAINING-PERCENT              PIC +9(3).9(3).         
+               10  UL-PA-REMAIN-NO-OF-ASSIGNS           PIC +9(3).              
+               10  UL-PA-REMAIN-NO-OF-BENES             PIC +9(3).              
+               10  UL-PA-TAXABLE-AMOUNT                 PIC +9(9).99.           
+               10  UL-PA-PAYMENT-AMOUNT                 PIC +9(9).99.           
+               10  UL-PA-ASSIGNOR-NAME.                                         
+                   15 UL-PA-ASSIGNOR-NAME-PART1         PIC X(42).              
+                   15 UL-PA-ASSIGNOR-NAME-PART2         PIC X(40).              
+               10  UL-PA-TAXPAYER-NAME.                                         
+                   15  UL-PA-LAST-NAME                  PIC X(35).              
+                   15  UL-PA-FIRST-NAME                 PIC X(25).              
+                   15  UL-PA-NAME-PREFIX                PIC X(10).              
+                   15  UL-PA-NAME-SUFFIX                PIC X(10).              
+               10  UL-PA-TAXPAYER-ADD-LINE-1            PIC X(35).              
+               10  UL-PA-TAXPAYER-ADD-LINE-2            PIC X(35).              
+               10  UL-PA-TAXPAYER-ADD-LINE-3            PIC X(35).              
+               10  UL-PA-TAXPAYER-ADD-LINE-4            PIC X(35).              
+               10  UL-PA-TAXPAYER-ADD-LINE-5            PIC X(35).              
+               10  UL-PA-TAXPAYER-ZIP-CODE              PIC X(15).              
+               10  UL-PA-PRIOR-SHARED-PEND-IND          PIC X.                  
+               10  UL-PA-DEATH-CLAIM-SEQ-NUMBER         PIC +9(3).              
+               10  FILLER-2                             PIC X(100).             
+               10  UL-PA-SUSPENSE-INFO-AREA.                                    
+                   15  UL-PA-SUSPENSE-INFO-OCCURS       PIC +9(3).              
+                   15  UL-PA-SUSPENSE-INFO-CNTR         PIC 9(3).               
+                   15  UL-PA-SUSPENSE-INFO OCCURS 20 TIMES.                     
+                       20  UL-PA-SUSP-ORIGINATOR-CODE   PIC X(8).               
+                       20  UL-PA-SUSP-COMPANY-CDE       PIC XXX.                
+                       20  UL-PA-SUSP-TICKET-NO         PIC X(5).               
+                       20  UL-PA-SUSP-COMPANY-CODE      PIC XXX.                
+                       20  UL-PA-SUSP-NAME              PIC X(80).              
+                       20  UL-PA-TICKET-NUMBER          PIC X(5).               
+                       20  UL-PA-SUSP-MASTER-ID         PIC X(15).              
+                       20  UL-PA-SUPERIOR-CLIENT-NO     PIC X(15).              
+                       20  UL-PA-SUSPENSE-DATE          PIC 9(8).               
+                       20  UL-PA-DATE-RECEIVED          PIC 9(8).               
+                       20  UL-PA-LAST-CHANGED-DATE      PIC 9(8).               
+                       20  UL-PA-SUSPENSE-AMOUNT        PIC +9(9).99.           
+                       20  UL-PA-AUDIT-SEQUENCE-NUM     PIC +9(7).              
+                       20  UL-PA-STAT-COMPANY-CODE      PIC XXX.                
+                       20  UL-PA-STAT-COMPANY-CODE-TRNSL PIC X(50).             
+                       20  UL-PA-SUSP-SECONDARY-ID      PIC X(5).               
+                       20  UL-PA-BATCH-NUMBER           PIC X(5).               
+                       20  UL-PA-SUSP-MEMO-CODE         PIC XX.                 
+                       20  UL-PA-SUSP-SOURCE-CODE       PIC XX.                 
+                       20  UL-PA-SOURCE-OF-PREMIUM      PIC XX.                 
+                       20  UL-PA-ROLLOVER-CODE          PIC X.                  
+                       20  UL-PA-REASON-CODE            PIC XXXX.               
+                       20  UL-PA-IDENTIFICATION-NO.                             
+                           25  UL-PA-IDENTIFICATION-NO-PRE PIC X(15).           
+                           25  UL-PA-IDENTIFICATION-NO-SUF PIC X.               
+                       20  UL-PA-INFO-TRX-CODE          PIC X(4).               
+                       20  UL-PA-SUSP-TEXT              PIC X(25).              
+                       20  UL-PA-PRIOR-NOS-CNTR         PIC 9(3).               
+                       20  UL-PA-PRIOR-TICKETS.                                 
+                           25  UL-PA-PRIOR-NOS   PIC X(5) OCCURS 10.            
+                       20  UL-PA-COMMISSION-IND         PIC X.                  
+                       20  UL-PA-SERVICING-AGENCY-CODE  PIC X(6).               
+                       20  UL-PA-SUSPENSE-TYPE          PIC X.                  
+                       20  UL-PA-NAME-TYPE-IND          PIC X.                  
+                       20  UL-PA-INIT-PREM-USE-CODE     PIC X.                  
+                       20  UL-PA-INIT-PREM-EXCEPT-CD    PIC X.                  
+                       20  UL-PA-SOURCE-INFO            PIC X(50).              
+                       20  UL-PA-PRE-COST-BASIS-AMT     PIC +9(9).99.           
+                       20  UL-PA-POST-COST-BASIS-AMT    PIC +9(9).99.           
+                       20  UL-PA-EXCHANGE-1035-IND      PIC X.                  
+                       20  UL-PA-CALENDAR-YEAR-OVER     PIC 9(4).               
+                       20  UL-PA-RETAIN-AGENT-1-ID.                             
+                           25  UL-PA-RETAIN-AGENT-1-NUM PIC X(10).              
+                           25  UL-PA-RETAIN-AGENT-1-PRF PIC XXX.                
+                       20  UL-PA-RETAIN-AGENT-1-AMT     PIC +9(9).99.           
+                       20  UL-PA-RETAIN-AGENT-2-ID.                             
+                           25  UL-PA-RETAIN-AGENT-2-NUM PIC X(10).              
+                           25  UL-PA-RETAIN-AGENT-2-PRF PIC XXX.                
+                       20  UL-PA-RETAIN-AGENT-2-AMT     PIC +9(9).99.           
+                       20  UL-PA-NET-PREMIUM            PIC +9(9).99.           
+                       20  UL-PA-CANADIAN-FIELDS.                               
+                           25  UL-PA-SPOUSE-CNTRB-IND   PIC X.                  
+                           25  UL-PA-CERTIFICATE-IND    PIC X.                  
+                           25  UL-PA-CERTIFICATE-NUMBER PIC X(10).              
+                           25  UL-PA-CANADIAN-FUND-SOURCE PIC X.                
+                           25  UL-PA-HOMEBUYER-REPYMT   PIC X.                  
+                           25  FILLER-3                 PIC X.                  
+               10  UL-PA-FUND-INFO-TEXT.                                        
+                   15  UL-PA-FUND-INFO-CNTR             PIC 9(3).               
+                   15  UL-PA-FUND-INFO                  OCCURS 99.              
+                       20  UL-PA-FUND-NUMBER   PIC +99.                         
+                       20  UL-PA-FUND-NUMBER-TRNSL      PIC X(50).              
+                       20  UL-PA-FUND-TYPE              PIC X.                  
+                       20  UL-PA-FIXED-NET-AMOUNT       PIC +9(9).99.           
+                       20  UL-PA-VARIABLE-FUND-UNITS    PIC +9(9).9(4).         
+                       20  UL-PA-VARIABLE-CASH-VALUE    PIC +9(9).99.           
+                       20  UL-PA-FUND-GAIN-LOSS-AMOUNT  PIC +9(9).99.           
+                       20  FILLER-4                     PIC X(17).              
+               10 UL-PA-FCT-JUAXPAA-FIELDS-AREA         PIC X(714).             
+               10 UL-PA-FCT-JUAXPAA-FIELDS REDEFINES                            
+                        UL-PA-FCT-JUAXPAA-FIELDS-AREA.                          
+                  15 UL-PA-TRX-TYPE-01-AREA.                                    
+                     20 UL-PA-FACE-AMOUNT-PA01          PIC +9(9).99.           
+                     20 UL-PA-ADDL-DTHBEN-AMOUNT        PIC +9(9).99.           
+                     20 UL-PA-ADB-AMOUNT-PA01           PIC +9(9).99.           
+                     20 UL-PA-TR-AMOUNT-PA01            PIC +9(9).99.           
+                     20 UL-PA-TR-AMOUNT-PA01-IND        PIC X.                  
+                     20 UL-PA-TTR-DTHBNF-AMT-PA01       PIC +9(9).99.           
+                     20 UL-PA-TTR-DTHBNF-AMT-PA01-IND   PIC X.                  
+                     20 UL-PA-OS-CHARGES                PIC +9(9).99.           
+                  15 UL-PA-CLAIMS-APPEAL-INFO.                                  
+                     20 UL-PA-CLM-OFFICE-ADDRESS1       PIC X(50).              
+                     20 UL-PA-CLM-OFFICE-ADDRESS2       PIC X(50).              
+                     20 UL-PA-CLM-OFFICE-ADDRESS3       PIC X(50).              
+                     20 UL-PA-CLM-OFFICE-FAX-NBR        PIC X(20).              
+                     20 UL-PA-CLM-OFFICE-COORDNTR       PIC X(50).              
+                     20 UL-PA-CLM-OFFICE-DIVISION       PIC X(50).              
+                  15 UL-PA-ALLIANCE-CUST-SERV-INFO.                             
+                     20  UL-PA-ALNC-TELE-NUMBER         PIC X(20).              
+                     20  UL-PA-ALNC-SERV-OPEN-DAY       PIC X(50).              
+                     20  UL-PA-ALNC-SERV-CLOSE-DAY      PIC X(50).              
+                     20  UL-PA-ALNC-SERV-OPEN-HOUR      PIC X(50).              
+                     20  UL-PA-ALNC-SERV-CLOSE-HOUR     PIC X(50).              
+                     20  UL-PA-ALNC-SERV-TIME-ZONE      PIC X(50).              
+                  15 UL-PA-POLICY-DEBT                  PIC +9(9).99.           
+                  15 UL-PA-DTHBEN-DUE                   PIC +9(9).99.           
+                  15 UL-PA-OTHER-PAYMENTS               PIC +9(9).99.           
+                  15 UL-PA-NAME-OF-INSURED-AREA.                                
+                     20 UL-PA-INSURED-FIRST             PIC X(25).              
+                     20 UL-PA-INSURED-LAST              PIC X(35).              
+                     20 UL-PA-INSURED-SUFFIX            PIC X(10).              
+                  15 UL-PA-PAYEE-STATE                  PIC XXX.                
+               10 UL-PA-STATEMENT-TYPE                  PIC XX.                 

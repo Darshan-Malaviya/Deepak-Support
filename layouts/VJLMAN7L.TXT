@@ -1,0 +1,22 @@
+       01 WS-VCLMAN7L-LAYOUT.                                                   
+         02  UL-AN7L-KEY-DATA-AREA.                                             
+           05  UL-AN7L-KEY-COMPANY-CODE        PIC X(03).                       
+           05  UL-AN7L-KEY-MASTER-ID           PIC X(15).                       
+           05  UL-AN7L-KEY-FILE-CODE           PIC X(05).                       
+           05  UL-AN7L-KEY-DOCUMENT-TYPE       PIC X(50).                       
+           05  UL-AN7L-KEY-DOCUMENT-ID         PIC X(50).                       
+           05  UL-AN7L-KEY-TRX-CODE            PIC X(04).                       
+           05  UL-AN7L-FILLER                  PIC X(100).                      
+           05  UL-AN7L-KEY-MAP-RECORD-ID       PIC X(50).                       
+         02  UL-AN7L-DATA-AREA.                                                 
+           05  UL-AN7L-RECORD-TYPE-IND         PIC X(4).                        
+           05  UL-AN7L-RECORD-CODE             PIC 9(5).                        
+           05  UL-AN7L-EXTRACT-DATA.                                            
+               10  UL-AN7L-TRX-CODE             PIC X(04).                      
+               10  UL-AN7L-INIT-BAL             PIC +9(9).9(2).                 
+               10  UL-AN7L-BIA-NET-ADDITIONS    PIC +9(9).9(2).                 
+               10  UL-AN7L-BIA-MATURED-TRNSFERS PIC +9(9).9(2).                 
+               10  UL-AN7L-BIA-WDLS             PIC +9(9).9(2).                 
+               10  UL-AN7L-BIA-INT-CREDIT       PIC +9(9).9(2).                 
+               10  UL-AN7L-INDX-TRNSFERS        PIC +9(9).9(2).                 
+               10  UL-AN7L-TOTL-BIA-VALUE       PIC +9(9).9(2).                 

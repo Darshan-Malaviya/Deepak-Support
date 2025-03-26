@@ -1,0 +1,14 @@
+       01 WS-VCLMAN98-LAYOUT.                                                   
+         02  UL-AN98-KEY-DATA-AREA.                                             
+           05  UL-AN98-KEY-COMPANY-CODE  PIC X(03).                             
+           05  UL-AN98-KEY-MASTER-ID     PIC X(15).                             
+           05  UL-AN98-KEY-FILE-CODE     PIC X(05).                             
+           05  UL-AN98-KEY-DOCUMENT-TYPE PIC X(50).                             
+           05  UL-AN98-KEY-DOCUMENT-ID   PIC X(50).                             
+           05  UL-AN98-KEY-TRX-CODE      PIC X(04).                             
+           05  UL-AN98-FILLER            PIC X(100).                            
+           05  UL-AN98-KEY-MAP-RECORD-ID PIC X(50).                             
+         02  UL-AN98-DATA-AREA.                                                 
+          03  UL-AN98-RECORD-TYPE-IND.                                          
+           05  STMT-IMAGE-INDICATORS  OCCURS 1000 TIMES.                        
+               10  UL-AN98-IMAGE-IND     PIC X.                                 

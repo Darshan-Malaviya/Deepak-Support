@@ -1,0 +1,246 @@
+       01  WS-VCLMELIX-LAYOUT.                                                  
+           05  UL-CNTR-KEY-DATA-AREA.                                           
+               10  UL-LIX-KEY-COMPANY-CODE PIC X(03).                           
+               10  UL-LIX-KEY-MASTER-ID  PIC X(15).                             
+               10  UL-LIX-KEY-FILE-CODE  PIC X(05).                             
+               10  UL-LIX-KEY-DOCUMENT-TYPE PIC X(50).                          
+               10  UL-LIX-KEY-DOCUMENT-ID PIC X(50).                            
+               10  UL-LIX-KEY-TRX-CODE   PIC X(04).                             
+               10  FILLER-1                   PIC X(100).                       
+               10  UL-LIX-KEY-MAP-RECORD-ID PIC X(50).                          
+           05  UL-LIX-BROKER-DEALER-INFO.                                       
+               10  UL-LIX-TRADE-PARTNER-ID-NUM    PIC X(20).                    
+               10  UL-LIX-CLEARINGHOUSE-NAME      PIC X(30).                    
+               10  UL-LIX-TRADE-PARTNER-CTL-NUM   PIC X(30).                    
+               10  UL-LIX-CLEARINGHOUSE-CTL-NUM   PIC X(30).                    
+               10  UL-LIX-DISTRIB-CUST-ACCT-NUM   PIC X(30).                    
+               10  UL-LIX-DISTRIB-TRX-ID-NUM      PIC X(30).                    
+               10  UL-LIX-APPLICATION-CTL-NUM     PIC X(20).                    
+               10  UL-LIX-FILLER-FUTURE-USE       PIC X(68).                    
+           05  UL-LIX-DB-SEGMENT-KEY                    PIC X(87).              
+           05  UL-LIX-SEGMENT-IDENTIFIER.                                       
+               10  UL-LIX-DB-NAMED-INSURED              PIC XX.                 
+               10  UL-LIX-DB-NI-DIRECTORY-ID            PIC X(15).              
+               10  UL-LIX-SEGMENT-NAME                  PIC X(5).               
+               10  UL-LIX-SEGMENT-OCC-ID                PIC 99.                 
+           05  UL-LIX-TRX-SEGMENT-PRIOR.                                        
+               10  UL-LIX-PRI-COMMON-CVG-FIELDS.                                
+                   15  UL-LIX-PCC-CVG-DATE-OF-ISSUE     PIC 9(8).               
+                   15  UL-LIX-PCC-ISSUE-AGE             PIC +9(3).              
+                   15  UL-LIX-PCC-ISSUE-AGE-YOUNGEST    PIC +9(3).              
+                   15  UL-LIX-PCC-ISSUE-AGE-OLDEST      PIC +9(3).              
+                   15  UL-LIX-PCC-CVG-EFF-DATE          PIC 9(8).               
+                   15  UL-LIX-PCC-RATE-EFF-DATE         PIC 9(8).               
+                   15  UL-LIX-PCC-UND-EFF-DATE          PIC 9(8).               
+                   15  UL-LIX-PCC-CVG-TERMINATE-DATE    PIC 9(8).               
+                   15  UL-LIX-PCC-CVG-TERMINATE-RSN     PIC XX.                 
+                   15  UL-LIX-PCC-RB-STATUS             PIC X.                  
+                   15  UL-LIX-PCC-PREM-CLASS-CODE       PIC X.                  
+                   15  UL-LIX-PCC-PREM-CLASS-CD-TRNSL   PIC X(50).              
+                   15  UL-LIX-PCC-UNDERWRITING-AGE      PIC +9(3).              
+                   15  UL-LIX-PCC-UNDRWRTNG-BASIS-IND   PIC X.                  
+                   15  UL-LIX-PCC-PRODUCER-GROUP-CODE   PIC XX.                 
+                   15  UL-LIX-PCC-RISK-COMM-DURA-ADJ    PIC +9(3).              
+                   15  UL-LIX-PCC-RISK-LOAD-DURA-ADJ    PIC +9(3).              
+                   15  UL-LIX-PCC-GUIDELN-LEVEL-PREM    PIC +9(9).99.           
+                   15  UL-LIX-PCC-GUIDELN-LVL-PRM-OR                            
+                                                        PIC +9(9).99.           
+                   15  UL-LIX-PCC-GUIDELN-SINGLE-PREM   PIC +9(9).99.           
+                   15  UL-LIX-PCC-GUIDELN-SING-PRM-OR                           
+                                                        PIC +9(9).99.           
+                   15  UL-LIX-PCC-REINSTATE-DUR-ADJ     PIC +9(3).              
+                   15  UL-LIX-PCC-TAMRA-7PP-AMT         PIC +9(9).99.           
+                   15  UL-LIX-PCC-JOINT-COMPLETE        PIC 99.                 
+                   15  UL-LIX-PCC-JOINT-INDICATOR       PIC X.                  
+                   15  UL-LIX-PCC-QUALIFIED-IND         PIC X.                  
+                   15  UL-LIX-PCC-NET-SINGLE-PREM       PIC +9(9).99.           
+                   15  UL-LIX-PCC-SPECIAL-CLASS-CODE    PIC XX.                 
+                   15  UL-LIX-PCC-SPECIAL-CL-CD-TRNSL   PIC X(50).              
+                   15  UL-LIX-PCC-SPECIAL-CL-RSN-CD     PIC XX.                 
+                   15  UL-LIX-PCC-SPECIAL-CL-CEASE-DT   PIC 9(8).               
+                   15  UL-LIX-PCC-SPECIAL-CL-COMM-CD    PIC X.                  
+                   15  UL-LIX-PCC-RATING-FACTOR         PIC +99.999.            
+                   15  UL-LIX-PCC-RATING-REASON-CODE    PIC XX.                 
+                   15  UL-LIX-PCC-RATING-END-DATE       PIC 9(8).               
+                   15  UL-LIX-PCC-RATING-FACT-COMM-CD   PIC X.                  
+               10  UL-LIX-PRI-TERM-CVG-FIELDS.                                  
+                   15  UL-LIX-PTC-TERM-OCCURRENCE-NO    PIC 99.                 
+                   15  UL-LIX-PTC-CVG-UNITS           PIC +9(6).9(5).           
+                   15  UL-LIX-PTC-ORIG-CVG-UNITS      PIC +9(6).9(5).           
+                   15  UL-LIX-PTC-BENEFICIARY-CODE      PIC XX.                 
+                   15  UL-LIX-PTC-CVG-ISSUE-REASON-CD   PIC XX.                 
+                   15  UL-LIX-PTC-LAST-RB-STAT-CHG-DT   PIC X(8).               
+                   15  UL-LIX-PTC-TAMRA-DB-AMT          PIC +9(9).99.           
+                   15  UL-LIX-PTC-APPLICATION-DATE      PIC 9(8).               
+                   15  UL-LIX-PTC-PREM-EFF-DATE         PIC 9(8).               
+                   15  UL-LIX-PTC-PREM-TERMINATE-DATE   PIC 9(8).               
+                   15  UL-LIX-PTC-PREM-TERMINATE-RSN    PIC XX.                 
+                   15  UL-LIX-PTC-EXCLUSION-IND         PIC X.                  
+                   15  UL-LIX-PTC-PLAN-CODE             PIC X(6).               
+                   15  UL-LIX-PTC-PLAN-CODE-TRNSL       PIC X(50).              
+                   15  UL-LIX-PTC-COI-RATE-GUAR        PIC +9(3).9(5).          
+                   15  UL-LIX-PTC-COI-RATE-CURR        PIC +9(3).9(5).          
+                   15  UL-LIX-PTC-JOT-INFORMATION.                              
+                       20 UL-LIX-PTC-JOT-TOT-CVG-UNITS PIC +9(6).9(5).          
+                   15  FILLER-2                         PIC X(09).              
+                   15  UL-LIX-PTC-PREM-CLASS-CODE       PIC X.                  
+                   15  UL-LIX-PTC-PREM-CLASS-CD-TRNSL   PIC X(50).              
+                   15  UL-LIX-PTC-SPECIAL-CLASS-CODE    PIC XX.                 
+                   15  UL-LIX-PTC-SPECIAL-CL-CD-TRNSL   PIC X(50).              
+                   15  UL-LIX-PTC-SPECIAL-CL-RSN-CD     PIC XX.                 
+                   15  UL-LIX-PTC-SPECIAL-CL-CEASE-DT   PIC 9(8).               
+                   15  UL-LIX-PTC-SPECIAL-CL-COMM-CD    PIC X.                  
+                   15  UL-LIX-PTC-RATING-FACTOR         PIC +99.999.            
+                   15  UL-LIX-PTC-RATING-REASON-CODE    PIC XX.                 
+                   15  UL-LIX-PTC-RATING-END-DATE       PIC 9(8).               
+                   15  UL-LIX-PTC-RATING-FACT-COMM-CD   PIC X.                  
+               10  UL-LIX-PRI-JOINT-INFO.                                       
+                   15  UL-LIX-PRI-JT-DIRECTORY-ID       PIC X(15).              
+                   15  UL-LIX-PRI-JT-PREMIUM-CLASS-CD   PIC X.                  
+                   15  UL-LIX-PRI-JT-PRM-CLS-CD-TRNSL   PIC X(50).              
+                   15  UL-LIX-PRI-JT-UND-BASIS-IND      PIC X.                  
+                   15  UL-LIX-PRI-JT-ISSUE-AGE          PIC +9(3).              
+                   15  UL-LIX-PRI-JT-UNDERWRITING-AGE   PIC +9(3).              
+                   15  UL-LIX-PRI-JT-UND-EFF-DT         PIC 9(8).               
+                   15  UL-LIX-PRI-JT-UNITS              PIC +9(6).9(5).         
+                   15  UL-LIX-PRI-JT-JOINT-PROB-INFO.                           
+                       20  UL-LIX-PRI-JT-GUAR-P         PIC +9.9(10).           
+                       20  UL-LIX-PRI-JT-CURR-P         PIC +9.9(10).           
+           05  UL-LIX-TRX-SEGMENT-CURRENT.                                      
+               10  UL-LIX-CUR-COMMON-CVG-FIELDS.                                
+                   15  UL-LIX-CCC-CVG-DATE-OF-ISSUE     PIC 9(8).               
+                   15  UL-LIX-CCC-ISSUE-AGE             PIC +9(3).              
+                   15  UL-LIX-CCC-ISSUE-AGE-YOUNGEST    PIC +9(3).              
+                   15  UL-LIX-CCC-ISSUE-AGE-OLDEST      PIC +9(3).              
+                   15  UL-LIX-CCC-CVG-EFF-DATE          PIC 9(8).               
+                   15  UL-LIX-CCC-RATE-EFF-DATE         PIC 9(8).               
+                   15  UL-LIX-CCC-UND-EFF-DATE          PIC 9(8).               
+                   15  UL-LIX-CCC-CVG-TERMINATE-DATE    PIC 9(8).               
+                   15  UL-LIX-CCC-CVG-TERMINATE-RSN     PIC XX.                 
+                   15  UL-LIX-CCC-RB-STATUS             PIC X.                  
+                   15  UL-LIX-CCC-PREM-CLASS-CODE       PIC X.                  
+                   15  UL-LIX-CCC-PREM-CLASS-CD-TRNSL   PIC X(50).              
+                   15  UL-LIX-CCC-UNDERWRITING-AGE      PIC +9(3).              
+                   15  UL-LIX-CCC-UNDRWRTNG-BASIS-IND   PIC X.                  
+                   15  UL-LIX-CCC-PRODUCER-GROUP-CODE   PIC XX.                 
+                   15  UL-LIX-CCC-RISK-COMM-DURA-ADJ    PIC +9(3).              
+                   15  UL-LIX-CCC-RISK-LOAD-DURA-ADJ    PIC +9(3).              
+                   15  UL-LIX-CCC-GUIDELN-LEVEL-PREM    PIC +9(9).99.           
+                   15  UL-LIX-CCC-GUIDELN-LVL-PRM-OR                            
+                                                        PIC +9(9).99.           
+                   15  UL-LIX-CCC-GUIDELN-SINGLE-PREM   PIC +9(9).99.           
+                   15  UL-LIX-CCC-GUIDELN-SING-PRM-OR                           
+                                                        PIC +9(9).99.           
+                   15  UL-LIX-CCC-REINSTATE-DUR-ADJ     PIC +9(3).              
+                   15  UL-LIX-CCC-TAMRA-7PP-AMT         PIC +9(9).99.           
+                   15  UL-LIX-CCC-JOINT-COMPLETE        PIC 99.                 
+                   15  UL-LIX-CCC-JOINT-INDICATOR       PIC X.                  
+                   15  UL-LIX-CCC-QUALIFIED-INDICATOR   PIC X.                  
+                   15  UL-LIX-CCC-NET-SINGLE-PREM       PIC +9(9).99.           
+                   15  UL-LIX-CCC-SPECIAL-CLASS-CODE    PIC XX.                 
+                   15  UL-LIX-CCC-SPECIAL-CL-CD-TRNSL   PIC X(50).              
+                   15  UL-LIX-CCC-SPECIAL-CL-RSN-CD     PIC XX.                 
+                   15  UL-LIX-CCC-SPECIAL-CL-CEASE-DT   PIC 9(8).               
+                   15  UL-LIX-CCC-SPECIAL-CL-COMM-CD    PIC X.                  
+                   15  UL-LIX-CCC-RATING-FACTOR         PIC +99.999.            
+                   15  UL-LIX-CCC-RATING-REASON-CODE    PIC XX.                 
+                   15  UL-LIX-CCC-RATING-END-DATE       PIC 9(8).               
+                   15  UL-LIX-CCC-RATING-FACT-COMM-CD   PIC X.                  
+               10  UL-LIX-CUR-TERM-CVG-FIELDS.                                  
+                   15  UL-LIX-CTC-TERM-OCCURRENCE-NO    PIC 99.                 
+                   15  UL-LIX-CTC-CVG-UNITS           PIC +9(6).9(5).           
+                   15  UL-LIX-CTC-ORIG-CVG-UNITS      PIC +9(6).9(5).           
+                   15  UL-LIX-CTC-BENEFICIARY-CODE      PIC XX.                 
+                   15  UL-LIX-CTC-CVG-ISSUE-REASON-CD   PIC XX.                 
+                   15  UL-LIX-CTC-LAST-RB-STAT-CHG-DT   PIC X(8).               
+                   15  UL-LIX-CTC-TAMRA-DB-AMT          PIC +9(9).99.           
+                   15  UL-LIX-CTC-APPLICATION-DATE      PIC 9(8).               
+                   15  UL-LIX-CTC-PREM-EFF-DATE         PIC 9(8).               
+                   15  UL-LIX-CTC-PREM-TERMINATE-DATE   PIC 9(8).               
+                   15  UL-LIX-CTC-PREM-TERMINATE-RSN    PIC XX.                 
+                   15  UL-LIX-CTC-EXCLUSION-IND         PIC X.                  
+                   15  UL-LIX-CTC-PLAN-CODE             PIC X(6).               
+                   15  UL-LIX-CTC-PLAN-CODE-TRNSL       PIC X(50).              
+                   15  UL-LIX-CTC-COI-RATE-GUAR        PIC +9(3).9(5).          
+                   15  UL-LIX-CTC-COI-RATE-CURR        PIC +9(3).9(5).          
+                   15  UL-LIX-CTC-JOT-INFORMATION.                              
+                       20 UL-LIX-CTC-JOT-TOT-CVG-UNITS PIC +9(6).9(5).          
+                   15  FILLER-3                         PIC X(09).              
+                   15  UL-LIX-CTC-PREM-CLASS-CODE       PIC X.                  
+                   15  UL-LIX-CTC-PREM-CLASS-CD-TRNSL   PIC X(50).              
+                   15  UL-LIX-CTC-SPECIAL-CLASS-CODE    PIC XX.                 
+                   15  UL-LIX-CTC-SPECIAL-CL-CD-TRNSL   PIC X(50).              
+                   15  UL-LIX-CTC-SPECIAL-CL-RSN-CD     PIC XX.                 
+                   15  UL-LIX-CTC-SPECIAL-CL-CEASE-DT   PIC 9(8).               
+                   15  UL-LIX-CTC-SPECIAL-CL-COMM-CD    PIC X.                  
+                   15  UL-LIX-CTC-RATING-FACTOR         PIC +99.999.            
+                   15  UL-LIX-CTC-RATING-REASON-CODE    PIC XX.                 
+                   15  UL-LIX-CTC-RATING-END-DATE       PIC 9(8).               
+                   15  UL-LIX-CTC-RATING-FACT-COMM-CD   PIC X.                  
+               10  UL-LIX-CUR-JOINT-INFO.                                       
+                   15  UL-LIX-CUR-JT-DIRECTORY-ID       PIC X(15).              
+                   15  UL-LIX-CUR-JT-PREMIUM-CLASS-CD   PIC X.                  
+                   15  UL-LIX-CUR-JT-PRM-CLS-CD-TRNSL   PIC X(50).              
+                   15  UL-LIX-CUR-JT-UND-BASIS-IND      PIC X.                  
+                   15  UL-LIX-CUR-JT-ISSUE-AGE          PIC +9(3).              
+                   15  UL-LIX-CUR-JT-UNDERWRITING-AGE   PIC +9(3).              
+                   15  UL-LIX-CUR-JT-UND-EFF-DT         PIC 9(8).               
+                   15  UL-LIX-CUR-JT-UNITS              PIC +9(6).9(5).         
+                   15  UL-LIX-CUR-JT-JOINT-PROB-INFO.                           
+                       20  UL-LIX-CUR-JT-GUAR-P         PIC +9.9(10).           
+                       20  UL-LIX-CUR-JT-CURR-P         PIC +9.9(10).           
+           05  UL-LIX-RECALC-FIELDS.                                            
+               10  UL-LIX-GUIDELINE-RECALC-FIELDS.                              
+                   15  UL-LIX-TOTAL-GLP-ADJ           PIC +9(9).99.             
+                   15  UL-LIX-PRORATED-GLP-ADJ        PIC +9(9).99.             
+                   15  UL-LIX-GSP-ADJ                 PIC +9(9).99.             
+                   15  UL-LIX-TOTAL-PW-GLP-ADJ        PIC +9(9).99.             
+                   15  UL-LIX-PRORATED-PW-GLP-ADJ     PIC +9(9).99.             
+                   15  UL-LIX-GSP-PW-ADJ              PIC +9(9).99.             
+           05  UL-LIX-ONLINE-KEY-FIELDS.                                        
+               10  UL-LIX-PLAN-CODE                   PIC X(6).                 
+               10  UL-LIX-PLAN-CODE-TRNSL             PIC X(50).                
+               10  UL-LIX-LINE-OF-BUSINESS-CODE       PIC XXX.                  
+               10  UL-LIX-LINE-OF-BUS-CODE-TRNSL      PIC X(50).                
+               10  UL-LIX-RESTRICTION-CODE            PIC X.                    
+               10  UL-LIX-CONTRACT-FORM               PIC X.                    
+               10  UL-LIX-POLICY-ANNIV-DATE           PIC X(8).                 
+               10  UL-LIX-LAST-FIN-EFF-DATE           PIC X(8).                 
+               10  UL-LIX-INDIVIDUAL-NAME             PIC X(46).                
+               10  UL-LIX-POLICY-STATUS               PIC X.                    
+               10  UL-LIX-NSTD-INDICATOR              PIC X.                    
+               10  UL-LIX-REINS-INDICATOR             PIC X.                    
+               10  UL-LIX-TARGET-INDICATOR            PIC X.                    
+               10  UL-LIX-PW-COV-INDICATOR            PIC X.                    
+               10  UL-LIX-RPLI-INDICATOR              PIC X.                    
+               10  UL-LIX-SUSPEND-CODE                PIC X.                    
+               10  UL-LIX-PDF-IND-CODE                PIC X.                    
+               10  UL-LIX-TAX-ID-VERIFICATION         PIC X.                    
+               10  UL-LIX-TAX-ID-SOLICIT-DATE         PIC 9(8).                 
+               10  UL-LIX-NONRESIDENT-ALIEN-IND       PIC X.                    
+               10  UL-LIX-GL-PREM-OVERRIDE-IND        PIC X.                    
+           05  UL-LIX-CALC-AREA.                                                
+               10  UL-LIX-PREM-CLASS-CODE             PIC X.                    
+               10  UL-LIX-PREM-CLASS-CD-TRNSL         PIC X(50).                
+               10  UL-LIX-SPECIAL-CLASS-CODE          PIC XX.                   
+               10  UL-LIX-SPECIAL-CLASS-CD-TRNSL      PIC X(50).                
+               10  UL-LIX-INDIVID-NAME.                                         
+                   15  UL-LIX-LAST-NAME               PIC X(35).                
+                   15  UL-LIX-FIRST-NAME              PIC X(25).                
+                   15  UL-LIX-NAME-PREFIX             PIC X(10).                
+                   15  UL-LIX-NAME-SUFFIX             PIC X(10).                
+               10  UL-LIX-JNT-PREM-CLASS-CODE         PIC X.                    
+               10  UL-LIX-JNT-PREM-CL-CD-TRNSL        PIC X(50).                
+               10  UL-LIX-JNT-SPEC-CLASS-CODE         PIC XX.                   
+               10  UL-LIX-JNT-SPEC-CL-CD-TRNSL        PIC X(50).                
+               10  UL-LIX-JNT-INDIVID-NAME.                                     
+                   15  UL-LIX-JNT-LAST-NAME           PIC X(35).                
+                   15  UL-LIX-JNT-FIRST-NAME          PIC X(25).                
+                   15  UL-LIX-JNT-NAME-PREFIX         PIC X(10).                
+                   15  UL-LIX-JNT-NAME-SUFFIX         PIC X(10).                
+               10  UL-LIX-OWN-INS-SAME-NAME-IND       PIC X.                    
+               10  UL-LIX-PRI-SIA-INDICATOR           PIC X.                    
+               10  UL-LIX-CUR-SIA-INDICATOR           PIC X.                    
+               10  UL-LIX-PRI-JT-SHAD-P         PIC +9.9(10).                   
+               10  UL-LIX-CUR-JT-SHAD-P         PIC +9.9(10).                   
+               10  UL-LIX-MULT-CHANGE-IND       PIC X.                          

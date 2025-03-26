@@ -1,0 +1,141 @@
+       01 WS-VCLMAN02-LAYOUT.                                                   
+         02  UL-AN02-KEY-DATA-AREA.                                             
+           05  UL-AN02-KEY-COMPANY-CODE  PIC X(03).                             
+           05  UL-AN02-KEY-MASTER-ID     PIC X(15).                             
+           05  UL-AN02-KEY-FILE-CODE     PIC X(05).                             
+           05  UL-AN02-KEY-DOCUMENT-TYPE PIC X(50).                             
+           05  UL-AN02-KEY-DOCUMENT-ID   PIC X(50).                             
+           05  UL-AN02-KEY-TRX-CODE      PIC X(04).                             
+           05  UL-AN02-FILLER                 PIC X(100).                       
+           05  UL-AN02-KEY-MAP-RECORD-ID PIC X(50).                             
+         02  UL-AN02-DATA-AREA.                                                 
+           05  UL-AN02-RECORD-TYPE-IND            PIC X(4).                     
+           05  UL-AN02-RECORD-CODE                PIC 9(5).                     
+           05  UL-AN02-EXTRACT-DATA.                                            
+               10  UL-AN02-BEGIN-VALUES.                                        
+                   15  UL-AN02-BEG-INSURANCE-AMOUNT PIC +9(9).99.               
+                   15  UL-AN02-BEG-ACCUM-CASH-VAL PIC +9(9).99.                 
+                   15  UL-AN02-BEG-FUND-AREA        PIC X(6138).                
+                   15  UL-AN02-BEG-FUND-ARRAY REDEFINES                         
+                                          UL-AN02-BEG-FUND-AREA.                
+                     17  UL-AN02-BEG-FUND-INFORMATION OCCURS 99 TIMES.          
+                       20  UL-AN02-BEG-FUND-NUMBER PIC 9(3).                    
+                       20  UL-AN02-BEG-FUND-TYPE-IND PIC X.                     
+                       20  UL-AN02-BEG-FUND-DOLLARS PIC +9(9).99.               
+                       20  UL-AN02-BEG-FUND-UNIT-VAL PIC +9(9).9(6).            
+                       20  UL-AN02-BEG-FUND-VALUE PIC +9(9).99.                 
+                       20  UL-AN02-BEG-ALLOC-PERCENT PIC +9(4).9.               
+                       20  UL-AN02-BEG-TRX-FEE    PIC +9(9).99.                 
+                       20  UL-AN02-BEG-ALLOC-CHG-PCT PIC +9(4).9.               
+                   15  UL-AN02-BEG-CASH-SURR-VAL PIC +9(9).99.                  
+                   15  UL-AN02-BEG-DEATH-BENEFIT  PIC +9(9).99.                 
+               10  UL-AN02-END-VALUES.                                          
+                   15  UL-AN02-END-INSURANCE-AMOUNT PIC +9(9).99.               
+                   15  UL-AN02-END-ACCUM-CASH-VAL PIC +9(9).99.                 
+                   15  UL-AN02-END-FUND-AREA        PIC X(9504).                
+                   15  UL-AN02-END-FUND-ARRAY REDEFINES                         
+                                          UL-AN02-END-FUND-AREA.                
+                     17  UL-AN02-END-FUND-INFORMATION OCCURS 99 TIMES.          
+                       20  UL-AN02-END-FUND-NUMBER PIC 999.                     
+                       20  UL-AN02-END-FUND-NUM-TRNSL PIC X(50).                
+                       20  UL-AN02-END-FUND-TYPE-IND PIC X.                     
+                       20  UL-AN02-END-FUND-DOLLARS PIC +9(9).99.               
+                       20  UL-AN02-END-FUND-UNIT-VAL PIC +9(9).9(6).            
+                       20  UL-AN02-END-FUND-VALUE PIC +9(9).99.                 
+                       20  UL-AN02-END-ALLOC-CHG-PCT PIC +9(4).9.               
+                   15  UL-AN02-END-CASH-SURR-VAL PIC +9(9).99.                  
+                   15  UL-AN02-END-DEATH-BENEFIT                                
+                                                 PIC +9(9).99.                  
+               10  UL-AN02-NEXT-YEAR-VALUES.                                    
+                   15  UL-AN02-WT-AVERAGE-INT-RATE PIC +99.999.                 
+                   15  UL-AN02-FUT-PREM-FIX-INT-RTE PIC +99.999.                
+                   15  UL-AN02-FUT-PREM-VAR-INT-RTE PIC +99.999.                
+                   15  UL-AN02-NXT-INSURANCE-AMOUNT PIC +9(9).99.               
+                   15  UL-AN02-NXT-ACCUM-CASH-VAL   PIC +9(9).99.               
+                   15  UL-AN02-NXT-CASH-SURR-VAL PIC +9(9).99.                  
+                   15  UL-AN02-NXT-TTR-DEATH-BENEFIT PIC +9(9).99.              
+                   15  UL-AN02-NXT-DEATH-BENEFIT PIC +9(9).99.                  
+               10  UL-AN02-LAPSE-DATES.                                         
+                   15  UL-AN02-LAPSE-INDICATOR   PIC X.                         
+                   15  UL-AN02-LAPSE-IF-PREM-PAID.                              
+                       20  UL-AN02-PAID-GUAR-LAPSE-DATE PIC 9(8).               
+                       20  UL-AN02-PAID-DECL-LAPSE-DATE PIC 9(8).               
+                   15  UL-AN02-LAPSE-IF-PREM-NOT-PD.                            
+                       20  UL-AN02-NOT-GUAR-LAPSE-DATE  PIC 9(8).               
+                       20  UL-AN02-NOT-DECL-LAPSE-DATE  PIC 9(8).               
+                   15  UL-AN02-INTEREST-RATES-USED.                             
+                       20  UL-AN02-GUAR-PREM-RATE-FIX PIC 99.999.               
+                       20  UL-AN02-GUAR-PREM-RATE-VAR PIC 99.999.               
+                       20  UL-AN02-DECL-PREM-RATE-FIX PIC 99.999.               
+                       20  UL-AN02-DECL-PREM-RATE-VAR PIC 99.999.               
+                       20  UL-AN02-COLL-PREM-RATE PIC 99.999.                   
+                       20  UL-AN02-LOAN-PREM-RATE PIC 99.999.                   
+               10  UL-AN02-FUND-ACTIVITY-IND                                    
+                               OCCURS 99 TIMES PIC X.                           
+           05  UL-AN02-POL-VALUES-MISC-INFO.                                    
+               10  UL-AN02-WEIGHT-AVG-INT-RATE  PIC +99.9(5).                   
+               10  UL-AN02-ACCUMULATED-CASH-VAL PIC +9(9).99.                   
+               10  UL-AN02-LOAN-COLLATERAL-VAL  PIC +9(9).99.                   
+               10  UL-AN02-FIXED-FUND-VALUE     PIC +9(9).99.                   
+               10  UL-AN02-VARIABLE-FUND-VALUE  PIC +9(9).99.                   
+               10  UL-AN02-FUND-TYPE-INDICATOR PIC X.                           
+               10  UL-AN02-FUND-EXTRA-INFO.                                     
+                   15  UL-AN02-FUND-ALLOC-INFO OCCURS 99 TIMES.                 
+                       20  UL-AN02-ALLOC-PERCENT PIC +9(4).9.                   
+           05  UL-AN02-POL-VAL-MISC-ROR-INFO.                                   
+               10  UL-AN02-ROR-POLICY-SW      PIC X(01).                        
+               10  UL-AN02-POLICY-RATE-OF-RET PIC +999.9.                       
+               10  UL-AN02-ROR-YTD-SW         PIC X(01).                        
+               10  UL-AN02-YTD-RATE-OF-RETURN PIC +999.9.                       
+           05  UL-AN02-LAPSE-PENDING-AREA.                                      
+               10  UL-AN02-TOTAL-BACK-COI-DUE PIC 9(09).99.                     
+           05  UL-AN02-TARGET-TERM-AREA.                                        
+               10  UL-AN02-TRGT-TERM-CVG-UNTS PIC 9(06).9(05).                  
+               10  UL-AN02-TARGET-TERM-DB-AMT PIC 9(09).99.                     
+           05  UL-AN02-RETURN-SALES-AREA.                                       
+               10  UL-AN02-RET-OF-SALES-CHRGS PIC 9(09).99.                     
+           05  UL-AN02-INCREASE-AREA.                                           
+               10  UL-AN02-INCREASE-EFFECT-YR PIC 9(04).                        
+               10  UL-AN02-INCREASE-UNITS     PIC 9(06).9(05).                  
+           05  UL-AN02-LAPSE-PENDING-QTR.                                       
+               10  UL-AN02-TOT-BACK-COI-DUE-CUR                                 
+                                              PIC 9(09).99.                     
+               10  UL-AN02-TOT-BACK-COI-DUE-PRE                                 
+                                              PIC 9(09).99.                     
+           05  UL-AN02-GUIDELINE-AREA.                                          
+               10  UL-AN02-GDLN-PREM-VIOL-IND PIC X.                            
+           05  UL-AN02-CALC-AREA.                                               
+               10  UL-AN02-END-VALUES-FUND-CNTR PIC 99.                         
+               10  UL-AN02-END-VALUES-FUND-PERC OCCURS 99 TIMES                 
+                                              PIC +999.99.                      
+               10  UL-AN02-BEG-GROSS-SURR-CALC PIC +9(9).99.                    
+               10  UL-AN02-END-GROSS-SURR-CALC PIC +9(9).99.                    
+               10  UL-AN02-ALLOC-PCT-CHG-IND   PIC X(1).                        
+           05  UL-AN02-SVE-AREA.                                                
+               10  UL-AN02-BEG-SURR-VAL-ENHANCE PIC +9(9).99.                   
+               10  UL-AN02-END-SURR-VAL-ENHANCE PIC +9(9).99.                   
+           05  UL-AN02-FILLER-NUMERIC1          PIC +9(9).99.                   
+           05  UL-AN02-BEG-RPB-AMOUNT           PIC +9(9).99.                   
+           05  UL-AN02-END-RPB-AMOUNT           PIC +9(9).99.                   
+           05  UL-AN02-AVERAGE-YTD-ROR-IND      PIC X.                          
+           05  UL-AN02-AVERAGE-POLICY-ROR-IND   PIC X.                          
+           05  UL-AN02-BASIS-6-LAPSE-DATE       PIC X(8).                       
+           05  UL-AN02-LIFETIME-IND             PIC X.                          
+           05  UL-AN02-INCEPTION-DATE           PIC X(8).                       
+           05  UL-AN02-PAID-GUAR-LAPSE-NEAR     PIC X(1).                       
+           05  UL-AN02-END-NET-MCF-AMT          PIC +9(9).99.                   
+           05  UL-AN02-BIA-ALLOC-PCT            PIC +9(4).9.                    
+           05  UL-AN02-IDX-ALLOC-PCT-ARRAY      OCCURS 5 TIMES.                 
+               10  UL-AN02-IDX-ALLOC-PCT        PIC +9(4).9.                    
+           05  UL-AN02-IDX-HOLDBACK-AMT         PIC +9(9).99.                   
+           05  UL-AN02-MATURED-SEG              PIC X(1).                       
+           05  UL-AN02-ACTIVE-SEG               PIC X(1).                       
+           05  UL-AN02-NO-REMAINING             PIC X(1).                       
+           05  UL-AN02-DEPL-SEG                 PIC X(1).                       
+           05  UL-AN02-BONUS-INT-RT             PIC S.9(5).                     
+           05  UL-AN02-CURR-PERSIST-CREDIT-RT   PIC +99.999.                    
+           05  UL-AN02-GUAR-PERSIST-CREDIT-RT   PIC +99.999.                    
+           05  UL-AN02-IDX-BLEND-RATE           PIC +9(03).                     
+           05  UL-AN02-FIXED-BLEND-RATE         PIC +9(03).                     
+           05  UL-AN02-DESIG-TRANSF-AMT         PIC +9(9).99 .                  
+           05  UL-AN02-PART-LN-DUR              PIC 9(3).                       

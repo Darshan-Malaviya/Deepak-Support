@@ -1,0 +1,67 @@
+       01 WS-VCLMBRAI-LAYOUT.                                                   
+           05  BC-ADSI-KEY-DATA-AREA.                                           
+               10  BC-ADSI-KEY-COMPANY-CODE       PIC X(03).                    
+               10  BC-ADSI-KEY-BILL-CLIENT-NUMBER PIC X(15).                    
+               10  BC-ADSI-KEY-BILL-INDEX-NUMBER  PIC X(05).                    
+               10  BC-ADSI-KEY-DOCUMENT-TYPE      PIC X(50).                    
+               10  BC-ADSI-KEY-DOCUMENT-ID        PIC X(50).                    
+               10  BC-ADSI-KEY-REPORT-CODE        PIC X(04).                    
+               10  FILLER-1                       PIC X(100).                   
+               10  BC-ADSI-KEY-MAP-RECORD-ID      PIC X(50).                    
+           05  BC-ADSI-CALLING-INFO.                                            
+               10  BC-ADSI-AGENT-PRE              PIC X.                        
+               10  BC-ADSI-ORD-AGENCY             PIC X.                        
+               10  BC-ADSI-DET-OFF-CODE           PIC X.                        
+               10  BC-ADSI-APPLICATION-STATE      PIC X(02).                    
+               10  BC-ADSI-COMPANY-CODE           PIC X(02).                    
+               10  BC-ADSI-PRODUCT-GROUP-CODE     PIC X(03).                    
+               10  BC-ADSI-LICENSE-DATE           PIC 9(8).                     
+               10  BC-ADSI-FUNCTION-CODE          PIC X.                        
+               10  BC-ADSI-RET-CHANNEL-IND        PIC X.                        
+               10  BC-ADSI-KEY-CHANNEL-IND        PIC X.                        
+               10  BC-ADSI-KEY-RMO                PIC X.                        
+           05  BC-ADSI-RETURNED-INFO.                                           
+               10  BC-ADSI-FUNCTION-A-CODES       PIC X.                        
+               10  BC-ADSI-FUNCTION-B-CODES       PIC X.                        
+               10  BC-ADSI-FUNCTION-C-CODES       PIC X.                        
+               10  BC-ADSI-FUNCTION-D-CODES       PIC X.                        
+               10  BC-ADSI-FUNCTION-E-CODES       PIC X.                        
+               10  BC-ADSI-FUNCTION-F-CODES       PIC X.                        
+               10  BC-ADSI-FILE-STATUS-CODE       PIC 9(02).                    
+               10  BC-ADSI-PROGRAM-STATUS         PIC 9(02).                    
+               10  BC-ADSI-CHANNEL-IND            PIC X.                        
+               10  BC-ADSI-AGENT-NAME-INFO.                                     
+                   15  BC-ADSI-TITLE-NAME         PIC X(10).                    
+                   15  BC-ADSI-FIRST-NAME         PIC X(20).                    
+                   15  BC-ADSI-MIDDLE-INT         PIC X.                        
+                   15  BC-ADSI-BROKERS-NAME       PIC X(50).                    
+                   15  BC-ADSI-LAST-NAME          PIC X(30).                    
+                   15  BC-ADSI-SUFFIX-NAME        PIC X(20).                    
+                   15  BC-ADSI-DESIG-CTR          PIC 9(3).                     
+                   15  BC-ADSI-DESIGNATIONS       PIC X(06)                     
+                                         OCCURS 7 TIMES.                        
+               10  BC-ADSI-DEBIT-INIT             PIC X(03).                    
+               10  BC-ADSI-RMO                    PIC X.                        
+               10  BC-ADSI-OFFICE.                                              
+                   15  BC-ADSI-FOUR-POS-OFFICE    PIC X(04).                    
+                   15  BC-ADSI-DETACHED-OFFICE    PIC X.                        
+               10  BC-ADSI-REGION                 PIC X.                        
+               10  BC-ADSI-STAFF                  PIC X.                        
+               10  BC-ADSI-CONTRACT-PREFIX        PIC X.                        
+               10  BC-ADSI-FINAL-CODE             PIC X.                        
+               10  BC-ADSI-PRUBACHE-AE-NBR        PIC X(06).                    
+               10  BC-ADSI-ADDRESS-INFO.                                        
+                   15  BC-ADSI-ADDR-LINE-1        PIC X(40).                    
+                   15  BC-ADSI-ADDR-LINE-2        PIC X(40).                    
+                   15  BC-ADSI-ADDR-LINE-3        PIC X(40).                    
+                   15  BC-ADSI-CITY-NAME          PIC X(20).                    
+                   15  BC-ADSI-STATE-CODE         PIC X(02).                    
+                   15  BC-ADSI-ZIP-CODE           PIC X(10).                    
+               10  BC-ADSI-AREA-CODE              PIC X(03).                    
+               10  BC-ADSI-LOCAL-NUMBER           PIC X(07).                    
+               10  BC-ADSI-RECORD-INDICATOR       PIC X.                        
+               10  BC-ADSI-PRODUCT-INDICATOR      PIC X.                        
+               10  BC-ADSI-CHECK-PRODUCT          PIC X.                        
+               10  BC-ADSI-CHECK-PRODUCT-DATE1    PIC X.                        
+               10  BC-ADSI-PRODUCT-DATE           PIC 9(08).                    
+               10  FILLER-2                       PIC X(200).                   

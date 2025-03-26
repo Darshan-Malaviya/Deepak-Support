@@ -1,0 +1,77 @@
+       01 WS-VCLMAN01-LAYOUT.                                                   
+         02  UL-AN01-KEY-DATA-AREA.                                             
+           05  UL-AN01-KEY-COMPANY-CODE  PIC X(03).                             
+           05  UL-AN01-KEY-MASTER-ID     PIC X(15).                             
+           05  UL-AN01-KEY-FILE-CODE     PIC X(05).                             
+           05  UL-AN01-KEY-DOCUMENT-TYPE PIC X(50).                             
+           05  UL-AN01-KEY-DOCUMENT-ID   PIC X(50).                             
+           05  UL-AN01-KEY-TRX-CODE      PIC X(04).                             
+           05  UL-AN01-FILLER            PIC X(100).                            
+           05  UL-AN01-KEY-MAP-RECORD-ID PIC X(50).                             
+         02  UL-AN01-DATA-AREA.                                                 
+           05  UL-AN01-RECORD-TYPE-IND          PIC X(4).                       
+           05  UL-AN01-RECORD-CODE              PIC 9(5).                       
+           05  UL-AN01-EXTRACT-DATA.                                            
+               10  UL-AN01-STATEMENT-BEG-DATE PIC 9(8).                         
+               10  UL-AN01-STATEMENT-END-DATE   PIC 9(8).                       
+               10  UL-AN01-POLICY-NUMBER        PIC X(15).                      
+               10  UL-AN01-CLIENT-NUMBER        PIC X(15).                      
+                 10 NAME-ADDRESS.                                               
+                   15  UL-AN01-INDIVIDUAL-NAME.                                 
+                       20  UL-AN01-LAST-NAME        PIC X(35).                  
+                       20  UL-AN01-FIRST-NAME       PIC X(25).                  
+                       20  UL-AN01-NAME-PREFIX      PIC X(10).                  
+                       20  UL-AN01-NAME-SUFFIX      PIC X(10).                  
+                   15  UL-AN01-ADDRESS-LINE-1       PIC X(35).                  
+                   15  UL-AN01-ADDRESS-LINE-2       PIC X(35).                  
+                   15  UL-AN01-ADDRESS-LINE-3       PIC X(35).                  
+                   15  UL-AN01-ADDRESS-LINE-4       PIC X(35).                  
+                   15  UL-AN01-ADDRESS-LINE-5       PIC X(35).                  
+                   15  UL-AN01-POSTAL-ZIP-CODE      PIC X(15).                  
+                   15  UL-AN01-SOC-SEC-NUMBER       PIC X(16).                  
+                   15  UL-AN01-COMPANY-INDIV-CODE   PIC X.                      
+                   15  UL-AN01-ISSUE-COUNTRY-CODE   PIC XX.                     
+                   15  UL-AN01-INSURED-BIRTH-DATE   PIC 9(8).                   
+                   15  UL-AN01-INSURED-SEX          PIC X.                      
+               10  UL-AN01-STAT-COMPANY-CODE    PIC XXX.                        
+               10  UL-AN01-SERV-AGENCY-CODE     PIC X(6).                       
+               10  UL-AN01-SERV-AGENT           PIC X(10).                      
+               10  UL-AN01-PLAN-CODE            PIC X(6).                       
+               10  UL-AN01-POLICY-TYPE          PIC X.                          
+               10  UL-AN01-POLICY-TYPE-TRNSL    PIC X(50).                      
+               10  UL-AN01-POLICY-STATUS        PIC X.                          
+               10  UL-AN01-RESIDENT-STATE       PIC XXX.                        
+               10  UL-AN01-LANGUAGE-CODE        PIC X.                          
+               10  UL-AN01-CURRENCY-CODE        PIC X.                          
+               10  UL-AN01-POLICY-ISSUE-STATE   PIC XXX.                        
+               10  UL-AN01-POLICY-ISSUE-AGE     PIC +999.                       
+               10  UL-AN01-MATURITY-AGE         PIC +999.                       
+               10  UL-AN01-POLICY-ISSUE-DATE    PIC 9(8).                       
+               10  UL-AN01-MATURITY-DATE        PIC 9(8).                       
+               10  UL-AN01-TEFRA-GUIDELINE-BAL  PIC +9(9).99.                   
+               10  UL-AN01-TYPE-NO-OF-ENTRIES   PIC 9(3).                       
+               10  UL-AN01-TYPE-INFO OCCURS 5 TIMES.                            
+                   15  UL-AN01-TYPE-CHANGE-IND  PIC X.                          
+                   15  UL-AN01-TYPE-CHANGE-DATE PIC 9(8).                       
+                   15  UL-AN01-TYPE-CHANGE-UNITS PIC +9(6).9(5).                
+               10  UL-AN01-FACE-NO-OF-ENTRIES   PIC 9(3).                       
+               10  UL-AN01-FACE-INFO OCCURS 10 TIMES.                           
+                   15  UL-AN01-FACE-CHANGE-IND  PIC X.                          
+                   15  UL-AN01-FACE-CHANGE-DATE PIC 9(8).                       
+                   15  UL-AN01-FACE-AMOUNT      PIC +9(6).9(5).                 
+               10  UL-AN01-NET-SINGLE-PREM      PIC +9(9).99.                   
+               10  UL-AN01-PRODUCT-CODE         PIC XX.                         
+               10  UL-AN01-DIRECTORY-ID         PIC X(15).                      
+               10  UL-AN01-TAMRA-MEC-IND        PIC X.                          
+               10  UL-AN01-TAMRA-MEC-DATE       PIC 9(8).                       
+               10  UL-AN01-TAMRA-7PP-START-DATE PIC 9(8).                       
+               10  UL-AN01-TAMRA-7PP-END-DATE   PIC 9(8).                       
+               10  UL-AN01-TAMRA-7PP-AMT        PIC +9(9).99.                   
+               10  UL-AN01-TAMRA-REMIT-TOTAL    PIC +9(9).99.                   
+               10  UL-AN01-NO-LAPSE-END-DATE    PIC X(8).                       
+               10  UL-AN01-COST-BASIS-IN        PIC +9(9).99.                   
+               10  UL-AN01-COST-BASIS-REMOVED   PIC +9(9).99.                   
+               10  UL-AN01-PREM-RETURN-INT-RATE PIC +9(03).9(05).               
+               10  UL-AN01-TTR-COVERAGE-UNITS   PIC +9(06).9(05).               
+               10  UL-AN01-MISC-INFO.                                           
+                   15  UL-AN01-INSURED-COPY-SW    PIC X.                        

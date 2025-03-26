@@ -1,0 +1,32 @@
+       01  WS-VCLMELIT-LAYOUT.                                                  
+           05  UL-LITI-KEY-DATA-AREA.                                           
+               10  UL-LITI-KEY-COMPANY-CODE              PIC X(03).             
+               10  UL-LITI-KEY-MASTER-ID                 PIC X(15).             
+               10  UL-LITI-KEY-FILE-CODE                 PIC X(05).             
+               10  UL-LITI-KEY-DOCUMENT-TYPE             PIC X(50).             
+               10  UL-LITI-KEY-DOCUMENT-ID               PIC X(50).             
+               10  UL-LITI-KEY-TRX-CODE                  PIC X(04).             
+               10  FILLER-1                              PIC X(100).            
+               10  UL-LITI-KEY-MAP-RECORD-ID             PIC X(50).             
+            05  LITI-TRX-INFO.                                                  
+               10   UL-LITI-MATURING-FUND-INFO OCCURS 10 TIMES.                 
+                  15  UL-LITI-MATURING-INDEX-FUND-NM      PIC X(50).            
+                  15  UL-LITI-SWEEP-INFORMATION-M    OCCURS 50 TIMES.           
+                     20  UL-LITI-SWEEP-FUND-NAME-M  PIC X(50).                  
+                     20  UL-LITI-SWEEP-FUND-PCT-M   PIC 9(3).                   
+               10  UL-LITI-RECURR-SWEEP-AMT         PIC +9(9).9(2).             
+               10  UL-LITI-RECURR-TRANSFER-CNT          PIC 9(3).               
+               10  UL-LITI-RECURR-TRANSFER-END-DT.                              
+                  15  UL-LITI-RECURR-TRNS-YYYY         PIC 9(4).                
+                  15  UL-LITI-RECURR-TRNS-MM           PIC 9(2).                
+                  15  UL-LITI-RECURR-TRNS-DD           PIC 9(2).                
+               10  UL-LITI-RECURR-TRNSF-END-DT-R                                
+                    REDEFINES UL-LITI-RECURR-TRANSFER-END-DT PIC 9(8).          
+               10  UL-LITI-SWEEP-INFORMATION-R    OCCURS 10 TIMES.              
+                  15  UL-LITI-SWEEP-FUND-NAME-R   PIC X(50).                    
+                  15  UL-LITI-SWEEP-FUND-PCT-R   PIC 9(3).                      
+               10  UL-LITI-SWEEP-AMT-A                  PIC +9(9).9(2).         
+               10  UL-LITI-SWEEP-PCT-A                  PIC 9(3).               
+               10  UL-LITI-INDEX-FUND-INFO-A OCCURS 10 TIMES.                   
+                  15  UL-LITI-INDEX-FUND-NAME-A   PIC X(50).                    
+                  15  UL-LITI-INDEX-FUND-PCT-A   PIC 9(3).                      

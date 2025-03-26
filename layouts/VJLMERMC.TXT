@@ -1,0 +1,17 @@
+       01  WS-VCLMERMC-LAYOUT.                                                  
+           05  UL-RMEC-KEY-DATA-AREA.                                           
+               10  UL-RMEC-KEY-COMPANY-CODE              PIC X(03).             
+               10  UL-RMEC-KEY-MASTER-ID                 PIC X(15).             
+               10  UL-RMEC-KEY-FILE-CODE                 PIC X(05).             
+               10  UL-RMEC-KEY-DOCUMENT-TYPE             PIC X(50).             
+               10  UL-RMEC-KEY-DOCUMENT-ID               PIC X(50).             
+               10  UL-RMEC-KEY-TRX-CODE                  PIC X(04).             
+               10  FILLER-1                              PIC X(100).            
+               10  UL-RMEC-KEY-MAP-RECORD-ID             PIC X(50).             
+         05  V270-TRX-INFO.                                                     
+             10  UL-RMEC-EXC-GRS-PREM             PIC +9(9).99.                 
+             10  UL-RMEC-ANN-NON-MEC-LIMIT        PIC +9(9).99.                 
+             10  UL-RMEC-7P-END-DATE              PIC 9(08).                    
+             10  UL-RMEC-ADJ-EXC-REM-DT           PIC 9(08).                    
+             10  UL-RMEC-7P-ANNIV-DT              PIC 9(08).                    
+             10  UL-RMEC-ASG-CNTR                 PIC 9.                        

@@ -1,0 +1,150 @@
+       01  WS-VCLMEGDA-LAYOUT.                                                  
+           05  UL-GD-KEY-DATA-AREA.                                             
+               10  UL-GD-KEY-COMPANY-CODE     PIC X(03).                        
+               10  UL-GD-KEY-MASTER-ID        PIC X(15).                        
+               10  UL-GD-KEY-FILE-CODE        PIC X(05).                        
+               10  UL-GD-KEY-DOCUMENT-TYPE    PIC X(50).                        
+               10  UL-GD-KEY-DOCUMENT-ID      PIC X(50).                        
+               10  UL-GD-KEY-TRX-CODE         PIC X(04).                        
+               10  FILLER-1                   PIC X(100).                       
+               10  UL-GD-KEY-MAP-RECORD-ID    PIC X(50).                        
+           05  UL-GD-BROKER-DEALER-INFO.                                        
+               10  UL-GD-TRADE-PARTNER-ID-NUM     PIC X(20).                    
+               10  UL-GD-CLEARINGHOUSE-NAME       PIC X(30).                    
+               10  UL-GD-TRADE-PARTNER-CTL-NUM    PIC X(30).                    
+               10  UL-GD-CLEARINGHOUSE-CTL-NUM    PIC X(30).                    
+               10  UL-GD-DISTRIB-CUST-ACCT-NUM    PIC X(30).                    
+               10  UL-GD-DISTRIB-TRX-ID-NUM       PIC X(30).                    
+               10  UL-GD-APPLICATION-CTL-NUM      PIC X(20).                    
+               10  UL-GD-FILLER-FUTURE-USE        PIC X(68).                    
+           05  UL-GD-TRX-INFO.                                                  
+                10  UL-GD-SAVED-COMPLETION-INDS.                                
+                   15  UL-GD-CONTRACT-INDS        PIC X(6).                     
+                   15  UL-GD-NAMED-INSURED-INDS   PIC X(14).                    
+                10  UL-GD-PARENT-ID               PIC XX.                       
+                10  UL-GD-ADDL-NI-DIRECT-ID       PIC X(15).                    
+                10  UL-GD-OCCURRENCE-NUMBER       PIC 99.                       
+                10  UL-GD-PLAN-CODE               PIC X(6).                     
+                10  UL-GD-PLAN-CODE-TRNSL         PIC X(50).                    
+                10  UL-GD-NUMBER-OF-UNITS         PIC +9(6).9(5).               
+                10  UL-GD-PREM-CLASS-CODE         PIC X.                        
+                10  UL-GD-PREM-CLASS-CODE-TRNSL   PIC X(50).                    
+                10  UL-GD-UNDERWRITING-BASIS-IND  PIC X.                        
+                10  UL-GD-STATUS-REQUEST-IND      PIC X.                        
+                10  UL-GD-RESTRICTION-CODE        PIC X.                        
+                10  UL-GD-INCREASE-INDICATOR      PIC X.                        
+                10  UL-GD-SPECIAL-CASE-INDICATOR  PIC X.                        
+                10  UL-GD-ADVANCE-INDICATOR       PIC X.                        
+                10  UL-GD-EXCLUSION-IND           PIC X.                        
+                10  UL-GD-RELATIONSHIP-POINTERS.                                
+                   15  UL-GD-PROD-GROUP-CODE      PIC XX.                       
+                   15  UL-GD-BENE-GROUP-CODE      PIC XX.                       
+                10  UL-GD-REINS-IND               PIC X.                        
+                10  UL-GD-NON-STANDARD-IND        PIC X.                        
+                10  UL-GD-BENE-IND                PIC X.                        
+                10  UL-GD-CVG-EFF-DATE            PIC 9(8).                     
+                10  UL-GD-PREM-EFF-DATE           PIC 9(8).                     
+                10  UL-GD-ISSUE-DATE              PIC 9(8).                     
+                10  UL-GD-CVG-TERM-DATE           PIC 9(8).                     
+                10  UL-GD-PREM-TERM-DATE          PIC 9(8).                     
+                10  UL-GD-RATE-EFF-DATE           PIC 9(8).                     
+                10  UL-GD-UND-EFF-DATE            PIC 9(8).                     
+                10  UL-GD-APPLICATION-DATE        PIC 9(8).                     
+                10  UL-GD-GUIDELN-SINGLE-PREM-OVR PIC +9(9).99.                 
+                10  UL-GD-GUIDELN-LEVEL-PREM-OVR  PIC +9(9).99.                 
+                10  UL-GD-CALC-GUIDELN-LEVEL-PREM PIC +9(9).99.                 
+                10  UL-GD-CALC-PRO-RT-GL-LVL-PREM PIC +9(9).99.                 
+                10  UL-GD-CALC-SNGL-GL-LVL-PREM   PIC +9(9).99.                 
+                10  UL-GD-CALC-MIN-PYMT-TGT-IND   PIC X.                        
+                10  UL-GD-PYMT-MIN-TARGET         PIC +9(9).99.                 
+                10  UL-GD-CALC-SURR-LOAD-TGT-IND  PIC X.                        
+                10  UL-GD-SURR-LOAD-TARGET        PIC +9(9).99.                 
+                10  UL-GD-CALC-PYMT-LOAD-TGT-IND  PIC X.                        
+                10  UL-GD-PYMT-LOAD-TARGET        PIC +9(9).99.                 
+                10  UL-GD-CALC-PYMT-COMM-TGT-IND  PIC X.                        
+                10  UL-GD-PYMT-COMM-TARGET        PIC +9(9).99.                 
+                10  UL-GD-RISK-COMM-DURATION-ADJ  PIC +9(3).                    
+                10  UL-GD-RISK-LOAD-DURATION-ADJ  PIC +9(3).                    
+                10  UL-GD-QUALIFIED-INDICATOR     PIC X.                        
+                10  UL-GD-COVERAGE-SUB-TYPE       PIC X(3).                     
+                10  FILLER-2                      PIC X(122).                   
+                10  UL-GD-USER-AREA-TR.                                         
+                   15  UL-GD-USER-AREA-CNTR       PIC 9(3).                     
+                   15  UL-GD-USER-AREA            OCCURS 10 TIMES.              
+                       20  UL-GD-USER-DATA        PIC X(30).                    
+                10  UL-GD-PRODUCER-INFO.                                        
+                   15  UL-GD-PRODUCER-GROUP-CODE  PIC XX.                       
+                   15  UL-GD-AGENT-INFO-CNTR      PIC 9(3).                     
+                   15  UL-GD-AGENT-INFORMATION    OCCURS 10 TIMES.              
+                       20  UL-GD-ROLE-TYPE-CODE         PIC X.                  
+                       20  UL-GD-FIRST-YEAR-PERCENT     PIC +9(4).9.            
+                       20  UL-GD-RENEWAL-PERCENT        PIC +9(4).9.            
+                       20  UL-GD-COMMISSION-AGENCY-CODE PIC X(6).               
+                       20  UL-GD-PERSON-CODE            PIC X(10).              
+                       20  UL-GD-AGENT-EFF-DATE         PIC 9(8).               
+                       20  UL-GD-USER-INFO-AREA         PIC X(17).              
+                       20  UL-GD-AGENT-PROFILE          PIC X(03).              
+                       20  UL-GD-AGENT-CONTRACT         PIC X(5).               
+                10  UL-GD-USER-AREA-COMM.                                       
+                   15  UL-GD-USER-AREA-CNTR       PIC 9(3).                     
+                   15  UL-GD-USER-AREA            OCCURS 10 TIMES.              
+                       20  UL-GD-USER-DATA        PIC X(30).                    
+                10  UL-GD-REINSURANCE-INFO.                                     
+                   15  UL-GD-REINSURANCE-TYPE        PIC X.                     
+                   15  UL-GD-REINSURER-CODE          PIC XXX.                   
+                   15  UL-GD-CESSION-NUMBER          PIC X(11).                 
+                   15  UL-GD-RETENTION-THRESHOLD-PCT PIC +9(3).9.               
+                   15  UL-GD-RETENTION-THRESHOLD-AMT PIC +9(9).                 
+                10  UL-GD-SPECIAL-RISK-INFO.                                    
+                   15  UL-GD-SPECIAL-CLASS-CODE      PIC XX.                    
+                   15  UL-GD-SPECIAL-CLASS-REASON    PIC XX.                    
+                   15  UL-GD-CEASE-DATE              PIC 9(8).                  
+                   15  UL-GD-SPECIAL-CLASS-COMM-CODE PIC X.                     
+                   15  UL-GD-RATING-FACTOR           PIC +99.999.               
+                   15  UL-GD-RATING-REASON           PIC XX.                    
+                   15  UL-GD-RATING-END-DATE         PIC 9(8).                  
+                   15  UL-GD-RATING-FACTOR-COMM-CODE PIC X.                     
+                   15  UL-GD-FLAT-EXTRA-CNTR         PIC 9(3).                  
+                   15  UL-GD-FLAT-EXTRA-AREA       OCCURS 6 TIMES.              
+                       20  UL-GD-FLAT-EXTRA-AMOUNT       PIC +999.99.           
+                       20  UL-GD-FLAT-EXTRA-REASON       PIC XX.                
+                       20  UL-GD-FLAT-EXTRA-REASON-TRNSL PIC X(50).             
+                       20  UL-GD-FLAT-EXTRA-END-DATE     PIC 9(8).              
+                       20  UL-GD-FLAT-EXTRA-COMM-CD      PIC X.                 
+                10  UL-GD-BENEFICIARY-DATA.                                     
+                   15  UL-GD-BENE-GROUP-CODE         PIC XX.                    
+                   15  UL-GD-NAME                    PIC X(80).                 
+                   15  UL-GD-DIRECTORY-ID            PIC X(15).                 
+                   15  UL-GD-TAX-ID.                                            
+                       20  UL-GD-TAX-ID-NUM          PIC 9(9).                  
+                       20  UL-GD-TAX-ID-SUFFIX       PIC X.                     
+                   15  UL-GD-ADDRESS-1               PIC X(35).                 
+                   15  UL-GD-ZIP-POSTAL-CODE         PIC X(15).                 
+                   15  UL-GD-COUNTRY-CODE            PIC XX.                    
+                   15  UL-GD-ADDRESS-AREA-CNTR       PIC 9(3).                  
+                   15  UL-GD-ADDRESS-AREA          OCCURS 4 TIMES.              
+                       20  UL-GD-ADDRESS-LINE        PIC X(35).                 
+                   15  UL-GD-CASE-INDIV-CODE         PIC X.                     
+                   15  UL-GD-BENE-EXTRA-CNTR         PIC 9(3).                  
+                   15  UL-GD-BENEFICIARY-EXTRA-DATA OCCURS 10 TIMES.            
+                       20  UL-GD-BENE-DATA           PIC X(60).                 
+           05  UL-GD-CALC-AREA.                                                 
+               10  UL-GD-RIDER-AMT-PRIOR             PIC +9(9).99.              
+               10  UL-GD-RIDER-AMT-CURR              PIC +9(9).99.              
+               10  UL-GD-BASIC-INS-AMT               PIC +9(9).99.              
+               10  UL-GD-TARGET-AMT-PRIOR            PIC +9(9).99.              
+               10  UL-GD-TARGET-AMT-CURR             PIC +9(9).99.              
+           05  UL-GD-REINS-INFO.                                                
+               10  UL-GD-REINS-OPT-OUT-IND           PIC X(02).                 
+               10  UL-GD-REINS-OPT-1-2  REDEFINES                               
+                                       UL-GD-REINS-OPT-OUT-IND.                 
+                   15  UL-GD-REINS-OPT-1              PIC X.                    
+                       88  AUTO-REINS-OPT-X          VALUE 'X'.                 
+                   15  UL-GD-REINS-OPT-2              PIC X.                    
+               10  UL-GD-REINS-AREA-INFO OCCURS 6 TIMES.                        
+                   15  UL-GD-EXCESS-REINS-PRG-CD     PIC X(03).                 
+                   15  UL-GD-PRU-REINSURER-CODE      PIC 9(02).                 
+                       88  VALID-REINS-CODES VALUES 01 THRU 99.                 
+                   15  UL-GD-EXCESS-AMT-REINS     PIC +9(9).99 COMP-3.          
+           05  UL-GD-ISSUE-BASIS                     PIC 999.                   
+           05  UL-GD-SIA-INDICATOR                   PIC X.                     

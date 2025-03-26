@@ -1,0 +1,38 @@
+       01  WS-VCLMEFTW-LAYOUT.                                                  
+           05  FUND-UL-TWTB-KEY-DATA-AREA.                                      
+               10  FUND-UL-TWTB-KEY-COMPANY-CODE         PIC X(03).             
+               10  FUND-UL-TWTB-KEY-MASTER-ID            PIC X(15).             
+               10  FUND-UL-TWTB-KEY-FILE-CODE            PIC X(05).             
+               10  FUND-UL-TWTB-KEY-DOCUMENT-TYPE        PIC X(50).             
+               10  FUND-UL-TWTB-KEY-DOCUMENT-ID          PIC X(50).             
+               10  FUND-UL-TWTB-KEY-TRX-CODE             PIC X(04).             
+               10  FILLER-1                              PIC X(100).            
+               10  FUND-UL-TWTB-KEY-MAP-RECORD-ID        PIC X(50).             
+           05  FUND-UL-TWTB-FUND-INFO.                                          
+               10  FUND-UL-TWTB-FUND-TYPE         PIC X.                        
+               10  FUND-UL-TWTB-FUND-NUMBER       PIC +999.                     
+               10  FUND-UL-TWTB-FUND-NUMBER-TRNSL PIC X(50).                    
+               10  FUND-UL-TWTB-FUND-REMOVAL-IND  PIC X.                        
+               10  FUND-UL-TWTB-FUND-NET-AMOUNT   PIC +9(9).99.                 
+               10  FUND-UL-TWTB-FUND-AMT-SURR     PIC +9(9).99.                 
+               10  FUND-UL-TWTB-FUND-UNITS-SURR   PIC +9(7).9(4).               
+               10  FUND-UL-TWTB-FUND-CURR-CSH-VAL  PIC +9(9).9(2).              
+               10  FUND-UL-TWTB-FUND-ADMIN-PLTY    PIC +9(9).99.                
+               10  FUND-UL-TWTB-FUND-SALES-PLTY    PIC +9(9).99.                
+               10  FUND-UL-TWTB-FUND-FLAT-FEE     PIC +9(9).99.                 
+               10  FUND-UL-TWTB-FUND-ADMIN-PCT-CV PIC +9(9).99.                 
+               10  FUND-UL-TWTB-FUND-SALES-PCT-CV PIC +9(9).99.                 
+               10  FUND-UL-TWTB-FUND-ADMIN-CHG-UT  PIC +9(9).99.                
+               10  FUND-UL-TWTB-FUND-SALES-CHG-UT  PIC +9(9).99.                
+               10  FUND-UL-TWTB-FUND-ADMIN-PCT-TG  PIC +9(9).99.                
+               10  FUND-UL-TWTB-FUND-SALES-PCT-TG  PIC +9(9).99.                
+               10  FUND-UL-TWTB-FUND-GAIN-AMOUNT  PIC +9(9).99.                 
+               10  FUND-UL-TWTB-FUND-LOSS-AMOUNT  PIC +9(9).99.                 
+               10  FUND-UL-TWTB-FUND-TOTAL-UNITS  PIC +9(7).9(4).               
+               10  FUND-UL-TWTB-FUND-REMOVAL-INT  PIC +9(9).99.                 
+               10  FILLER-2                       PIC X(14).                    
+               10  FUND-UL-TWTB-FUND-WITH-INFO.                                 
+                   15  FUND-UL-TWTB-FUND-WITH-NUM      PIC +999.                
+                   15  FUND-UL-TWTB-FUND-WITH-AMT      PIC +9(9).99.            
+                   15  FUND-UL-TWTB-FUND-WITH-PERCENT  PIC +9(3).9.             
+               10  FUND-UL-TWTB-FUND-UNIT-VALUE       PIC +999.9(6).            

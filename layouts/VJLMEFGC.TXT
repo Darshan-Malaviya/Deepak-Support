@@ -1,0 +1,20 @@
+       01  WS-VCLMEFGC-LAYOUT.                                                  
+           05  FUND-UL-GCC-KEY-DATA-AREA.                                       
+                 10  FUND-UL-GCC-KEY-COMPANY-CODE      PIC X(03).               
+                 10  FUND-UL-GCC-KEY-MASTER-ID         PIC X(15).               
+                 10  FUND-UL-GCC-KEY-FILE-CODE         PIC X(05).               
+                 10  FUND-UL-GCC-KEY-DOCUMENT-TYPE     PIC X(50).               
+                 10  FUND-UL-GCC-KEY-DOCUMENT-ID       PIC X(50).               
+                 10  FUND-UL-GCC-KEY-TRX-CODE          PIC X(04).               
+                 10  FUND-UL-GCC-FILLER                PIC X(100).              
+                 10  FUND-UL-GCC-KEY-MAP-RECORD-ID     PIC X(50).               
+             05  FUND-UL-GCC-FUND-ALLOC-INFO.                                   
+                 10  FUND-UL-GCC-FROM-TO-INDICATOR     PIC X.                   
+                 10  FUND-UL-GCC-FUND-NUMBER           PIC +999.                
+                 10  FUND-UL-GCC-FUND-NUMBER-TRNSL     PIC X(50).               
+                 10  FUND-UL-GCC-AMOUNT-UNIT-IND       PIC X.                   
+                 10  FUND-UL-GCC-ALLOC-AMOUNT          PIC +9(9).99.            
+                 10  FUND-UL-GCC-ALLOC-PERCENT         PIC +9(03).9.            
+             05  FUND-UL-GCC-FUND-ADDL-INFO.                                    
+                 10  FUND-UL-GCC-CHANGE-IND            PIC X.                   
+                 10  FUND-UL-GCC-TO-ALLOC-PCT-SUM      PIC +9(03).9.            

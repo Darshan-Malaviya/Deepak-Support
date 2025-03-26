@@ -1,0 +1,22 @@
+       01 WS-VCLMAN7S-LAYOUT.                                                   
+         02  UL-AN7S-KEY-DATA-AREA.                                             
+           05  UL-AN7S-KEY-COMPANY-CODE  PIC X(03).                             
+           05  UL-AN7S-KEY-MASTER-ID     PIC X(15).                             
+           05  UL-AN7S-KEY-FILE-CODE     PIC X(05).                             
+           05  UL-AN7S-KEY-DOCUMENT-TYPE PIC X(50).                             
+           05  UL-AN7S-KEY-DOCUMENT-ID   PIC X(50).                             
+           05  UL-AN7S-KEY-TRX-CODE      PIC X(04).                             
+           05  UL-AN7S-FILLER            PIC X(100).                            
+           05  UL-AN7S-KEY-MAP-RECORD-ID PIC X(50).                             
+         02  UL-AN7S-DATA-AREA.                                                 
+           05  UL-AN7S-RECORD-TYPE-IND          PIC X(4).                       
+           05  UL-AN7S-RECORD-CODE              PIC 9(5).                       
+           05  UL-AN7S-EXTRACT-DATA.                                            
+               10  UL-AN7S-FUND-AREA          PIC X(8811).                      
+               10  UL-AN7S-FUND-ARRAY REDEFINES                                 
+                                 UL-AN7S-FUND-AREA.                             
+                 12  UL-AN7S-FUND-TRX-DATA     OCCURS 99 TIMES.                 
+                   15  UL-AN7S-FUND-NUMBER-TRNSL     PIC X(50).                 
+                   15  UL-AN7S-CHANGE-IN-UNITS       PIC +9(9).9(4).            
+                   15  UL-AN7S-UNIT-PRICE            PIC +9(3).9(6).            
+                   15  UL-AN7S-AMOUNT                PIC +9(9).9(2).            

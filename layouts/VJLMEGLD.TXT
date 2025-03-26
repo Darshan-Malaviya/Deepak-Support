@@ -1,0 +1,91 @@
+       01  WS-VCLMEGLD-LAYOUT.                                                  
+           05  UL-GLD-KEY-DATA-AREA.                                            
+               10  UL-GLD-KEY-COMPANY-CODE    PIC X(03).                        
+               10  UL-GLD-KEY-MASTER-ID       PIC X(15).                        
+               10  UL-GLD-KEY-FILE-CODE       PIC X(05).                        
+               10  UL-GLD-KEY-DOCUMENT-TYPE   PIC X(50).                        
+               10  UL-GLD-KEY-DOCUMENT-ID     PIC X(50).                        
+               10  UL-GLD-KEY-TRX-CODE        PIC X(04).                        
+               10  FILLER-1                   PIC X(100).                       
+               10  UL-GLD-KEY-MAP-RECORD-ID   PIC X(50).                        
+           05  UL-GLD-BROKER-DEALER-INFO.                                       
+               10  UL-GLD-TRADE-PARTNER-ID-NUM    PIC X(20).                    
+               10  UL-GLD-CLEARINGHOUSE-NAME      PIC X(30).                    
+               10  UL-GLD-TRADE-PARTNER-CTL-NUM   PIC X(30).                    
+               10  UL-GLD-CLEARINGHOUSE-CTL-NUM   PIC X(30).                    
+               10  UL-GLD-DISTRIB-CUST-ACCT-NUM   PIC X(30).                    
+               10  UL-GLD-DISTRIB-TRX-ID-NUM      PIC X(30).                    
+               10  UL-GLD-APPLICATION-CTL-NUM     PIC X(20).                    
+               10  UL-GLD-FILLER-FUTURE-USE       PIC X(68).                    
+           05  UL-GLD-TRX-INFO.                                                 
+               10  UL-GLD-PLAN-CODE                     PIC X(6).               
+               10  UL-GLD-PLAN-CODE-TRNSL               PIC X(50).              
+               10  UL-GLD-LINE-OF-BUSINESS              PIC XXX.                
+               10  UL-GLD-LOB-TRNSL                     PIC X(50).              
+               10  UL-GLD-STAT-COMPANY-CODE             PIC XXX.                
+               10  UL-GLD-POLICY-DURATION               PIC +9(3).              
+               10  UL-GLD-ADJUSTED-DURATION             PIC +9(3).              
+               10  UL-GLD-TEFRA-IND                     PIC X.                  
+               10  UL-GLD-TARGET-IND                    PIC X.                  
+               10  UL-GLD-DECREASE-UNITS                PIC +9(6).9(5).         
+               10  UL-GLD-CVG-TERM-REASON               PIC XX.                 
+               10  UL-GLD-SPEC-PG-AGENCY-CARD-IND       PIC X.                  
+               10  UL-GLD-TRANSACTION-FEE               PIC +9(9).99.           
+               10  UL-GLD-STATUS-REQUEST-CODE           PIC X.                  
+               10  UL-GLD-LIMIT-OVERRIDE-CODE           PIC X.                  
+               10  UL-GLD-TERM-SEGMENT-USER-AREA.                               
+                   15 UL-GLD-TERM-CNTR                  PIC 9(3).               
+                   15 UL-GLD-TERM-USER-AREA         OCCURS 10 TIMES.            
+                       20  UL-GLD-TERM-USER-LINE       PIC X(30).               
+               10  UL-GLD-PRIOR-UNITS                  PIC +9(6).9(5).          
+               10  UL-GLD-CURRENT-UNITS                PIC +9(6).9(5).          
+               10  UL-GLD-REVERSAL-TRX-DATE            PIC 9(8).                
+               10  UL-GLD-REVERSAL-ORIG-CODE           PIC X(8).                
+               10  UL-GLD-TOTAL-FUNDS-AFFECTED         PIC +9(3).               
+               10  UL-GLD-FUND-VALUES-REMOVED          PIC +9(9).99.            
+               10  UL-GLD-GUIDELINE-LVL-PREM-ADJ       PIC +9(9).99.            
+               10  UL-GLD-PRI-GUIDELINE-LVL-PREM       PIC +9(9).99.            
+               10  UL-GLD-GUIDELINE-SNGL-PREM-ADJ      PIC +9(9).99.            
+               10  UL-GLD-PRI-GUIDELINE-SNGL-PRM       PIC +9(9).99.            
+               10  UL-GLD-TOTAL-POLICY-VALUE           PIC +9(9).99.            
+               10  UL-GLD-QUOTE-REQUEST-IND            PIC X.                   
+               10  UL-GLD-LOWEST-TERM-CVG-UNITS        PIC +9(6).9(5).          
+               10  FILLER-2                            PIC X(7).                
+               10  UL-GLD-ADMIN-PCT-OF-CASH-VAL        PIC +9(9).9(2).          
+               10  UL-GLD-SALES-PCT-OF-CASH-VAL        PIC +9(9).9(2).          
+               10  UL-GLD-ADMIN-CHARGE-PER-UNIT        PIC +9(9).9(2).          
+               10  UL-GLD-SALES-CHARGE-PER-UNIT        PIC +9(9).9(2).          
+               10  UL-GLD-ADMIN-PCT-OF-TARG            PIC +9(9).9(2).          
+               10  UL-GLD-SALES-PCT-OF-TARG            PIC +9(9).9(2).          
+               10  UL-GLD-PARTIAL-SURR-FCTR-REMNG      PIC +9(1).9(6).          
+               10  UL-GLD-PRIOR-SURR-FCTR-REMNG        PIC +9(1).9(6).          
+               10  UL-GLD-FUND-CNTR                    PIC 9(3).                
+               10  UL-GLD-FUND-AREA                    PIC X(18414).            
+               10  UL-GLD-FUND-ARRAY REDEFINES UL-GLD-FUND-AREA.                
+                 12  UL-GLD-FUND-INFORMATION          OCCURS 99.                
+                   15  UL-GLD-FUND-NUMBER              PIC +999.                
+                   15  UL-GLD-FUND-NUMBER-TRNSL        PIC X(50).               
+                   15  UL-GLD-FUND-TYPE                PIC X.                   
+                   15  UL-GLD-FUND-CURR-CASH-VALUE     PIC +9(9).99.            
+                   15  UL-GLD-FUND-UNITS-REMAINING     PIC +9(7).9(4).          
+                   15  UL-GLD-FUND-CHANGE-IN-UNITS     PIC +9(7).9(4).          
+                   15  UL-GLD-FUND-TRANSACTION-FEE     PIC +9(9).99.            
+                   15  UL-GLD-FUND-GAIN-AMOUNT         PIC +9(9).99.            
+                   15  UL-GLD-FUND-LOSS-AMOUNT         PIC +9(9).99.            
+                   15  UL-GLD-ADMIN-PCT-OF-CASH-VAL                             
+                                                       PIC +9(9).99.            
+                   15  UL-GLD-SALES-PCT-OF-CASH-VAL                             
+                                                       PIC +9(9).99.            
+                   15  UL-GLD-FUND-ADMIN-CHARGE-UNIT   PIC +9(9).99.            
+                   15  UL-GLD-FUND-SALES-CHARGE-UNIT   PIC +9(9).99.            
+                   15  UL-GLD-FUND-ADMIN-PCT-OF-TRG    PIC +9(9).99.            
+                   15  UL-GLD-FUND-SALES-PCT-OF-TRG    PIC +9(9).99.            
+           05  UL-GLD-CALC-AREA.                                                
+               10  UL-GLD-BASIC-INS-AMT-CURR           PIC +9(9).99.            
+               10  UL-GLD-BASIC-INS-AMT-PRIOR          PIC +9(9).99.            
+               10  UL-GLD-RIDER-AMT                    PIC +9(9).99.            
+               10  UL-GLD-TARGET-AMT-PRIOR             PIC +9(9).99.            
+               10  UL-GLD-TARGET-AMT-CURR              PIC +9(9).99.            
+               10  UL-GLD-SURR-CHARGE                  PIC +9(9).99.            
+               10  UL-GLD-GLD-MEC-IND-I                PIC X.                   
+               10  UL-GLD-GLD-MEC-CONTRACT             PIC X.                   

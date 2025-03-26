@@ -1,0 +1,34 @@
+       01 WS-VCLMEAE3-LAYOUT.                                                   
+           05  UL-CNTR-KEY-DATA-AREA.                                           
+               10  UL-AE-KEY-COMPANY-CODE         PIC X(03).                    
+               10  UL-AE-KEY-MASTER-ID            PIC X(15).                    
+               10  UL-AE-KEY-FILE-CODE            PIC X(05).                    
+               10  UL-AE-KEY-DOCUMENT-TYPE        PIC X(50).                    
+               10  UL-AE-KEY-DOCUMENT-ID          PIC X(50).                    
+               10  UL-AE-KEY-TRX-CODE             PIC X(04).                    
+               10  FILLER-1                       PIC X(100).                   
+               10  UL-AE-KEY-MAP-RECORD-ID        PIC X(50).                    
+           05  UL-AE-BROKER-DEALER-INFO.                                        
+               10  UL-AE-TRADE-PARTNER-ID-NUM     PIC X(20).                    
+               10  UL-AE-CLEARINGHOUSE-NAME       PIC X(30).                    
+               10  UL-AE-TRADE-PARTNER-CTL-NUM    PIC X(30).                    
+               10  UL-AE-CLEARINGHOUSE-CTL-NUM    PIC X(30).                    
+               10  UL-AE-DISTRIB-CUST-ACCT-NUM    PIC X(30).                    
+               10  UL-AE-DISTRIB-TRX-ID-NUM       PIC X(30).                    
+               10  UL-AE-APPLICATION-CTL-NUM      PIC X(20).                    
+               10  UL-AE-FILLER-FUTURE-USE        PIC X(68).                    
+           05  UL-AE-BILL-TYPE                    PIC X.                        
+           05  UL-AE-EXCEPTION-CODE               PIC X(02).                    
+           05  UL-AE-EXTRACT-INDICATOR            PIC X.                        
+           05  UL-AE-NEXT-BILL-EXTRACT-DT         PIC +9(8).                    
+           05  UL-AE-EXTRACT-DATE                 PIC 9(08).                    
+           05  UL-AE-BILLING-DATE                 PIC 9(08).                    
+           05  UL-AE-MESSAGE-CODE                 PIC +9(02).                   
+           05  UL-AE-NEXT-PAYMENT-DUE-DT          PIC 9(08).                    
+           05  UL-AE-CLIENT-NUMBER                PIC X(15).                    
+           05  UL-AE-BILLING-FREQUENCY            PIC X(02).                    
+           05  UL-AE-CALCULATED-VALUES.                                         
+               10  UL-AE-BILL-PERIOD-END-DATE     PIC 9(08).                    
+               10  UL-AE-BILL-PERIOD-START-DATE   PIC 9(08).                    
+           05  UL-AE-SCAN-LINE                    PIC X(51).                    
+           05  FILLER-2                           PIC X(116).                   

@@ -1,0 +1,49 @@
+       01  WS-VCLMXCAC-LAYOUT.                                                  
+           05  ARC-CAA-KEY-DATA-AREA.                                           
+               10  ARC-CAA-KEY-COMPANY-CODE          PIC X(03).                 
+               10  ARC-CAA-KEY-MASTER-ID             PIC X(15).                 
+               10  ARE-CAA-KEY-FILE-CODE             PIC X(05).                 
+               10  ARC-CAA-KEY-DOCUMENT-TYPE         PIC X(50).                 
+               10  ARC-CAA-KEY-DOCUMENT-ID           PIC X(50).                 
+               10  ARC-CAA-KEY-TRX-CODE              PIC X(04).                 
+               10  FILLER-1                          PIC X(100).                
+               10  ARC-CAA-KEY-MAP-RECORD-ID         PIC X(50).                 
+           05  ARC-CAA-COMPANY-NAME                  PIC X(80).                 
+           05  ARC-CAA-INDIVIDUAL-NAME.                                         
+               10  ARC-CAA-LAST-NAME                 PIC X(35).                 
+               10  ARC-CAA-FIRST-NAME                PIC X(25).                 
+               10  ARC-CAA-NAME-PREFIX               PIC X(10).                 
+               10  ARC-CAA-NAME-SUFFIX               PIC X(10).                 
+           05  ARC-CAA-ADDRESS-INFO.                                            
+               10  ARC-CAA-ADDRESS-LINE-1            PIC X(35).                 
+               10  ARC-CAA-ADDRESS-LINE-2            PIC X(35).                 
+               10  ARC-CAA-ADDRESS-LINE-3            PIC X(35).                 
+               10  ARC-CAA-ADDRESS-LINE-4            PIC X(35).                 
+               10  ARC-CAA-ADDRESS-LINE-5            PIC X(35).                 
+               10  ARC-CAA-FILLER-CITY-ST            PIC X(35).                 
+               10  ARC-CAA-ZIP-POSTAL-CODE           PIC X(15).                 
+           05  ARC-CAA-TAX-ID-NUMBER.                                           
+               10  ARC-CAA-TAX-ID-NO                 PIC X(15).                 
+               10  ARC-CAA-TAX-ID-SUFFIX             PIC X.                     
+           05  ARC-CAA-COMPANY-INDIV-CODE            PIC X.                     
+           05  ARC-CAA-COUNTRY-CODE                  PIC XX.                    
+           05  ARC-CAA-BIRTH-DATE                    PIC 9(08).                 
+           05  ARC-CAA-SEX-CODE                      PIC X.                     
+           05  ARC-CAA-SEX-CODE-TRNSL                PIC X(50).                 
+           05  ARC-CAA-DEPOSIT-FUND-IND              PIC X.                     
+           05  ARC-CAA-HANDLING-CODE                 PIC X.                     
+           05  ARC-CAA-LANGUAGE-CODE                 PIC X.                     
+           05  ARC-CAA-SPECIAL-COND-CODE-1           PIC X.                     
+           05  ARC-CAA-SPECIAL-COND-CODE-2           PIC X.                     
+           05  ARC-CAA-STATUS-CODE                   PIC X.                     
+           05  ARC-CAA-SOLICITATION-DATE             PIC 9(08).                 
+           05  ARC-CAA-TIN-VERIFICATION              PIC X.                     
+           05  ARC-CAA-NON-RES-ALIEN-IND             PIC X.                     
+           05  ARC-CAA-MARITAL-STATUS                PIC X.                     
+           05  ARC-CAA-NUM-EXEMPTIONS                PIC 9(02).                 
+           05  ARC-CAA-CLIENT-CENTRIC-INFO.                                     
+               10  ARC-CAA-CLIENT-CENTRIC-DATA-CT    PIC 9(03).                 
+               10  ARC-CAA-CLIENT-CENTRIC-DATA OCCURS 50 TIMES.                 
+                   15  ARC-CAA-COMMUNICATION-TYPE    PIC X(02).                 
+                   15  ARC-CAA-COMMUNICATION-NUM     PIC X(50).                 
+           05  FILLER                                PIC X(200).                

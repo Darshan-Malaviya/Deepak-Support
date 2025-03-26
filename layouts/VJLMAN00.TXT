@@ -1,0 +1,193 @@
+       01 WS-VCLMAN00-LAYOUT.                                                   
+         02  UL-AN00-KEY-DATA-AREA.                                             
+           05  UL-AN00-KEY-COMPANY-CODE           PIC X(03).                    
+           05  UL-AN00-KEY-MASTER-ID              PIC X(15).                    
+           05  UL-AN00-KEY-FILE-CODE              PIC X(05).                    
+           05  UL-AN00-KEY-DOCUMENT-TYPE          PIC X(50).                    
+           05  UL-AN00-KEY-DOCUMENT-ID            PIC X(50).                    
+           05  UL-AN00-KEY-TRX-CODE               PIC X(04).                    
+           05  UL-AN00-FILLER                     PIC X(100).                   
+           05  UL-AN00-KEY-MAP-RECORD-ID          PIC X(50).                    
+         02  UL-AN00-DATA-AREA.                                                 
+           05  UL-AN00-RECORD-TYPE-IND            PIC X(4).                     
+           05  UL-AN00-TRX-RETRIEVAL-KEY.                                       
+               10  UL-AN00-TRX-SORT-KEY.                                        
+                   15  UL-AN00-COMPANY-CODE       PIC X(3).                     
+                   15  UL-AN00-SORT-CTL-IND       PIC X(1).                     
+                   15  UL-AN00-MASTER-ID          PIC X(15).                    
+                   15  UL-AN00-EFFECTIVE-DATE     PIC 9(8).                     
+                   15  UL-AN00-SEQUENCE-NO        PIC 9(2).                     
+                   15  UL-AN00-TRX-CODE           PIC X(4).                     
+                   15  UL-AN00-TRX-DATE           PIC 9(8).                     
+               10  UL-AN00-DATE-PROCESSED         PIC +9(7).                    
+               10  UL-AN00-TIME-PROCESSED         PIC +9(7).                    
+           05  UL-AN00-HEADER-INFO.                                             
+               10  UL-AN00-ORIGINATOR-INFO.                                     
+                   15  UL-AN00-OPER-ID            PIC X(3).                     
+                   15  UL-AN00-TERM-ID            PIC X(4).                     
+                   15  UL-AN00-ORIGINATOR-CODE    PIC X(8).                     
+               10  UL-AN00-SECONDARY-ID           PIC X(5).                     
+               10  UL-AN00-ONLINE-DELETED-REV     PIC X(1).                     
+               10  UL-AN00-FILE-CODE              PIC +9(5).                    
+               10  UL-AN00-REVERSAL-CODE          PIC X(1).                     
+               10  UL-AN00-REVERSAL-FILE-CODE     PIC +9(5).                    
+               10  UL-AN00-PRIOR-STATUS-CODE      PIC X(1).                     
+               10  UL-AN00-CURR-STATUS-CODE       PIC X(1).                     
+               10  UL-AN00-PRODUCT-CODE           PIC X(2).                     
+               10  UL-AN00-TRX-TYPE               PIC X(2).                     
+               10  UL-AN00-PROCESS-DATE           PIC X(8).                     
+               10  UL-AN00-SOURCE-OF-TRX-CODE     PIC X(1).                     
+               10  UL-AN00-COUNTRY-OF-ORIGIN      PIC X(2).                     
+               10  UL-AN00-CURRENCY-CODE          PIC X(1).                     
+               10  UL-AN00-LANGUAGE-CODE          PIC X(1).                     
+               10  UL-AN00-DISBURSEMENT-IND       PIC X(1).                     
+               10  UL-AN00-PRIME-EVT-TRX-CODE     PIC X(4).                     
+               10  UL-AN00-PRIME-EVT-FILE-CODE    PIC +9(5).                    
+               10  UL-AN00-ERROR-INFO.                                          
+                   15  UL-AN00-ERROR-CODE         PIC X(4) OCCURS 10.           
+               10  UL-AN00-FAV-CODE               PIC X(6).                     
+               05  UL-AN00-BROKER-DEALER-INFO.                                  
+                   10  UL-AN00-TRADE-PARTNER-ID-NUM     PIC X(20).              
+                   10  UL-AN00-CLEARINGHOUSE-NAME       PIC X(30).              
+                   10  UL-AN00-TRADE-PARTNER-CTL-NUM    PIC X(30).              
+                   10  UL-AN00-CLEARINGHOUSE-CTL-NUM    PIC X(30).              
+                   10  UL-AN00-DISTRIB-CUST-ACCT-NUM    PIC X(30).              
+                   10  UL-AN00-DISTRIB-TRX-ID-NUM       PIC X(30).              
+                   10  UL-AN00-APPLICATION-CTL-NUM      PIC X(20).              
+           05  UL-AN00-TRX-INFO.                                                
+               10  UL-AN00-REQUESTED-CLIENT-NO    PIC X(15).                    
+               10  UL-AN00-REQUEST-TYPE           PIC X(1).                     
+               10  UL-AN00-STATEMENT-BEG-DATE     PIC 9(8).                     
+               10  UL-AN00-STATEMENT-END-DATE     PIC 9(8).                     
+               10  UL-AN00-EXTERNAL-REQ-TYPE      PIC X(1).                     
+               10  UL-AN00-LAST-REINSTMT-DATE     PIC 9(8).                     
+           05  UL-AN00-STMT-SUMM-BALANCES.                                      
+               10  UL-AN00-BEGIN-BALANCES OCCURS 2 TIMES.                       
+                   15  UL-AN00-BEG-BAL-CALC-DATE   PIC 9(8).                    
+                   15  UL-AN00-BEG-INSURANCE-AMT   PIC +9(9).99.                
+                   15  UL-AN00-BEG-ACCUM-CASH-VAL  PIC +9(9).99.                
+                   15  UL-AN00-BEG-CASH-SURR-VALUE PIC +9(9).99.                
+                   15  UL-AN00-BEG-LOAN-BALANCE    PIC +9(9).99.                
+                   15  UL-AN00-BEG-DEATH-BEN-CURR  PIC +9(9).99.                
+                   15  UL-AN00-BEG-REGU-LOAN-BAL   PIC +9(9).99.                
+                   15  UL-AN00-BEG-PREF-LOAN-BAL   PIC +9(9).99.                
+                   15  UL-AN00-BEG-REGU-FUND-DOLLRS PIC +9(9).99.               
+                   15  UL-AN00-BEG-PREF-FUND-DOLLRS PIC +9(9).99.               
+                   15  UL-AN00-BEG-DEATH-BENEFIT    PIC +9(9).9(2).             
+                   15  UL-AN00-BEG-TOTAL-CONTR-FUND PIC +9(9).9(2).             
+                   15  UL-AN00-BEG-GROSS-PREM-PAID  PIC +9(9).9(2).             
+                   15  UL-AN00-BEG-NET-WITHDRWL-AMT PIC +9(9).9(2).             
+                   15  UL-AN00-BEG-PREMIUM-TAX      PIC +9(9).9(2).             
+                   15  UL-AN00-BEG-SALES-LOAD-FEE   PIC +9(9).9(2).             
+                   15  UL-AN00-BEG-COST-OF-INSRNC   PIC +9(9).9(2).             
+                   15  UL-AN00-BEG-ADMIN-LOAD-FEE   PIC +9(9).9(2).             
+                   15  UL-AN00-BEG-TRANSACTION-FEE  PIC +9(9).9(2).             
+                   15  UL-AN00-BEG-LOAN-INTEREST-PD PIC +9(9).9(2).             
+                   15  UL-AN00-BEG-LOAN-PRINCIPL-PD PIC +9(9).9(2).             
+                   15  UL-AN00-BEG-TRG-TR-RDR-DEATH PIC +9(9).99.               
+                   15  UL-AN00-BEG-BASE-DEATH-BENE  PIC +9(9).99.               
+                   15  UL-AN00-BEG-OUTSTANDING-CHGS PIC +9(9).99.               
+                   15  UL-AN00-BEG-RTRN-OF-SALES-CH PIC +9(9).99.               
+                   15  UL-AN00-BEG-FULL-SURR-CHARGE PIC +9(9).99.               
+                   15  UL-AN00-BEG-FUND-AREA        PIC X(4554).                
+                   15  UL-AN00-BEG-FUND-ARRAY REDEFINES                         
+                                        UL-AN00-BEG-FUND-AREA.                  
+                     17  UL-AN00-BEG-FUND-INFO OCCURS 99 TIMES.                 
+                       20  UL-AN00-BEG-FUND-NUM        PIC +9(3).               
+                       20  UL-AN00-BEG-FUND-TYPE-IND   PIC X(1).                
+                       20  UL-AN00-BEG-FUND-DOLLARS    PIC +9(9).99.            
+                       20  UL-AN00-BEG-FUND-UNIT-VALUE PIC +9(9).9(6).          
+                       20  UL-AN00-BEG-FUND-VALUE      PIC +9(9).99.            
+                       20  UL-AN00-BEG-ALLOC-CHG-PCT   PIC +9(4).9.             
+               10  UL-AN00-END-BALANCES OCCURS 2 TIMES.                         
+                   15  UL-AN00-END-BAL-CALC-DATE    PIC 9(8).                   
+                   15  UL-AN00-END-INSURANCE-AMT    PIC +9(9).99.               
+                   15  UL-AN00-END-ACCUM-CASH-VAL   PIC +9(9).99.               
+                   15  UL-AN00-END-CASH-SURR-VALUE  PIC +9(9).99.               
+                   15  UL-AN00-END-LOAN-BALANCE     PIC +9(9).99.               
+                   15  UL-AN00-END-DEATH-BEN-CURR   PIC +9(9).99.               
+                   15  UL-AN00-END-REGU-LOAN-BAL    PIC +9(9).99.               
+                   15  UL-AN00-END-PREF-LOAN-BAL    PIC +9(9).99.               
+                   15  UL-AN00-END-REGU-FUND-DOLLRS PIC +9(9).99.               
+                   15  UL-AN00-END-PREF-FUND-DOLLRS PIC +9(9).99.               
+                   15  UL-AN00-END-DEATH-BENEFIT    PIC +9(9).9(2).             
+                   15  UL-AN00-END-TOTAL-CONTR-FUND PIC +9(9).9(2).             
+                   15  UL-AN00-END-GROSS-PREM-PAID  PIC +9(9).9(2).             
+                   15  UL-AN00-END-NET-WITHDRWL-AMT PIC +9(9).9(2).             
+                   15  UL-AN00-END-PREMIUM-TAX      PIC +9(9).9(2).             
+                   15  UL-AN00-END-SALES-LOAD-FEE   PIC +9(9).9(2).             
+                   15  UL-AN00-END-COST-OF-INSRNC   PIC +9(9).9(2).             
+                   15  UL-AN00-END-ADMIN-LOAD-FEE   PIC +9(9).9(2).             
+                   15  UL-AN00-END-TRANSACTION-FEE  PIC +9(9).9(2).             
+                   15  UL-AN00-END-LOAN-INTEREST-PD PIC +9(9).9(2).             
+                   15  UL-AN00-END-LOAN-PRINCIPL-PD PIC +9(9).9(2).             
+                   15  UL-AN00-END-TRG-TR-RDR-DEATH PIC +9(9).99.               
+                   15  UL-AN00-END-BASE-DEATH-BENE  PIC +9(9).99.               
+                   15  UL-AN00-END-OUTSTANDING-CHGS PIC +9(9).99.               
+                   15  UL-AN00-END-RTRN-OF-SALES-CH PIC +9(9).99.               
+                   15  UL-AN00-END-FULL-SURR-CHARGE PIC +9(9).99.               
+                   15  UL-AN00-END-FUND-AREA        PIC X(4554).                
+                   15  UL-AN00-END-FUND-ARRAY REDEFINES                         
+                                        UL-AN00-END-FUND-AREA.                  
+                     17  UL-AN00-END-FUND-INFO OCCURS 99 TIMES.                 
+                       20  UL-AN00-END-FUND-NUM        PIC +9(3).               
+                       20  UL-AN00-END-FUND-TYPE-IND   PIC X(1).                
+                       20  UL-AN00-END-FUND-DOLLARS    PIC +9(9).99.            
+                       20  UL-AN00-END-FUND-UNIT-VALUE PIC +9(9).9(6).          
+                       20  UL-AN00-END-FUND-VALUE      PIC +9(9).99.            
+                       20  UL-AN00-END-ALLOC-CHG-PCT   PIC +9(4).9.             
+           05  UL-AN00-STMT-REC-MISC-INFO.                                      
+               10  UL-AN00-ANNUAL-STATEMENT-SW   PIC X.                         
+               10  UL-AN00-FIRST-STATEMENT-SW    PIC X.                         
+               10  UL-AN00-UNIVERSAL-LIFE-SW     PIC X.                         
+               10  UL-AN00-SCHEDULED-STMT-SW     PIC X.                         
+               10  UL-AN00-POLICY-DURATION       PIC 999.                       
+               10  UL-AN00-NEXT-ANNIVERSARY      PIC 9(8).                      
+               10  UL-AN00-LAPSE-PEND-SWITCH     PIC X.                         
+               10  UL-AN00-MDBG-SWITCH           PIC X.                         
+               10  UL-AN00-LAPSE-RECOVER-SWITCH  PIC X.                         
+               10  UL-AN00-MDBG-RECOVER-SWITCH   PIC X.                         
+               10  UL-AN00-BEG-DEATH-BEN-INC-RDR PIC +9(9).99.                  
+               10  UL-AN00-END-DEATH-BEN-INC-RDR PIC +9(9).99.                  
+           05  UL-AN00-SVE-AREA OCCURS 2 TIMES.                                 
+               10  UL-AN00-BEG-SURR-VAL-ENHANCE PIC +9(9).99.                   
+               10  UL-AN00-END-SURR-VAL-ENHANCE PIC +9(9).99.                   
+           05  UL-AN00-STMT-REC-MISC-INFO-2.                                    
+               10  UL-AN00-TOTAL-BEG-RDR-DTH-BNFT   PIC +9(9).99.               
+               10  UL-AN00-TOTAL-END-RDR-DTH-BNFT   PIC +9(9).99.               
+               10  UL-AN00-BEG-NET-SUR-CAL-FORCD    PIC X.                      
+               10  UL-AN00-END-NET-SUR-CAL-FORCD    PIC X.                      
+               10  UL-AN00-BEG-GRS-SUR-CAL-FORCD    PIC X.                      
+               10  UL-AN00-END-GRS-SUR-CAL-FORCD    PIC X.                      
+               10  UL-AN00-BEG-BASIS-LAPSE OCCURS 2 TIMES.                      
+                 15  UL-AN00-BASIS-1-LAPSE-DATE     PIC 9(8).                   
+                 15  UL-AN00-BASIS-2-LAPSE-DATE     PIC 9(8).                   
+                 15  UL-AN00-BASIS-3-LAPSE-DATE     PIC 9(8).                   
+                 15  UL-AN00-BASIS-4-LAPSE-DATE     PIC 9(8).                   
+               10  UL-AN00-END-BASIS-LAPSE OCCURS 2 TIMES.                      
+                 15  UL-AN00-BASIS-1-LAPSE-DATE     PIC 9(8).                   
+                 15  UL-AN00-BASIS-2-LAPSE-DATE     PIC 9(8).                   
+                 15  UL-AN00-BASIS-3-LAPSE-DATE     PIC 9(8).                   
+                 15  UL-AN00-BASIS-4-LAPSE-DATE     PIC 9(8).                   
+               10  UL-AN00-NET-AREA OCCURS 2 TIMES.                             
+                 15  UL-AN00-BEG-NET-SHDW-CSH-VAL   PIC +9(9).99.               
+                 15  UL-AN00-END-NET-SHDW-CSH-VAL   PIC +9(9).99.               
+           05  UL-AN00-STMT-VAR-FOUND-IND           PIC X.                      
+           05  UL-CNTR-IUL-POLICY-IND               PIC X.                      
+           05  UL-CNTR-OPR-STATUS-CD                PIC X.                      
+           05  UL-CNTR-NEXT-IDX-SWEEP-DATE          PIC 9(8).                   
+           05  UL-AN00-MCF-AREA OCCURS 2 TIMES.                                 
+                10 UL-AN00-BEG-MCF-ADJ-AMT          PIC +9(9).99.               
+                10 UL-AN00-END-MCF-ADJ-AMT          PIC +9(9).99.               
+           05  UL-AN00-CUM-PREM-PD-AREA      OCCURS 2 TIMES.                    
+                10  UL-AN00-BEG-NET-CUM-PREM-PD     PIC +9(9).99.               
+                10  UL-AN00-END-NET-CUM-PREM-PD     PIC +9(9).99.               
+           05  UL-AN00-MAX-LOANABLE-AREA     OCCURS 2 TIMES.                    
+                10  UL-AN00-BEG-MAX-LOANABLE-AMT    PIC +9(9).99.               
+                10  UL-AN00-END-MAX-LOANABLE-AMT    PIC +9(9).99.               
+           05  UL-AN00-PART-LOAN-BALANCE     OCCURS 2 TIMES.                    
+               10  UL-AN00-BEG-PART-LOAN-BALANCE    PIC +9(9).99.               
+               10  UL-AN00-END-PART-LOAN-BALANCE    PIC +9(9).99.               
+           05  UL-AN00-PART-FUND-DOLLARS     OCCURS 2 TIMES.                    
+               10  UL-AN00-BEG-PART-FUND-DOLLARS    PIC +9(9).99.               
+               10  UL-AN00-END-PART-FUND-DOLLARS    PIC +9(9).99.               

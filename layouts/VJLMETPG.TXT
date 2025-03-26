@@ -1,0 +1,69 @@
+       01  WS-VCLMETPG-LAYOUT.                                                  
+           05  UL-TP-KEY-DATA-AREA.                                             
+               10  UL-TP-KEY-COMPANY-CODE        PIC X(03).                     
+               10  UL-TP-KEY-MASTER-ID           PIC X(15).                     
+               10  UL-TP-KEY-FILE-CODE           PIC X(05).                     
+               10  UL-TP-KEY-DOCUMENT-TYPE       PIC X(50).                     
+               10  UL-TP-KEY-DOCUMENT-ID         PIC X(50).                     
+               10  UL-TP-KEY-TRX-CODE            PIC X(04).                     
+               10  FILLER-1                      PIC X(100).                    
+               10  UL-TP-KEY-MAP-RECORD-ID       PIC X(50).                     
+           05  UL-TP-BROKER-DEALER-INFO.                                        
+               10  UL-TP-TRADE-PARTNER-ID-NUM    PIC X(20).                     
+               10  UL-TP-CLEARINGHOUSE-NAME      PIC X(30).                     
+               10  UL-TP-TRADE-PARTNER-CTL-NUM   PIC X(30).                     
+               10  UL-TP-CLEARINGHOUSE-CTL-NUM   PIC X(30).                     
+               10  UL-TP-DISTRIB-CUST-ACCT-NUM   PIC X(30).                     
+               10  UL-TP-DISTRIB-TRX-ID-NUM      PIC X(30).                     
+               10  UL-TP-APPLICATION-CTL-NUM     PIC X(20).                     
+               10  UL-TP-FILLER-FUTURE-USE       PIC X(68).                     
+           05  UL-TP-TRANSACTION-INFO.                                          
+               10  UL-TP-STAT-COMPANY-CODE       PIC X(03).                     
+               10  UL-TP-PLAN-CODE               PIC X(06).                     
+               10  UL-TP-PLAN-CODE-TRNSL         PIC X(50).                     
+               10  UL-TP-LINE-OF-BUSINESS        PIC X(03).                     
+               10  UL-TP-LINE-OF-BUSINESS-TRNSL  PIC X(50).                     
+               10  UL-TP-STATE-CODE              PIC X(02).                     
+               10  FILLER-2                      PIC X.                         
+               10  UL-TP-MEMO-CODE               PIC X(02).                     
+               10  UL-TP-SOURCE-CODE             PIC X(02).                     
+               10  UL-TP-LOAN-REVERSAL-INFO.                                    
+                   15  UL-TP-REVERSAL-EFF-DATE   PIC X(08).                     
+                   15  UL-TP-REVERSAL-TRX-DATE   PIC X(08).                     
+                   15  UL-TP-REVERSAL-ORIGINATOR PIC X(08).                     
+               10  UL-TP-PREV-CONTRACT-INFO.                                    
+                   15  UL-TP-CURRENT-STATUS      PIC X.                         
+                   15  UL-TP-PRIOR-STATUS        PIC X.                         
+                   15  UL-TP-NXT-PREF-LOAN-CONV-DT                              
+                                                 PIC X(08).                     
+                   15  UL-TP-TOTAL-NO-LOANS      PIC +9(03).                    
+                   15  UL-TP-CURR-NO-PREF-LOANS  PIC +9(03).                    
+               10  UL-TP-LOAN-INIT-REASON        PIC X(02).                     
+               10  UL-TP-LOAN-INDICATORS.                                       
+                   15  UL-TP-GROSS-NET-IND       PIC X.                         
+                   15  UL-TP-ADV-ARR-IND         PIC X(03).                     
+                   15  UL-TP-NEXT-YEAR-IND       PIC X.                         
+                   15  UL-TP-FUND-ALLOC-OVERRIDE PIC X.                         
+                   15  UL-TP-LOAN-LIMIT-OVERRIDE PIC X.                         
+               10  UL-TP-LOAN-AMOUNTS.                                          
+                   15  UL-TP-ORIGINAL-LOAN-AMT                                  
+                                             PIC +9(9).9(2).                    
+                   15  UL-TP-REMAINING-LOAN-AMT                                 
+                                             PIC +9(9).9(2).                    
+                   15  UL-TP-LOAN-DURATION       PIC +9(03).                    
+               10  UL-TP-LOAN-FILE-CODE          PIC +9(05).                    
+               10  UL-TP-CONVERTED-PRINCIPAL-AMT                                
+                                             PIC +9(9).9(2).                    
+               10  UL-TP-CONVERTED-CAP-AMT   PIC +9(9).9(2).                    
+               10  UL-TP-PRIOR-REGU-LOAN-AMT PIC +9(9).9(2).                    
+               10  UL-TP-CURR-REGU-LOAN-AMT  PIC +9(9).9(2).                    
+               10  UL-TP-CURR-PREF-LOAN-AMT  PIC +9(9).9(2).                    
+               10  UL-TP-LOAN-FUND-NUMBER        PIC +9(03).                    
+               10  UL-TP-LOAN-COLL-FUND-NUMBER   PIC +9(03).                    
+               10  FILLER-3                      PIC X(100).                    
+           05  UL-TP-JETS-FIELDS.                                               
+               10  UL-TP-PREF-INT-RATE-TRNSL     PIC X(50).                     
+               10  UL-TP-STD-INT-RATE-TRNSL      PIC X(50).                     
+               10  UL-TP-COLL-INT-RATE-TRNSL     PIC X(50).                     
+               10  UL-TP-TOTAL-CONVERTED-AMT PIC +9(9).9(2).                    
+               10  UL-TP-PREFERRED-LOAN-CD       PIC X.                         

@@ -1,0 +1,87 @@
+       01 WS-VCLMAN4F-LAYOUT.                                                   
+         02  UL-AN4F-KEY-DATA-AREA.                                             
+           05  UL-AN4F-KEY-COMPANY-CODE  PIC X(03).                             
+           05  UL-AN4F-KEY-MASTER-ID     PIC X(15).                             
+           05  UL-AN4F-KEY-FILE-CODE     PIC X(05).                             
+           05  UL-AN4F-KEY-DOCUMENT-TYPE PIC X(50).                             
+           05  UL-AN4F-KEY-DOCUMENT-ID   PIC X(50).                             
+           05  UL-AN4F-KEY-TRX-CODE      PIC X(04).                             
+           05  UL-AN4F-FILLER            PIC X(100).                            
+           05  UL-AN4F-KEY-MAP-RECORD-ID PIC X(50).                             
+         02  UL-AN4F-DATA-AREA.                                                 
+           05  UL-AN4F-RECORD-TYPE-IND   PIC X(4).                              
+           05  UL-AN4F-RECORD-CODE       PIC 9(5).                              
+           05  UL-AN4F-NUMBER-OF-FUNDS   PIC +9(3).                             
+           05  UL-AN4F-RECORD-DATA.                                             
+               10  UL-AN4F-FUND-DATA.                                           
+                   15  UL-AN4F-FUND-NUMBER PIC +9(3).                           
+                   15  UL-AN4F-FUND-TYPE PIC X.                                 
+                   15  UL-AN4F-FUND-RATE-AREA OCCURS 28.                        
+                       20  UL-AN4F-RATE-START-DATE  PIC 9(8).                   
+                       20  UL-AN4F-RATE-END-DATE    PIC 9(8).                   
+                       20  UL-AN4F-INTEREST-RATE PIC +9(2).9(3).                
+                       20  UL-AN4F-BONUS-INT-RT     PIC +9(2).9(3).             
+                       20  UL-AN4F-BASIC-INT-RT-1  PIC +99.999.                 
+                       20  UL-AN4F-BASIC-INT-RT-2  PIC +99.999.                 
+                       20  UL-AN4F-BASIC-INT-RT-3  PIC +99.999.                 
+                       20  UL-AN4F-BASIC-INT-RT-4  PIC +99.999.                 
+                       20  UL-AN4F-BASIC-INT-RT-5  PIC +99.999.                 
+               10  UL-AN4F-FUND-INT-COUNT-OLD           PIC +9(3).              
+               10  UL-AN4F-FUND-INT-COUNT-NEW           PIC +9(3).              
+               10  UL-AN4F-ADVERSE-IND                  PIC X.                  
+               10  UL-AN4F-IUL-DATA              OCCURS 5 TIMES.                
+                   15 UL-AN4F-IDX-ACCT-NAME            PIC X(30).               
+                   15 UL-AN4F-GUAR-PART-RATE           PIC +9(3).9(2).          
+                   15 UL-AN4F-GUAR-MIN-FLOOR           PIC +9(3).9(2).          
+                   15 UL-AN4F-GUAR-GRW-CAP             PIC +9(3).9(2).          
+                   15 UL-AN4F-CURR-PART-RATE           PIC +9(3).9(2).          
+                   15 UL-AN4F-CURR-MIN-FLOOR           PIC +9(3).9(2).          
+                   15 UL-AN4F-CURR-GRW-CAP             PIC +9(3).9(2).          
+                   15 UL-AN4F-GUAR-INT-RATE            PIC +9(2).9(3).          
+                   15 UL-AN4F-PART-RATE-ADVERSE-INDC   PIC X(1).                
+                   15 UL-AN4F-GROWTH-FLOOR-ADV-INDC    PIC X(1).                
+                   15 UL-AN4F-GROWTH-CAP-ADVERS-INDC   PIC X(1).                
+                   15 UL-AN4F-BAS-INT-ADJ-PCT       PIC +99.999.                
+               10  UL-AN4F-BONUS-ADVERSE-IND          PIC X(1).                 
+               10  UL-AN4F-BONUS-INT-START-DT         PIC 9(8).                 
+               10  UL-AN4F-PART-RATE-ADVERSE-IND      PIC X(1).                 
+               10  UL-AN4F-GROWTH-FLOOR-ADV-IND       PIC X(1).                 
+               10  UL-AN4F-GROWTH-CAP-ADVERSE-IND     PIC X(1).                 
+               10  UL-AN4F-FUND-DATA-ENHC.                                      
+                 15 UL-AN4F-FUND-NUMBER-ENHC            PIC +9(3).              
+                 15 UL-AN4F-FUND-TYPE-ENHC              PIC X.                  
+                 15 UL-AN4F-FUND-RATE-AREA-ENHC         OCCURS 28.              
+                   20 UL-AN4F-RATE-START-DATE-ENHC      PIC 9(8).               
+                   20 UL-AN4F-RATE-END-DATE-ENHC        PIC 9(8).               
+                   20 UL-AN4F-INTEREST-RATE-ENHC        PIC +9(2).9(3).         
+               10 UL-AN4F-SPREAD-FCT-ADVERSE-IND    PIC X(1).                   
+               10  UL-AN4F-IUL-DATA-A            OCCURS 5 TIMES.                
+                   15 UL-AN4F-GUAR-SPREAD             PIC +99.99 .              
+                   15 UL-AN4F-GUAR-MULT               PIC +9.99  .              
+                   15 UL-AN4F-CURR-SPREAD             PIC +99.99 .              
+                   15 UL-AN4F-CURR-MULT               PIC +9.99  .              
+                   15 UL-AN4F-SPREAD-FCT-ADVERS-INDC   PIC X(1).                
+               10 UL-AN4F-FUND-DATA-DIA.                                        
+                   15 UL-AN4F-FUND-NUMBER-DIA           PIC +9(5).              
+                   15 UL-AN4F-FUND-TYPE-DIA             PIC X.                  
+                   15 UL-AN4F-GUAR-DIA-RATE             PIC +9(2).9(3).         
+                   15 UL-AN4F-DIA-ADVERSE-IND           PIC X.                  
+                   15 UL-AN4F-FUND-RATE-AREA-DIA     OCCURS 28.                 
+                      20 UL-AN4F-RATE-START-DATE-DIA   PIC 9(8).                
+                      20 UL-AN4F-RATE-END-DATE-DIA     PIC 9(8).                
+                      20 UL-AN4F-INTEREST-RATE-DIA     PIC +9(2).9(3).          
+               10  UL-AN4F-IVUL-DATA-A       OCCURS 5 TIMES.                    
+                   15 UL-AN4F-GUAR-BUFF           PIC +9(3).9(2).               
+                   15 UL-AN4F-GUAR-STEP           PIC +9(3).9(2).               
+                   15 UL-AN4F-CURR-BUFF           PIC +9(3).9(2).               
+                   15 UL-AN4F-CURR-STEP           PIC +9(3).9(2).               
+               10 UL-AN4F-FUND-DATA-FHA.                                        
+                   15 UL-AN4F-FUND-NUMBER-FHA           PIC +9(5).              
+                   15 UL-AN4F-FUND-TYPE-FHA             PIC X.                  
+                   15 UL-AN4F-FUND-RATE-AREA-FHA     OCCURS 28.                 
+                      20 UL-AN4F-RATE-START-DATE-FHA   PIC 9(8).                
+                      20 UL-AN4F-RATE-END-DATE-FHA     PIC 9(8).                
+                      20 UL-AN4F-INTEREST-RATE-FHA     PIC +9(2).9(3).          
+               10 UL-AN4F-PART-LN-INT-RT              PIC +9(2).9(3).           
+               10 UL-AN4F-PART-LN-ADV-IND             PIC X.                    
+               10 UL-AN4F-PART-LN-ADV-EFF-DT          PIC 9(8).                 

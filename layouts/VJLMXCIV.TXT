@@ -1,0 +1,61 @@
+       01 WS-VCLMXCIV-LAYOUT.                                                   
+           05  ARC-TRX-KEY-DATA-AREA.                                           
+               10  ARC-TRX-KEY-COMPANY-CODE       PIC X(03).                    
+               10  ARC-TRX-KEY-MASTER-ID          PIC X(15).                    
+               10  ARC-TRX-KEY-FILE-CODE          PIC X(05).                    
+               10  ARC-TRX-KEY-DOCUMENT-TYPE      PIC X(50).                    
+               10  ARC-TRX-KEY-DOCUMENT-ID        PIC X(50).                    
+               10  ARC-TRX-KEY-TRX-CODE           PIC X(04).                    
+               10  FILLER-1                       PIC X(100).                   
+               10  ARC-TRX-KEY-MAP-RECORD-ID      PIC X(50).                    
+           05  ARC-TRX-COMMON-DATA-AREA.                                        
+               10  ARC-TRX-COMPANY-CODE           PIC X(03).                    
+               10  ARC-TRX-SORT-CTL-IND           PIC X.                        
+               10  ARC-TRX-MASTER-ID              PIC X(15).                    
+               10  ARC-TRX-EFFECTIVE-DATE         PIC 9(08).                    
+               10  ARC-TRX-SEQUENCE-NO            PIC 99.                       
+               10  ARC-TRX-TRX-CODE               PIC X(04).                    
+               10  ARC-TRX-TRX-CODE-TRNSL         PIC X(50).                    
+               10  ARC-TRX-TRX-DATE               PIC 9(08).                    
+               10  ARC-TRX-DATE-TIME-PROCESSED.                                 
+                   15  ARC-TRX-DATE-PROCESSED PIC +9(07).                       
+                   15  ARC-TRX-TIME-PROCESSED PIC +9(07).                       
+               10  ARC-TRX-ORIGINATOR-INFO.                                     
+                   15  ARC-TRX-OPER-ID            PIC X(03).                    
+                   15  ARC-TRX-TERM-ID            PIC X(04).                    
+                   15  ARC-TRX-ORIGINATOR-CODE    PIC X(08).                    
+               10  ARC-TRX-SECONDARY-ID           PIC X(05).                    
+               10  ARC-TRX-ONLINE-DELETE-REVISE   PIC X.                        
+               10  ARC-TRX-FILE-CODE              PIC +9(05).                   
+               10  ARC-TRX-REVERSAL-CODE          PIC X.                        
+               10  ARC-TRX-REVERSAL-FILE-CODE     PIC +9(05).                   
+               10  ARC-TRX-PRIOR-STATUS-CODE      PIC X.                        
+               10  ARC-TRX-CURR-STATUS-CODE       PIC X.                        
+               10  ARC-TRX-PRODUCT-CODE           PIC X(02).                    
+               10  ARC-TRX-PRODUCT-CODE-TRNSL     PIC X(50).                    
+               10  ARC-TRX-TRX-TYPE               PIC X(02).                    
+               10  ARC-TRX-PROCESS-DATE           PIC 9(08).                    
+               10  ARC-TRX-SOURCE-OF-TRX-CODE     PIC X.                        
+               10  ARC-TRX-COUNTRY-OF-ORIGIN      PIC X(02).                    
+               10  ARC-TRX-CURRENCY-CODE          PIC X.                        
+               10  ARC-TRX-LANGUAGE-CODE          PIC X.                        
+               10  ARC-TRX-DISBURSEMENT-IND       PIC X.                        
+               10  ARC-TRX-PRIME-EVENT-TRX-CODE   PIC X(04).                    
+               10  ARC-TRX-PRIME-EVENT-FILE-CODE  PIC +9(05).                   
+               10  ARC-TRX-REAL-TIME-PROCESS-IND  PIC X.                        
+               10  ARC-TRX-CONFIRM-INHIBIT-IND    PIC X.                        
+               10  ARC-TRX-LOAN-IND               PIC X.                        
+               10  ARC-TRX-ERROR-INFO.                                          
+                   15  ARC-TRX-ERROR-CODE-CNTR    PIC 9(3).                     
+                   15  ARC-TRX-ERROR-CODE  PIC X(4)                             
+                                           OCCURS 10 TIMES.                     
+               10  ARC-TRX-FAV-CODE               PIC X(06).                    
+               10  ARC-TRX-BROKER-DEALER-INFO.                                  
+                   15  ARC-TRX-TRADE-PARTNER-ID-NUM PIC X(20).                  
+                   15  ARC-TRX-CLEARINGHOUSE-NAME   PIC X(30).                  
+                   15  ARC-TRX-TRADE-PARTNER-CTL-NUM PIC X(30).                 
+                   15  ARC-TRX-CLEARINGHOUSE-CTL-NUM PIC X(30).                 
+                   15  ARC-TRX-DISTRIB-CUST-ACCT-NUM PIC X(30).                 
+                   15  ARC-TRX-DISTRIB-TRX-ID-NUM    PIC X(30).                 
+                   15  ARC-TRX-APPLICATION-CTL-NUM   PIC X(20).                 
+                   15  ARC-TRX-FUTURE-USE            PIC X(68).                 

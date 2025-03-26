@@ -1,0 +1,12 @@
+       01  WS-VCLMENLG-LAYOUT.                                                  
+           05  UL-NLGT-KEY-DATA-AREA.                                           
+               10  UL-NLGT-KEY-COMPANY-CODE              PIC X(03).             
+               10  UL-NLGT-KEY-MASTER-ID                 PIC X(15).             
+               10  UL-NLGT-KEY-FILE-CODE                 PIC X(05).             
+               10  UL-NLGT-KEY-DOCUMENT-TYPE             PIC X(50).             
+               10  UL-NLGT-KEY-DOCUMENT-ID               PIC X(50).             
+               10  UL-NLGT-KEY-TRX-CODE                  PIC X(04).             
+               10  FILLER-1                              PIC X(100).            
+               10  UL-NLGT-KEY-MAP-RECORD-ID             PIC X(50).             
+         05  V272-TRX-INFO.                                                     
+             10  UL-NLGT-REF-AMT                      PIC +9(9).99.             

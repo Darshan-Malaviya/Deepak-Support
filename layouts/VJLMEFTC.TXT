@@ -1,0 +1,23 @@
+       01  WS-VCLMEFTC-LAYOUT.                                                  
+           05  FUND-UL-TC-KEY-DATA-AREA.                                        
+               10  FUND-UL-TC-KEY-COMPANY-CODE           PIC X(03).             
+               10  FUND-UL-TC-KEY-MASTER-ID              PIC X(15).             
+               10  FUND-UL-TC-KEY-FILE-CODE              PIC X(05).             
+               10  FUND-UL-TC-KEY-DOCUMENT-TYPE          PIC X(50).             
+               10  FUND-UL-TC-KEY-DOCUMENT-ID            PIC X(50).             
+               10  FUND-UL-TC-KEY-TRX-CODE               PIC X(04).             
+               10  FILLER-1                              PIC X(100).            
+               10  FUND-UL-TC-KEY-MAP-RECORD-ID          PIC X(50).             
+           05  FUND-UL-TC-LOAN-FUND-INFO.                                       
+               10  FUND-UL-TC-FUND-NUMBER          PIC +9(3).                   
+               10  FUND-UL-TC-FUND-NUMBER-TRNSL    PIC X(50).                   
+               10  FUND-UL-TC-FUND-AMOUNT          PIC +9(9).99.                
+               10  FUND-UL-TC-FUND-UNITS           PIC +9(7).9999.              
+               10  FUND-UL-TC-FUND-VALUE           PIC +9(9).99.                
+               10  FUND-UL-TC-FUND-GAIN            PIC +9(9).99.                
+               10  FUND-UL-TC-FUND-LOSS            PIC +9(9).99.                
+               10  FUND-UL-TC-FUND-TYPE            PIC X.                       
+               10  FUND-UL-TC-FUND-TRX-FEE         PIC +9(9).99.                
+               10  FUND-UL-TC-FUND-NET-AMOUNT      PIC +9(9).99.                
+               10  FUND-UL-TC-FUND-TOTAL-UNITS     PIC +9(7).9(4).              
+               10  FUND-UL-TC-FUND-UNIT-VALUE       PIC +999.9(6).              

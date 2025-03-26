@@ -1,0 +1,29 @@
+       01 WS-VCLMXBE3-LAYOUT.                                                   
+           05  UL-AEEX-KEY-DATA-AREA.                                           
+               10  UL-AEEX-KEY-COMPANY-CODE            PIC X(03).               
+               10  UL-AEEX-KEY-MASTER-ID               PIC X(15).               
+               10  UL-AEEX-KEY-FILE-CODE               PIC X(05).               
+               10  UL-AEEX-KEY-DOCUMENT-TYPE           PIC X(50).               
+               10  UL-AEEX-KEY-DOCUMENT-ID             PIC X(50).               
+               10  UL-AEEX-KEY-TRX-CODE                PIC X(04).               
+               10  FILLER-1                            PIC X(100).              
+               10  UL-AEEX-KEY-MAP-RECORD-ID           PIC X(50).               
+           05  UL-AEEX-BILLED-AMOUNT                   PIC +9(9).99.            
+           05  UL-AEEX-BILLED-DIFFERENCE               PIC +9(9).99.            
+           05  UL-AEEX-RSN-FOR-DIFFERENCE              PIC X(02).               
+           05  UL-AEEX-SLR-BILL-AMOUNT                 PIC +9(9).99.            
+           05  UL-AEEX-LOAN-INTEREST-AMT               PIC +9(9).99.            
+           05  UL-AEEX-LOAN-REPAY-AMOUNT               PIC +9(9).99.            
+           05  UL-AEEX-MESSAGE-CODE                    PIC +9(02).              
+           05  UL-AEEX-DEPOSIT-FUND-IND                PIC X.                   
+           05  UL-AEEX-CURRENT-PDF-VALUE               PIC +9(9).99.            
+           05  UL-AEEX-MAX-MEC-AMOUNT                  PIC 9(9).99.             
+           05  UL-AEEX-MODAL-PREMIUM                   PIC +9(9).99.            
+           05  UL-AEEX-LAST-BILL-DATE                  PIC 9(8).                
+           05  UL-AEEX-LAST-BILL-AMT                   PIC +9(9).99.            
+           05  UL-AEEX-CALCULATED-FIELDS.                                       
+               10  UL-AEEX-MINIMUM-PREMIUM             PIC X(50).               
+           05  UL-AEEX-MAX-PREM-NEXT-YR                PIC +9(9).99.            
+           05  UL-AEEX-MAX-PREM-IND                    PIC X.                   
+           05  UL-AEEX-ORIG-MODAL-PREM                 PIC +9(9).99.            
+           05  UL-AEEX-FILLER                          PIC X(147).              

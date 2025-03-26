@@ -1,0 +1,98 @@
+       01  WS-VCLMEGCC-LAYOUT.                                                  
+           05  UL-CNTR-KEY-DATA-AREA.                                           
+               10  UL-GCC-KEY-COMPANY-CODE    PIC X(03).                        
+               10  UL-GCC-KEY-MASTER-ID       PIC X(15).                        
+               10  UL-GCC-KEY-FILE-CODE       PIC X(05).                        
+               10  UL-GCC-KEY-DOCUMENT-TYPE   PIC X(50).                        
+               10  UL-GCC-KEY-DOCUMENT-ID     PIC X(50).                        
+               10  UL-GCC-KEY-TRX-CODE        PIC X(04).                        
+               10  FILLER-1                   PIC X(100).                       
+               10  UL-GCC-KEY-MAP-RECORD-ID   PIC X(50).                        
+           05  UL-GCC-BROKER-DEALER-INFO.                                       
+               10  UL-GCC-TRADE-PARTNER-ID-NUM    PIC X(20).                    
+               10  UL-GCC-CLEARINGHOUSE-NAME      PIC X(30).                    
+               10  UL-GCC-TRADE-PARTNER-CTL-NUM   PIC X(30).                    
+               10  UL-GCC-CLEARINGHOUSE-CTL-NUM   PIC X(30).                    
+               10  UL-GCC-DISTRIB-CUST-ACCT-NUM   PIC X(30).                    
+               10  UL-GCC-DISTRIB-TRX-ID-NUM      PIC X(30).                    
+               10  UL-GCC-APPLICATION-CTL-NUM     PIC X(20).                    
+               10  UL-GCC-FILLER-FUTURE-USE       PIC X(68).                    
+           05  UL-GCC-DB-SEGMENT-KEY              PIC X(87).                    
+           05  UL-GCC-SEGMENT-IDENTIFIER.                                       
+               10  UL-GCC-DB-NAMED-INSURED        PIC XX.                       
+               10  UL-GCC-DB-NI-DIRECTORY-ID      PIC X(15).                    
+               10  UL-GCC-SEGMENT-NAME            PIC X(5).                     
+               10  UL-GCC-SEGMENT-OCC-ID          PIC 99.                       
+           05  UL-GCC-TRX-SEGMENT-PRIOR.                                        
+               10  UL-GCC-PRI-COST-AVER-TYPE       PIC XX.                      
+               10  UL-GCC-PRI-GC-BEGIN-DATE        PIC 9(8).                    
+               10  UL-GCC-PRI-GC-END-DATE          PIC 9(8).                    
+               10  UL-GCC-PRI-TRANSFER-FREQUENCY   PIC 99.                      
+               10  UL-GCC-PRI-NMBER-OF-TRANSFERS   PIC 999.                     
+               10  UL-GCC-PRI-TRANSFER-DAY         PIC 99.                      
+               10  UL-GCC-PRI-FUND-INFO-CTR        PIC 9(3).                    
+               10  UL-GCC-PRI-FUND-AREA            PIC X(6790).                 
+               10  UL-GCC-PRI-FUND-ARRAY REDEFINES                              
+                                   UL-GCC-PRI-FUND-AREA.                        
+                 12  UL-GCC-PRI-FUND-ALLOC-INFO OCCURS 97 TIMES.                
+                   15  UL-GCC-PRI-FROM-TO-IND       PIC X.                      
+                   15  UL-GCC-PRI-FUND-NUMBER       PIC +9(3).                  
+                   15  UL-GCC-PRI-FUND-NUMBER-TRNSL PIC X(50).                  
+                   15  UL-GCC-PRI-AMOUNT-UNIT-IND   PIC X.                      
+                   15  UL-GCC-PRI-ALLOC-AMOUNT      PIC +9(9).99.               
+                   15  UL-GCC-PRI-ALLOC-PERCENT     PIC +9(3).9.                
+               10  UL-GCC-PRI-FEE-OVERRIDE-IND     PIC X.                       
+               10  UL-GCC-PRI-FEE-OVERIDE-AMOUNT   PIC +9(9).99.                
+               10  UL-GCC-PRI-SGMENT-RESTRICT-CD   PIC X.                       
+               10  UL-GCC-PRI-LIMIT-OVERRIDE-IND   PIC X.                       
+               10  UL-GCC-PRI-GC-LST-TRANSFER-DT   PIC 9(8).                    
+               10  UL-GCC-PRI-GC-NXT-TRANSFER-DT   PIC 9(8).                    
+               10  UL-GCC-PRI-MEMO-CODE            PIC XX.                      
+               10  UL-GCC-PRI-USER-AREA            PIC X(8).                    
+               10  FILLER-2                        PIC X(100).                  
+           05  UL-GCC-TRX-SEGMENT-CURRENT.                                      
+               10  UL-GCC-CUR-COST-AVER-TYPE       PIC XX.                      
+               10  UL-GCC-CUR-GC-BEGIN-DATE        PIC 9(8).                    
+               10  UL-GCC-CUR-GC-END-DATE          PIC 9(8).                    
+               10  UL-GCC-CUR-TRANSFER-FREQUENCY   PIC 99.                      
+               10  UL-GCC-CUR-NMBER-OF-TRANSFERS   PIC 999.                     
+               10  UL-GCC-CUR-TRANSFER-DAY         PIC 99.                      
+               10  UL-GCC-CUR-FUND-INFO-CTR        PIC 9(3).                    
+               10  UL-GCC-CUR-FUND-AREA            PIC X(6790).                 
+               10  UL-GCC-CUR-FUND-ARRAY REDEFINES                              
+                                  UL-GCC-CUR-FUND-AREA.                         
+                 12  UL-GCC-CUR-FUND-ALLOC-INFO OCCURS 97 TIMES.                
+                   15  UL-GCC-CUR-FROM-TO-IND       PIC X.                      
+                   15  UL-GCC-CUR-FUND-NUMBER       PIC +9(3).                  
+                   15  UL-GCC-CUR-FUND-NUMBER-TRNSL PIC X(50).                  
+                   15  UL-GCC-CUR-AMOUNT-UNIT-IND   PIC X.                      
+                   15  UL-GCC-CUR-ALLOC-AMOUNT      PIC +9(9).99.               
+                   15  UL-GCC-CUR-ALLOC-PERCENT     PIC +9(3).9.                
+               10  UL-GCC-CUR-FEE-OVERRIDE-IND     PIC X.                       
+               10  UL-GCC-CUR-FEE-OVERIDE-AMOUNT   PIC +9(9).99.                
+               10  UL-GCC-CUR-SGMENT-RESTRICT-CD   PIC X.                       
+               10  UL-GCC-CUR-LIMIT-OVERRIDE-IND   PIC X.                       
+               10  UL-GCC-CUR-GC-LST-TRANSFER-DT   PIC 9(8).                    
+               10  UL-GCC-CUR-GC-NXT-TRANSFER-DT   PIC 9(8).                    
+               10  UL-GCC-CUR-MEMO-CODE            PIC XX.                      
+               10  UL-GCC-CUR-USER-AREA            PIC X(8).                    
+               10  FILLER-3                        PIC X(100).                  
+           05  UL-GCC-ONLINE-KEY-FIELDS.                                        
+               10  UL-GCC-PLAN-CODE               PIC X(6).                     
+               10  UL-GCC-PLAN-CODE-TRNSL         PIC X(50).                    
+               10  UL-GCC-LINE-OF-BUSINESS-CODE   PIC XXX.                      
+               10  UL-GCC-LINE-OF-BUS-CODE-TRNSL PIC X(50).                     
+               10  UL-GCC-RESTRICTION-CODE        PIC X.                        
+               10  UL-GCC-CONTRACT-FORM           PIC X.                        
+               10  UL-GCC-POLICY-STATUS           PIC X.                        
+               10  UL-GCC-POLICY-ANNIV-DATE       PIC 9(8).                     
+               10  UL-GCC-LAST-FIN-EFF-DATE       PIC 9(8).                     
+               10  UL-GCC-SUSPEND-CODE            PIC X.                        
+               10  UL-GCC-PDF-IND-CODE            PIC X.                        
+           05  UL-GCC-CALC-FIELDS.                                              
+               10  UL-GCC-DCA-CHANGE-IND          PIC X(1).                     
+               10  UL-GCC-FROM-ALLOC-PCT-SUM      PIC +9(3).9.                  
+               10  UL-GCC-FROM-ALLOC-AMT-SUM      PIC +9(9).99.                 
+               10  UL-GCC-TO-ALLOC-PCT-SUM        PIC +9(3).9.                  
+               10  UL-GCC-TO-ALLOC-AMT-SUM        PIC +9(9).99.                 
+               10  UL-GCC-DCA-ALLOC-IND           PIC X(1).                     

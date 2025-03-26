@@ -1,0 +1,18 @@
+       01  WS-VCLMEFRB-LAYOUT.                                                  
+           05  FUND-UL-RBC-KEY-DATA-AREA.                                       
+               10  FUND-UL-RBC-KEY-COMPANY-CODE     PIC X(03).                  
+               10  FUND-UL-RBC-KEY-MASTER-ID        PIC X(15).                  
+               10  FUND-UL-RBC-KEY-FILE-CODE        PIC X(05).                  
+               10  FUND-UL-RBC-KEY-DOCUMENT-TYPE    PIC X(50).                  
+               10  FUND-UL-RBC-KEY-DOCUMENT-ID      PIC X(50).                  
+               10  FUND-UL-RBC-KEY-TRX-CODE         PIC X(04).                  
+               10  FILLER-1                         PIC X(100).                 
+               10  FUND-UL-RBC-KEY-MAP-RECORD-ID    PIC X(50).                  
+           05  FUND-UL-RBC-FUND-INFORMATION.                                    
+               10  FUND-UL-RBC-FUND-NUMBER          PIC +9(3).                  
+               10  FUND-UL-RBC-FUND-NUM-TRNSL       PIC X(50).                  
+               10  FUND-UL-RBC-ALLOC-PERCENT        PIC +9(4).9.                
+           05  FUND-UL-RBC-FUND-UN-INFO.                                        
+               10  FUND-UL-RBC-UNS-FUND-NO          PIC +9(3).                  
+               10  FUND-UL-RBC-UNS-FD-NO-TRNSL      PIC X(50).                  
+               10  FUND-UL-RBC-UNS-ALLOC-PCT        PIC +9(4).9.                

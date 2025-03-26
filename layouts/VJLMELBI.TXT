@@ -1,0 +1,164 @@
+       01 WS-VCLMELBI-LAYOUT.                                                   
+           05  UL-CNTR-KEY-DATA-AREA.                                           
+               10  UL-LBI-KEY-COMPANY-CODE    PIC X(03).                        
+               10  UL-LBI-KEY-MASTER-ID       PIC X(15).                        
+               10  UL-LBI-KEY-FILE-CODE       PIC X(05).                        
+               10  UL-LBI-KEY-DOCUMENT-TYPE   PIC X(50).                        
+               10  UL-LBI-KEY-DOCUMENT-ID     PIC X(50).                        
+               10  UL-LBI-KEY-TRX-CODE        PIC X(04).                        
+               10  FILLER-1                   PIC X(100).                       
+               10  UL-LBI-KEY-MAP-RECORD-ID   PIC X(50).                        
+           05  UL-LBI-BROKER-DEALER-INFO.                                       
+               10 UL-LBI-TRADE-PARTNER-ID-NUM    PIC X(20).                     
+               10 UL-LBI-CLEARINGHOUSE-NAME      PIC X(30).                     
+               10 UL-LBI-TRADE-PARTNER-CTL-NUM   PIC X(30).                     
+               10 UL-LBI-CLEARINGHOUSE-CTL-NUM   PIC X(30).                     
+               10 UL-LBI-DISTRIB-CUST-ACCT-NUM   PIC X(30).                     
+               10 UL-LBI-DISTRIB-TRX-ID-NUM      PIC X(30).                     
+               10 UL-LBI-APPLICATION-CTL-NUM     PIC X(20).                     
+               10 UL-LBI-FILLER-FUTURE-USE       PIC X(68).                     
+           05  UL-LBI-DB-SEGMENT-KEY                PIC X(87).                  
+           05  UL-LBI-DB-SEGMENT-KEY-USER           PIC X(87).                  
+           05  UL-LBI-SEGMENT-IDENTIFIER.                                       
+               10  UL-LBI-DB-NAMED-INSURED          PIC XX.                     
+               10  UL-LBI-DB-NI-DIRECTORY-ID        PIC X(15).                  
+               10  UL-LBI-SEGMENT-NAME              PIC X(5).                   
+               10  UL-LBI-SEGMENT-OCC-ID            PIC 99.                     
+           05  UL-LBI-TRX-SEGMENT-PRIOR.                                        
+               10  UL-LBI-PRI-ORIG-BILL-MAIL-CODE   PIC X.                      
+               10  UL-LBI-PRI-DUP-BILL-MAIL-CODE    PIC X.                      
+               10  UL-LBI-PRI-BILLING-FREQUENCY     PIC 99.                     
+               10  UL-LBI-PRI-BILLING-FREQ-TRNSL    PIC X(50).                  
+               10  UL-LBI-PRI-BILL-OPTION-CODE      PIC X.                      
+               10  UL-LBI-PRI-BILLING-CLIENT-NUM    PIC X(15).                  
+               10  UL-LBI-PRI-NEXT-PAYMENT-DUE-DT   PIC 9(8).                   
+               10  UL-LBI-PRI-LAST-BILLING-DATE     PIC 9(8).                   
+               10  UL-LBI-PRI-LAST-PAYMENT-DUE-DT   PIC 9(8).                   
+               10  UL-LBI-PRI-LAST-BILLING-AMT      PIC +9(9).99.               
+               10  UL-LBI-PRI-MODAL-PREM            PIC +9(9).99.               
+               10  UL-LBI-PRI-PRIOR-BILLED-PREM     PIC +9(9).99.               
+               10  UL-LBI-PRI-EMPLOYEE-NUMBER       PIC X(11).                  
+               10  UL-LBI-PRI-PAYMENT-METHOD        PIC X.                      
+               10  UL-LBI-PRI-GRACE-PER-BILL-IND    PIC X.                      
+               10  UL-LBI-PRI-INITIAL-BILL-IND      PIC X.                      
+               10  UL-LBI-PRI-INITL-DEPOSIT-PREM    PIC +9(9).99.               
+               10  FILLER-2                         PIC X.                      
+               10  UL-LBI-PRI-ORG-LOANINT-MAIL-CD   PIC X.                      
+               10  UL-LBI-PRI-DUP-LOANINT-MAIL-CD   PIC X.                      
+               10  UL-LBI-PRI-STIPULATED-PER-DUR    PIC 999.                    
+               10  UL-LBI-PRI-STIP-PAY-CNG-DATE     PIC 9(8).                   
+               10  UL-LBI-PRI-STIP-PAY-LAST-AMT     PIC +9(9).99.               
+               10  UL-LBI-PRI-PAID-TO-DATE          PIC 9(8).                   
+               10  UL-LBI-PRI-SKIP-INFO-CNTR        PIC 9(3).                   
+               10  UL-LBI-PRI-SKIP-INFORMATION     OCCURS 2 TIMES.              
+                   15  UL-LBI-PRI-BEGIN-SKIP-DATE    PIC 9(4).                  
+                   15  UL-LBI-PRI-NUMBER-OF-SKIPS    PIC 99.                    
+                   15  UL-LBI-PRI-RESTART-BILLING-DT PIC 9(4).                  
+               10  UL-LBI-PRI-BILL-PAC-EXTRACT-DY    PIC 9(2).                  
+               10  UL-LBI-PRI-SLR-AREA.                                         
+                   15  UL-LBI-PRI-SLR-AMOUNT        PIC +9(9).99.               
+               10  FILLER-3                         PIC X(9).                   
+               10  UL-LBI-PRI-PAC-TYPE              PIC X.                      
+               10  UL-LBI-PRI-PAC-NUMBER            PIC X(7).                   
+               10  UL-LBI-PRI-BANK-CHECK-ID         PIC X(50).                  
+               10  UL-LBI-PRI-CREDIT-CARD-NUMBER    PIC X(17).                  
+               10  UL-LBI-PRI-CREDIT-CARD-TYPE      PIC X(8).                   
+               10  UL-LBI-PRI-CONTRACT-SEG-FIELDS.                              
+                   15  UL-LBI-PRI-BILL-PAC-EXTRACT-DT PIC 9(8).                 
+                   15  UL-LBI-PRI-INITIAL-BILL-DATE   PIC X(8).                 
+                   15  UL-LBI-PRI-ANTICIPATE-ANN-PREM PIC +9(9).99.             
+               10  UL-LBI-PRI-ISSUE-FREQUENCY         PIC 99.                   
+               10  UL-LBI-PRI-ISSUE-ANNUAL-PREM       PIC +9(9).99.             
+               10  UL-LBI-PRI-FIRST-DRAFT-AMOUNT      PIC +9(9).99.             
+               10  UL-LBI-PRI-NUM-OF-MODES-BILLED     PIC 99.                   
+               10  UL-LBI-PRI-FIRST-DRAFT-DATE        PIC X(8).                 
+               10  UL-LBI-PAC-WELCOME-LETTER-IND      PIC X.                    
+           05  UL-LBI-TRX-USER-SEGMENT-PRIOR.                                   
+               10  UL-LBI-PRI-USER-AREA-CNTR    PIC 9(3).                       
+               10  UL-LBI-PRI-USER-AREA         PIC X(30) OCCURS 10.            
+           05  UL-LBI-TRX-SEGMENT-CURRENT.                                      
+               10  UL-LBI-CUR-ORIG-BILL-MAIL-CODE   PIC X.                      
+               10  UL-LBI-CUR-DUP-BILL-MAIL-CODE    PIC X.                      
+               10  UL-LBI-CUR-BILLING-FREQUENCY     PIC 99.                     
+               10  UL-LBI-CUR-BILLING-FREQ-TRNSL    PIC X(50).                  
+               10  UL-LBI-CUR-BILL-OPTION-CODE      PIC X.                      
+               10  UL-LBI-CUR-BILLING-CLIENT-NUM    PIC X(15).                  
+               10  UL-LBI-CUR-NEXT-PAYMENT-DUE-DT.                              
+                   15  UL-LBI-CUR-NEXT-PAYMENT-DUE-YY   PIC 9(4).               
+                   15  UL-LBI-CUR-NEXT-PAYMENT-DUE-MM   PIC 99.                 
+                   15  UL-LBI-CUR-NEXT-PAYMENT-DUE-DD   PIC 99.                 
+               10  UL-LBI-CUR-NEXT-PYMNT-DD-TRNSL       PIC X(50).              
+               10  UL-LBI-CUR-LAST-BILLING-DATE         PIC 9(8).               
+               10  UL-LBI-CUR-LAST-PAYMENT-DUE-DT       PIC 9(8).               
+               10  UL-LBI-CUR-LAST-BILLING-AMOUNT       PIC +9(9).99.           
+               10  UL-LBI-CUR-MODAL-PREM                PIC +9(9).99.           
+               10  UL-LBI-CUR-PRIOR-BILLED-PREM         PIC +9(9).99.           
+               10  UL-LBI-CUR-EMPLOYEE-NUMBER           PIC X(11).              
+               10  UL-LBI-CUR-PAYMENT-METHOD            PIC X.                  
+               10  UL-LBI-CUR-GRACE-PER-BILL-IND        PIC X.                  
+               10  UL-LBI-CUR-INITIAL-BILL-IND          PIC X.                  
+               10  UL-LBI-CUR-INIT-DEPOSIT-PREM     PIC +9(9).99.               
+               10  FILLER-4                             PIC X.                  
+               10  UL-LBI-CUR-ORG-LOANINT-MAIL-CD       PIC X.                  
+               10  UL-LBI-CUR-DUP-LOANINT-MAIL-CD       PIC X.                  
+               10  UL-LBI-CUR-STIPULATED-PER-DUR        PIC 999.                
+               10  UL-LBI-CUR-STIP-PYMNT-CNG-DT         PIC 9(8).               
+               10  UL-LBI-CUR-STIP-PYMNT-LAST-AMT   PIC +9(9).99.               
+               10  UL-LBI-CUR-PAID-TO-DATE              PIC 9(8).               
+               10  UL-LBI-CUR-SKIP-INFO-CNTR            PIC 9(3).               
+               10  UL-LBI-CUR-SKIP-INFORMATION     OCCURS 2 TIMES.              
+                   15  UL-LBI-CUR-BEGIN-SKIP-DATE       PIC 9(4).               
+                   15  UL-LBI-CUR-NUMBER-OF-SKIPS       PIC 99.                 
+                   15  UL-LBI-CUR-RESTART-BILLING-DT    PIC 9(4).               
+               10  UL-LBI-CUR-BILL-PAC-EXTRACT-DY       PIC 9(2).               
+               10  UL-LBI-CUR-SLR-AREA.                                         
+                   15  UL-LBI-CUR-SLR-AMOUNT        PIC +9(9).99.               
+               10  FILLER-5                         PIC X(9).                   
+               10  UL-LBI-CUR-PAC-TYPE              PIC X.                      
+               10  UL-LBI-CUR-PAC-NUMBER            PIC X(7).                   
+               10  UL-LBI-CUR-BANK-CHECK-ID         PIC X(50).                  
+               10  UL-LBI-CUR-CREDIT-CARD-NUMBER    PIC X(17).                  
+               10  UL-LBI-CUR-CREDIT-CARD-TYPE      PIC X(8).                   
+               10  UL-LBI-CUR-CONTRACT-SEG-FIELDS.                              
+                   15  UL-LBI-CUR-BILL-PAC-EXTRACT-DT   PIC X(8).               
+                   15  UL-LBI-CUR-INITIAL-BILL-DATE     PIC X(8).               
+                   15  UL-LBI-CUR-ANTICIPATE-ANN-PREM   PIC +9(9).99.           
+               10  UL-LBI-CUR-ISSUE-FREQUENCY           PIC 99.                 
+               10  UL-LBI-CUR-ISSUE-ANNUAL-PREM         PIC +9(9).99.           
+               10  UL-LBI-WELCOME-LETTER-IND            PIC X.                  
+               10  UL-LBI-CUR-FIRST-DRAFT-AMOUNT        PIC +9(9).99.           
+               10  UL-LBI-CUR-NUM-OF-MODES-BILLED       PIC 99.                 
+               10  UL-LBI-CUR-FIRST-DRAFT-DATE          PIC X(8).               
+               10  FILLER-6                             PIC X(01).              
+           05  UL-LBI-TRX-USER-SEGMNT-CURRENT.                                  
+               10  UL-LBI-CUR-USER-AREA-CNTR      PIC 9(3).                     
+               10  UL-LBI-CUR-USER-AREA           PIC X(30) OCCURS 10.          
+           05  UL-LBI-ONLINE-KEY-FIELDS.                                        
+               10  UL-LBI-PLAN-CODE                 PIC X(6).                   
+               10  UL-LBI-LINE-OF-BUSINESS-CODE     PIC XXX.                    
+               10  UL-LBI-LOB-CODE-TRNSL            PIC X(50).                  
+               10  UL-LBI-RESTRICTION-CODE          PIC X.                      
+               10  UL-LBI-CONTRACT-FORM             PIC X.                      
+               10  UL-LBI-POLICY-STATUS             PIC X.                      
+               10  UL-LBI-POLICY-ANNIV-DATE         PIC X(8).                   
+               10  UL-LBI-LAST-FIN-EFF-DATE         PIC X(8).                   
+               10  UL-LBI-SUSPEND-CODE              PIC X.                      
+               10  UL-LBI-PDF-IND-CODE              PIC X.                      
+           05  UL-LBI-ADDITIONAL-FIELDS.                                        
+               10  UL-LBI-SPECIAL-CASE-INDICATOR    PIC X.                      
+               10  UL-LBI-ADVANCE-INDICATOR         PIC X.                      
+           05  UL-LBI-CALC-AREA.                                                
+               10  UL-LBI-EFT-CHANGE-IND            PIC X.                      
+               10  UL-LBI-BACK-DRAFT-IND            PIC X.                      
+           05  UL-LBI-ADDITIONAL-FIELDS-2.                                      
+               10  UL-LBI-FIRST-DRAFT-AMT-PRIOR     PIC +9(9).99.               
+               10  UL-LBI-NBR-OF-MODES-BILL-PRIOR   PIC 99.                     
+               10  UL-LBI-FIRST-DRAFT-DATE          PIC 9(8).                   
+               10  UL-LBI-FIRST-DRAFT-AMT-CURR      PIC +9(9).99.               
+               10  UL-LBI-NBR-OF-MODES-BILL-CURR    PIC 99.                     
+               10  UL-LBI-FINAL-DRAFT-DATE          PIC 9(8).                   
+               10  UL-LBI-VA022X-ORIG-TRX-CODE      PIC X(4).                   
+               10  FILLER-7                         PIC X(10).                  
+               10  UL-LBI-PAC-PROTEST-DRAFT-IND     PIC X(1).                   
+               10  UL-LBI-PAC-DUE-MONTH             PIC 99.                     
+               10  FILLER-8                         PIC X(37).                  

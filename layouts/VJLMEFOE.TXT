@@ -1,0 +1,36 @@
+       01  WS-VCLMEFOE-LAYOUT.                                                  
+           05  FUND-UL-OE-KEY-DATA-AREA.                                        
+               10  FUND-UL-OE-KEY-COMPANY-CODE           PIC X(03).             
+               10  FUND-UL-OE-KEY-MASTER-ID              PIC X(15).             
+               10  FUND-UL-OE-KEY-FILE-CODE              PIC X(05).             
+               10  FUND-UL-OE-KEY-DOCUMENT-TYPE          PIC X(50).             
+               10  FUND-UL-OE-KEY-DOCUMENT-ID            PIC X(50).             
+               10  FUND-UL-OE-KEY-TRX-CODE               PIC X(04).             
+               10  FILLER-1                              PIC X(100).            
+               10  FUND-UL-OE-KEY-MAP-RECORD-ID          PIC X(50).             
+           05  FUND-UL-OE-FUND-INFO.                                            
+               10  FUND-UL-OE-FUND-NUMBER         PIC +999.                     
+               10  FUND-UL-OE-FUND-NUMBER-TRNSL   PIC X(50).                    
+               10  FUND-UL-OE-FUND-TYPE-INDICATOR PIC X.                        
+               10  FUND-UL-OE-PARTICIPATION-TYPE  PIC X.                        
+               10  FUND-UL-OE-PARTICIPATION-PCT   PIC +99.999.                  
+               10  FUND-UL-OE-PARTICIPATION-AMT   PIC +9(9).99.                 
+               10  FUND-UL-OE-PARTICIPATION-UNITS PIC +9(7).9(4).               
+               10  FUND-UL-OE-TRANSFER-FEE-AMOUNT PIC +9(9).99.                 
+               10  FUND-UL-OE-TRANSFER-FEE-UNITS  PIC +9(7).9(4).               
+               10  FUND-UL-OE-RESULTING-UNITS     PIC +9(7).9(4).               
+               10  FUND-UL-OE-ORIG-VALUE-UNITS    PIC +9(9).99.                 
+               10  FUND-UL-OE-CURR-VALUE-UNITS    PIC +9(9).99.                 
+               10  FUND-UL-OE-FUND-EDIT-OVERRIDE  PIC X.                        
+               10  FUND-UL-OE-FUND-GAIN-LOSS      PIC +9(9).99.                 
+               10  FUND-UL-OE-PREVIOUS-TRANS-DT   PIC 9(8).                     
+               10  FUND-UL-OE-FUND-MVA-AMOUNT     PIC +9(7).99.                 
+               10  FUND-UL-OE-FORCED-INT-RATE     PIC +99.999.                  
+               10  FUND-UL-OE-FORCED-INT-DATE     PIC 9(8).                     
+               10  FUND-UL-OE-SEG-EFF-DATE        PIC 9(8).                     
+               10  FUND-UL-OE-SEG-MATURITY-DATE   PIC 9(8).                     
+               10  FUND-UL-OE-NON-GUAR-GROWTH-RT  PIC +9(3).99.                 
+               10  FUND-UL-OE-NON-GUAR-PAR-RATE   PIC +9(3).99.                 
+               10  FUND-UL-OE-NON-GUAR-STEP-RATE  PIC +9(3).99.                 
+               10  FUND-UL-OE-INDEX-STARTING-VAL  PIC +9(3).9(5).               
+               10  FUND-UL-OE-FUND-UNIT-VALUE     PIC +999.9(6).                

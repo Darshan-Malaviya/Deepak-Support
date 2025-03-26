@@ -1,0 +1,104 @@
+       01  WS-VCLMEPV3-LAYOUT.                                                  
+           05  UL-VAL-KEY-DATA-AREA.                                            
+               10  UL-VAL-KEY-COMPANY-CODE    PIC X(03).                        
+               10  UL-VAL-KEY-MASTER-ID       PIC X(15).                        
+               10  UL-VAL-KEY-FILE-CODE       PIC X(05).                        
+               10  UL-VAL-KEY-DOCUMENT-TYPE   PIC X(50).                        
+               10  UL-VAL-KEY-DOCUMENT-ID     PIC X(50).                        
+               10  UL-VAL-KEY-TRX-CODE        PIC X(04).                        
+               10  FILLER-1                   PIC X(100).                       
+               10  UL-VAL-KEY-MAP-RECORD-ID   PIC X(50).                        
+           05  UL-VAL-LPSVAL-ACCUM-CASH-VALUE            PIC +9(9).99.          
+           05  UL-VAL-LPSVAL-SURR-PENALTY-AMT            PIC +9(9).99.          
+           05  UL-VAL-LPSVAL-CALCULATED-VALS.                                   
+               10  UL-VAL-LPSVAL-CASH-SURR-VALUE         PIC +9(9).99.          
+           05  UL-VAL-OUTPUT-FIELDS.                                            
+               10  UL-VAL-VALUATION-DATE                 PIC 9(8).              
+               10  UL-VAL-FUND-AREA                      PIC X(13860).          
+               10  UL-VAL-FUND-ARRAY REDEFINES UL-VAL-FUND-AREA.                
+                 12  UL-VAL-FUND-VALUES  OCCURS 99 TIMES.                       
+                   15  UL-VAL-FUND-NUMBER                PIC +9(3).             
+                   15  UL-VAL-FUND-NUMBER-TRNSL          PIC X(50).             
+                   15  UL-VAL-FUND-TYPE-INDICATOR        PIC X(1).              
+                   15  UL-VAL-FUND-DOLLARS               PIC +9(9).99.          
+                   15  UL-VAL-FUND-UNITS                 PIC +9(7).9(4).        
+                   15  UL-VAL-FUND-UNIT-VALUE            PIC +9(3).9(6).        
+                   15  UL-VAL-FUND-VALUE                 PIC +9(9).99.          
+                   15  UL-VAL-FUND-EXCESS-INTEREST       PIC +9(9).99.          
+                   15  UL-VAL-FUND-EXCESS-INT-ITD        PIC +9(9).99.          
+                   15  UL-VAL-FUND-GUARANTEED-INT-ITD    PIC +9(9).99.          
+                   15  UL-VAL-FUND-DECLARED-INT-ITD      PIC +9(9).99.          
+               10  UL-VAL-ACCUMULATED-CASH-VALUE         PIC +9(9).99.          
+               10  UL-VAL-GUAR-POLICY-VALUE              PIC +9(9).99.          
+               10  UL-VAL-FUND-CASH-VALUE                PIC +9(9).99.          
+               10  UL-VAL-CIC-AMT-UNDISTRIBUTED          PIC +9(9).99.          
+               10  UL-VAL-ARREARS-EARNED-INTEREST        PIC +9(9).99.          
+               10  UL-VAL-ADVANCE-UNEARNED-INTRST        PIC +9(9).99.          
+               10  UL-VAL-TOT-LOAN-PRINCIPAL-DUE         PIC +9(9).99.          
+               10  UL-VAL-LOAN-COLL-CASH-VALUE           PIC +9(9).99.          
+               10  UL-VAL-PREV-MONTHIVERSARY-DATE        PIC 9(8).              
+               10  UL-VAL-PREF-LOAN-VALUES.                                     
+                  15  UL-VAL-PREF-LOAN-FUND-NUMBER       PIC +9(3).             
+                  15  UL-VAL-PREF-LOAN-FUND-TYPE-IND     PIC X.                 
+                  15  UL-VAL-PREF-LOAN-FUND-DOLLARS      PIC +9(9).99.          
+                  15  UL-VAL-PREF-LOAN-FUND-VALUE        PIC +9(9).99.          
+                  15  UL-VAL-RETURN-OF-SALES-VALUE       PIC +9(9).99.          
+               10  UL-VAL-REGU-LOAN-VALUES.                                     
+                  15  UL-VAL-REGU-LOAN-FUND-NUMBER       PIC +9(3).             
+                  15  UL-VAL-REGU-LOAN-FUND-TYPE-IND     PIC X.                 
+                  15  UL-VAL-REGU-LOAN-FUND-DOLLARS      PIC +9(9).99.          
+                  15  UL-VAL-REGU-LOAN-FUND-VALUE        PIC +9(9).99.          
+               10  UL-VAL-PREF-COLL-VALUES.                                     
+                  15  UL-VAL-PREF-COLL-FUND-NUMBER       PIC +9(3).             
+                  15  UL-VAL-PREF-COLL-FUND-TYPE-IND     PIC X.                 
+                  15  UL-VAL-PREF-COLL-FUND-DOLLARS      PIC +9(9).99.          
+                  15  UL-VAL-PREF-COLL-FUND-VALUE        PIC +9(9).99.          
+                  15  UL-VAL-PREF-FUND-EXCS-INT-ITD      PIC +9(9).99.          
+                  15  UL-VAL-PREF-FUND-GUAR-INT-ITD      PIC +9(9).99.          
+                  15  UL-VAL-PREF-FUND-DECL-INT-ITD      PIC +9(9).99.          
+               10  UL-VAL-REGU-COLL-VALUES.                                     
+                  15  UL-VAL-REGU-COLL-FUND-NUMBER       PIC +9(3).             
+                  15  UL-VAL-REGU-COLL-FUND-TYPE-IND     PIC X.                 
+                  15  UL-VAL-REGU-COLL-FUND-DOLLARS      PIC +9(9).99.          
+                  15  UL-VAL-REGU-COLL-FUND-VALUE        PIC +9(9).99.          
+                  15  UL-VAL-REGU-FUND-EXCS-INT-ITD      PIC +9(9).99.          
+                  15  UL-VAL-REGU-FUND-GUAR-INT-ITD      PIC +9(9).99.          
+                  15  UL-VAL-REGU-FUND-DECL-INT-ITD      PIC +9(9).99.          
+               10  UL-VAL-PREF-REGU-TOTALS.                                     
+                  15  UL-VAL-REGU-CIC-AMT-UNDIST         PIC +9(9).99.          
+                  15  UL-VAL-REGU-ARREARS-EARNED-INT     PIC +9(9).99.          
+                  15  UL-VAL-REGU-ADV-UNEARNED-INT       PIC +9(9).99.          
+                  15  UL-VAL-REGU-TOT-LOAN-PRINCIPAL     PIC +9(9).99.          
+                  15  UL-VAL-REGU-LOAN-COLL-CASH-VAL     PIC +9(9).99.          
+                  15  UL-VAL-PREF-CIC-AMT-UNDIST         PIC +9(9).99.          
+                  15  UL-VAL-PREF-ARREARS-EARNED-INT     PIC +9(9).99.          
+                  15  FILLER-2                           PIC +9(9).99.          
+                  15  UL-VAL-PREF-ADV-UNEARNED-INT       PIC +9(9).99.          
+                  15  UL-VAL-PREF-TOT-LOAN-PRINCIPAL     PIC +9(9).99.          
+                  15  UL-VAL-PREF-LOAN-COLL-CASH-VAL     PIC +9(9).99.          
+           05  UL-VAL-OUTPUT-FIELDS-2.                                          
+               10  UL-VAL-SURRENDER-PENALTY-AMT          PIC +9(9).99.          
+               10  UL-VAL-FLAT-FEE-AMT                   PIC +9(9).99.          
+               10  UL-VAL-ADMIN-PCT-CASH-VAL-AMT         PIC +9(9).99.          
+               10  UL-VAL-SALES-PCT-CASH-VAL-AMT         PIC +9(9).99.          
+               10  UL-VAL-TOT-ADMIN-CHG-PER-UNIT         PIC +9(9).99.          
+               10  UL-VAL-TOT-SALES-CHG-PER-UNIT         PIC +9(9).99.          
+               10  UL-VAL-ADMIN-SURR-LOAD-TGT-AMT        PIC +9(9).99.          
+               10  UL-VAL-SALES-SURR-LOAD-TGT-AMT        PIC +9(9).99.          
+               10  UL-VAL-CASH-SURRENDER-VALUE           PIC +9(9).99.          
+               10  UL-VAL-SOURCE-OF-TRX-CODE             PIC X.                 
+               10  UL-VAL-INIT-OR-VAL-INDICATOR          PIC X.                 
+               10  UL-VAL-BASIS-ID                       PIC X.                 
+               10  UL-VAL-STOP-DATE                      PIC 9(8).              
+               10  UL-VAL-FIXED-RATE-IND                 PIC X(3).              
+               10  UL-VAL-VARIABLE-RATE-IND              PIC X(3).              
+               10  UL-VAL-TAMRA-WITHHOLDING-AMT          PIC +9(9).99.          
+               10  UL-VAL-CALC-VALUES.                                          
+                   15  UL-VAL-FIXED-FUND-VALUE-SUM       PIC +9(9).99.          
+                   15  UL-VAL-LOAN-FUND-VALUE            PIC +9(9).99.          
+                   15  UL-VAL-COLL-FUND-VALUE            PIC +9(9).99.          
+                   15  UL-VAL-FIXED-VAR-SUM              PIC +9(9).99.          
+                   15  UL-VAL-FIXED-VAR-LOAN-SUM         PIC +9(9).99.          
+               10  FILLER-3                              PIC X(1).              
+               10  UL-VAL-TOTAL-POLICY-DEBT              PIC +9(9).99.          
+               10  UL-VAL-PART-TOT-LOAN-PRINC           PIC +9(9).99.           

@@ -1,0 +1,49 @@
+       01 WS-VCLMXCSA-LAYOUT.                                                   
+           05  ARC-SCAA-KEY-DATA-AREA.                                          
+               10  ARC-SCAA-KEY-COMPANY-CODE         PIC X(03).                 
+               10  ARC-SCAA-KEY-MASTER-ID            PIC X(15).                 
+               10  ARC-SCAA-KEY-FILE-CODE            PIC X(05).                 
+               10  ARC-SCAA-KEY-DOCUMENT-TYPE        PIC X(50).                 
+               10  ARC-SCAA-KEY-DOCUMENT-ID          PIC X(50).                 
+               10  ARC-SCAA-KEY-TRX-CODE             PIC X(04).                 
+               10  ARC-SCAA-FILLER                   PIC X(100).                
+               10  ARC-SCAA-KEY-MAP-RECORD-ID        PIC X(50).                 
+           05  ARC-SCAA-COMPANY-NAME                 PIC X(80).                 
+           05  ARC-SCAA-INDIVIDUAL-NAME.                                        
+               10  ARC-SCAA-LAST-NAME                PIC X(35).                 
+               10  ARC-SCAA-FIRST-NAME               PIC X(25).                 
+               10  ARC-SCAA-NAME-PREFIX              PIC X(10).                 
+               10  ARC-SCAA-NAME-SUFFIX              PIC X(10).                 
+           05  ARC-SCAA-ADDRESS-INFO.                                           
+               10  ARC-SCAA-ADDRESS-LINE-1           PIC X(35).                 
+               10  ARC-SCAA-ADDRESS-LINE-2           PIC X(35).                 
+               10  ARC-SCAA-ADDRESS-LINE-3           PIC X(35).                 
+               10  ARC-SCAA-ADDRESS-LINE-4           PIC X(35).                 
+               10  ARC-SCAA-ADDRESS-LINE-5           PIC X(35).                 
+               10  ARC-SCAA-FILLER-CITY-ST           PIC X(35).                 
+               10  ARC-SCAA-ZIP-POSTAL-CODE          PIC X(15).                 
+           05  ARC-SCAA-TAX-ID-NUMBER.                                          
+               10  ARC-SCAA-TAX-ID-NO                PIC X(15).                 
+               10  ARC-SCAA-TAX-ID-SUFFIX            PIC X.                     
+           05  ARC-SCAA-COMPANY-INDIV-CODE           PIC X.                     
+           05  ARC-SCAA-COUNTRY-CODE                 PIC XX.                    
+           05  ARC-SCAA-BIRTH-DATE                   PIC 9(08).                 
+           05  ARC-SCAA-SEX-CODE                     PIC X.                     
+           05  ARC-SCAA-SEX-CODE-TRNSL               PIC X(50).                 
+           05  ARC-SCAA-DEPOSIT-FUND-IND             PIC X.                     
+           05  ARC-SCAA-HANDLING-CODE                PIC X.                     
+           05  ARC-SCAA-LANGUAGE-CODE                PIC X.                     
+           05  ARC-SCAA-SPECIAL-COND-CODE-1          PIC X.                     
+           05  ARC-SCAA-SPECIAL-COND-CODE-2          PIC X.                     
+           05  ARC-SCAA-STATUS-CODE                  PIC X.                     
+           05  ARC-SCAA-SOLICITATION-DATE            PIC 9(08).                 
+           05  ARC-SCAA-TIN-VERIFICATION             PIC X.                     
+           05  ARC-SCAA-NON-RES-ALIEN-IND            PIC X.                     
+           05  ARC-SCAA-MARITAL-STATUS               PIC X.                     
+           05  ARC-SCAA-NUM-EXEMPTIONS               PIC 9(02).                 
+           05  ARC-SCAA-CLIENT-CENTRIC-INFO.                                    
+               10  ARC-SCAA-CLIENT-CENTRIC-DAT-CT     PIC 9(03).                
+               10  ARC-SCAA-CLIENT-CENTRIC-DATA OCCURS 50 TIMES.                
+                   15  ARC-SCAA-COMMUNICATION-TYPE    PIC X(02).                
+                   15  ARC-SCAA-COMMUNICATION-NUM     PIC X(50).                
+           05  FILLER                                PIC X(200).                

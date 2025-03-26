@@ -1,0 +1,81 @@
+       01 WS-VCLMAN97-LAYOUT.                                                   
+         02  UL-AN97-KEY-DATA-AREA.                                             
+           05  UL-AN97-KEY-COMPANY-CODE  PIC X(03).                             
+           05  UL-AN97-KEY-MASTER-ID     PIC X(15).                             
+           05  UL-AN97-KEY-FILE-CODE     PIC X(05).                             
+           05  UL-AN97-KEY-DOCUMENT-TYPE PIC X(50).                             
+           05  UL-AN97-KEY-DOCUMENT-ID   PIC X(50).                             
+           05  UL-AN97-KEY-TRX-CODE      PIC X(04).                             
+           05  UL-AN97-FILLER            PIC X(100).                            
+           05  UL-AN97-KEY-MAP-RECORD-ID PIC X(50).                             
+         02  UL-AN97-DATA-AREA.                                                 
+           05  UL-AN97-ADDRESS-1-DEFAULT.                                       
+             10  UL-AN97-1-SERV-OFFICE-NAME   PIC X(50).                        
+             10  UL-AN97-1-ADDRESS-LINE-1     PIC X(50).                        
+             10  UL-AN97-1-ADDRESS-LINE-2     PIC X(50).                        
+             10  UL-AN97-1-TELEPHONE-NUMBER   PIC X(20).                        
+             10  UL-AN97-1-SERVICE-OPEN-DAY   PIC X(50).                        
+             10  UL-AN97-1-SERVICE-CLOSE-DAY  PIC X(50).                        
+             10  UL-AN97-1-SERVICE-OPEN-HOUR  PIC X(50).                        
+             10  UL-AN97-1-SERVICE-CLOSE-HOUR PIC X(50).                        
+             10  UL-AN97-1-SERVICE-TIME-ZONE  PIC X(50).                        
+             10  UL-AN97-1-COORDINATOR        PIC X(50).                        
+             10  UL-AN97-1-DIVISION-NAME      PIC X(50).                        
+             10  UL-AN97-1-FAX-NUMBER         PIC X(50).                        
+             10  UL-AN97-1-PHONE-EXTENSION    PIC X(50).                        
+           05  UL-AN97-ADDRESS-2-DEFAULT.                                       
+             10  UL-AN97-2-SERV-OFFICE-NAME   PIC X(50).                        
+             10  UL-AN97-2-ADDRESS-LINE-1     PIC X(50).                        
+             10  UL-AN97-2-ADDRESS-LINE-2     PIC X(50).                        
+             10  UL-AN97-2-TELEPHONE-NUMBER   PIC X(20).                        
+             10  UL-AN97-2-SERVICE-OPEN-DAY   PIC X(50).                        
+             10  UL-AN97-2-SERVICE-CLOSE-DAY  PIC X(50).                        
+             10  UL-AN97-2-SERVICE-OPEN-HOUR  PIC X(50).                        
+             10  UL-AN97-2-SERVICE-CLOSE-HOUR PIC X(50).                        
+             10  UL-AN97-2-SERVICE-TIME-ZONE  PIC X(50).                        
+             10  UL-AN97-2-COORDINATOR        PIC X(50).                        
+             10  UL-AN97-2-DIVISION-NAME      PIC X(50).                        
+             10  UL-AN97-2-FAX-NUMBER         PIC X(50).                        
+             10  UL-AN97-2-PHONE-EXTENSION    PIC X(50).                        
+           05  UL-AN97-ADDRESS-3-DEFAULT.                                       
+             10  UL-AN97-3-SERV-OFFICE-NAME   PIC X(50).                        
+             10  UL-AN97-3-ADDRESS-LINE-1     PIC X(50).                        
+             10  UL-AN97-3-ADDRESS-LINE-2     PIC X(50).                        
+             10  UL-AN97-3-TELEPHONE-NUMBER   PIC X(20).                        
+             10  UL-AN97-3-SERVICE-OPEN-DAY   PIC X(50).                        
+             10  UL-AN97-3-SERVICE-CLOSE-DAY  PIC X(50).                        
+             10  UL-AN97-3-SERVICE-OPEN-HOUR  PIC X(50).                        
+             10  UL-AN97-3-SERVICE-CLOSE-HOUR PIC X(50).                        
+             10  UL-AN97-3-SERVICE-TIME-ZONE  PIC X(50).                        
+             10  UL-AN97-3-COORDINATOR        PIC X(50).                        
+             10  UL-AN97-3-DIVISION-NAME      PIC X(50).                        
+             10  UL-AN97-3-FAX-NUMBER         PIC X(50).                        
+             10  UL-AN97-3-PHONE-EXTENSION    PIC X(50).                        
+           05  UL-AN97-ADDRESS-4-DEFAULT.                                       
+             10  UL-AN97-4-SERV-OFFICE-NAME   PIC X(50).                        
+             10  UL-AN97-4-ADDRESS-LINE-1     PIC X(50).                        
+             10  UL-AN97-4-ADDRESS-LINE-2     PIC X(50).                        
+             10  UL-AN97-4-TELEPHONE-NUMBER   PIC X(20).                        
+             10  UL-AN97-4-SERVICE-OPEN-DAY   PIC X(50).                        
+             10  UL-AN97-4-SERVICE-CLOSE-DAY  PIC X(50).                        
+             10  UL-AN97-4-SERVICE-OPEN-HOUR  PIC X(50).                        
+             10  UL-AN97-4-SERVICE-CLOSE-HOUR PIC X(50).                        
+             10  UL-AN97-4-SERVICE-TIME-ZONE  PIC X(50).                        
+             10  UL-AN97-4-COORDINATOR        PIC X(50).                        
+             10  UL-AN97-4-DIVISION-NAME      PIC X(50).                        
+             10  UL-AN97-4-FAX-NUMBER         PIC X(50).                        
+             10  UL-AN97-4-PHONE-EXTENSION    PIC X(50).                        
+           05  UL-AN97-ADDRESS-5-DEFAULT.                                       
+             10  UL-AN97-5-SERV-OFFICE-NAME   PIC X(50).                        
+             10  UL-AN97-5-ADDRESS-LINE-1     PIC X(50).                        
+             10  UL-AN97-5-ADDRESS-LINE-2     PIC X(50).                        
+             10  UL-AN97-5-TELEPHONE-NUMBER   PIC X(20).                        
+             10  UL-AN97-5-SERVICE-OPEN-DAY   PIC X(50).                        
+             10  UL-AN97-5-SERVICE-CLOSE-DAY  PIC X(50).                        
+             10  UL-AN97-5-SERVICE-OPEN-HOUR  PIC X(50).                        
+             10  UL-AN97-5-SERVICE-CLOSE-HOUR PIC X(50).                        
+             10  UL-AN97-5-SERVICE-TIME-ZONE  PIC X(50).                        
+             10  UL-AN97-5-COORDINATOR        PIC X(50).                        
+             10  UL-AN97-5-DIVISION-NAME      PIC X(50).                        
+             10  UL-AN97-5-FAX-NUMBER         PIC X(50).                        
+             10  UL-AN97-5-PHONE-EXTENSION    PIC X(50).                        

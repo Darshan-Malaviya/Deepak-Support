@@ -1,0 +1,25 @@
+        01 WS-VCLMAN7P-LAYOUT.                                                  
+         02  UL-AN7P-KEY-DATA-AREA.                                             
+           05  UL-AN7P-KEY-COMPANY-CODE        PIC X(03).                       
+           05  UL-AN7P-KEY-MASTER-ID           PIC X(15).                       
+           05  UL-AN7P-KEY-FILE-CODE           PIC X(05).                       
+           05  UL-AN7P-KEY-DOCUMENT-TYPE       PIC X(50).                       
+           05  UL-AN7P-KEY-DOCUMENT-ID         PIC X(50).                       
+           05  UL-AN7P-KEY-TRX-CODE            PIC X(04).                       
+           05  UL-AN7P-FILLER                  PIC X(100).                      
+           05  UL-AN7P-KEY-MAP-RECORD-ID       PIC X(50).                       
+         02  UL-AN7P-DATA-AREA.                                                 
+           05  UL-AN7P-RECORD-TYPE-IND         PIC X(4).                        
+           05  UL-AN7P-RECORD-CODE             PIC 9(5).                        
+           05  UL-AN7P-EXTRACT-DATA.                                            
+               10  UL-AN7P-TOT-INIT-BAL        PIC +9(9).99.                    
+               10  UL-AN7P-TOT-WITHDRAWALS     PIC +9(9).99.                    
+               10  UL-AN7P-TOT-INT-CREDITED    PIC +9(9).99.                    
+               10  UL-AN7P-CONT-INT-CREDITED   PIC +9(9).99.                    
+               10  UL-AN7P-TOT-CURR-VALUE      PIC +9(9).99.                    
+               10  UL-AN7P-TOTL-ACCTS          PIC +9(9).99.                    
+               10  UL-AN7P-IDX-MAT-FND-REC OCCURS 5 TIMES.                      
+                 15  UL-AN7P-FND-TOT-INIT-BAL    PIC +9(9).99.                  
+                 15  UL-AN7P-FND-TOT-WITHDRAWALS PIC +9(9).99.                  
+                 15  UL-AN7P-FND-TOT-CURR-VALUE  PIC +9(9).99.                  
+                 15  UL-AN7P-FND-TOT-IV          PIC +9(9).99.                  

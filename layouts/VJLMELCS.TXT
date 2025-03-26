@@ -1,0 +1,92 @@
+       01  WS-VCLMELCS-LAYOUT.                                                  
+           05  UL-CNTR-KEY-DATA-AREA.                                           
+               10  UL-LCS-KEY-COMPANY-CODE    PIC X(03).                        
+               10  UL-LCS-KEY-MASTER-ID       PIC X(15).                        
+               10  UL-LCS-KEY-FILE-CODE       PIC X(05).                        
+               10  UL-LCS-KEY-DOCUMENT-TYPE   PIC X(50).                        
+               10  UL-LCS-KEY-DOCUMENT-ID     PIC X(50).                        
+               10  UL-LCS-KEY-TRX-CODE        PIC X(04).                        
+               10  FILLER-1                   PIC X(100).                       
+               10  UL-LCS-KEY-MAP-RECORD-ID   PIC X(50).                        
+           05  UL-LCS-BROKER-DEALER-INFO.                                       
+               10  UL-LCS-TRADE-PARTNER-ID-NUM    PIC X(20).                    
+               10  UL-LCS-CLEARINGHOUSE-NAME      PIC X(30).                    
+               10  UL-LCS-TRADE-PARTNER-CTL-NUM   PIC X(30).                    
+               10  UL-LCS-CLEARINGHOUSE-CTL-NUM   PIC X(30).                    
+               10  UL-LCS-DISTRIB-CUST-ACCT-NUM   PIC X(30).                    
+               10  UL-LCS-DISTRIB-TRX-ID-NUM      PIC X(30).                    
+               10  UL-LCS-APPLICATION-CTL-NUM     PIC X(20).                    
+               10  UL-LCS-FILLER-FUTURE-USE       PIC X(68).                    
+           05  UL-LCS-DB-SEGMENT-KEY                   PIC X(87).               
+           05  UL-LCS-DB-SEGMENT-KEY-USER              PIC X(87).               
+           05  UL-LCS-SEGMENT-IDENTIFIER.                                       
+               10  UL-LCS-DB-NAMED-INSURED             PIC XX.                  
+               10  UL-LCS-DB-NI-DIRECTORY-ID           PIC X(15).               
+               10  UL-LCS-SEGMENT-NAME                 PIC X(5).                
+               10  UL-LCS-SEGMENT-OCC-ID               PIC 99.                  
+           05  UL-LCS-TRX-SEGMENT-PRIOR.                                        
+               10  UL-LCS-COLL-ASSIGNEE-DATA-PRI.                               
+                  15  UL-LCS-TAX-IDENTIFIER-PRI        PIC X.                   
+                  15  UL-LCS-COST-BASIS-IN-PRI         PIC +9(9).99.            
+                  15  UL-LCS-COST-BASIS-OUT-PRI        PIC +9(9).99.            
+                  15  UL-LCS-POLICY-VALUE-PRI          PIC +9(9).99.            
+                  15  UL-LCS-GAIN-AMOUNT-PRI           PIC +9(9).99.            
+                  15  UL-LCS-DIRECTORY-ID-PRI          PIC X(15).               
+                  15  UL-LCS-ASSIGNMENT-EFF-DATE-PRI   PIC 9(8).                
+                  15  UL-LCS-ASSIGNMNT-TERM-DATE-PRI   PIC 9(8).                
+                  15  UL-LCS-ASSIGNMNT-REASON-CD-PRI   PIC X(2).                
+                  15  UL-LCS-ASSIGNMNT-MAIL-CODE-PRI   PIC X.                   
+                  15  UL-LCS-FILLER-PRI                PIC X.                   
+                  15  UL-LCS-DISTRIBUTION-CODE-PRI     PIC X(1).                
+                  15  UL-LCS-TAX-FORM-OVERRIDE-PRI     PIC X(1).                
+                  15  UL-LCS-STMT-MAIL-IND-PRI         PIC X.                   
+                  15  UL-LCS-CONFIRM-MAIL-IND-PRI      PIC X.                   
+                  15  UL-LCS-LAPSE-MAIL-IND-PRI        PIC X.                   
+                  15  UL-LCS-PROXY-MAIL-IND-PRI        PIC X.                   
+                  15  UL-LCS-OTHER-MAIL-IND-PRI        PIC X.                   
+                  15  UL-LCS-BILL-MAIL-IND-PRI         PIC X.                   
+                  15  UL-LCS-LOAN-INT-MAIL-IND-PRI     PIC X.                   
+                  15  UL-LCS-FILLER-PRI                PIC X(43).               
+                  15  UL-LCS-ASSIGNMNT-USR-AREAS-PRI.                           
+                      20  UL-LCS-ASSGNMNT-USR-CTR-PRI  PIC 9(3).                
+                      20  UL-LCS-ASSIGNMENT-USR-AREA-PRI                        
+                                     OCCURS 10 TIMES   PIC X(30).               
+                  15  UL-LCS-FILLER-PRI                PIC X(74).               
+           05 TRX-SEGMENT-CURRENT.                                              
+               10 UL-LCS-COLL-ASSIGNEE-DATA-CURR.                               
+                  15  UL-LCS-TAX-IDENTIFIER-CURR       PIC X.                   
+                  15  UL-LCS-COST-BASIS-IN-CURR        PIC +9(9).99.            
+                  15  UL-LCS-COST-BASIS-OUT-CURR       PIC +9(9).99.            
+                  15  UL-LCS-POLICY-VALUE-CURR         PIC +9(9).99.            
+                  15  UL-LCS-GAIN-AMOUNT-CURR          PIC +9(9).99.            
+                  15  UL-LCS-DIRECTORY-ID-CURR         PIC X(15).               
+                  15  UL-LCS-ASSIGNMNT-EFF-DATE-CURR   PIC 9(8).                
+                  15  UL-LCS-ASSIGNMNT-TRM-DATE-CURR   PIC 9(8).                
+                  15  UL-LCS-ASSGNMNT-REASON-CD-CURR   PIC X(2).                
+                  15  UL-LCS-ASSIGNMNT-MAIL-CD-CURR    PIC X.                   
+                  15  UL-LCS-FILLER-CURR               PIC X.                   
+                  15  UL-LCS-DISTRIBUTION-CODE-CURR    PIC X(1).                
+                  15  UL-LCS-TAX-FORM-OVERRIDE-CURR    PIC X(1).                
+                  15  UL-LCS-STMT-MAIL-IND-CURR        PIC X.                   
+                  15  UL-LCS-CONFIRM-MAIL-IND-CURR     PIC X.                   
+                  15  UL-LCS-LAPSE-MAIL-IND-CURR       PIC X.                   
+                  15  UL-LCS-PROXY-MAIL-IND-CURR       PIC X.                   
+                  15  UL-LCS-OTHER-MAIL-IND-CURR       PIC X.                   
+                  15  UL-LCS-BILL-MAIL-IND-CURR        PIC X.                   
+                  15  UL-LCS-LOAN-INT-MAIL-IND-CURR    PIC X.                   
+                  15  UL-LCS-FILLER-CURR               PIC X(43).               
+                  15  UL-LCS-ASSGNMNT-USR-AREAS-CURR.                           
+                      20  UL-LCS-ASSGNMNT-USR-CTR-CURR PIC 9(3).                
+                      20  UL-LCS-ASSGNMNT-USR-AREA-CURR                         
+                                     OCCURS 10 TIMES   PIC X(30).               
+                  15  UL-LCS-FILLER-CURR               PIC X(74).               
+           05  UL-LCS-ONLINE-KEY-FIELDS.                                        
+               10  UL-LCS-PLAN-CODE                    PIC X(6).                
+               10  UL-LCS-LINE-OF-BUSINESS-CODE        PIC XXX.                 
+               10  UL-LCS-RESTRICTION-CODE             PIC X.                   
+               10  UL-LCS-CONTRACT-FORM                PIC X.                   
+               10  UL-LCS-POLICY-STATUS                PIC X.                   
+               10  UL-LCS-POLICY-ANNIV-DATE            PIC 9(8).                
+               10  UL-LCS-LAST-FIN-EFF-DATE            PIC 9(8).                
+               10  UL-LCS-SUSPEND-CODE                 PIC X.                   
+               10  UL-LCS-PDF-IND-CODE                 PIC X.                   

@@ -1,0 +1,23 @@
+       01  WS-VCLMERIM-LAYOUT.                                                  
+           05  UL-ZRIM-KEY-DATA-AREA.                                           
+               10  UL-ZRIM-KEY-COMPANY-CODE      PIC X(03).                     
+               10  UL-ZRIM-KEY-MASTER-ID         PIC X(15).                     
+               10  UL-ZRIM-KEY-FILE-CODE         PIC X(05).                     
+               10  UL-ZRIM-KEY-DOCUMENT-TYPE     PIC X(50).                     
+               10  UL-ZRIM-KEY-DOCUMENT-ID       PIC X(50).                     
+               10  UL-ZRIM-KEY-TRX-CODE          PIC X(04).                     
+               10  FILLER-1                      PIC X(100).                    
+               10  UL-ZRIM-KEY-MAP-RECORD-ID     PIC X(50).                     
+           05  UL-ZRIM-BROKER-DEALER-INFO.                                      
+               10  UL-ZRIM-TRADE-PARTNER-ID-NUM   PIC X(20).                    
+               10  UL-ZRIM-CLEARINGHOUSE-NAME     PIC X(30).                    
+               10  UL-ZRIM-TRADE-PARTNER-CTL-NUM  PIC X(30).                    
+               10  UL-ZRIM-CLEARINGHOUSE-CTL-NUM  PIC X(30).                    
+               10  UL-ZRIM-DISTRIB-CUST-ACCT-NUM  PIC X(30).                    
+               10  UL-ZRIM-DISTRIB-TRX-ID-NUM     PIC X(30).                    
+               10  UL-ZRIM-APPLICATION-CTL-NUM    PIC X(20).                    
+               10  UL-ZRIM-FILLER-FUTURE-USE      PIC X(68).                    
+           05  UL-ZRIM-INSURED-21-BIRTHDATE       PIC 9(8).                     
+           05  UL-ZRIM-TAMRA-MEC-IND              PIC X.                        
+           05  UL-ZRIM-OWNER-CHG-NOTIFY-DATE      PIC 9(8).                     
+           05  FILLER-2                           PIC X(100).                   

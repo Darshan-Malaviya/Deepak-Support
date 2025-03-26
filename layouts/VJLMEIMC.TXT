@@ -1,0 +1,14 @@
+       01  WS-VCLMEIMC-LAYOUT.                                                  
+           05  UL-IMEC-KEY-DATA-AREA.                                           
+               10  UL-IMEC-KEY-COMPANY-CODE              PIC X(03).             
+               10  UL-IMEC-KEY-MASTER-ID                 PIC X(15).             
+               10  UL-IMEC-KEY-FILE-CODE                 PIC X(05).             
+               10  UL-IMEC-KEY-DOCUMENT-TYPE             PIC X(50).             
+               10  UL-IMEC-KEY-DOCUMENT-ID               PIC X(50).             
+               10  UL-IMEC-KEY-TRX-CODE                  PIC X(04).             
+               10  FILLER-1                              PIC X(100).            
+               10  UL-IMEC-KEY-MAP-RECORD-ID             PIC X(50).             
+         05  V271-TRX-INFO.                                                     
+             10  UL-IMEC-ADJ-EXC-REM-DT           PIC 9(08).                    
+             10  UL-IMEC-VA270-DT                 PIC 9(08).                    
+             10  UL-IMEC-7P-ANNIV-DT              PIC 9(08).                    

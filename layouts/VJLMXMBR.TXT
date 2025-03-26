@@ -1,0 +1,59 @@
+       01 WS-VCLMXMBR-LAYOUT.                                                   
+           05  BC-MBR-KEY-DATA-AREA.                                            
+               10  BC-MBR-KEY-COMPANY-CODE             PIC X(03).               
+               10  BC-MBR-KEY-BILL-CLIENT-NUMBER       PIC X(15).               
+               10  BC-MBR-KEY-BILL-INDEX-NUMBER        PIC X(05).               
+               10  BC-MBR-KEY-DOCUMENT-TYPE            PIC X(50).               
+               10  BC-MBR-KEY-DOCUMENT-ID              PIC X(50).               
+               10  BC-MBR-KEY-REPORT-CODE              PIC X(04).               
+               10  FILLER-1                            PIC X(100).              
+               10  BC-MBR-KEY-MAP-RECORD-ID            PIC X(50).               
+           05  BC-MBR-REPORT-CODE                      PIC X(3).                
+           05  BC-MBR-COMPANY-CODE                     PIC X(3).                
+           05  BC-MBR-BILL-CLIENT-NUMBER               PIC X(15).               
+           05  BC-MBR-BILL-INDEX-NUMBER                PIC X(5).                
+           05  BC-MBR-BILL-SORT-FIELD                  PIC X(15).               
+           05  BC-MBR-SERVICING-AGENCY-CODE            PIC X(6).                
+           05  BC-MBR-SERVICING-AGENT                  PIC X(10).               
+           05  BC-MBR-LINE-OF-BUSINESS-COUNT           PIC 9(3).                
+           05  BC-MBR-LOB-CODE-AREA                    OCCURS 50.               
+               10  BC-MBR-LINE-OF-BUSINESS-CODE        PIC XXX.                 
+               10  BC-MBR-LOB-CODE-TRNSL               PIC X(50).               
+           05  BC-MBR-MASTER-DATA-AREA.                                         
+               10  BC-MBR-CLIENT-NAME-ADDR-INFO.                                
+                   15  BC-MBR-ORIG-NAME-ADDR.                                   
+                       20  BC-MBR-ORIG-NAME            PIC X(80).               
+                       20  BC-MBR-ORIG-ADDRESS-AREA-CTR PIC 9(3).               
+                       20  BC-MBR-ORIG-ADDRESS-AREA.                            
+                           25  BC-MBR-ORIG-ADDRESS OCCURS 5 PIC X(35).          
+                       20  BC-MBR-ORIG-ZIP-CODE.                                
+                           25  BC-MBR-ORIG-ZIP-PREFIX  PIC X(5).                
+                           25  BC-MBR-ORIG-ZIP-SUFFIX  PIC X(4).                
+                           25  BC-MBR-ORIG-ZIP-SIX     PIC X(6).                
+                       20  BC-MBR-ORIG-CO-INDIV-CODE   PIC X.                   
+                       20  BC-MBR-ORIG-COUNTRY-CODE    PIC XX.                  
+                   15  BC-MBR-DUPL-NAME-ADDR.                                   
+                       20  BC-MBR-DUPL-NAME            PIC X(80).               
+                       20  BC-MBR-DUPL-ADDRESS-AREA-CTR PIC 9(3).               
+                       20  BC-MBR-DUPL-ADDRESS-AREA.                            
+                           25  BC-MBR-DUPL-ADDRESS OCCURS 5 PIC X(35).          
+                       20  BC-MBR-DUPL-ZIP-CODE.                                
+                           25  BC-MBR-DUPL-ZIP-PREFIX  PIC X(5).                
+                           25  BC-MBR-DUPL-ZIP-SUFFIX  PIC X(4).                
+                           25  BC-MBR-DUPL-ZIP-SIX     PIC X(6).                
+                       20  BC-MBR-DUPL-CO-INDIV-CODE   PIC X.                   
+                       20  BC-MBR-DUPL-COUNTRY-CODE    PIC XX.                  
+           05  BC-MBR-GROUP-DATA-AREA.                                          
+               10  BC-MBR-DATES.                                                
+                   15  BC-MBR-BILL-DUE-DATE            PIC X(8).                
+                   15  BC-MBR-REMITTANCE-EFF-DATE      PIC X(8).                
+                   15  BC-MBR-NEXT-DUE-DATE            PIC X(8).                
+               10  BC-MBR-AMOUNTS.                                              
+                   15  BC-MBR-BILL-AMOUNT              PIC +9(9).99.            
+                   15  BC-MBR-LOAN-BILL-AMOUNT         PIC +9(9).99.            
+                   15  BC-MBR-LOAN-INT-BILL-AMOUNT     PIC +9(9).99.            
+                   15  BC-MBR-PAID-AMOUNT              PIC +9(9).99.            
+               10  BC-MBR-POLICY-IN-DEFAULT-IND        PIC X.                   
+               10  BC-MBR-LAST-ONLINE-DATE             PIC X(8).                
+               10  BC-MBR-LAST-ONLINE-ORIG             PIC X(8).                
+           05  BC-MBR-FILLER                           PIC X(1606).             

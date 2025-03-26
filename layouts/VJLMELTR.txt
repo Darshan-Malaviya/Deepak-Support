@@ -1,0 +1,162 @@
+       01  WS-VCLMELTR-LAYOUT.                                                  
+           05  UL-LTR-KEY-DATA-AREA.                                            
+               10  UL-LTR-KEY-COMPANY-CODE    PIC X(03).                        
+               10  UL-LTR-KEY-MASTER-ID       PIC X(15).                        
+               10  UL-LTR-KEY-FILE-CODE       PIC X(05).                        
+               10  UL-LTR-KEY-DOCUMENT-TYPE   PIC X(50).                        
+               10  UL-LTR-KEY-DOCUMENT-ID     PIC X(50).                        
+               10  UL-LTR-KEY-TRX-CODE        PIC X(04).                        
+               10  FILLER-1                   PIC X(100).                       
+               10  UL-LTR-KEY-MAP-RECORD-ID   PIC X(50).                        
+           05  UL-LTR-BROKER-DEALER-INFO.                                       
+               10  UL-LTR-TRADE-PARTNER-ID-NUM    PIC X(20).                    
+               10  UL-LTR-CLEARINGHOUSE-NAME      PIC X(30).                    
+               10  UL-LTR-TRADE-PARTNER-CTL-NUM   PIC X(30).                    
+               10  UL-LTR-CLEARINGHOUSE-CTL-NUM   PIC X(30).                    
+               10  UL-LTR-DISTRIB-CUST-ACCT-NUM   PIC X(30).                    
+               10  UL-LTR-DISTRIB-TRX-ID-NUM      PIC X(30).                    
+               10  UL-LTR-APPLICATION-CTL-NUM     PIC X(20).                    
+               10  UL-LTR-FILLER-FUTURE-USE       PIC X(68).                    
+           05  UL-LTR-DB-SEGMENT-KEY                   PIC X(87).               
+           05  UL-LTR-SEGMENT-IDENTIFIER.                                       
+               10  UL-LTR-DB-NAMED-INSURED             PIC XX.                  
+               10  UL-LTR-DB-NI-DIRECTORY-ID           PIC X(15).               
+               10  UL-LTR-SEGMENT-NAME                 PIC X(5).                
+               10  UL-LTR-SEGMENT-OCC-ID               PIC 99.                  
+           05  UL-LTR-TRX-SEGMENT-PRIOR.                                        
+               10  UL-LTR-PRI-COMMON-CVG-FIELDS.                                
+                   15  UL-LTR-PRI-DATE-OF-ISSUE        PIC 9(8).                
+                   15  UL-LTR-PRI-ISSUE-AGE            PIC +9(3).               
+                   15  UL-LTR-PRI-ISSUE-AGE-YOUNGEST   PIC +9(3).               
+                   15  UL-LTR-PRI-ISSUE-AGE-OLDEST     PIC +9(3).               
+                   15  UL-LTR-PRI-CVG-EFF-DATE         PIC 9(8).                
+                   15  UL-LTR-PRI-RATE-EFF-DATE        PIC 9(8).                
+                   15  UL-LTR-PRI-UND-EFF-DATE         PIC 9(8).                
+                   15  UL-LTR-PRI-CVG-TERMINATE-DATE   PIC 9(8).                
+                   15  UL-LTR-PRI-CVG-TERMINATE-RSN    PIC XX.                  
+                   15  UL-LTR-PRI-RB-STATUS            PIC X.                   
+                   15  UL-LTR-PRI-PREM-CLASS-CODE      PIC X.                   
+                   15  UL-LTR-PRI-PREM-CLASS-CD-TRNSL  PIC X(50).               
+                   15  UL-LTR-PRI-UNDERWRITING-AGE     PIC +9(3).               
+                   15  UL-LTR-PRI-UNDRWRTNG-BASIS-IND  PIC X.                   
+                   15  UL-LTR-PRI-PRODUCER-GROUP-CODE  PIC XX.                  
+                   15  UL-LTR-PRI-RISK-COMM-DURA-ADJ   PIC +9(3).               
+                   15  UL-LTR-PRI-RISK-LOAD-DURA-ADJ   PIC +9(3).               
+                   15  UL-LTR-PRI-GUIDELN-LEVEL-PREM   PIC +9(9).99.            
+                   15  UL-LTR-PRI-GUIDELN-LVL-PREM-OR                           
+                                                       PIC +9(9).99.            
+                   15  UL-LTR-PRI-GUIDELN-SINGLE-PREM  PIC +9(9).99.            
+                   15  UL-LTR-PRI-GUIDELN-SING-PRM-OR                           
+                                                       PIC +9(9).99.            
+                   15  UL-LTR-PRI-REINSTATE-DUR-ADJ    PIC +9(3).               
+                   15  UL-LTR-PRI-TAMRA-7PP-AMT        PIC +9(9).99.            
+                   15  UL-LTR-PRI-JOINT-COMPLETE       PIC 99.                  
+                   15  UL-LTR-PRI-JOINT-INDICATOR      PIC X.                   
+                   15  UL-LTR-PRI-QUALIFIED-INDICATOR  PIC X.                   
+                   15  UL-LTR-PRI-NET-SINGLE-PREM      PIC +9(9).99.            
+               10  UL-LTR-PRI-TERM-RIDER-CVG-FLDS.                              
+                   15  UL-LTR-PRI-TR-OCCURRENCE-NO     PIC 99.                  
+                   15  UL-LTR-PRI-PREM-EFF-DATE        PIC 9(8).                
+                   15  UL-LTR-PRI-PREM-TERMINATE-DATE  PIC 9(8).                
+                   15  UL-LTR-PRI-PREM-TERMINATE-RSN   PIC XX.                  
+                   15  UL-LTR-PRI-LAST-RB-STAT-CHG-DT  PIC 9(8).                
+                   15  UL-LTR-PRI-NUMBER-OF-UNITS    PIC +9(6).9(5).            
+                   15  UL-LTR-PRI-ORIG-CVG-UNITS     PIC +9(6).9(5).            
+                   15  UL-LTR-PRI-BENEFICIARY-CODE     PIC XX.                  
+                   15  UL-LTR-PRI-EXCLUSION-IND        PIC X.                   
+                   15  UL-LTR-PRI-PLAN-CODE            PIC X(6).                
+                   15  UL-LTR-PRI-PLAN-CODE-TRNSL      PIC X(50).               
+                   15  UL-LTR-PRI-APPLICATION-DATE     PIC 9(8).                
+                   15  UL-LTR-PRI-COI-RATE-GUAR      PIC +9(3).9(5).            
+                   15  UL-LTR-PRI-COI-RATE-CURR      PIC +9(3).9(5).            
+                   15  UL-LTR-COVERAGE-SUB-TYPE      PIC X(3).                  
+                   15  UL-LTR-PRI-JOT-INFORMATION.                              
+                       20 UL-LTR-PRI-JOT-TOT-CVG-UNITS PIC +9(6).9(5).          
+                   15  FILLER-2                        PIC X(14).               
+           05  UL-LTR-TRX-SEGMENT-CURRENT.                                      
+               10  UL-LTR-CUR-COMMON-CVG-FIELDS.                                
+                   15  UL-LTR-CUR-DATE-OF-ISSUE        PIC 9(8).                
+                   15  UL-LTR-CUR-ISSUE-AGE            PIC +9(3).               
+                   15  UL-LTR-CUR-ISSUE-AGE-YOUNGEST   PIC +9(3).               
+                   15  UL-LTR-CUR-ISSUE-AGE-OLDEST     PIC +9(3).               
+                   15  UL-LTR-CUR-CVG-EFF-DATE         PIC 9(8).                
+                   15  UL-LTR-CUR-RATE-EFF-DATE        PIC 9(8).                
+                   15  UL-LTR-CUR-UND-EFF-DATE         PIC 9(8).                
+                   15  UL-LTR-CUR-CVG-TERMINATE-DATE   PIC 9(8).                
+                   15  UL-LTR-CUR-CVG-TERMINATE-RSN    PIC XX.                  
+                   15  UL-LTR-CUR-RB-STATUS            PIC X.                   
+                   15  UL-LTR-CUR-PREM-CLASS-CODE      PIC X.                   
+                   15  UL-LTR-CUR-PREM-CLASS-CD-TRNSL  PIC X(50).               
+                   15  UL-LTR-CUR-UNDERWRITING-AGE     PIC +9(3).               
+                   15  UL-LTR-CUR-UNDRWRTNG-BASIS-IND  PIC X.                   
+                   15  UL-LTR-CUR-PRODUCER-GROUP-CODE  PIC XX.                  
+                   15  UL-LTR-CUR-RISK-COMM-DURA-ADJ   PIC +9(3).               
+                   15  UL-LTR-CUR-RISK-LOAD-DURA-ADJ   PIC +9(3).               
+                   15  UL-LTR-CUR-GUIDELN-LEVEL-PREM   PIC +9(9).99.            
+                   15  UL-LTR-CUR-GUIDELN-LVL-PREM-OR                           
+                                                       PIC +9(9).99.            
+                   15  UL-LTR-CUR-GUIDELN-SINGLE-PREM  PIC +9(9).99.            
+                   15  UL-LTR-CUR-GUIDLN-SING-PREM-OR                           
+                                                       PIC +9(9).99.            
+                   15  UL-LTR-CUR-REINSTATE-DUR-ADJ    PIC +9(3).               
+                   15  UL-LTR-CUR-TAMRA-7PP-AMT        PIC +9(9).99.            
+                   15  UL-LTR-CUR-JOINT-COMPLETE       PIC 99.                  
+                   15  UL-LTR-CUR-JOINT-INDICATOR      PIC X.                   
+                   15  UL-LTR-CUR-QUALIFIED-INDICATOR  PIC X.                   
+                   15  UL-LTR-CUR-NET-SINGLE-PREM      PIC +9(9).99.            
+               10  UL-LTR-CUR-TERM-RIDER-CVG-FLDS.                              
+                   15  UL-LTR-CUR-TR-OCCURRENCE-NO     PIC 99.                  
+                   15  UL-LTR-CUR-PREM-EFF-DATE        PIC 9(8).                
+                   15  UL-LTR-CUR-PREM-TERMINATE-DATE  PIC 9(8).                
+                   15  UL-LTR-CUR-PREM-TERMINATE-RSN   PIC XX.                  
+                   15  UL-LTR-CUR-LAST-RB-STAT-CHG-DT  PIC 9(8).                
+                   15  UL-LTR-CUR-NUMBER-OF-UNITS    PIC +9(6).9(5).            
+                   15  UL-LTR-CUR-ORIG-CVG-UNITS     PIC +9(6).9(5).            
+                   15  UL-LTR-CUR-BENEFICIARY-CODE     PIC XX.                  
+                   15  UL-LTR-CUR-EXCLUSION-IND        PIC X.                   
+                   15  UL-LTR-CUR-PLAN-CODE            PIC X(6).                
+                   15  UL-LTR-CUR-PLAN-CODE-TRNSL      PIC X(50).               
+                   15  UL-LTR-CUR-APPLICATION-DATE     PIC 9(8).                
+                   15  UL-LTR-CUR-COI-RATE-GUAR      PIC +9(3).9(5).            
+                   15  UL-LTR-CUR-COI-RATE-CURR      PIC +9(3).9(5).            
+                   15  UL-LTR-COVERAGE-SUB-TYPE        PIC X(3).                
+                   15  UL-LTR-CUR-JOT-INFORMATION.                              
+                       20 UL-LTR-CUR-JOT-TOT-CVG-UNITS PIC +9(6).9(5).          
+                   15  FILLER-3                        PIC X(14).               
+           05  UL-LTR-RECALC-FIELDS.                                            
+               10  UL-LTR-GUIDELINE-RECALC-FIELDS.                              
+                   15  UL-LTR-TOTAL-GLP-ADJ       PIC +9(9).99.                 
+                   15  UL-LTR-PRORATED-GLP-ADJ    PIC +9(9).99.                 
+                   15  UL-LTR-GSP-ADJ             PIC +9(9).99.                 
+                   15  UL-LTR-TOTAL-PW-GLP-ADJ    PIC +9(9).99.                 
+                   15  UL-LTR-PRORATED-PW-GLP-ADJ PIC +9(9).99.                 
+                   15  UL-LTR-GSP-PW-ADJ          PIC +9(9).99.                 
+           05  UL-LTR-ONLINE-KEY-FIELDS.                                        
+               10  UL-LTR-PLAN-CODE               PIC X(6).                     
+               10  UL-LTR-PLAN-CODE-TRNSL         PIC X(50).                    
+               10  UL-LTR-LINE-OF-BUSINESS-CODE   PIC XXX.                      
+               10  UL-LTR-LINE-OF-BUS-CODE-TRNSL  PIC X(50).                    
+               10  UL-LTR-RESTRICTION-CODE        PIC X.                        
+               10  UL-LTR-SUSPEND-CODE            PIC X.                        
+               10  UL-LTR-DEPOSIT-FUND-IND        PIC X.                        
+               10  UL-LTR-CONTRACT-FORM           PIC X.                        
+               10  UL-LTR-GL-PREM-OVERRIDE-IND    PIC X.                        
+               10  UL-LTR-NSTD-INDICATOR          PIC X.                        
+               10  UL-LTR-REINS-INDICATOR         PIC X.                        
+               10  UL-LTR-TARGET-INDICATOR        PIC X.                        
+               10  UL-LTR-PW-COV-INDICATOR        PIC XX.                       
+               10  UL-LTR-POLICY-STATUS           PIC X.                        
+               10  UL-LTR-POLICY-ANNIV-DATE       PIC X(8).                     
+               10  UL-LTR-LAST-FIN-EFF-DATE       PIC X(8).                     
+               10  UL-LTR-SUSPEND-CODE            PIC X.                        
+               10  UL-LTR-DEPOSIT-FUND-IND        PIC X.                        
+           05  UL-LTR-CALC-AREA.                                                
+               10  UL-LTR-RIDER-AMT-PRIOR            PIC +9(9).99.              
+               10  UL-LTR-RIDER-AMT-CURR             PIC +9(9).99.              
+               10  UL-LTR-BASIC-INS-AMT              PIC +9(9).99.              
+               10  UL-LTR-TARGET-AMT-PRIOR           PIC +9(9).99.              
+               10  UL-LTR-TARGET-AMT-CURR            PIC +9(9).99.              
+               10  UL-LTR-PRI-TTR-ADJUST-IND     PIC X.                         
+               10  UL-LTR-CUR-TTR-ADJUST-IND     PIC X.                         
+               10  UL-LTR-PRI-SIA-INDICATOR      PIC X.                         
+               10  UL-LTR-CUR-SIA-INDICATOR      PIC X.                         

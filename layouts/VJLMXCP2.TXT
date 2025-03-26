@@ -1,0 +1,49 @@
+       01 WS-VCLMXCP2-LAYOUT.                                                   
+           05  ARC-PA2-KEY-DATA-AREA.                                           
+               10  ARC-PA2-KEY-COMPANY-CODE          PIC X(03).                 
+               10  ARC-PA2-KEY-MASTER-ID             PIC X(15).                 
+               10  ARC-PA2-KEY-FILE-CODE             PIC X(05).                 
+               10  ARC-PA2-KEY-DOCUMENT-TYPE         PIC X(50).                 
+               10  ARC-PA2-KEY-DOCUMENT-ID           PIC X(50).                 
+               10  ARC-PA2-KEY-TRX-CODE              PIC X(04).                 
+               10  FILLER-1                          PIC X(100).                
+               10  ARC-PA2-KEY-MAP-RECORD-ID         PIC X(50).                 
+           05  ARC-PA2-COMPANY-NAME                  PIC X(80).                 
+           05  ARC-PA2-INDIVIDUAL-NAME.                                         
+               10  ARC-PA2-LAST-NAME                 PIC X(35).                 
+               10  ARC-PA2-FIRST-NAME                PIC X(25).                 
+               10  ARC-PA2-NAME-PREFIX               PIC X(10).                 
+               10  ARC-PA2-NAME-SUFFIX               PIC X(10).                 
+           05  ARC-PA2-ADDRESS-INFO.                                            
+               10  ARC-PA2-ADDRESS-LINE-1            PIC X(35).                 
+               10  ARC-PA2-ADDRESS-LINE-2            PIC X(35).                 
+               10  ARC-PA2-ADDRESS-LINE-3            PIC X(35).                 
+               10  ARC-PA2-ADDRESS-LINE-4            PIC X(35).                 
+               10  ARC-PA2-ADDRESS-LINE-5            PIC X(35).                 
+               10  ARC-PA2-FILLER-CITY-ST            PIC X(35).                 
+               10  ARC-PA2-ZIP-POSTAL-CODE           PIC X(15).                 
+           05  ARC-PA2-TAX-ID-NUMBER.                                           
+               10  ARC-PA2-TAX-ID-NO                 PIC X(15).                 
+               10  ARC-PA2-TAX-ID-SUFFIX             PIC X.                     
+           05  ARC-PA2-COMPANY-INDIV-CODE            PIC X.                     
+           05  ARC-PA2-COUNTRY-CODE                  PIC XX.                    
+           05  ARC-PA2-BIRTH-DATE                    PIC 9(08).                 
+           05  ARC-PA2-SEX-CODE                      PIC X.                     
+           05  ARC-PA2-SEX-CODE-TRNSL                PIC X(50).                 
+           05  ARC-PA2-DEPOSIT-FUND-IND              PIC X.                     
+           05  ARC-PA2-HANDLING-CODE                 PIC X.                     
+           05  ARC-PA2-LANGUAGE-CODE                 PIC X.                     
+           05  ARC-PA2-SPECIAL-COND-CODE-1           PIC X.                     
+           05  ARC-PA2-SPECIAL-COND-CODE-2           PIC X.                     
+           05  ARC-PA2-STATUS-CODE                   PIC X.                     
+           05  ARC-PA2-SOLICITATION-DATE             PIC 9(08).                 
+           05  ARC-PA2-TIN-VERIFICATION              PIC X.                     
+           05  ARC-PA2-NON-RES-ALIEN-IND             PIC X.                     
+           05  ARC-PA2-MARITAL-STATUS                PIC X.                     
+           05  ARC-PA2-NUM-EXEMPTIONS                PIC 9(02).                 
+           05  ARC-PA2-CLIENT-CENTRIC-INFO.                                     
+               10  ARC-PA2-CLIENT-CENTRIC-DATA-CT    PIC 9(03).                 
+               10  ARC-PA2-CLIENT-CENTRIC-DATA OCCURS 50 TIMES.                 
+                   15  ARC-PA2-COMMUNICATION-TYPE    PIC X(02).                 
+                   15  ARC-PA2-COMMUNICATION-NUM     PIC X(50).                 
+           05  FILLER                                PIC X(200).                

@@ -1,0 +1,37 @@
+       01  WS-VCLMEFS3-LAYOUT.                                                  
+           05  UL-FUND-KEY-DATA-AREA.                                           
+               10  UL-FUND-KEY-COMPANY-CODE          PIC X(03).                 
+               10  UL-FUND-KEY-MASTER-ID             PIC X(15).                 
+               10  UL-FUND-KEY-FILE-CODE             PIC X(05).                 
+               10  UL-FUND-KEY-DOCUMENT-TYPE         PIC X(50).                 
+               10  UL-FUND-KEY-DOCUMENT-ID           PIC X(50).                 
+               10  UL-FUND-KEY-TRX-CODE              PIC X(04).                 
+               10  FILLER-1                          PIC X(100).                
+               10  UL-FUND-KEY-MAP-RECORD-ID         PIC X(50).                 
+           05  UL-FUND-SOURCE-OF-PREMIUM             PIC X(02).                 
+           05  UL-FUND-LAST-ALLOC-CNG-DT             PIC 9(08).                 
+           05  UL-FUND-FUND-CTR                      PIC 9(03).                 
+           05  UL-FUND-FUND-AREA                     PIC X(18018).              
+           05  UL-FUND-FUND-ARRAY REDEFINES UL-FUND-FUND-AREA.                  
+             07  UL-FUND-FUND-INFORMATION         OCCURS 99 TIMES.              
+               10  UL-FUND-FUND-NUMBER               PIC +9(03).                
+               10  UL-FUND-FUND-NUMBER-TRNSL         PIC X(50).                 
+               10  UL-FUND-FUND-TYPE-INDICATOR       PIC X.                     
+               10  UL-FUND-ALLOCATION-PERCENT        PIC +9(4).9.               
+               10  UL-FUND-ALLOC-CHG-PCT             PIC +9(4).9.               
+               10  UL-FUND-NET-PREMIUM               PIC +9(9).99.              
+               10  UL-FUND-PREMIUM-TAX               PIC +9(9).99.              
+               10  UL-FUND-AREA-TAX                  PIC +9(9).99.              
+               10  UL-FUND-TRANSACTION-FEE           PIC +9(9).99.              
+               10  UL-FUND-SALES-FEE                 PIC +9(9).99.              
+               10  UL-FUND-ADMIN-FEE                 PIC +9(9).99.              
+               10  UL-FUND-MTHLY-COST-OF-INS         PIC +9(9).99.              
+               10  UL-FUND-PART-SURR-WITHDRAW        PIC +9(9).99.              
+               10  UL-FUND-TRANSFERS-IN              PIC +9(9).99.              
+               10  UL-FUND-TRANSFERS-OUT             PIC +9(9).99.              
+               10  UL-FUND-LAST-TRANSFER-DATE        PIC 9(08).                 
+           05  UL-FUND-CALCULATED-VALUES.                                       
+               10  UL-FUND-ALLOCATION-PCT-SUM        PIC +9(9).99.              
+           05  FIXED-FUND-RESTRICT-IND               PIC X.                     
+           05  UL-FUND-IDX-HOLDBACK-AMT              PIC +9(9).99.              
+           05  FILLER-2                              PIC X(188).                

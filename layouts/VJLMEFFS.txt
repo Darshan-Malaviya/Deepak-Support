@@ -1,0 +1,27 @@
+       01  WS-VCLMEFFS-LAYOUT.                                                  
+           05  FUND-UL-FUND-KEY-DATA-AREA.                                      
+               10  FUND-UL-FUND-KEY-COMPANY-CODE     PIC X(03).                 
+               10  FUND-UL-FUND-KEY-MASTER-ID        PIC X(15).                 
+               10  FUND-UL-FUND-KEY-FILE-CODE        PIC X(05).                 
+               10  FUND-UL-FUND-KEY-DOCUMENT-TYPE    PIC X(50).                 
+               10  FUND-UL-FUND-KEY-DOCUMENT-ID      PIC X(50).                 
+               10  FUND-UL-FUND-KEY-TRX-CODE         PIC X(04).                 
+               10  FILLER-1                          PIC X(100).                
+               10  FUND-UL-FUND-KEY-MAP-RECORD-ID    PIC X(50).                 
+           05  FUND-UL-FUND-INFORMATION.                                        
+               10  FUND-UL-FUND-NUMBER               PIC +9(03).                
+               10  FUND-UL-FUND-NUMBER-TRNSL         PIC X(50).                 
+               10  FUND-UL-FUND-TYPE-INDICATOR       PIC X.                     
+               10  FUND-UL-ALLOCATION-PERCENT        PIC +9(4).9.               
+               10  FUND-UL-ALLOC-CHG-PCT             PIC +9(4).9.               
+               10  FUND-UL-NET-PREMIUM               PIC +9(9).99.              
+               10  FUND-UL-PREMIUM-TAX               PIC +9(9).99.              
+               10  FUND-UL-AREA-TAX                  PIC +9(9).99.              
+               10  FUND-UL-TRANSACTION-FEE           PIC +9(9).99.              
+               10  FUND-UL-SALES-FEE                 PIC +9(9).99.              
+               10  FUND-UL-ADMIN-FEE                 PIC +9(9).99.              
+               10  FUND-UL-MTHLY-COST-OF-INS         PIC +9(9).99.              
+               10  FUND-UL-PART-SURR-WITHDRAW        PIC +9(9).99.              
+               10  FUND-UL-TRANSFERS-IN              PIC +9(9).99.              
+               10  FUND-UL-TRANSFERS-OUT             PIC +9(9).99.              
+               10  FUND-UL-LAST-TRANSFER-DATE        PIC 9(08).                 

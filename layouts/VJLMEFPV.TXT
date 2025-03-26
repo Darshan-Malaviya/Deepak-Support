@@ -1,0 +1,25 @@
+       01  WS-VCLMEFPV-LAYOUT.                                                  
+           05  FUND-UL-VAL-KEY-DATA-AREA.                                       
+               10  FUND-UL-VAL-KEY-COMPANY-CODE     PIC X(03).                  
+               10  FUND-UL-VAL-KEY-MASTER-ID        PIC X(15).                  
+               10  FUND-UL-VAL-KEY-FILE-CODE        PIC X(05).                  
+               10  FUND-UL-VAL-KEY-DOCUMENT-TYPE    PIC X(50).                  
+               10  FUND-UL-VAL-KEY-DOCUMENT-ID      PIC X(50).                  
+               10  FUND-UL-VAL-KEY-TRX-CODE         PIC X(04).                  
+               10  FILLER-1                         PIC X(100).                 
+               10  FUND-UL-VAL-KEY-MAP-RECORD-ID    PIC X(50).                  
+            05  FUND-UL-VAL-FUND-NUMBER             PIC +9(3).                  
+            05  FUND-UL-VAL-FUND-NUMBER-TRNSL       PIC X(50).                  
+            05  FUND-UL-VAL-FUND-TYP-INDICATOR      PIC X(1).                   
+            05  FUND-UL-VAL-FUND-DOLLARS            PIC +9(9).9(2).             
+            05  FUND-UL-VAL-FUND-UNITS              PIC +9(7).9(4).             
+            05  FUND-UL-VAL-FUND-UNIT-VALUE         PIC +9(3).9(6).             
+            05  FUND-UL-VAL-FUND-VALUE              PIC +9(9).9(2).             
+            05  FUND-UL-VAL-FUND-EXCESS-INT         PIC +9(9).9(2).             
+            05  FUND-UL-VAL-FUND-EXC-INT-ITD        PIC +9(9).99.               
+            05  FUND-UL-VAL-FUND-GUAR-INT-ITD       PIC +9(9).99.               
+            05  FUND-UL-VAL-FUND-DECL-INT-ITD       PIC +9(9).99.               
+            05  FUND-UL-VAL-CALCULATED-VALUES.                                  
+                10  FUND-UL-VAL-FUND-SEG-ALLOC-PCT  PIC +9(4).9.                
+                10  FUND-UL-VAL-CHANGE-IND          PIC X(1).                   
+                10  FUND-UL-VAL-FUND-FUND-PCT       PIC +9(4).9.                

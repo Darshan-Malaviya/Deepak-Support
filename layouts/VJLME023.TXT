@@ -1,0 +1,26 @@
+       01  WS-VCLME023-LAYOUT.                                                  
+           05  UL-V023-KEY-DATA-AREA.                                           
+               10  UL-V023-KEY-COMPANY-CODE       PIC X(03).                    
+               10  UL-V023-KEY-MASTER-ID          PIC X(15).                    
+               10  UL-V023-KEY-FILE-CODE          PIC X(05).                    
+               10  UL-V023-KEY-DOCUMENT-TYPE      PIC X(50).                    
+               10  UL-V023-KEY-DOCUMENT-ID        PIC X(50).                    
+               10  UL-V023-KEY-TRX-CODE           PIC X(04).                    
+               10  FILLER-1                       PIC X(100).                   
+               10  UL-V023-KEY-MAP-RECORD-ID      PIC X(50).                    
+           05  UL-V023-TRX-INFO.                                                
+               10  UL-V023-MASTER-ID              PIC X(15).                    
+               10  UL-V023-ORIGINATOR-CODE        PIC X(8).                     
+               10  UL-V023-PRODUCT-CODE           PIC X(2).                     
+               10  UL-V023-PROCESS-DATE           PIC 9(8).                     
+               10  UL-V023-TOTAL-AMOUNT-1         PIC +9(9).99.                 
+               10  UL-V023-TOTAL-AMOUNT-2         PIC +9(9).99.                 
+               10  UL-V023-ADDL-AMT-NEEDED        PIC +9(9).99.                 
+               10  UL-V023-DATE-1                 PIC 9(8).                     
+               10  UL-V023-PHONE-NUMBER           PIC X(20).                    
+               10  UL-V023-OPEN-DAY               PIC X(50).                    
+               10  UL-V023-CLOSE-DAY              PIC X(50).                    
+               10  UL-V023-OPEN-HOUR              PIC X(50).                    
+               10  UL-V023-CLOSE-HOUR             PIC X(50).                    
+               10  UL-V023-TIME-ZONE              PIC X(50).                    
+               10  UL-V023-SCANLINE               PIC X(51).                    

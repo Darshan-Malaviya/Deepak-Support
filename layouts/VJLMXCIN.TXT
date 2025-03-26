@@ -1,0 +1,49 @@
+       01  WS-VCLMXCIN-LAYOUT.                                                  
+           05  ARC-INS-KEY-DATA-AREA.                                           
+               10  ARC-INS-KEY-COMPANY-CODE          PIC X(03).                 
+               10  ARC-INS-KEY-MASTER-ID             PIC X(15).                 
+               10  ARC-INS-KEY-FILE-CODE             PIC X(05).                 
+               10  ARC-INS-KEY-DOCUMENT-TYPE         PIC X(50).                 
+               10  ARC-INS-KEY-DOCUMENT-ID           PIC X(50).                 
+               10  ARC-INS-KEY-TRX-CODE              PIC X(04).                 
+               10  FILLER-1                          PIC X(100).                
+               10  ARC-INS-KEY-MAP-RECORD-ID         PIC X(50).                 
+           05  ARC-INS-COMPANY-NAME                  PIC X(80).                 
+           05  ARC-INS-INDIVIDUAL-NAME.                                         
+               10  ARC-INS-LAST-NAME                 PIC X(35).                 
+               10  ARC-INS-FIRST-NAME                PIC X(25).                 
+               10  ARC-INS-NAME-PREFIX               PIC X(10).                 
+               10  ARC-INS-NAME-SUFFIX               PIC X(10).                 
+           05  ARC-INS-ADDRESS-INFO.                                            
+               10  ARC-INS-ADDRESS-LINE-1            PIC X(35).                 
+               10  ARC-INS-ADDRESS-LINE-2            PIC X(35).                 
+               10  ARC-INS-ADDRESS-LINE-3            PIC X(35).                 
+               10  ARC-INS-ADDRESS-LINE-4            PIC X(35).                 
+               10  ARC-INS-ADDRESS-LINE-5            PIC X(35).                 
+               10  ARC-INS-FILLER-CITY-ST            PIC X(35).                 
+               10  ARC-INS-ZIP-POSTAL-CODE           PIC X(15).                 
+           05  ARC-INS-TAX-ID-NUMBER.                                           
+               10  ARC-INS-TAX-ID-NO                 PIC X(15).                 
+               10  ARC-INS-TAX-ID-SUFFIX             PIC X.                     
+           05  ARC-INS-COMPANY-INDIV-CODE            PIC X.                     
+           05  ARC-INS-COUNTRY-CODE                  PIC XX.                    
+           05  ARC-INS-BIRTH-DATE                    PIC 9(08).                 
+           05  ARC-INS-SEX-CODE                      PIC X.                     
+           05  ARC-INS-SEX-CODE-TRNSL                PIC X(50).                 
+           05  ARC-INS-DEPOSIT-FUND-IND              PIC X.                     
+           05  ARC-INS-HANDLING-CODE                 PIC X.                     
+           05  ARC-INS-LANGUAGE-CODE                 PIC X.                     
+           05  ARC-INS-SPECIAL-COND-CODE-1           PIC X.                     
+           05  ARC-INS-SPECIAL-COND-CODE-2           PIC X.                     
+           05  ARC-INS-STATUS-CODE                   PIC X.                     
+           05  ARC-INS-SOLICITATION-DATE             PIC 9(08).                 
+           05  ARC-INS-TIN-VERIFICATION              PIC X.                     
+           05  ARC-INS-NON-RES-ALIEN-IND             PIC X.                     
+           05  ARC-INS-MARITAL-STATUS                PIC X.                     
+           05  ARC-INS-NUM-EXEMPTIONS                PIC 9(02).                 
+           05  ARC-INS-CLIENT-CENTRIC-INFO.                                     
+               10  ARC-INS-CLIENT-CENTRIC-DATA-CT    PIC 9(03).                 
+               10  ARC-INS-CLIENT-CENTRIC-DATA OCCURS 50 TIMES.                 
+                   15  ARC-INS-COMMUNICATION-TYPE    PIC X(02).                 
+                   15  ARC-INS-COMMUNICATION-NUM     PIC X(50).                 
+           05  FILLER                                PIC X(200).                

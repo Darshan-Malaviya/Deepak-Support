@@ -1,0 +1,26 @@
+       01  WS-VCLMETH1-LAYOUT.                                                  
+           05  UL-TH-KEY-DATA-AREA.                                             
+               10  UL-TH-KEY-COMPANY-CODE                PIC X(03).             
+               10  UL-TH-KEY-MASTER-ID                   PIC X(15).             
+               10  UL-TH-KEY-FILE-CODE                   PIC X(05).             
+               10  UL-TH-KEY-DOCUMENT-TYPE               PIC X(50).             
+               10  UL-TH-KEY-DOCUMENT-ID                 PIC X(50).             
+               10  UL-TH-KEY-TRX-CODE                    PIC X(04).             
+               10  FILLER-1                              PIC X(100).            
+               10  UL-TH-KEY-MAP-RECORD-ID               PIC X(50).             
+         05  V274-TRX-INFO.                                                     
+             10  UL-TH-MEMO-CODE                  PIC XX.                       
+             10  UL-TH-SOURCE-CODE                PIC XX.                       
+             10  UL-TH-TRX-AMOUNT                 PIC +9(9).99.                 
+             10  UL-TH-CHECK-AMOUNT               PIC +9(9).99.                 
+             10  UL-TH-GROSS-WITHDRAWAL-AMT       PIC +9(9).99.                 
+             10  UL-TH-ADMIN-CHARGE               PIC +9(9).99.                 
+             10  UL-TH-SALES-CHARGE               PIC +9(9).99.                 
+             10  UL-TH-TRANSACTION-FEE            PIC +9(9).99.                 
+             10  UL-TH-TOTAL-WITHHOLDING-AMT      PIC +9(9).99.                 
+             10  UL-TH-WITHHOLDING-AMT-STATE      PIC +9(9).99.                 
+             10  UL-TH-WITHHOLDING-AMT-FED        PIC +9(9).99.                 
+             10  UL-TH-WITHHOLDING-AMT-LOCAL      PIC +9(9).99.                 
+             10  UL-TH-DISCNTD-PREMIUM-AMT        PIC +9(9).99.                 
+             10  UL-TH-TAXABLE-INT-EARNED-AMT     PIC +9(9).99.                 
+             10  UL-TH-PDF-BALANCE                PIC +9(9).99.                 

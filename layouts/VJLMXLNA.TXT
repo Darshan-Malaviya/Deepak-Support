@@ -1,0 +1,154 @@
+       01 WS-VCLMXLNA-LAYOUT.                                                   
+           05  UL-LNA-KEY-DATA-AREA.                                            
+               10  UL-LNA-KEY-COMPANY-CODE    PIC X(03).                        
+               10  UL-LNA-KEY-MASTER-ID       PIC X(15).                        
+               10  UL-LNA-KEY-FILE-CODE       PIC X(05).                        
+               10  UL-LNA-KEY-DOCUMENT-TYPE PIC X(50).                          
+               10  UL-LNA-KEY-DOCUMENT-ID     PIC X(50).                        
+               10  UL-LNA-KEY-TRX-CODE        PIC X(04).                        
+               10  FILLER-1                   PIC X(100).                       
+               10  UL-LNA-KEY-MAP-RECORD-ID PIC X(50).                          
+           05  BROKER-DEALER-INFO.                                              
+               10  UL-LNA-TRADE-PARTNER-ID-NUM       PIC X(20).                 
+               10  UL-LNA-CLEARINGHOUSE-NAME         PIC X(30).                 
+               10  UL-LNA-TRADE-PARTNER-CTL-NUM      PIC X(30).                 
+               10  UL-LNA-CLEARINGHOUSE-CTL-NUM      PIC X(30).                 
+               10  UL-LNA-DISTRIB-CUST-ACCT-NUM      PIC X(30).                 
+               10  UL-LNA-DISTRIB-TRX-ID-NUM         PIC X(30).                 
+               10  UL-LNA-APPLICATION-CTL-NUM        PIC X(20).                 
+               10  UL-LNA-FILLER-FUTURE-USE          PIC X(68).                 
+           05  UL-LNA-DB-SEGMENT-KEY                 PIC X(87).                 
+           05  UL-LNA-SEGMENT-IDENTIFIER.                                       
+               10  UL-LNA-DB-NAMED-INSURED           PIC XX.                    
+               10  UL-LNA-DIRECTORY-ID               PIC X(15).                 
+               10  UL-LNA-SEGMENT-NAME               PIC X(5).                  
+               10  UL-LNA-SEGMENT-OCC-ID             PIC 99.                    
+           05  UL-LNA-TRX-SEGMENT-PRIOR.                                        
+               10  UL-LNA-PRI-COMPANY-NAME           PIC X(80).                 
+               10  UL-LNA-PRI-LAST-NAME              PIC X(35).                 
+               10  UL-LNA-PRI-FIRST-NAME             PIC X(25).                 
+               10  UL-LNA-PRI-NAME-PREFIX            PIC X(10).                 
+               10  UL-LNA-PRI-NAME-SUFFIX            PIC X(10).                 
+               10  UL-LNA-PRI-ADDRESS-LINE-1         PIC X(35).                 
+               10  UL-LNA-PRI-ADDRESS-LINE-2         PIC X(35).                 
+               10  UL-LNA-PRI-ADDRESS-LINE-3         PIC X(35).                 
+               10  UL-LNA-PRI-ADDRESS-LINE-4         PIC X(35).                 
+               10  UL-LNA-PRI-ADDRESS-LINE-5         PIC X(35).                 
+               10  UL-LNA-PRI-ZIP-POSTAL-CODE        PIC X(15).                 
+               10  UL-LNA-PRI-SOC-SEC-NUMBER.                                   
+                   15  UL-LNA-PRI-SOC-SEC-NO         PIC X(15).                 
+                   15  UL-LNA-PRI-SOC-SEC-SUFFIX     PIC X.                     
+               10  UL-LNA-PRI-COMPANY-INDIVID-CD     PIC X.                     
+               10  UL-LNA-PRI-COUNTRY-CODE           PIC XX.                    
+               10  UL-LNA-PRI-BIRTH-DATE             PIC 9(8).                  
+               10  UL-LNA-PRI-SEX-CODE               PIC X.                     
+               10  UL-LNA-PRI-SEX-CODE-TRNSL         PIC X(50).                 
+               10  FILLER                            PIC X.                     
+               10  UL-LNA-PRI-HANDLING-CODE          PIC X.                     
+               10  UL-LNA-PRI-LANGUAGE-CODE          PIC X.                     
+               10  UL-LNA-PRI-SPECIAL-COND-1         PIC X.                     
+               10  UL-LNA-PRI-SPECIAL-COND-2         PIC X.                     
+               10  UL-LNA-PRI-STATUS-CODE            PIC X.                     
+               10  FILLER                            PIC X(4).                  
+               10  UL-LNA-PRI-SOLICITATION-DATE      PIC 9(8).                  
+               10  UL-LNA-PRI-TIN-VERIFICATION       PIC X.                     
+               10  UL-LNA-PRI-NON-RES-ALIEN-IND      PIC X.                     
+               10  UL-LNA-PRI-MARITAL-STATUS         PIC X.                     
+               10  UL-LNA-PRI-NUM-EXEMPTIONS         PIC 99.                    
+               10  UL-LNA-PRI-DISTRIBUTION-CODE      PIC X.                     
+               10  UL-LNA-PRI-DISTRIBUTION-CD-2      PIC X.                     
+               10  FILLER                            PIC X(35).                 
+               10  UL-LNA-PRI-CLIENT-CENTRIC-INFO.                              
+                   15  UL-LNA-PRI-CLIENT-CENTRIC-DATA OCCURS 50 TIMES.          
+                       20  UL-LNA-PRI-COMMUNICATION-TYPE PIC XX.                
+                       20  UL-LNA-PRI-COMMUNICATION-NUM PIC X(50).              
+           05  UL-LNA-TRX-SEGMENT-CURRENT.                                      
+               10  UL-LNA-CUR-COMPANY-NAME           PIC X(80).                 
+               10  UL-LNA-CUR-LAST-NAME              PIC X(35).                 
+               10  UL-LNA-CUR-FIRST-NAME             PIC X(25).                 
+               10  UL-LNA-CUR-NAME-PREFIX            PIC X(10).                 
+               10  UL-LNA-CUR-NAME-SUFFIX            PIC X(10).                 
+               10  UL-LNA-CUR-ADDRESS-LINE-1         PIC X(35).                 
+               10  UL-LNA-CUR-ADDRESS-LINE-2         PIC X(35).                 
+               10  UL-LNA-CUR-ADDRESS-LINE-3         PIC X(35).                 
+               10  UL-LNA-CUR-ADDRESS-LINE-4         PIC X(35).                 
+               10  UL-LNA-CUR-ADDRESS-LINE-5         PIC X(35).                 
+               10  UL-LNA-CUR-ZIP-POSTAL-CODE        PIC X(15).                 
+               10  UL-LNA-CUR-SOC-SEC-NUMBER.                                   
+                   15  UL-LNA-CUR-SOC-SEC-NO         PIC X(15).                 
+                   15  UL-LNA-CUR-SOC-SEC-SUFFIX     PIC X.                     
+               10  UL-LNA-CUR-COMPANY-INDIVID-CD     PIC X.                     
+               10  UL-LNA-CUR-COUNTRY-CODE           PIC XX.                    
+               10  UL-LNA-CUR-BIRTH-DATE             PIC 9(8).                  
+               10  UL-LNA-CUR-SEX-CODE               PIC X.                     
+               10  UL-LNA-CUR-SEX-CODE-TRNSL         PIC X(50).                 
+               10  FILLER                            PIC X.                     
+               10  UL-LNA-CUR-HANDLING-CODE          PIC X.                     
+               10  UL-LNA-CUR-LANGUAGE-CODE          PIC X.                     
+               10  UL-LNA-CUR-SPECIAL-COND-1         PIC X.                     
+               10  UL-LNA-CUR-SPECIAL-COND-2         PIC X.                     
+               10  UL-LNA-CUR-STATUS-CODE            PIC X.                     
+               10  FILLER                            PIC X(4).                  
+               10  UL-LNA-CUR-SOLICITATION-DATE      PIC 9(8).                  
+               10  UL-LNA-CUR-TIN-VERIFICATION       PIC X.                     
+               10  UL-LNA-CUR-NON-RES-ALIEN-IND      PIC X.                     
+               10  UL-LNA-CUR-MARITAL-STATUS         PIC X.                     
+               10  UL-LNA-CUR-NUM-EXEMPTIONS         PIC 99.                    
+               10  UL-LNA-CUR-DISTRIBUTION-CODE      PIC X.                     
+               10  UL-LNA-CUR-DISTRIBUTION-CD-2      PIC X.                     
+               10  FILLER                            PIC X(35).                 
+               10  UL-LNA-CUR-CLIENT-CENTRIC-INFO.                              
+                   15  UL-LNA-CUR-CLIENT-CENTRIC-DATA OCCURS 50 TIMES.          
+                       20  UL-LNA-CUR-COMMUNICATION-TYPE PIC XX.                
+                       20  UL-LNA-CUR-COMMUNICATION-NUM PIC X(50).              
+           05  UL-LNA-ONLINE-KEY-FIELDS.                                        
+               10  UL-LNA-PLAN-CODE                  PIC X(6).                  
+               10  UL-LNA-PLAN-CODE-TRNSL            PIC X(50).                 
+               10  UL-LNA-LINE-OF-BUSINESS-CODE      PIC XXX.                   
+               10  UL-LNA-LOB-CODE-TRNSL             PIC X(50).                 
+               10  UL-LNA-RESTRICTION-CODE           PIC X.                     
+               10  UL-LNA-CONTRACT-FORM              PIC X.                     
+               10  UL-LNA-POLICY-ANNIV-DATE          PIC X(8).                  
+               10  UL-LNA-LAST-FIN-EFF-DATE          PIC X(8).                  
+               10  UL-LNA-POLICY-STATUS              PIC X.                     
+               10  UL-LNA-CAN-TAXABLE-CHANGE-IND     PIC X(1).                  
+               10  UL-LNA-OLD-DIRECTORY-ID           PIC X(15).                 
+               10  UL-LNA-SUSPEND-CODE               PIC X(1).                  
+               10  UL-LNA-PDF-IND-CODE               PIC X(1).                  
+               10  UL-LNA-ADJUSTMENT-RULE            PIC X(01).                 
+               10  UL-LNA-JOINT-INDICATOR            PIC X(01).                 
+               10  UL-LNA-TAX-TO-MAIL-CODE           PIC X.                     
+               10  UL-LNA-OWNERSHIP-CODE             PIC X.                     
+               10  UL-LNA-DATE-OF-DEATH           PIC 9(8).                     
+               10  UL-LNA-PRI-SUCCESR-ANNUTNT-CD      PIC X(01).                
+               10  UL-LNA-ORIGINAL-YEARLY-MINIMUM        PIC +9(09).99.         
+               10  UL-LNA-DECEASED-YEARLY-MINIMUM        PIC +9(09).99.         
+               10  UL-LNA-NEW-YEARLY-MINIMUM             PIC +9(09).99.         
+               10  UL-LNA-MORE-REVERSAL-INFO.                                   
+                   15 UL-LNA-PRIOR-PAYOUT-TABLE.                                
+                      20 UL-LNA-PRIOR-PAYOUT OCCURS 12 TIMES.                   
+                         25 UL-LNA-PRIOR-PAYOUT-SEQ-NO    PIC 9(3).             
+                         25 PRIOR-PAYOUT-SCHED-MIN        PIC +9(9).99.         
+                         25 PRIOR-PAYOUT-AMOUNT           PIC +9(9).99.         
+                         25 PRIOR-PAYOUT-OPTION           PIC X(1).             
+                   15 UL-LNA-PRI-CANADIAN-SEG-FIELDS.                           
+                      20 UL-LNA-UL-LNA-PRI-YRLY-THRHOLD                         
+                                                          PIC +9(9).99.         
+                      20 UL-LNA-PRIOR-YTD-PO-APPL-MIN     PIC +9(9).99.         
+                      20 UL-LNA-PRIOR-YTD-PAYOUTS         PIC +9(9).99.         
+                      20 UL-LNA-PRIOR-YTD-TK-PAYOUTS      PIC +9(9).99.         
+                      20 UL-LNA-FILLER                    PIC X(36).            
+               10  UL-LNA-IUAFMX8-RETURN-CODE             PIC X(1).             
+               10  UL-LNA-PRIOR-RES-PROVINCE              PIC X(03).            
+               10  UL-LNA-NEW-RES-PROVINCE                PIC X(03).            
+               10  UL-LNA-PRI-SPUSAL-CNTRT-IND            PIC X.                
+               10  UL-LNA-PRIOR-OWNERSHIP-CODE            PIC X.                
+               10  UL-LNA-ONLINE-SELECTED-ROLE            PIC XXX.              
+               10  UL-LNA-ONLINE-SELECTED-ACTION          PIC X.                
+               10  UL-LNA-PRIOR-ACCRUAL-FREQUENCY         PIC X(01).            
+               10  UL-LNA-PRI-POL-CAL-TAX-RPT-IND        PIC X(01).             
+               10  UL-LNA-PRIOR-NEXT-ACCRUAL-DATE         PIC X(08).            
+               10  UL-LNA-FILLER                          PIC X(47).            
+               10  UL-LNA-LDF-DFCN-TRX-IND                PIC X(01).            
+           05  UL-LNA-CALC-AREAS.                                               
+               10  UL-LNA-NAME-ADDRESS-IND           PIC X(5).                  

@@ -1,0 +1,117 @@
+       01  WS-VCLMELE1-LAYOUT.                                                  
+           05  UL-CNTR-KEY-DATA-AREA.                                           
+               10  UL-LE-KEY-COMPANY-CODE         PIC X(03).                    
+               10  UL-LE-KEY-MASTER-ID            PIC X(15).                    
+               10  UL-LE-KEY-FILE-CODE            PIC X(05).                    
+               10  UL-LE-KEY-DOCUMENT-TYPE        PIC X(50).                    
+               10  UL-LE-KEY-DOCUMENT-ID          PIC X(50).                    
+               10  UL-LE-KEY-TRX-CODE             PIC X(04).                    
+               10  FILLER-1                       PIC X(100).                   
+               10  UL-LE-KEY-MAP-RECORD-ID        PIC X(50).                    
+           05  UL-LE-BROKER-DEALER-INFO.                                        
+               10  UL-LE-TRADE-PARTNER-ID-NUM     PIC X(20).                    
+               10  UL-LE-CLEARINGHOUSE-NAME       PIC X(30).                    
+               10  UL-LE-TRADE-PARTNER-CTL-NUM    PIC X(30).                    
+               10  UL-LE-CLEARINGHOUSE-CTL-NUM    PIC X(30).                    
+               10  UL-LE-DISTRIB-CUST-ACCT-NUM    PIC X(30).                    
+               10  UL-LE-DISTRIB-TRX-ID-NUM       PIC X(30).                    
+               10  UL-LE-APPLICATION-CTL-NUM      PIC X(20).                    
+               10  UL-LE-FILLER-FUTURE-USE        PIC X(68).                    
+           05  UL-LE-PRI-TRX-SEG-PRIOR.                                         
+               10  UL-LE-PRI-SOURCE-OF-PREMIUM         PIC XX.                  
+               10  UL-LE-PRI-LAST-ALLOC-CHG-DATE       PIC 9(8).                
+               10  UL-LE-PRI-FUND-INFORMATION-CTR      PIC +9(3).               
+               10  UL-LE-PRI-FUND-AREA                 PIC X(13068).            
+               10  UL-LE-PRI-FUND-ARRAY REDEFINES                               
+                                      UL-LE-PRI-FUND-AREA.                      
+                 12  UL-LE-PRI-FUND-INFORMATION  OCCURS 99 TIMES.               
+                   15  UL-LE-PRI-FUND-NUMBER           PIC +9(3).               
+                   15  UL-LE-PRI-FUND-TYPE-IND         PIC X.                   
+                   15  UL-LE-PRI-ALLOC-PERCENT         PIC +9(4).9.             
+                   15  UL-LE-PRI-ALLOC-CHG-PCT         PIC +9(4).9.             
+                   15  UL-LE-PRI-NET-PREMIUM           PIC +9(9).99.            
+                   15  UL-LE-PRI-PREMIUM-TAX           PIC +9(9).99.            
+                   15  UL-LE-PRI-AREA-TAX              PIC +9(9).99.            
+                   15  UL-LE-PRI-TRANSACTION-FEE       PIC +9(9).99.            
+                   15  UL-LE-PRI-SALES-FEE             PIC +9(9).99.            
+                   15  UL-LE-PRI-ADMIN-FEE             PIC +9(9).99.            
+                   15  UL-LE-PRI-MONTHLY-COST-OF-INS   PIC +9(9).99.            
+                   15  UL-LE-PRI-PARTIAL-SURR-WITH     PIC +9(9).99.            
+                   15  UL-LE-PRI-TRANSFERS-IN          PIC +9(9).99.            
+                   15  UL-LE-PRI-TRANSFERS-OUT         PIC +9(9).99.            
+                   15  UL-LE-PRI-LAST-TRANSFER-DT      PIC 9(8).                
+           05  UL-LE-CUR-TRX-SEG-CURRENT.                                       
+               10  UL-LE-CUR-SOURCE-OF-PREMIUM         PIC XX.                  
+               10  UL-LE-CUR-LAST-ALLOC-CHG-DATE       PIC 9(8).                
+               10  UL-LE-CUR-FUND-INFORMATION-CTR      PIC +9(3).               
+               10  UL-LE-CUR-FUND-AREA                 PIC X(18018).            
+               10  UL-LE-CUR-FUND-ARRAY REDEFINES                               
+                                      UL-LE-CUR-FUND-AREA.                      
+                 12  UL-LE-CUR-FUND-INFORMATION  OCCURS 99 TIMES.               
+                   15  UL-LE-CUR-FUND-NUMBER           PIC +9(3).               
+                   15  UL-LE-CUR-FUND-NUMBER-TRNSL     PIC X(50).               
+                   15  UL-LE-CUR-FUND-TYPE-IND         PIC X.                   
+                   15  UL-LE-CUR-ALLOC-PERCENT         PIC +9(4).9.             
+                   15  UL-LE-CUR-ALLOC-CHG-PCT         PIC +9(4).9.             
+                   15  UL-LE-CUR-NET-PREMIUM           PIC +9(9).99.            
+                   15  UL-LE-CUR-PREMIUM-TAX           PIC +9(9).99.            
+                   15  UL-LE-CUR-AREA-TAX              PIC +9(9).99.            
+                   15  UL-LE-CUR-TRANSACTION-FEE       PIC +9(9).99.            
+                   15  UL-LE-CUR-SALES-FEE             PIC +9(9).99.            
+                   15  UL-LE-CUR-ADMIN-FEE             PIC +9(9).99.            
+                   15  UL-LE-CUR-MONTHLY-COST-OF-INS   PIC +9(9).99.            
+                   15  UL-LE-CUR-PARTIAL-SURR-WITH     PIC +9(9).99.            
+                   15  UL-LE-CUR-TRANSFERS-IN          PIC +9(9).99.            
+                   15  UL-LE-CUR-TRANSFERS-OUT         PIC +9(9).99.            
+                   15  UL-LE-CUR-LAST-TRANS-DT         PIC 9(8).                
+           05  UL-LE-ONLINE-KEY-FIELDS.                                         
+               10  UL-LE-PLAN-CODE                     PIC X(6).                
+               10  UL-LE-PLAN-CODE-TRNSL               PIC X(50).               
+               10  UL-LE-LINE-OF-BUSINESS-CODE         PIC XXX.                 
+               10  UL-LE-LINE-OF-BUS-CODE-TRNSL        PIC X(50).               
+               10  UL-LE-RESTRICTION-CODE              PIC X.                   
+               10  UL-LE-CONTRACT-FORM                 PIC X.                   
+               10  UL-LE-POLICY-STATUS                 PIC X.                   
+               10  UL-LE-POLICY-ANNIV-DATE             PIC 9(8).                
+               10  UL-LE-LAST-FIN-EFF-DATE             PIC 9(8).                
+               10  UL-LE-SUSPEND-CODE                  PIC X.                   
+               10  UL-LE-PDF-IND-CODE                  PIC X.                   
+           05  UL-LE-PHONE-FIELDS.                                              
+               10  UL-LE-PHONE-CALLER                  PIC X.                   
+               10  UL-LE-PHONE-EXTENSION               PIC 9(4).                
+               10  UL-LE-PHONE-DATE                    PIC 9(8).                
+               10  UL-LE-PHONE-TIME                    PIC X(7).                
+           05 UL-LE-JETS-FIELDS.                                                
+               10  UL-LE-ALLOCATION-CHG-TYPE-IND       PIC X.                   
+               10  UL-LE-ALLOC-CHG-SUM-PCT-PRI         PIC +9(4).9.             
+               10  UL-LE-ALLOC-CHG-SUM-PCT-CUR         PIC +9(4).9.             
+           05 UL-LE-IUL-JETS-FIELDS.                                            
+               10  UL-LE-TRANS-ALLOC-CHG-SW            PIC X.                   
+               10  UL-LE-HOLDBACK-CHG-SW               PIC X.                   
+               10  UL-LE-BIA-ACCT-PRI-PCT              PIC +9(4).9.             
+               10  UL-LE-BIA-ACCT-CUR-PCT              PIC +9(4).9.             
+               10  UL-LE-TRANS-ALLOC-SECTION   OCCURS 10 TIMES.                 
+                   15  UL-LE-INDEX-ACCOUNT-NAME        PIC X(25).               
+                   15  UL-LE-INDEX-ACCT-PRI-PCT        PIC +9(4).9.             
+                   15  UL-LE-INDEX-ACCT-CUR-PCT        PIC +9(4).9.             
+               10  UL-LE-IUL-PRIOR-PCT-SUM             PIC +9(4).9.             
+               10  UL-LE-IUL-CURRENT-PCT-SUM           PIC +9(4).9.             
+               10  UL-LE-INDEX-USED-IND-AREA OCCURS 5 TIMES.                    
+                   15 UL-LE-INDEX-USED-IND             PIC 99.                  
+               10  UL-LE-EFFECTIVE-DATE                PIC 9(8).                
+               10  UL-LE-DESIG-TRNSFER-CHG-SW          PIC X.                   
+               10  UL-LE-SPECF-INDEX-PCT-CHG-SW        PIC X.                   
+               10  UL-LE-PRI-IDX-DESIG-TRNSFR-AMT      PIC +9(9).99.            
+               10  UL-LE-CUR-IDX-DESIG-TRNSFR-AMT      PIC +9(9).99.            
+               10  UL-LE-PRI-IDX-BLEND-PCT             PIC 9(03).               
+               10  UL-LE-CUR-IDX-BLEND-PCT             PIC 9(03).               
+               10  UL-LE-INSTRUCTION-CD-M               PIC X(1).               
+               10  UL-LE-INSTRUCTION-CD-R               PIC X(1).               
+               10  UL-LE-INSTRUCTION-CD-A               PIC X(1).               
+               10  UL-LE-INSTRUCTION-STATUS-CD-M        PIC X(1).               
+               10  UL-LE-INSTRUCTION-STATUS-CD-R        PIC X(1).               
+               10  UL-LE-INSTRUCTION-STATUS-CD-A        PIC X(1).               
+               10  UL-LE-CUSTOM-INDEX-ACC   OCCURS 4 TIMES.                     
+                  15  UL-LE-CUSTOM-INDEX-ACCOUNT-NM       PIC X(50).            
+               10  UL-LE-CUSTOM-FIXED-ACCOUNT-NM          PIC X(50).            
+               10  UL-LE-FIXED-ACCOUNT-NM          PIC X(25).                   

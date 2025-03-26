@@ -1,0 +1,108 @@
+       01  WS-VCLMELNS-LAYOUT.                                                  
+           05  UL-CNTR-KEY-DATA-AREA.                                           
+               10  UL-LNS-KEY-COMPANY-CODE    PIC X(03).                        
+               10  UL-LNS-KEY-MASTER-ID       PIC X(15).                        
+               10  UL-LNS-KEY-FILE-CODE       PIC X(05).                        
+               10  UL-LNS-KEY-DOCUMENT-TYPE   PIC X(50).                        
+               10  UL-LNS-KEY-DOCUMENT-ID     PIC X(50).                        
+               10  UL-LNS-KEY-TRX-CODE        PIC X(04).                        
+               10  FILLER-1                   PIC X(100).                       
+               10  UL-LNS-KEY-MAP-RECORD-ID   PIC X(50).                        
+           05  UL-LNS-BROKER-DEALER-INFO.                                       
+               10  UL-LNS-TRADE-PARTNER-ID-NUM    PIC X(20).                    
+               10  UL-LNS-CLEARINGHOUSE-NAME      PIC X(30).                    
+               10  UL-LNS-TRADE-PARTNER-CTL-NUM   PIC X(30).                    
+               10  UL-LNS-CLEARINGHOUSE-CTL-NUM   PIC X(30).                    
+               10  UL-LNS-DISTRIB-CUST-ACCT-NUM   PIC X(30).                    
+               10  UL-LNS-DISTRIB-TRX-ID-NUM      PIC X(30).                    
+               10  UL-LNS-APPLICATION-CTL-NUM     PIC X(20).                    
+               10  UL-LNS-FILLER-FUTURE-USE       PIC X(68).                    
+           05  UL-LNS-DB-SEGMENT-KEY                     PIC X(87).             
+           05  UL-LNS-SEGMENT-IDENTIFIER.                                       
+               10  UL-LNS-DB-NAMED-INSURED               PIC XX.                
+               10  UL-LNS-DB-NI-DIRECTORY-ID             PIC X(15).             
+               10  UL-LNS-SEGMENT-NAME                   PIC X(5).              
+               10  UL-LNS-SEGMENT-OCC-ID                 PIC 99.                
+           05  UL-LNS-TRX-SEGMENT-PRIOR.                                        
+               10  UL-LNS-PRI-SPECIAL-CLASS-CODE         PIC XX.                
+               10  UL-LNS-PRI-SPECIAL-CL-RSN-CD          PIC XX.                
+               10  UL-LNS-PRI-SPECIAL-CL-CEASE-DT        PIC 9(8).              
+               10  UL-LNS-PRI-SPECIAL-CL-COMM-CD         PIC X.                 
+               10  UL-LNS-PRI-RATING-FACTOR              PIC +99.999.           
+               10  UL-LNS-PRI-RATING-REASON-CODE         PIC XX.                
+               10  UL-LNS-PRI-RATING-END-DATE            PIC 9(8).              
+               10  UL-LNS-PRI-RATING-FACT-COMM-CD        PIC X.                 
+               10  UL-LNS-PRI-FLAT-EXT-INFO-CNTR         PIC 9(3).              
+               10  UL-LNS-PRI-FLAT-EXTRA-INFO   OCCURS 6 TIMES.                 
+                   15  UL-LNS-PRI-FLAT-EXTRA-AMT         PIC +9(3).99.          
+                   15  UL-LNS-PRI-FLAT-EXT-REASON-CD     PIC XX.                
+                   15  UL-LNS-PRI-FLAT-EXT-RSN-CD-TRN    PIC X(50).             
+                   15  UL-LNS-PRI-FLAT-EXTRA-EXP-DATE    PIC 9(8).              
+                   15  UL-LNS-PRI-FLAT-EXT-COMM-CODE     PIC X.                 
+               10  UL-LNS-PRI-JOINT-INFO.                                       
+                   15  UL-LNS-PRI-DIRECTORY-ID           PIC X(15).             
+                   15  UL-LNS-PRI-PREMIUM-CLASS-CODE     PIC X.                 
+                   15  UL-LNS-PRI-PREM-CLASS-CD-TRNSL    PIC X(50).             
+                   15  UL-LNS-PRI-UNDRWRTNG-BASIS-IND    PIC X.                 
+                   15  UL-LNS-PRI-ISSUE-AGE              PIC +9(3).             
+                   15  UL-LNS-PRI-UNDERWRITING-AGE       PIC +9(3).             
+                   15  UL-LNS-PRI-UNDERWRITING-EFF-DT    PIC 9(8).              
+                   15  UL-LNS-PRI-UNITS                PIC +9(6).9(5).          
+                   15  UL-LNS-JOINT-PROB-INFO.                                  
+                       20  UL-LNS-PRI-GUAR-P             PIC +9.9(10).          
+                       20  UL-LNS-PRI-CURR-P             PIC +9.9(10).          
+           05  UL-LNS-TRX-SEGMENT-CURRENT.                                      
+               10  UL-LNS-CUR-SPECIAL-CLASS-CODE         PIC XX.                
+               10  UL-LNS-CUR-SPECIAL-CL-RSN-CD          PIC XX.                
+               10  UL-LNS-CUR-SPECIAL-CL-CEASE-DT        PIC 9(8).              
+               10  UL-LNS-CUR-SPECIAL-CL-COMM-CD         PIC X.                 
+               10  UL-LNS-CUR-RATING-FACTOR              PIC +99.999.           
+               10  UL-LNS-CUR-RATING-REASON-CODE         PIC XX.                
+               10  UL-LNS-CUR-RATING-END-DATE            PIC 9(8).              
+               10  UL-LNS-CUR-RATING-FACT-COMM-CD        PIC X.                 
+               10  UL-LNS-CUR-FLAT-EXT-INFO-CNTR         PIC 9(3).              
+               10  UL-LNS-CUR-FLAT-EXTRA-INFO         OCCURS 6 TIMES.           
+                   15  UL-LNS-CUR-FLAT-EXTRA-AMT         PIC +9(3).99.          
+                   15  UL-LNS-CUR-FLAT-EXT-REASON-CD     PIC XX.                
+                   15  UL-LNS-CUR-FLAT-EXT-RSN-CD-TRN    PIC X(50).             
+                   15  UL-LNS-CUR-FLAT-EXTRA-EXP-DATE    PIC 9(8).              
+                   15  UL-LNS-CUR-FLAT-EXT-COMM-CODE     PIC X.                 
+               10  UL-LNS-CUR-JOINT-INFO.                                       
+                   15  UL-LNS-CUR-DIRECTORY-ID           PIC X(15).             
+                   15  UL-LNS-CUR-PREMIUM-CLASS-CODE     PIC X.                 
+                   15  UL-LNS-CUR-PREM-CLASS-CD-TRNSL    PIC X(50).             
+                   15  UL-LNS-CUR-UNDRWRTNG-BASIS-IND    PIC X.                 
+                   15  UL-LNS-CUR-ISSUE-AGE              PIC +9(3).             
+                   15  UL-LNS-CUR-UNDERWRITING-AGE       PIC +9(3).             
+                   15  UL-LNS-CUR-UNDERWRITING-EFF-DT    PIC 9(8).              
+                   15  UL-LNS-CUR-UNITS                PIC +9(6).9(5).          
+                   15  UL-LNS-CUR-JOINT-PROB-INFO.                              
+                       20  UL-LNS-CUR-GUAR-P             PIC +9.9(10).          
+                       20  UL-LNS-CUR-CURR-P             PIC +9.9(10).          
+           05  UL-LNS-RECALC-FIELDS.                                            
+               10  UL-LNS-GUIDELINE-RECALC-FIELDS.                              
+                   15  UL-LNS-TOTAL-GLP-ADJ              PIC +9(9).99.          
+                   15  UL-LNS-PRORATED-GLP-ADJ           PIC +9(9).99.          
+                   15  UL-LNS-GSP-ADJ                    PIC +9(9).99.          
+                   15  UL-LNS-TOTAL-PW-GLP-ADJ           PIC +9(9).99.          
+                   15  UL-LNS-PRORATED-PW-GLP-ADJ        PIC +9(9).99.          
+                   15  UL-LNS-GSP-PW-ADJ                 PIC +9(9).99.          
+           05  UL-LNS-ONLINE-KEY-FIELDS.                                        
+               10  UL-LNS-PLAN-CODE                      PIC X(6).              
+               10  UL-LNS-PLAN-CODE-TRNSL                PIC X(50).             
+               10  UL-LNS-LINE-OF-BUSINESS-CODE          PIC XXX.               
+               10  UL-LNS-LINE-OF-BUS-CODE-TRNSL         PIC X(50).             
+               10  UL-LNS-POLICY-STATUS                  PIC X.                 
+               10  UL-LNS-RESTRICTION-CODE               PIC X.                 
+               10  UL-LNS-CONTRACT-FORM                  PIC X.                 
+               10  UL-LNS-POLICY-ANNIV-DATE              PIC X(8).              
+               10  UL-LNS-LAST-FIN-EFF-DATE              PIC X(8).              
+               10  UL-LNS-INSURED-NAME                   PIC X(46).             
+               10  UL-LNS-DIRECTORY-ID                   PIC X(15).             
+               10  UL-LNS-COVERAGE-EFF-DATE              PIC X(8).              
+               10  UL-LNS-COVERAGE-UNITS                 PIC 9(6).9(5).         
+               10  UL-LNS-SUSPEND-CODE                   PIC X.                 
+               10  UL-LNS-PDF-IND-CODE                   PIC X.                 
+           05  UL-LNS-CALC-AREA.                                                
+               10  UL-LNS-FLAT-EX-IND                    PIC X.                 
+               10  UL-LNS-SEG-ID-SEG-NAME                PIC X(5).              

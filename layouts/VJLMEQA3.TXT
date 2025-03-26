@@ -1,0 +1,114 @@
+       01  WS-VCLMEQA3-LAYOUT.                                                  
+           05  UL-QA-KEY-DATA-AREA.                                             
+               10  UL-QA-KEY-COMPANY-CODE     PIC X(03).                        
+               10  UL-QA-KEY-MASTER-ID        PIC X(15).                        
+               10  UL-QA-KEY-FILE-CODE        PIC X(05).                        
+               10  UL-QA-KEY-DOCUMENT-TYPE    PIC X(50).                        
+               10  UL-QA-KEY-DOCUMENT-ID      PIC X(50).                        
+               10  UL-QA-KEY-TRX-CODE         PIC X(04).                        
+               10  FILLER-1                   PIC X(100).                       
+               10  UL-QA-KEY-MAP-RECORD-ID    PIC X(50).                        
+           05  UL-QA-BROKER-DEALER-INFO.                                        
+               10  UL-QA-TRADE-PARTNER-ID-NUM            PIC X(20).             
+               10  UL-QA-CLEARINGHOUSE-NAME              PIC X(30).             
+               10  UL-QA-TRADE-PARTNER-CTL-NUM           PIC X(30).             
+               10  UL-QA-CLEARINGHOUSE-CTL-NUM           PIC X(30).             
+               10  UL-QA-DISTRIB-CUST-ACCT-NUM           PIC X(30).             
+               10  UL-QA-DISTRIB-TRX-ID-NUM              PIC X(30).             
+               10  UL-QA-APPLICATION-CTL-NUM             PIC X(20).             
+               10  UL-QA-FILLER-FUTURE-USE               PIC X(68).             
+           05  UL-QA-TRX-DATA.                                                  
+               10  UL-QA-STATUTORY-COMPANY-CODE              PIC XXX.           
+               10  UL-QA-PLAN-CODE                           PIC X(6).          
+               10  UL-QA-PLAN-CODE-TRNSL                     PIC X(50).         
+               10  UL-QA-MEMO-CODE                           PIC XX.            
+               10  UL-QA-SOURCE-CODE                         PIC XX.            
+               10  UL-QA-USER-AREA                           PIC X(8).          
+               10  UL-QA-WITHDRAWAL-TICKET-NO.                                  
+                   15  UL-QA-WITHDRAWAL-TICKET-NO-1          PIC X.             
+                   15  UL-QA-WITHDRAWAL-TICKET-NO-4          PIC 9(4).          
+               10  UL-QA-DEPOSIT-TICKET-NO.                                     
+                   15  UL-QA-DEPOSIT-TICKET-NO-1             PIC X.             
+                   15  UL-QA-DEPOSIT-TICKET-NO-4             PIC 9(4).          
+               10  UL-QA-ORIG-EFFECTIVE-DATE                 PIC 9(8).          
+               10  UL-QA-ORIG-TRANS-CODE                     PIC XXXX.          
+               10  UL-QA-ORIG-TRANS-CODE-TRNSL               PIC X(50).         
+               10  UL-QA-AMOUNTS.                                               
+                   15  UL-QA-TOTAL-REG-PREMIUMS           PIC +9(9).99.         
+                   15  UL-QA-TOTAL-ROLLOVER-PREMIUMS      PIC +9(9).99.         
+                   15  UL-QA-TOTAL-NET-PREMIUMS           PIC +9(9).99.         
+                   15  UL-QA-TOT-MONTHLY-COI-REVERSED     PIC +9(9).99.         
+                   15  UL-QA-TOT-SALES-FEES-REVERSED      PIC +9(9).99.         
+                   15  UL-QA-TOT-ADMIN-FEES-REVERSED      PIC +9(9).99.         
+                   15  UL-QA-TOTAL-PREM-TAX-REVERSED      PIC +9(9).99.         
+                   15  UL-QA-TOTAL-AREA-TAX-REVERSED      PIC +9(9).99.         
+                   15  UL-QA-TOTAL-TRX-FEES-REVERSED      PIC +9(9).99.         
+                   15  UL-QA-TOTAL-POLICY-VALUE           PIC +9(9).99.         
+                   15  UL-QA-TRX-GAIN                     PIC +9(9).99.         
+                   15  UL-QA-TRX-LOSS                     PIC +9(9).99.         
+                   15  UL-QA-INVESTMENT-PROFIT            PIC +9(9).99.         
+                   15  UL-QA-INVESTMENT-LOSS              PIC +9(9).99.         
+                   15  UL-QA-TRANSACTION-FEE              PIC +9(9).99.         
+                   15  UL-QA-DISBURSEMENT-AMOUNT          PIC +9(9).99.         
+                   15  UL-QA-NUMBER-OF-FUNDS              PIC +9(3).            
+               10  UL-QA-PROFIT-LOSS-TO-IND               PIC X.                
+               10  UL-QA-WITHHHOLDING-TAXES.                                    
+                   15  UL-QA-FEDERAL-AMT                  PIC +9(9).99.         
+                   15  UL-QA-FEDERAL-PCT                  PIC +999.99.          
+                   15  UL-QA-STATE-AMT                    PIC +9(9).99.         
+                   15  UL-QA-STATE-PCT                    PIC +999.99.          
+                   15  UL-QA-MUNIC-AMT                    PIC +9(9).99.         
+                   15  UL-QA-MUNIC-PCT                    PIC +999.99.          
+               10  UL-QA-SERVICING-AGENT                  PIC X(10).            
+               10  UL-QA-SERVICING-AGENCY                 PIC X(6).             
+               10  UL-QA-REV-TRX-DATE                     PIC X(8).             
+               10  UL-QA-REV-ORIG-CODE                    PIC X(8).             
+               10  UL-QA-STATUS-OPTION                    PIC X.                
+               10  UL-QA-FUND-INFO-CNTR                   PIC 9(3).             
+               10  UL-QA-FUND-AREA                        PIC X(10791).         
+               10  UL-QA-FUND-ARRAY REDEFINES UL-QA-FUND-AREA.                  
+                 12  UL-QA-FUND-INFO      OCCURS 99 TIMES.                      
+                   15  UL-QA-FUND-TYPE                  PIC X.                  
+                   15  UL-QA-FUND-NUMBER                PIC +9(3).              
+                   15  UL-QA-FUND-NUMBER-TRNSL          PIC X(50).              
+                   15  UL-QA-NET-PREMIUMS               PIC +9(9).99.           
+                   15  UL-QA-UNITS                      PIC +9(7).9(4).         
+                   15  UL-QA-FUND-VALUE                 PIC +9(9).99.           
+                   15  UL-QA-TRX-GAIN                   PIC +9(9).99.           
+                   15  UL-QA-TRX-LOSS                   PIC +9(9).99.           
+               10  UL-QA-WITHHOLDING-AMT-FED-IND        PIC X.                  
+               10  UL-QA-WITHHOLD-AMT-STATE-IND         PIC X.                  
+               10  UL-QA-WITHHOLD-AMT-LOCAL-IND         PIC X.                  
+               10  UL-QA-USE-STATE-TABLE-IND            PIC X.                  
+               10  UL-QA-COST-BASIS-REMOVED             PIC +9(9).99.           
+               10  UL-QA-GAIN-REMOVED                   PIC +9(9).99.           
+               10  UL-QA-WITHHOLDING-AMOUNT             PIC +9(9).99.           
+               10  UL-QA-TAX-PENALTY-IND                PIC X.                  
+               10  UL-QA-TAX-FORM-OVERRIDE              PIC X.                  
+               10  UL-QA-DISTRIBUTION-CODE              PIC X.                  
+               10  UL-QA-RESIDENT-STATE                 PIC XXX.                
+               10  UL-QA-ALTERNATE-PAYEE.                                       
+                   15  UL-QA-PAYEE-NUMBER                PIC X(4).              
+                   15  UL-QA-PAYEE-NAME                  PIC X(46).             
+                   15  UL-QA-PAYEE-ADDRESS-LINE1         PIC X(30).             
+                   15  UL-QA-PAYEE-ADDRESS-LINE2         PIC X(30).             
+                   15  UL-QA-PAYEE-ADDRESS-LINE3         PIC X(30).             
+                   15  UL-QA-PAYEE-ADDRESS-LINE4         PIC X(30).             
+                   15  UL-QA-PAYEE-ADDRESS-LINE5         PIC X(30).             
+                   15  UL-QA-PAYEE-ZIP-POSTAL-CODE       PIC X(9).              
+                   15  UL-QA-PAYEE-COUNTRY-CODE          PIC X(2).              
+               10  UL-QA-1035-INDICATOR                  PIC X.                 
+               10  UL-QA-DISTRIBUTION-CODE-2             PIC X.                 
+               10  UL-QA-TOTAL-M-AND-E-CHARGE            PIC +9(9).99.          
+               10  UL-QA-QAH-TYPE-OF-CANCEL              PIC X.                 
+               10  UL-QA-TERM-CONVERSION-INFO.                                  
+                   15  UL-QA-TOT-TERM-CONV-GROSS-PREM    PIC +9(9).99.          
+                   15  UL-QA-TOTAL-TERM-CONV-PREM-TAX    PIC +9(9).99.          
+                   15  UL-QA-TOTAL-TERM-CONV-AREA-TAX    PIC +9(9).99.          
+                   15  UL-QA-TOTAL-TERM-CONV-TRX-FEE     PIC +9(9).99.          
+                   15  UL-QA-TOT-TERM-CONV-SALES-FEE     PIC +9(9).99.          
+                   15  UL-QA-TOT-TERM-CONV-ADMIN-FEE     PIC +9(9).99.          
+                   15  UL-QA-TOTAL-TERM-CONV-NET-PREM    PIC +9(9).99.          
+                   15  UL-QA-LAPSE-PENDING-CREDIT        PIC +9(9).99.          
+               10  UL-QA-TAMRA-MEC-IND                   PIC X.                 
+               10  FILLER-2                              PIC X(43).             

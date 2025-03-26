@@ -1,0 +1,40 @@
+       01  WS-VCLMETF3-LAYOUT.                                                  
+           05  UL-TF-KEY-DATA-AREA.                                             
+               10  UL-TF-KEY-COMPANY-CODE     PIC X(03).                        
+               10  UL-TF-KEY-MASTER-ID        PIC X(15).                        
+               10  UL-TF-KEY-FILE-CODE        PIC X(05).                        
+               10  UL-TF-KEY-DOCUMENT-TYPE    PIC X(50).                        
+               10  UL-TF-KEY-DOCUMENT-ID      PIC X(50).                        
+               10  UL-TF-KEY-TRX-CODE         PIC X(04).                        
+               10  FILLER-1                   PIC X(100).                       
+               10  UL-TF-KEY-MAP-RECORD-ID    PIC X(50).                        
+           05  UL-TA-BROKER-DEALER-INFO.                                        
+               10  UL-TF-TRADE-PARTNER-ID-NUM PIC X(20).                        
+               10  UL-TF-CLEARINGHOUSE-NAME PIC X(30).                          
+               10  UL-TF-TRADE-PARTNER-CTL-NUM PIC X(30).                       
+               10  UL-TF-CLEARINGHOUSE-CTL-NUM PIC X(30).                       
+               10  UL-TF-DISTRIB-CUST-ACCT-NUM PIC X(30).                       
+               10  UL-TF-DISTRIB-TRX-ID-NUM PIC X(30).                          
+               10  UL-TF-APPLICATION-CTL-NUM PIC X(20).                         
+               10  UL-TF-FILLER-FUTURE-USE  PIC X(68).                          
+           05  UL-TF-LOAN-INTEREST-DUE-DT          PIC +9(08).                  
+           05  UL-TF-LOAN-INTEREST-DUE-AMT         PIC +9(11).99.               
+           05  UL-TF-OUTSTANDING-LOAN-AMT          PIC +9(11).99.               
+           05  UL-TF-PREF-LOAN-INT-DUE-AMT         PIC +9(11).99.               
+           05  UL-TF-PREF-OUTST-LOAN-AMT           PIC +9(11).99.               
+           05  UL-TF-REGU-LOAN-INT-DUE-AMT         PIC +9(11).99.               
+           05  UL-TF-REGU-OUTST-LOAN-AMT           PIC +9(11).99.               
+           05  UL-TF-CALCULATED-VALUES.                                         
+               10  UL-TF-LOAN-INT-PLUS-AE-BILL     PIC +9(9).99.                
+               10  UL-TF-TOTAL-POLICY-DEBT         PIC +9(9).99.                
+           05  UL-TF-SCANLINE                      PIC X(51).                   
+           05  FILLER-2                            PIC X(200).                  
+           05  UL-TF-STD-INT-RATE-TRNSL            PIC X(50).                   
+           05  UL-TF-PREF-INT-RATE-TRNSL           PIC X(50).                   
+           05  UL-TF-COLL-INT-RATE-TRNSL           PIC X(50).                   
+           05  UL-TF-PREF-LOAN-TIMEFRAME-SW        PIC X.                       
+           05  UL-TF-PREFERRED-LOAN-CD             PIC X.                       
+           05  UL-TF-PART-LOAN-IND                 PIC X.                       
+           05  UL-TF-PART-LN-INT-RT                PIC +9(2).999.               
+           05  UL-TF-PART-LN-INT-DUE-AMT           PIC +9(11).99.               
+           05  UL-TF-PART-OS-LOAN-AMT              PIC +9(11).99.               
