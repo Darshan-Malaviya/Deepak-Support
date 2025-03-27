@@ -141,7 +141,12 @@ def build_hierarchy(lines, index=0, parent_level=0, start_offset=1, flat_fields=
                     position += total_size
                 flat_fields.append(node.copy())
         else:
-            children, next_index = build_hierarchy(lines, index + 1, level, position, flat_fields, ref_map)
+            if 'redefines' in item and item['redefines'] in ref_map:
+                ref_node = ref_map[item['redefines']]
+                node['start_position'] = ref_node['start_position']
+            else:
+                node['start_position'] = position
+            children, next_index = build_hierarchy(lines, index + 1, level, node['start_position'], flat_fields, ref_map)
             node['children'] = children
             child_starts = [c['start_position'] for c in children if 'start_position' in c]
             child_ends = [c['end_position'] for c in children if 'end_position' in c]
@@ -178,7 +183,7 @@ def convert_copybook_to_hierarchy(copybook_text):
     return hierarchy, flat_fields
 
 if __name__ == "__main__":
-    with open(os.path.join(layout_folder_path, "VJLMELIT.TXT"), "r") as f:
+    with open(os.path.join(layout_folder_path, "VCLMXCSV.txt"), "r") as f:
         copybook_text = f.read()
 
     hierarchy, flat_fields = convert_copybook_to_hierarchy(copybook_text)
