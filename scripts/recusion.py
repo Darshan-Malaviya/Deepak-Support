@@ -24,7 +24,8 @@ line_pattern = re.compile(
 )
 
 pic_pattern = re.compile(
-    r'PIC\s*([+-S])?([X9S]+)(?:\((\d+)\))?(?:([V.])(9+)?(?:\((\d+)\))?)?',
+    r'PIC\s*([+-S])?((?:9|X|S)+)(?:\((\d+)\))?'  # Format part
+    r'(?:([V.])((?:9|X)+)?(?:\((\d+)\))?)?',     # Decimal part
     re.IGNORECASE
 )
 
@@ -36,24 +37,28 @@ def parse_pic(pic_clause):
     if not match:
         return None
 
-    sign, format_part, pic_length, decimal_marker, decimal_part, decimal_count = match.groups() + (None,) * (6 - len(match.groups()))
+    sign, format_part, int_count, decimal_marker, decimal_part, decimal_count = match.groups()
 
     has_explicit_sign = sign in ['+', '-', 'S']
     has_explicit_decimal = decimal_marker in ['V', '.']
 
-    if pic_length:
-        int_length = int(pic_length)
+
+    if int_count:
+        int_len = int(int_count)
     else:
-        int_length = len(format_part)
+        if pic_clause == "99" or pic_clause == "999":
+            int_len = len(pic_clause)
+        else:
+            int_len = len(format_part)
 
     if decimal_count:
-        decimal_places = int(decimal_count)
-    elif decimal_part and has_explicit_decimal:
-        decimal_places = len(decimal_part)
+        dec_len = int(decimal_count)
+    elif decimal_part:
+        dec_len = len(decimal_part)
     else:
-        decimal_places = 0
+        dec_len = 0
 
-    field_length = int_length + decimal_places
+    field_length = int_len + dec_len
     if has_explicit_sign:
         field_length += 1
     if has_explicit_decimal:
@@ -61,16 +66,14 @@ def parse_pic(pic_clause):
 
     if 'X' in format_part:
         field_type = 'string'
-    elif '9' in format_part or 'S' in format_part:
-        field_type = 'number'
     else:
-        field_type = 'string'
+        field_type = 'number'
 
     return {
         'sign': sign,
         'has_explicit_sign': has_explicit_sign,
         'has_explicit_decimal': has_explicit_decimal,
-        'decimal_places': decimal_places,
+        'decimal_places': dec_len,
         'field_length': field_length,
         'field_type': field_type
     }
