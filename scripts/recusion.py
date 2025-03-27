@@ -97,9 +97,11 @@ def parse_lines(lines):
             parsed.append({k: v for k, v in match.groupdict().items() if v})
     return parsed
 
-def build_hierarchy(lines, index=0, parent_level=0, start_offset=1, flat_fields=None):
+def build_hierarchy(lines, index=0, parent_level=0, start_offset=1, ref_map=None, flat_fields=None):
     if flat_fields is None:
         flat_fields = []
+    if ref_map is None:
+        ref_map = {}
 
     hierarchy = []
     position = start_offset
@@ -110,7 +112,7 @@ def build_hierarchy(lines, index=0, parent_level=0, start_offset=1, flat_fields=
         if level <= parent_level:
             break
 
-        children, next_index, position = build_hierarchy(lines, index + 1, level, position, flat_fields)
+        children, next_index, position = build_hierarchy(lines, index + 1, level, position, ref_map, flat_fields)
 
         node = {
             'name': item['name'],
@@ -129,11 +131,11 @@ def build_hierarchy(lines, index=0, parent_level=0, start_offset=1, flat_fields=
                 node['pic_details'] = parsed_pic
                 size = parsed_pic['field_length']
                 total_size = size * occurs_count
-                node['start_position'] = position
                 node['length'] = total_size
+                node['start_position'] = position
                 node['end_position'] = position + total_size - 1
-                flat_fields.append(node.copy())
                 position += total_size
+
         elif children:
             node['children'] = children
             child_starts = [c['start_position'] for c in children if 'start_position' in c]
@@ -144,11 +146,17 @@ def build_hierarchy(lines, index=0, parent_level=0, start_offset=1, flat_fields=
                 node['length'] = group_length
                 node['end_position'] = node['start_position'] + group_length - 1
                 position = node['end_position'] + 1
-            flat_fields.append(node.copy())
 
         if 'redefines' in item:
             node['redefines'] = item['redefines']
+            ref = ref_map.get(item['redefines'])
+            if ref:
+                for key in ['start_position', 'end_position', 'length', 'pic', 'pic_details', 'children']:
+                    if key in ref:
+                        node[key] = ref[key]
 
+        ref_map[node['name']] = node
+        flat_fields.append(dict(node))
         hierarchy.append(node)
         index = next_index
 
@@ -158,15 +166,13 @@ def convert_copybook_to_hierarchy(copybook_text):
     lines = copybook_text.strip().splitlines()
     merged_lines = preprocess_lines(lines)
     parsed_lines = parse_lines(merged_lines)
-    flat_fields = []
-    hierarchy, _, _ = build_hierarchy(parsed_lines, flat_fields=flat_fields)
-    return hierarchy, flat_fields
+    hierarchy, _, _ = build_hierarchy(parsed_lines, ref_map={}, flat_fields=[])
+    return hierarchy
 
 # Example usage:
 if __name__ == "__main__":
-    with open(os.path.join(layout_folder_path, "VJLMAN7F.TXT"), "r") as f:
+    with open(os.path.join(layout_folder_path, "VJLMELIT.TXT"), "r") as f:
         copybook_text = f.read()
 
-    hierarchy, flat_fields = convert_copybook_to_hierarchy(copybook_text)
+    hierarchy = convert_copybook_to_hierarchy(copybook_text)
     logger.debug(json.dumps(hierarchy, indent=2))
-    logger.debug(json.dumps(flat_fields, indent=2))
