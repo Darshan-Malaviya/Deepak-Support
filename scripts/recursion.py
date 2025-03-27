@@ -224,7 +224,7 @@ if __name__ == "__main__":
         copybook_text = f.read()
 
     hierarchy, flat_fields = convert_copybook_to_hierarchy(copybook_text)
-    logger.debug(json.dumps(hierarchy, indent=2))
+    # logger.debug(json.dumps(hierarchy, indent=2))
 
     # Example feed data (first line)
     feed_path = os.path.join(feeds_folder_path, "testfeed.txt")
