@@ -75,27 +75,20 @@ def parse_pic(pic_clause):
     }
 
 def preprocess_lines(lines):
-    """Merge continuation lines, skip comments, and merge OCCURS on next line."""
     processed = []
     current_line = ""
-
     for line in lines:
         stripped = line.strip()
-
-        # Skip comments and empty lines
-        if not stripped or stripped.startswith('*') or re.match(r'^\*{3,}$', stripped):
+        if not stripped or stripped.startswith("*"):  # skip comments
             continue
-
         if re.match(r"^\d{2}\s", stripped):
             if current_line:
                 processed.append(current_line)
             current_line = stripped
         else:
             current_line += " " + stripped
-
     if current_line:
         processed.append(current_line)
-
     return processed
 
 def parse_lines(lines):
@@ -113,23 +106,20 @@ def build_hierarchy(lines, index=0, parent_level=0, start_offset=1):
     while index < len(lines):
         item = lines[index]
         level = int(item['level'])
-
         if level <= parent_level:
             break
 
-        # Build children recursively
         children, next_index = build_hierarchy(lines, index + 1, level, position)
 
         node = {
             'name': item['name'],
             'level': level,
-            'is_group': 'pic' not in item
+            'is_group': 'pic' not in item,
         }
 
         occurs_count = int(item['occurs']) if 'occurs' in item else 1
-        node['occurs'] = occurs_count if 'occurs' in item else None
-
-        size = 0
+        if 'occurs' in item:
+            node['occurs'] = occurs_count
 
         if 'pic' in item:
             node['pic'] = item['pic']
@@ -139,26 +129,23 @@ def build_hierarchy(lines, index=0, parent_level=0, start_offset=1):
                 size = parsed_pic['field_length']
                 total_size = size * occurs_count
                 node['start_position'] = position
-                node['end_position'] = position + total_size - 1
                 node['length'] = total_size
+                node['end_position'] = position + total_size - 1
+                position += total_size
         elif children:
             node['children'] = children
-
             child_starts = [c['start_position'] for c in children if 'start_position' in c]
             child_ends = [c['end_position'] for c in children if 'end_position' in c]
-
             if child_starts and child_ends:
-                group_start = min(child_starts)
-                group_end = max(child_ends)
-                group_length = (group_end - group_start + 1) * occurs_count
-                node['start_position'] = group_start
-                node['end_position'] = group_start + group_length - 1
+                node['start_position'] = min(child_starts)
+                group_length = (max(child_ends) - min(child_starts) + 1) * occurs_count
                 node['length'] = group_length
+                node['end_position'] = node['start_position'] + group_length - 1
+                position = node['end_position'] + 1
 
         if 'redefines' in item:
             node['redefines'] = item['redefines']
 
-        position = max(position, node.get('end_position', position))
         hierarchy.append(node)
         index = next_index
 
@@ -173,7 +160,7 @@ def convert_copybook_to_hierarchy(copybook_text):
 
 # Example usage:
 if __name__ == "__main__":
-    with open(os.path.join(layout_folder_path, "VJLMAN8T.TXT"), "r") as f:
+    with open(os.path.join(layout_folder_path, "VJLMAN7F.TXT"), "r") as f:
         copybook_text = f.read()
 
     hierarchy = convert_copybook_to_hierarchy(copybook_text)
