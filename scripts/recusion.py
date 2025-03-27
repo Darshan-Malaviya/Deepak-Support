@@ -23,11 +23,7 @@ line_pattern = re.compile(
     re.IGNORECASE
 )
 
-pic_pattern = re.compile(
-    r'PIC\s*([+-S])?((?:9|X|S)+)(?:\((\d+)\))?'  # Format part
-    r'(?:([V.])((?:9|X)+)?(?:\((\d+)\))?)?',     # Decimal part
-    re.IGNORECASE
-)
+pic_pattern = re.compile(r'PIC\s*([+-S])?([X9S]+)(?:\((\d+)\))?(?:([V.])(9+)?(?:\((\d+)\))?)?', re.IGNORECASE)
 
 def parse_pic(pic_clause):
     if not pic_clause:
@@ -37,16 +33,16 @@ def parse_pic(pic_clause):
     if not match:
         return None
 
-    sign, format_part, int_count, decimal_marker, decimal_part, decimal_count = match.groups()
+    sign, format_part, int_count, decimal_marker, decimal_part, decimal_count = match.groups() + (None,) * (6 - len(match.groups()))
 
-    has_explicit_sign = sign in ['+', '-', 'S']
+    has_explicit_sign = sign in ['+', '-']
     has_explicit_decimal = decimal_marker in ['V', '.']
-
 
     if int_count:
         int_len = int(int_count)
     else:
-        if pic_clause == "99" or pic_clause == "999":
+        if all(c == '9' for c in pic_clause):
+            sign = None
             int_len = len(pic_clause)
         else:
             int_len = len(format_part)
@@ -194,4 +190,4 @@ if __name__ == "__main__":
 
     hierarchy, flat_fields = convert_copybook_to_hierarchy(copybook_text)
     logger.debug(json.dumps(hierarchy, indent=2))
-    logger.debug(json.dumps(flat_fields, indent=2))
+    # logger.debug(json.dumps(flat_fields, indent=2))
