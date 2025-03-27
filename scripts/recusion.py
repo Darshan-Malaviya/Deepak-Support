@@ -7,13 +7,11 @@ base_path = r"D:\development\Deepak Support New"
 log_folder_path = os.path.join(base_path, "logs")
 layout_folder_path = os.path.join(base_path, "layouts")
 
-
 os.makedirs(log_folder_path, exist_ok=True)
 
 with open(os.path.join(log_folder_path, "logs.json"), 'w'): pass
 logging.basicConfig(filename=os.path.join(log_folder_path, "logs.json"), level=logging.DEBUG, format='%(message)s')
 logger = logging.getLogger(__name__)
-
 
 line_pattern = re.compile(
     r'(?P<level>\d{2})\s+'
@@ -99,7 +97,10 @@ def parse_lines(lines):
             parsed.append({k: v for k, v in match.groupdict().items() if v})
     return parsed
 
-def build_hierarchy(lines, index=0, parent_level=0, start_offset=1):
+def build_hierarchy(lines, index=0, parent_level=0, start_offset=1, flat_fields=None):
+    if flat_fields is None:
+        flat_fields = []
+
     hierarchy = []
     position = start_offset
 
@@ -109,7 +110,7 @@ def build_hierarchy(lines, index=0, parent_level=0, start_offset=1):
         if level <= parent_level:
             break
 
-        children, next_index = build_hierarchy(lines, index + 1, level, position)
+        children, next_index, position = build_hierarchy(lines, index + 1, level, position, flat_fields)
 
         node = {
             'name': item['name'],
@@ -131,6 +132,7 @@ def build_hierarchy(lines, index=0, parent_level=0, start_offset=1):
                 node['start_position'] = position
                 node['length'] = total_size
                 node['end_position'] = position + total_size - 1
+                flat_fields.append(node.copy())
                 position += total_size
         elif children:
             node['children'] = children
@@ -142,6 +144,7 @@ def build_hierarchy(lines, index=0, parent_level=0, start_offset=1):
                 node['length'] = group_length
                 node['end_position'] = node['start_position'] + group_length - 1
                 position = node['end_position'] + 1
+            flat_fields.append(node.copy())
 
         if 'redefines' in item:
             node['redefines'] = item['redefines']
@@ -149,19 +152,21 @@ def build_hierarchy(lines, index=0, parent_level=0, start_offset=1):
         hierarchy.append(node)
         index = next_index
 
-    return hierarchy, index
+    return hierarchy, index, position
 
 def convert_copybook_to_hierarchy(copybook_text):
     lines = copybook_text.strip().splitlines()
     merged_lines = preprocess_lines(lines)
     parsed_lines = parse_lines(merged_lines)
-    hierarchy, _ = build_hierarchy(parsed_lines)
-    return hierarchy
+    flat_fields = []
+    hierarchy, _, _ = build_hierarchy(parsed_lines, flat_fields=flat_fields)
+    return hierarchy, flat_fields
 
 # Example usage:
 if __name__ == "__main__":
     with open(os.path.join(layout_folder_path, "VJLMAN7F.TXT"), "r") as f:
         copybook_text = f.read()
 
-    hierarchy = convert_copybook_to_hierarchy(copybook_text)
+    hierarchy, flat_fields = convert_copybook_to_hierarchy(copybook_text)
     logger.debug(json.dumps(hierarchy, indent=2))
+    logger.debug(json.dumps(flat_fields, indent=2))
