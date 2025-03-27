@@ -24,8 +24,7 @@ line_pattern = re.compile(
 )
 
 pic_pattern = re.compile(
-    r'PIC\s*([+-S])?([X9A]+)(?:\((\d+)\))?'
-    r'(?:([V.])([9A]+)?(?:\((\d+)\))?)?',
+    r'PIC\s*([+-S])?([X9S]+)(?:\((\d+)\))?(?:([V.])(9+)?(?:\((\d+)\))?)?',
     re.IGNORECASE
 )
 
@@ -42,6 +41,11 @@ def parse_pic(pic_clause):
     has_explicit_sign = sign in ['+', '-', 'S']
     has_explicit_decimal = decimal_marker in ['V', '.']
 
+    if pic_length:
+        int_length = int(pic_length)
+    else:
+        int_length = len(format_part)
+
     if decimal_count:
         decimal_places = int(decimal_count)
     elif decimal_part and has_explicit_decimal:
@@ -49,16 +53,15 @@ def parse_pic(pic_clause):
     else:
         decimal_places = 0
 
-    if pic_length:
-        int_length = int(pic_length)
-    else:
-        int_length = format_part.count('9') + (decimal_part.count('9') if decimal_part else 0)
-
-    field_length = int_length
+    field_length = int_length + decimal_places
+    if has_explicit_sign:
+        field_length += 1
+    if has_explicit_decimal:
+        field_length += 1
 
     if 'X' in format_part:
         field_type = 'string'
-    elif '9' in format_part:
+    elif '9' in format_part or 'S' in format_part:
         field_type = 'number'
     else:
         field_type = 'string'
