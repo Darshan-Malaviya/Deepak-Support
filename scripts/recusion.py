@@ -6,6 +6,7 @@ import json
 base_path = r"D:\development\Deepak Support New"
 log_folder_path = os.path.join(base_path, "logs")
 layout_folder_path = os.path.join(base_path, "layouts")
+feeds_folder_path = os.path.join(base_path, "feeds")
 
 os.makedirs(log_folder_path, exist_ok=True)
 
@@ -184,10 +185,51 @@ def convert_copybook_to_hierarchy(copybook_text):
     hierarchy, _ = build_hierarchy(parsed_lines, flat_fields=flat_fields, ref_map=ref_map)
     return hierarchy, flat_fields
 
+def extract_field_value(data, start, end):
+    return data[start - 1:end].strip()
+
+def parse_feed_with_layout(feed_data, layout):
+    def parse_node(node, data):
+        if node.get('is_group'):
+            result = [] if 'occurs' in node else {}
+            for i in range(node.get('occurs', 1)):
+                instance = {}
+                for child in node.get('children', []):
+                    parsed = parse_node(child, data)
+                    instance[child['name']] = parsed
+                if 'occurs' in node:
+                    result.append(instance)
+                else:
+                    result = instance
+            return result
+        else:
+            if 'occurs' in node:
+                values = []
+                field_len = node['pic_details']['field_length']
+                for i in range(node['occurs']):
+                    start = node['start_position'] + (i * field_len)
+                    end = start + field_len - 1
+                    values.append(extract_field_value(data, start, end))
+                return values
+            else:
+                return extract_field_value(data, node['start_position'], node['end_position'])
+
+    result = {}
+    for root in layout:
+        result[root['name']] = parse_node(root, feed_data)
+    return result
+
 if __name__ == "__main__":
     with open(os.path.join(layout_folder_path, "VCLMXCSV.txt"), "r") as f:
         copybook_text = f.read()
 
     hierarchy, flat_fields = convert_copybook_to_hierarchy(copybook_text)
     logger.debug(json.dumps(hierarchy, indent=2))
-    # logger.debug(json.dumps(flat_fields, indent=2))
+
+    # Example feed data (first line)
+    feed_path = os.path.join(feeds_folder_path, "testfeed.txt")
+    if os.path.exists(feed_path):
+        with open(feed_path, "r") as feed_file:
+            feed_line = feed_file.readline()
+            parsed_feed = parse_feed_with_layout(feed_line, hierarchy)
+            logger.debug(json.dumps(parsed_feed, indent=2))
