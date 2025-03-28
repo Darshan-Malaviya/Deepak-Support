@@ -195,6 +195,8 @@ def parse_feed_with_layout(feed_data, layout):
             for i in range(node.get('occurs', 1)):
                 instance = {}
                 for child in node.get('children', []):
+                    child['start_position'] = int(child['start_position'] + i*(node['length']/node.get('occurs', 1)))
+                    child['end_position'] = int(child['start_position'] + child['length'] - 1)
                     parsed = parse_node(child, data)
                     instance[child['name']] = parsed
                 if 'occurs' in node:
