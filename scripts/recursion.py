@@ -143,6 +143,7 @@ def build_hierarchy(lines, index=0, parent_level=0, start_offset=1, flat_fields=
                     node['end_position'] = position + total_size - 1
                     position += total_size
                 flat_fields.append(node.copy())
+        
         else:
             if 'redefines' in item and item['redefines'] in ref_map:
                 ref_node = ref_map[item['redefines']]
@@ -188,33 +189,39 @@ def convert_copybook_to_hierarchy(copybook_text):
 def extract_field_value(data, start, end):
     return data[start - 1:end].strip()
 
-def parse_feed_with_layout(feed_data, layout):
+def parse_feed_with_layout(feed_data, layout, flat_fields):
     def parse_node(node, data):
         if node.get('is_group'):
-            result = [] if 'occurs' in node else {}
-            for i in range(node.get('occurs', 1)):
+            occurs = node.get('occurs', 1)
+            result = []
+
+            for i in range(occurs):
                 instance = {}
+
                 for child in node.get('children', []):
-                    child['start_position'] = int(child['start_position'] + i*(node['length']/node.get('occurs', 1)))
-                    child['end_position'] = int(child['start_position'] + child['length'] - 1)
-                    parsed = parse_node(child, data)
-                    instance[child['name']] = parsed
-                if 'occurs' in node:
-                    result.append(instance)
-                else:
-                    result = instance
-            return result
+                    # Calculate offset based on group instance index
+                    offset = i * (node['length'] // occurs)
+                    child_instance = child.copy()
+                    child_instance['start_position'] = child['start_position'] + offset
+                    child_instance['end_position'] = child['end_position'] + offset
+                    parsed_value = parse_node(child_instance, data)
+                    instance[child['name']] = parsed_value
+
+                result.append(instance)
+
+            return result if occurs > 1 else result[0]
+
         else:
-            if 'occurs' in node:
-                values = []
-                field_len = node['pic_details']['field_length']
-                for i in range(node['occurs']):
-                    start = node['start_position'] + (i * field_len)
-                    end = start + field_len - 1
-                    values.append(extract_field_value(data, start, end))
-                return values
-            else:
-                return extract_field_value(data, node['start_position'], node['end_position'])
+            occurs = node.get('occurs', 1)
+            values = []
+
+            field_len = node['pic_details']['field_length']
+            for i in range(occurs):
+                start = node['start_position'] + (i * field_len)
+                end = start + field_len - 1
+                values.append(extract_field_value(data, start, end))
+
+            return values if occurs > 1 else values[0]
 
     result = {}
     for root in layout:
@@ -222,16 +229,16 @@ def parse_feed_with_layout(feed_data, layout):
     return result
 
 if __name__ == "__main__":
-    with open(os.path.join(layout_folder_path, "VCLMXCSV.txt"), "r") as f:
+    with open(os.path.join(layout_folder_path, "ACLMAN00.txt"), "r") as f:
         copybook_text = f.read()
 
     hierarchy, flat_fields = convert_copybook_to_hierarchy(copybook_text)
-    # logger.debug(json.dumps(hierarchy, indent=2))
+    logger.debug(json.dumps(hierarchy, indent=2))
 
     # Example feed data (first line)
-    feed_path = os.path.join(feeds_folder_path, "testfeed.txt")
+    feed_path = os.path.join(feeds_folder_path, "MAN00FIL.txt")
     if os.path.exists(feed_path):
         with open(feed_path, "r") as feed_file:
             feed_line = feed_file.readline()
-            parsed_feed = parse_feed_with_layout(feed_line, hierarchy)
+            parsed_feed = parse_feed_with_layout(feed_line, hierarchy, flat_fields)
             logger.debug(json.dumps(parsed_feed, indent=2))
