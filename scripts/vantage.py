@@ -714,3 +714,21 @@ if __name__ == "__main__":
                 continue
 
         logger.info(f"JSON output saved to {output_file}")
+
+
+
+
+# if __name__ == "__main__":
+#     with open(os.path.join(layout_folder_path, "ACLMAN00.txt"), "r") as f:
+#         copybook_text = f.read()
+
+#     hierarchy, flat_fields = convert_copybook_to_hierarchy(copybook_text)
+#     logger.debug(json.dumps(hierarchy, indent=2))
+
+#     # Example feed data (first line)
+#     feed_path = os.path.join(feeds_folder_path, "MAN00FIL.txt")
+#     if os.path.exists(feed_path):
+#         with open(feed_path, "r") as feed_file:
+#             feed_line = feed_file.readline()
+#             parsed_feed = parse_feed_with_layout(feed_line, hierarchy)
+#             logger.debug(json.dumps(parsed_feed, indent=2))
